@@ -1,0 +1,16 @@
+{
+  "name": "petergoes.nl",
+  "version": "1.0.0",
+  "description": "Petergoes.nl website",
+  "main": "dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "petergoes.nl",
+    "portfolio",
+    "blog"
+  ],
+  "author": "Peter Goes (petergoes.nl)",
+  "license": "ISC"
+}
