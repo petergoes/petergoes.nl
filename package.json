@@ -4,11 +4,16 @@
   "description": "PeterGoes.nl website",
   "main": "build/index.html",
   "scripts": {
-    
+    "start": "gulp html"
   },
   "keywords": [
     "petergoes.nl"
   ],
   "author": "Peter Goes (petergoes.nl)",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-nunjucks": "3.0.0",
+    "gulp-task-listing": "1.0.1"
+  }
 }
