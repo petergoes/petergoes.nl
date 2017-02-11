@@ -1,0 +1,5 @@
+---
+	view: page
+---
+
+# about me
