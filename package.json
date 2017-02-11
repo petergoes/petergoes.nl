@@ -1,15 +1,13 @@
 {
   "name": "petergoes.nl",
-  "version": "1.0.0",
-  "description": "Petergoes.nl website",
-  "main": "dist/index.html",
+  "version": "0.1.0",
+  "description": "PeterGoes.nl website",
+  "main": "build/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    
   },
   "keywords": [
-    "petergoes.nl",
-    "portfolio",
-    "blog"
+    "petergoes.nl"
   ],
   "author": "Peter Goes (petergoes.nl)",
   "license": "ISC"
