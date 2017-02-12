@@ -9,9 +9,15 @@
   "keywords": [
     "petergoes.nl"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:petergoes/petergoes.nl.git"
+  },
   "author": "Peter Goes (petergoes.nl)",
   "license": "ISC",
   "devDependencies": {
+    "babel-eslint": "7.1.1",
+    "eslint": "3.15.0",
     "front-matter": "2.1.2",
     "gulp": "3.9.1",
     "gulp-changed": "git:github.com/petergoes/gulp-changed.git",
