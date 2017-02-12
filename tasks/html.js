@@ -1,12 +1,12 @@
 const changed = require('gulp-changed');
 const frontMatter = require('front-matter');
 const gulp = require('gulp');
+const gulpWatch = require('gulp-watch');
 const marked = require('marked');
 const nunjucks = require('nunjucks');
 const path = require('path');
 const rename = require('gulp-rename');
 const transform = require('gulp-transform');
-const gulpWatch = require('gulp-watch');
 
 nunjucks.configure('./src/views', {
     autoescape: false
@@ -24,7 +24,7 @@ function html() {
 }
 
 function watch() {
-	return gulpWatch([
+	return gulp.watch([
 			'content/**/*.md'
 		], html);
 }
