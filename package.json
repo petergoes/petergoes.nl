@@ -4,7 +4,8 @@
   "description": "PeterGoes.nl website",
   "main": "build/index.html",
   "scripts": {
-    "start": "gulp html"
+    "start": "gulp html",
+    "watch": "gulp watch"
   },
   "keywords": [
     "petergoes.nl"
@@ -24,7 +25,9 @@
     "gulp-rename": "1.2.2",
     "gulp-task-listing": "1.0.1",
     "gulp-transform": "1.1.0",
+    "gulp-watch": "4.3.11",
     "marked": "0.3.6",
-    "nunjucks": "3.0.0"
+    "nunjucks": "3.0.0",
+    "run-sequence": "1.2.2"
   }
 }

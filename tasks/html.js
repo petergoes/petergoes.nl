@@ -1,17 +1,19 @@
+const changed = require('gulp-changed');
 const frontMatter = require('front-matter');
 const gulp = require('gulp');
 const marked = require('marked');
 const nunjucks = require('nunjucks');
+const path = require('path');
 const rename = require('gulp-rename');
 const transform = require('gulp-transform');
-const changed = require('gulp-changed');
-const path = require('path');
+const gulpWatch = require('gulp-watch');
 
 nunjucks.configure('./src/views', {
     autoescape: false
 });
 
 gulp.task('html', html);
+gulp.task('html:watch', watch);
 
 function html() {
 	gulp.src('content/**/*.md')
@@ -19,6 +21,12 @@ function html() {
 		.pipe(transform(markdownToHtml))
 		.pipe(rename(nameToFolderWithIndex))
 		.pipe(gulp.dest('dist'));
+}
+
+function watch() {
+	return gulpWatch([
+			'content/**/*.md'
+		], html);
 }
 
 function transformPath(newPath) {
