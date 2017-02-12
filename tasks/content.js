@@ -11,10 +11,10 @@ nunjucks.configure('./src/views', {
     autoescape: false
 });
 
-gulp.task('html', html);
-gulp.task('html:watch', watch);
+gulp.task('content', content);
+gulp.task('content:watch', watch);
 
-function html() {
+function content() {
 	gulp.src('content/**/*.md')
 		.pipe(changed('dist', {extension: '.html', transform: transformPath }))
 		.pipe(transform(markdownToHtml))
@@ -25,7 +25,7 @@ function html() {
 function watch() {
 	return gulp.watch([
 			'content/**/*.md'
-		], html);
+		], content);
 }
 
 function transformPath(newPath) {
