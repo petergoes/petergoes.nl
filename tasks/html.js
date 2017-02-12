@@ -1,7 +1,6 @@
 const changed = require('gulp-changed');
 const frontMatter = require('front-matter');
 const gulp = require('gulp');
-const gulpWatch = require('gulp-watch');
 const marked = require('marked');
 const nunjucks = require('nunjucks');
 const path = require('path');
