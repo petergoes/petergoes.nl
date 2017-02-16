@@ -8,8 +8,8 @@ const path = require('path');
 const rename = require('gulp-rename');
 const transform = require('gulp-transform');
 
-gulp.task('content', content);
-gulp.task('content:forceall', () => content({ onlyChanged: false }));
+gulp.task('content:buildNew', content);
+gulp.task('content:build', () => content({ onlyChanged: false }));
 gulp.task('content:watch', watch);
 
 function content({ onlyChanged = true } = {}) {
@@ -21,8 +21,8 @@ function content({ onlyChanged = true } = {}) {
 }
 
 function watch() {
-	gulp.watch(['content/**/*.md'], ['content']);
-	gulp.watch(['src/**/*.html'], ['content:forceall']);
+	gulp.watch(['content/**/*.md'], ['content:buildNew']);
+	gulp.watch(['src/**/*.html'], ['content:build']);
 }
 
 function transformPath(newPath) {
