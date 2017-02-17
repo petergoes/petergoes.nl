@@ -1,7 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
-		<title>Peter Goes</title>
+		<title>{% if page.path === 'index'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
+		
+		<link rel="dns-prefetch" href="http://www.gravatar.com/">
+
+		<link rel="me" href="{{ site.social.googlePlus }}">
+		<link rel="canonical" href="{{ page.permalink }}">
+		<link rel="shortcut icon" href="{{ site.social.gravatar }}" />
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<meta name="theme-color" content="{{ site.themeColor }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="{{ page.description }}">
+		
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:creator" content="{{ site.social.twitter.username }}">
+		<meta name="twitter:title" content="{% if page.path === 'index'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}">
+		<meta name="twitter:description" content="{{ page.description }}">
+		<meta name="twitter:image" content="{% if page.featuredimage %}{{ page.permalink }}{{ page.featuredimage}}{% else %}{{ site.social.gravatar }}{% endif %}">
+		
+		<meta property="og:site_name" content="{{ site.name }}">
+		<meta property="og:url" content="{{ page.permalink }}">
+		<meta property="og:title" content="{% if page.path === 'index'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}">
+		<meta property="og:type" content="article">
+		<meta property="og:image" content="{% if page.featuredimage %}{{ page.permalink }}{{ page.featuredimage}}{% else %}{{ site.social.gravatar }}{% endif %}">
+
+		{% if page.tags.length > 0 %}
+			<meta name="keywords" content="{% for tag in page.tags %}{{ tag.name }}{% if not loop.last %}, {% endif %}{% endfor %}">
+		{% endif %}
+
+		{% block head %}
+			<link rel="stylesheet" href="/styles/main.css">
+		{% endblock %}
 	</head>
 
 	<body>

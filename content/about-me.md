@@ -1,5 +1,6 @@
 ---
 	view: page
+	description: "About me page"
 ---
 
-# about me
+# About me 

@@ -4,7 +4,8 @@
   "description": "PeterGoes.nl website",
   "main": "build/index.html",
   "scripts": {
-    "start": "gulp serve"
+    "start": "gulp serve",
+    "gulp": "gulp"
   },
   "keywords": [
     "petergoes.nl"
@@ -19,6 +20,7 @@
     "babel-eslint": "7.1.1",
     "eslint": "3.15.0",
     "front-matter": "2.1.2",
+    "gravatar": "1.6.0",
     "gulp": "3.9.1",
     "gulp-changed": "git:github.com/petergoes/gulp-changed.git",
     "gulp-connect": "5.0.0",
