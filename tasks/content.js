@@ -8,6 +8,7 @@ const path = require('path');
 const rename = require('gulp-rename');
 const transform = require('gulp-transform');
 const configSite = require('../config/site');
+const { paths } = require('./config');
 
 gulp.task('content:buildNew', content);
 gulp.task('content:build', () => content({ onlyChanged: false }));
@@ -22,8 +23,8 @@ function content({ onlyChanged = true } = {}) {
 }
 
 function watch() {
-	gulp.watch(['content/**/*.md'], ['content:buildNew']);
-	gulp.watch(['src/**/*.html'], ['content:build']);
+	gulp.watch([paths.content.all], ['content:buildNew']);
+	gulp.watch([paths.source.html.all], ['content:build']);
 }
 
 function transformPath(newPath) {
@@ -40,7 +41,7 @@ function markdownToHtml(contents, file) {
 	const nunjucksData = { content: renderedHtml };
 	const data = Object.assign({}, nunjucksData, configSite, pageMeta);
 
-	nunjucks.configure('./src/views', {
+	nunjucks.configure(paths.source.views, {
 		autoescape: false
 	});
 
@@ -56,7 +57,7 @@ function nameToFolderWithIndex(path) {
 
 function getPageMetaData(file, frontMatter) {
 	const fileObj = path.parse(file.path);
-	const relativePath = path.relative('./dist', path.join(fileObj.dir, fileObj.name)).replace('../content/', '');
+	const relativePath = path.relative(paths.dist.root, path.join(fileObj.dir, fileObj.name)).replace('../content/', '');
 	const data = {
 		path: relativePath,
 		permalink: `${configSite.site.url}/${relativePath}`.replace('/index', ''),
