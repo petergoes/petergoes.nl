@@ -1,0 +1,43 @@
+@import (reference) "variables";
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+svg:not(:root) { overflow: hidden; }
+
+.content-section {
+	max-width: @char-width * 70;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+
+	@media screen and (min-width: @screen-small) and (max-width: @screen-medium) {
+		max-width: @char-width * 66.66666;
+	}
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+} 
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.alert {
+	margin-top: 0.5rem;
+	padding: 1rem;
+
+	&--success {
+		background-color: fade(@success-color, @alert-fade);
+	}
+
+	&--error {
+		background-color: fade(@error-color, @alert-fade);
+	}
+}

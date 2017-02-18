@@ -1,0 +1,247 @@
+@import (reference) "variables";
+
+@font-face{
+    font-family: 'Fira Code';
+    src: url('/fonts/FiraCode-Light.eot');
+    src: url('/fonts/FiraCode-Light.eot') format('embedded-opentype'),
+         url('/fonts/FiraCode-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Fira Code';
+    src: url('/fonts/FiraCode-Regular.eot');
+    src: url('/fonts/FiraCode-Regular.eot') format('embedded-opentype'),
+         
+         url('/fonts/FiraCode-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Fira Code';
+    src: url('/fonts/FiraCode-Medium.eot');
+    src: url('/fonts/FiraCode-Medium.eot') format('embedded-opentype'),
+         url('/fonts/FiraCode-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Fira Code';
+    src: url('/fonts/FiraCode-Bold.eot');
+    src: url('/fonts/FiraCode-Bold.eot') format('embedded-opentype'),
+         url('/fonts/FiraCode-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.fonts-loaded body {
+	font-family: @monospace-prefered;
+}
+
+body {
+	font-family: @monospace;
+	color: @default-text-color;
+	background-color: @background-color;
+	line-height: @line-height;
+}
+h2, .h2 {
+	margin-top: 4rem;
+}
+
+h3, .h3 {
+	margin-top: 2rem;
+}
+
+p {
+	margin-bottom: @line-height;
+}
+
+a {
+	color: @link-color;
+	text-decoration: none;
+
+	h1:before, .h1:before,
+	h2:before, .h2:before,
+	h3:before, .h3:before,
+	h4:before, .h4:before,
+	h5:before, .h5:before,
+	h6:before, .h6:before {
+		content: initial;
+	}
+
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6 {
+		display: inline-block;
+	}
+}
+a:hover {
+	border-bottom: 1px solid @link-color;	
+}
+
+blockquote {
+	border-left: 3px solid fade(@default-text-color, 50%);
+}
+
+small {
+	font-size: 0.75rem;
+}
+
+button {
+	border: 1px solid fade(@default-text-color, 50%);
+	background-color: transparent;
+	padding: 0.5rem;
+	font-family: @monospace-prefered;
+	font-size: 1rem;
+}
+
+@media screen {
+	h1, .h1 {
+		&:before {
+			content: '# ';
+			opacity: @markdown-decoration-fade;
+		}
+	}
+
+	h2, .h2 {
+		&:before {
+			content: '## ';
+			opacity: @markdown-decoration-fade;
+		}
+	}
+
+	h3, .h3 {
+		&:before {
+			content: '### ';
+			opacity: @markdown-decoration-fade;
+		}
+	}
+
+	h4, .h4 {
+		&:before {
+			content: '#### ';
+			opacity: @markdown-decoration-fade;
+		}
+	}
+
+	h5, .h5 {
+		&:before {
+			content: '##### ';
+			opacity: @markdown-decoration-fade;
+		}
+	}
+
+	h6, .h6 {
+		&:before {
+			content: '####### ';
+			opacity: @markdown-decoration-fade;
+		}
+	}
+
+	a:before {
+		content: '[';
+		opacity: @markdown-decoration-fade;
+		color: @default-text-color;
+	}
+	a:after {
+		content: ']';
+		opacity: @markdown-decoration-fade;
+		color: @default-text-color;
+	}
+
+	.headerlink:before,
+	.headerlink:after {
+		content: initial;
+	}
+
+	strong:before,
+	strong:after, {
+		content: '*';
+		opacity: @markdown-decoration-fade;
+		color: @default-text-color;
+	}
+
+	em:before, i:before,
+	em:after, i:after, {
+		content: '_';
+		opacity: @markdown-decoration-fade;
+		color: @default-text-color;
+	}
+
+	ol {
+		counter-reset:li; /* Initiate a counter */
+	}
+	ol > li {
+		position:relative; /* Create a positioning context */
+	}
+	ol > li:before {
+		content:counter(li) + '. '; /* Use the counter as content */
+		counter-increment:li; /* Increment the counter by 1 */
+	}
+
+	ul,
+	ol {
+		list-style: none;
+	}
+
+	li:before {
+		content: '* ';
+		opacity: @markdown-decoration-fade;
+		color: @default-text-color;
+	}
+}
+
+@media screen and (min-width: @screen-small) {
+	li,
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6, {
+		position: relative;
+	}
+
+	li:before,
+	h1:before, .h1:before,
+	h2:before, .h2:before,
+	h3:before, .h3:before,
+	h4:before, .h4:before,
+	h5:before, .h5:before,
+	h6:before, .h6:before {
+		position: absolute;
+		transform: translate(-100%);
+		padding-right: @char-width;
+	}
+}
+
+@media reader, speech, aural {
+    h1:before, .h1:before,
+	h2:before, .h2:before,
+	h3:before, .h3:before,
+	h4:before, .h4:before,
+	h5:before, .h5:before,
+	h6:before, .h6:before,
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6,
+	a:before, 
+	a:after,
+	strong:before,
+	strong:after, 
+	em:before, i:before,
+	em:after, i:after,
+	li:before,
+	{
+		content: initial;
+	}
+}
