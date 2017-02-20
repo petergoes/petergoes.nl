@@ -1,0 +1,29 @@
+<picture class="featured-image">
+	<!--[if IE 9]><video style="display: none;"><![endif]-->
+	<source type="image/webp" 
+		srcset="{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-l-@2x.webp', 'g') }} 1920w, 
+				{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-l.webp', 'g') }} 960w, 
+				{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-m-@2x.webp', 'g') }} 1536w, 
+				{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-m.webp', 'g') }} 768w, 
+				{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-s-@2x.webp', 'g') }} 640w, 
+				{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-s.webp', 'g') }} 320w" 
+		sizes="(min-width: 960px) 960px, 100vw" />
+	<source 
+		srcset="{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-l-@2x$1', 'g') }} 1920w, 
+				{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-l$1', 'g') }} 960w, 
+				{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-m-@2x$1', 'g') }} 1536w, 
+				{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-m$1', 'g') }} 768w, 
+				{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-s-@2x$1', 'g') }} 640w, 
+				{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-s$1', 'g') }} 320w" 
+		sizes="(min-width: 960px) 960px, 100vw" />
+	<!--[if IE 9]></video><![endif]-->
+	<img alt="{{ page.title }} overview image" 
+		src="{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-m$1', 'g') }}" 
+		srcset="{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-l-@2x$1', 'g') }} 1920w, 
+				{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-l$1', 'g') }} 960w, 
+				{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-m-@2x$1', 'g') }} 1536w, 
+				{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-m$1', 'g') }} 768w, 
+				{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-s-@2x$1', 'g') }} 640w, 
+				{{ page.featuredimage | replace('(.jpg|.jpeg|.png|.gif)', '-s$1', 'g') }} 320w" 
+		sizes="(min-width: 960px) 960px, 100vw" />
+</picture>

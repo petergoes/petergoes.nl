@@ -1,0 +1,27 @@
+<header>
+<div class="page-header">
+	<h1 class="page-header__title">
+		<a href="/" class="page-header__link">
+			<span class="page-header__name"><span class="page-header__code-decoration" aria-hidden="true" role="presentation" tabindex="-1">.</span>peter-goes</span> <span class="page-header__code-decoration" aria-hidden="true" role="presentation">{</span> 
+				<span class="page-header__occupation">
+					<span class="page-header__property">frontEnd</span><span class="page-header__code-decoration" aria-hidden="true" role="presentation">:</span> <span class="page-header__property--value">developer</span><span class="page-header__code-decoration" aria-hidden="true" role="presentation">;</span></span>
+				</span>
+			<span class="page-header__code-decoration" aria-hidden="true" role="presentation">}</span>
+		</a>
+	</h1>
+	<nav class="page-header__nav">
+		<h2 class="visuallyhidden">Menu</h2>
+		<span class="page-header__code-decoration page-header__link page-header__element--nav" aria-hidden="true" role="presentation">&lt;<span class="page-header__element">nav</span>&gt;</span>
+		<ul>
+			{% for link in site.data.mainmenu %}
+			<li class="page-header__link-container">
+				<a href="{{ link.uri }}" class="page-header__link">
+					<span class="page-header__code-decoration" aria-hidden="true" role="presentation">&lt;<span class="page-header__element">a</span> href&equals;</span><span class="page-header__string">&quot;{{ link.label }}&quot;</span><span class="page-header__code-decoration" aria-hidden="true" role="presentation">&gt;&lt;&sol;<span class="page-header__element">a</span>&gt;</span>
+				</a>
+			</li>	
+			{% endfor %}
+		</ul>
+		<span class="page-header__code-decoration page-header__link page-header__element--nav" aria-hidden="true" role="presentation">&lt;&sol;<span class="page-header__element">nav</span>&gt;</span>
+	</nav>
+</div>
+</header>

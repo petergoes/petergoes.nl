@@ -1,0 +1,147 @@
+body > header {
+	background-color: @background-color-header;
+}
+
+.page-header {
+	.content-section;
+
+	h1:before,
+	li:before,
+	a:before,
+	a:after {
+		content: initial;
+	}
+
+	h1 {
+		font-weight: 400;
+	}
+}
+
+.page-header__title,
+.page-header__nav {
+	padding-bottom: @default-margin / 2;
+}
+
+.page-header__code-decoration {
+	opacity: 0.5;
+	display: none;
+}
+
+
+.page-header__title {
+	padding-top: @default-margin / 2;
+	color: #DEE3E9;
+}
+
+.page-header__name {
+	color: #FFD47E;
+}
+
+.page-header__occupation {
+	display: block;
+	padding-left: 2rem;
+}
+
+.page-header__property {
+	color: #8FD2CE;
+}
+
+.page-header__property--value {
+	color: #BED5DD;
+}
+
+.page-header__nav {
+	margin-bottom: @default-margin;
+}
+
+.home .page-header__nav {
+	margin-bottom: 0;
+}
+
+.page-header__link-container {
+	padding-top: 0.2265625rem;
+	padding-bottom: 0.2265625rem;
+}
+
+.page-header__link {
+	text-decoration: none;
+	color: #98E3FF;
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-bottom: none;
+
+		.page-header__code-decoration {
+			opacity: 1;
+		}
+	}
+}
+
+.page-header__element {
+	color: #FA516D;
+}
+
+.page-header__element--nav {
+	display: none;
+}
+
+.page-header__string {
+	color: #CAE69C;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+@media screen and (min-width: @screen-xsmall) {
+	.page-header__code-decoration {
+		display: inline-block;
+		
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.page-header__element--nav {
+		display: none;
+	}
+}
+
+@media screen and (min-width: @screen-small) {
+	.page-header__title,
+	.page-header__nav {
+		padding-bottom: @default-margin;
+	}
+
+	.page-header__title {
+		padding-top: @default-margin;
+	}
+
+	.page-header__occupation {
+		display: inline-block;
+		padding: 0;
+	}
+
+	.page-header__title .page-header__link {
+		background-color: #2B3B40;
+		border: 1px solid fade(#fafafa, 25%);
+		padding: 0.3rem;
+		border-radius: 0.3rem;
+	}
+
+	.page-header__link-container {
+		margin-left: @char-width * 4;
+	}
+
+	.page-header__element--nav {
+		display: initial;
+	}
+}
+
+@media screen and (min-width: @screen-medium) {
+	.page-header__link-container {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}

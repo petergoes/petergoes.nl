@@ -1,0 +1,23 @@
+{% for category in site.categories %}
+	{% if category.name === 'Blog' %}
+		{% set blogItems = category.posts %}
+	{% endif %}
+{% endfor %}
+
+<section class="content-section" id="recent-work">
+	<h2>Recent blogs</h2>
+	<ul>
+		{% for item in blogItems %}
+			<li>
+				<a href="/{{item.path}}" target="_self">
+					<h4>{{ item.title }}</h4>
+				</a>
+				<small>
+					<time itemprop="datePublished" datetime="{{ moment(item.date).format() }}" content="{{ date(item.date, config.date_format) }}">
+						{{ moment(item.date).format('Do MMMM YYYY') }}
+					</time>
+				</small>
+			</li>
+		{% endfor %}
+	</ul>
+</section>

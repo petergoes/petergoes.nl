@@ -1,0 +1,17 @@
+<section class="testimonials" id="testimonials">
+	<h2>Testimonials</h2>
+	<ul>
+		{% for testimonial in site.data.testimonials %}
+		<li class="testimonials__item">
+			<blockquote class="testimonials__quote">
+				{{ testimonial.quote }}
+				<footer>
+					<cite>
+						{{ testimonial.author }}
+					</cite>
+				</footer>
+			</blockquote>
+		</li>
+		{% endfor %}
+	</ul>
+</section>

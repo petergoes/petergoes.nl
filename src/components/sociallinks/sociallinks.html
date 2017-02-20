@@ -1,0 +1,7 @@
+<ul class="sociallinks--inline">
+	{% for link in site.data.social %}
+		<li class="sociallinks__item">
+			<a href="{{ link }}" target="_blank">{{ loop.key }}</a>
+		</li>	
+	{% endfor %}
+</ul>
