@@ -2,7 +2,9 @@
 
 {% block content %}
 	<article>
-		<h2 class="{% if page.showPageTitle === false %}visuallyhidden{% endif %}">{{ page.title }}</h2>
-		{{ content }}
+		<h1 class="{% if page.showPageTitle === false %}visuallyhidden{% endif %}">{{ page.title }}</h1>
+		<div class="content-section">
+			{{ content }}
+		</div>
 	</article>
 {% endblock %}

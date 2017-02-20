@@ -2,16 +2,8 @@
 	title: Home
 	description: Every product we interact with, should be a valuable addition to our lives.
 	showPageTitle: false
-	view: page
+	view: home
 ---
-<section class="my-vision" id="my-vision">
-	<h2 class="visuallyhidden">My vision</h2>
-	<div class="my-vision__quote">
-		<blockquote>
-			<span class="page-header__code-decoration" aria-hidden="true" role="presentation" tabindex="-1">const <span class="my-vision__variable">vision</span> &equals; <span class="my-vision__text">&grave;</span></span><span class="my-vision__text">Every product we interact with, should be a valuable addition to our lives.</span><span class="page-header__code-decoration" aria-hidden="true" role="presentation" tabindex="-1"><span class="my-vision__text">&grave;</span><span class="my-vision__variable">&semi;</span></span>
-		</blockquote>
-	</div>
-</section>
 
 ## About me
 
