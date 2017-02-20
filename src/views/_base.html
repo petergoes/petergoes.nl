@@ -5,9 +5,9 @@
 		
 		<link rel="dns-prefetch" href="http://www.gravatar.com/">
 
-		<link rel="me" href="{{ site.social.googlePlus }}">
+		<link rel="me" href="{{ site.social.googlePlus.url }}">
 		<link rel="canonical" href="{{ page.permalink }}">
-		<link rel="shortcut icon" href="{{ site.social.gravatar }}" />
+		<link rel="shortcut icon" href="{{ site.gravatar }}" />
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		
@@ -19,13 +19,13 @@
 		<meta name="twitter:creator" content="{{ site.social.twitter.username }}">
 		<meta name="twitter:title" content="{% if page.path === 'index'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}">
 		<meta name="twitter:description" content="{{ page.description }}">
-		<meta name="twitter:image" content="{% if page.featuredimage %}{{ page.permalink }}{{ page.featuredimage}}{% else %}{{ site.social.gravatar }}{% endif %}">
+		<meta name="twitter:image" content="{% if page.featuredimage %}{{ page.permalink }}{{ page.featuredimage}}{% else %}{{ site.gravatar }}{% endif %}">
 		
 		<meta property="og:site_name" content="{{ site.name }}">
 		<meta property="og:url" content="{{ page.permalink }}">
 		<meta property="og:title" content="{% if page.path === 'index'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}">
 		<meta property="og:type" content="article">
-		<meta property="og:image" content="{% if page.featuredimage %}{{ page.permalink }}{{ page.featuredimage}}{% else %}{{ site.social.gravatar }}{% endif %}">
+		<meta property="og:image" content="{% if page.featuredimage %}{{ page.permalink }}{{ page.featuredimage}}{% else %}{{ site.gravatar }}{% endif %}">
 
 		{% if page.tags.length > 0 %}
 			<meta name="keywords" content="{% for tag in page.tags %}{{ tag.name }}{% if not loop.last %}, {% endif %}{% endfor %}">

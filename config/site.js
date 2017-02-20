@@ -12,15 +12,28 @@ module.exports = {
 		"name": "PeterGoes.nl",
 		"social": {
 			"twitter": {
+				"name": "Twitter",
 				"url": "https://twitter.com/petergoes",
-				"username": "@petergoes",
+				"username": "@petergoes"
 			},
-			"github": "https://github.com/petergoes",
-			"vimeo": "https://vimeo.com/petergoes",
-			"linkedIn": "https://nl.linkedin.com/in/pgoes",
-			"googlePlus": "https://plus.google.com/108905978694295358060",
-			"gravatar": gravatar.url('petergoes@gmail.com')
+			"github": {
+				"name": "Github",
+				"url": "https://github.com/petergoes"
+			},
+			"vimeo": {
+				"name": "Vimeo",
+				"url": "https://vimeo.com/petergoes"
+			},
+			"linkedIn": {
+				"name": "LinkedIn",
+				"url": "https://nl.linkedin.com/in/pgoes"
+			},
+			"googlePlus": {
+				"name": "Google+",
+				"url": "https://plus.google.com/108905978694295358060"
+			}
 		},
+		"gravatar": gravatar.url('petergoes@gmail.com'),
 		"subtitle": "Front-end Developer",
 		"themeColor": "#263238",
 		"title": "Peter Goes",
