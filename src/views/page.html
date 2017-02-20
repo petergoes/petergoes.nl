@@ -1,5 +1,8 @@
 {% extends 'views/_base.html' %}
 
 {% block content %}
-	{{ content }}
+	<article>
+		<h2 class="{% if page.showPageTitle === false %}visuallyhidden{% endif %}">{{ page.title }}</h2>
+		{{ content }}
+	</article>
 {% endblock %}

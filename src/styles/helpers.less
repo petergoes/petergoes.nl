@@ -25,19 +25,16 @@ svg:not(:root) { overflow: hidden; }
 .clearfix:after {
     clear: both;
 }
-.clearfix {
-    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-}
 
 .alert {
 	margin-top: 0.5rem;
 	padding: 1rem;
+}
 
-	&--success {
-		background-color: fade(@success-color, @alert-fade);
-	}
+.alert--success {
+	background-color: fade(@success-color, @alert-fade);
+}
 
-	&--error {
-		background-color: fade(@error-color, @alert-fade);
-	}
+.alert--error {
+	background-color: fade(@error-color, @alert-fade);
 }
