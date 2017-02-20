@@ -37,8 +37,12 @@
 	</head>
 
 	<body>
+		{% include 'components/header/header.html' %}
+
 		<main>
 			{% block content %}{% endblock %}
 		</main>
+
+		{% include 'components/footer/footer.html' %}
 	</body>
 </html>

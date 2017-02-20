@@ -8,10 +8,11 @@ module.exports = {
 			root: './dist',
 			styles: {
 				folder: './dist/styles',
-				fileName: 'styles.css'
+				fileName: 'main.css'
 			}
 		},
 		source: {
+			folder: './src',
 			html: {
 				all: './src/**/*.html'
 			},

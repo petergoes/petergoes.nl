@@ -41,11 +41,11 @@ function markdownToHtml(contents, file) {
 	const nunjucksData = { content: renderedHtml };
 	const data = Object.assign({}, nunjucksData, configSite, pageMeta);
 
-	nunjucks.configure(paths.source.views, {
+	nunjucks.configure(paths.source.folder, {
 		autoescape: false
 	});
 
-	return nunjucks.render(`${fm.attributes.view}.html`, data);
+	return nunjucks.render(`views/${fm.attributes.view}.html`, data);
 }
 
 function nameToFolderWithIndex(path) {

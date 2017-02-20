@@ -2,6 +2,12 @@ const gravatar = require('gravatar');
 
 module.exports = {
 	site: {
+		"data": {
+			"mainmenu": [
+				{ label: "Home",     uri: '/' },
+				{ label: "About Me", uri: '/about-me' }
+			]
+		},
 		"email": "petergoes@gmail.com",
 		"name": "PeterGoes.nl",
 		"social": {
