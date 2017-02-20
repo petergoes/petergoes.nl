@@ -12,6 +12,10 @@ module.exports = {
 			}
 		},
 		source: {
+			assets: [
+				'./src/assets/**/*',
+				'./node_modules/fontfaceobserver/fontfaceobserver.js'
+			],
 			folder: './src',
 			html: {
 				all: './src/**/*.html'
