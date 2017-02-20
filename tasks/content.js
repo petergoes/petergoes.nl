@@ -15,11 +15,11 @@ gulp.task('content:build', () => content({ onlyChanged: false }));
 gulp.task('content:watch', watch);
 
 function content({ onlyChanged = true } = {}) {
-	return gulp.src('content/**/*.md')
-		.pipe(gulpIf(onlyChanged, changed('dist', { transform: transformPath })))
+	return gulp.src(paths.content.all)
+		.pipe(gulpIf(onlyChanged, changed('dist', { transformPath: transformPath })))
 		.pipe(transform(markdownToHtml))
 		.pipe(rename(nameToFolderWithIndex))
-		.pipe(gulp.dest('dist'));
+		.pipe(gulp.dest(paths.dist.root));
 }
 
 function watch() {
