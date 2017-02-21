@@ -31,6 +31,7 @@
     "gulp-rename": "1.2.2",
     "gulp-task-listing": "1.0.1",
     "gulp-transform": "1.1.0",
+    "gulp-watch": "4.3.11",
     "highlight.js": "9.9.0",
     "marked": "0.3.6",
     "nunjucks": "3.0.0",

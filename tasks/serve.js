@@ -1,9 +1,9 @@
 const gulp = require('gulp');
 const gulpConnect = require('gulp-connect');
+const gulpWatch = require('gulp-watch');
 const { paths } = require('./config.js');
 
 gulp.task('connect', connect);
-gulp.task('connect:reload', connectReload);
 gulp.task('serve', ['connect', 'watch']);
 gulp.task('serve:watch', serveWatch);
 
@@ -15,11 +15,8 @@ function connect() {
 	});
 }
 
-function connectReload() {
-	gulp.src(paths.dist.all)
-		.pipe(gulpConnect.reload());
-}
-
 function serveWatch() {
-	gulp.watch([paths.dist.all], ['connect:reload']);
+	gulp.src(paths.dist.all)
+		.pipe(gulpWatch(paths.dist.all))
+		.pipe(gulpConnect.reload());
 }
