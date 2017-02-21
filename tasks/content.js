@@ -1,4 +1,6 @@
 const changed = require('gulp-changed');
+const cheerio = require('cheerio');
+const configSite = require('../config/site');
 const frontMatter = require('front-matter');
 const gulp = require('gulp');
 const gulpIf = require('gulp-if');
@@ -7,12 +9,17 @@ const nunjucks = require('nunjucks');
 const path = require('path');
 const rename = require('gulp-rename');
 const transform = require('gulp-transform');
-const configSite = require('../config/site');
 const { paths } = require('./config');
 
 gulp.task('content:buildNew', content);
 gulp.task('content:build', () => content({ onlyChanged: false }));
 gulp.task('content:watch', watch);
+
+marked.setOptions({
+  highlight: function (code) {
+    return require('highlight.js').highlightAuto(code).value;
+  }
+});
 
 function content({ onlyChanged = true } = {}) {
 	return gulp.src(paths.content.all)
@@ -37,7 +44,7 @@ function transformPath(newPath) {
 function markdownToHtml(contents, file) {
 	const fm = frontMatter(contents.toString());
 	const pageMeta = getPageMetaData(file, fm);
-	const renderedHtml = marked(fm.body);
+	const renderedHtml = addHighlightJsClassToHtml(marked(fm.body));
 	const nunjucksData = { content: renderedHtml };
 	const data = Object.assign({}, nunjucksData, configSite, pageMeta);
 
@@ -69,4 +76,11 @@ function getPageMetaData(file, frontMatter) {
 
 function getTitleFromMarkdown(markdown) {
 	return markdown.match(/(#\s)(.+)(\n)/)[2].trim();
+}
+
+function addHighlightJsClassToHtml(html) {
+	const $ = cheerio.load(html);
+	$('pre code').addClass('hljs');
+
+	return $.html();
 }
