@@ -81,6 +81,7 @@ function getTitleFromMarkdown(markdown) {
 function addHighlightJsClassToHtml(html) {
 	const $ = cheerio.load(html);
 	$('pre code').addClass('hljs');
+	$('pre:has(code)').addClass('hljs-wrapper');
 
 	return $.html();
 }

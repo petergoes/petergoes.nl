@@ -10,3 +10,26 @@ picture {
 	display: block;
 	// max-width: 100vw;
 }
+
+
+.hljs-wrapper {
+	position: relative;
+}
+
+.hljs-wrapper:before {
+	content: '';
+	position: absolute;
+	background-color: @background-color-header;
+	width: 150%;
+	height: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: 95vw;
+}
+
+.hljs {
+	position: relative;
+	background-color: @background-color-header;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}

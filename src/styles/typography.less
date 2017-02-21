@@ -103,10 +103,17 @@ button {
 
 pre code {
 	width: 100%;
-	color: white;
-	background-color: #263238;
+	color: @background-color;
+	background-color: @background-color-header;
 	font-family: @monospace;
 	display: block;
+}
+
+p > code {
+	background-color: @background-color-header;
+	color: @background-color;
+	padding: 0.25em 0.5em;
+	border-radius: 0.25em;
 }
 
 .fonts-loaded code {
