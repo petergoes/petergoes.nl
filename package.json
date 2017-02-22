@@ -4,7 +4,7 @@
   "description": "PeterGoes.nl website",
   "main": "build/index.html",
   "scripts": {
-    "start": "gulp serve",
+    "start": "gulp clean && gulp serve",
     "gulp": "gulp"
   },
   "keywords": [
@@ -19,6 +19,7 @@
   "devDependencies": {
     "babel-eslint": "7.1.1",
     "cheerio": "0.22.0",
+    "del": "2.2.2",
     "eslint": "3.15.0",
     "fontfaceobserver": "2.0.8",
     "front-matter": "2.1.2",
