@@ -34,6 +34,8 @@
 		{% block head %}
 			<link rel="stylesheet" href="/styles/main.css">
 		{% endblock %}
+
+		{% include 'components/font-face-observer/head.html' %}
 	</head>
 
 	<body class="{{ page.title.toLowerCase() }}">
@@ -44,18 +46,6 @@
 		</main>
 
 		{% include 'components/footer/footer.html' %}
-		<script src="/fontfaceobserver.js"></script>
-		<script>
-		
-			var font = new FontFaceObserver('Fira Code');
-
-			font.load()
-				.then(function () {
-					document.documentElement.className += " fonts-loaded";
-				})
-				.catch(function(err) {
-					document.documentElement.className += " fonts-not-loaded";
-				});
-		</script>
+		{% include 'components/font-face-observer/footer.html' %}
 	</body>
 </html>
