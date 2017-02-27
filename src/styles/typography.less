@@ -93,7 +93,9 @@ a:hover {
 }
 
 blockquote {
-	border-left: 3px solid fade(@default-text-color, 50%);
+	border-left: 0.1875em solid fade(@default-text-color, 50%);
+	padding-left: @char-width + 0.1875em;
+	transform: translateX(-@char-width - (0.1875em * 2)); 
 }
 
 small {

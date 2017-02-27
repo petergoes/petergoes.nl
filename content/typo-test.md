@@ -3,7 +3,6 @@
 	description: This page is a demo of all typographic styles
 	view: page
 ---
-# Typo test
 
 This page is a demo of all typographic styles
 
@@ -52,7 +51,7 @@ const text = `Some code`;
 function log(msg) {
 	console.log(msg);
 }
-vluv => 
+
 log(text);
 ```
 
