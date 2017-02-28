@@ -12,7 +12,11 @@ gulp.task('rev:cleanup', cleanup);
 gulp.task('rev:replace', replace);
 
 function rev() {
-	return gulp.src([paths.dist.styles.all, paths.dist.js.all], { base: paths.dist.root })
+	return gulp.src([
+		paths.dist.fonts.all,
+		paths.dist.js.all,
+		paths.dist.styles.all
+	], { base: paths.dist.root })
 		.pipe(gulpRev())
 		.pipe(gulp.dest(paths.dist.reved.root))  // write rev'd assets to build dir 
         .pipe(gulpRev.manifest())
@@ -20,7 +24,7 @@ function rev() {
 }
 
 function moveback() {
-	return gulp.src([paths.dist.reved.styles, paths.dist.reved.js])
+	return gulp.src(paths.dist.reved.all)
 		.pipe(gulp.dest(paths.dist.root));
 }
 
@@ -31,7 +35,7 @@ function cleanup() {
 function replace() {
 	const manifest = gulp.src(paths.dist.reved.manifest);
 
-	return gulp.src(paths.dist.html.all)
+	return gulp.src([paths.dist.html.all, paths.dist.styles.all])
 		.pipe(revReplace({ manifest }))
 		.pipe(gulp.dest(paths.dist.root));
 }

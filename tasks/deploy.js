@@ -29,12 +29,8 @@ function deploy(cb) {
 
 	Promise.all([localFileListDefer.promise, remoteFileListDefer.promise])
 		.then(([localFiles, remoteFiles]) => {
-			process.stdout.write('Deleting remote files:  ')
 			return deleteRemoteFiles(remoteFiles)
-				.then(() => process.stdout.write('Done\n'))
-				.then(() => process.stdout.write('Local files uploaded:   '))
-				.then(() => pushNewFiles(localFiles))
-				.then(() => process.stdout.write('Done\n'));
+				.then(() => pushNewFiles(localFiles));
 		})
 		.then(() => cb());
 }
@@ -64,6 +60,7 @@ function pushNewFiles(localFiles) {
 	const putPromises = localFiles.map(file => {
 		const putDefer = defer();
 		const fileBuffer = fs.readFileSync(path.resolve(paths.dist.root, file));
+		const expiresParam = getExpiresValue(file);
 		const s3PutParams = {
 			ACL: 'public-read',
 			Key: file,
@@ -72,7 +69,7 @@ function pushNewFiles(localFiles) {
 			ContentEncoding: 'gzip'
 		};
 
-		s3.putObject(Object.assign({}, s3PutParams, s3Params), function (err, data) {
+		s3.putObject(Object.assign({}, s3PutParams, s3Params, expiresParam), (err, data) => {
 			err ? putDefer.reject(err) : putDefer.resolve(data);
 		});
 
@@ -80,4 +77,14 @@ function pushNewFiles(localFiles) {
 	})
 
 	return Promise.all(putPromises);
+}
+
+function getExpiresValue(file) {
+	const revManifest = require(`../${paths.dist.reved.manifest}`);
+	const revedFiles = Object.values(revManifest);
+	const expires = { 
+		Expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).getTime() / 1000
+	};
+
+	return (revedFiles.includes(file)) ? expires : {} ;
 }

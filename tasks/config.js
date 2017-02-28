@@ -5,6 +5,9 @@ module.exports = {
 		},
 		dist: {
 			all: './dist/**/*',
+			fonts: {
+				all: './dist/fonts/**/*'
+			},
 			html: {
 				all: './dist/**/*.html'
 			},
@@ -12,10 +15,12 @@ module.exports = {
 				all: './dist/**/*.js'
 			},
 			reved: {
+				fonts: './dist/reved/fonts/**/*',
 				js: './dist/reved/**/*.js',
 				manifest: './dist/rev-manifest.json',
 				root: './dist/reved',
-				styles: './dist/reved/**/*.css'
+				styles: './dist/reved/**/*.css',
+				all: './dist/reved/**/*'
 			},
 			root: './dist',
 			styles: {
