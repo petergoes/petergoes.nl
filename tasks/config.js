@@ -5,8 +5,21 @@ module.exports = {
 		},
 		dist: {
 			all: './dist/**/*',
+			html: {
+				all: './dist/**/*.html'
+			},
+			js: {
+				all: './dist/**/*.js'
+			},
+			reved: {
+				js: './dist/reved/**/*.js',
+				manifest: './dist/rev-manifest.json',
+				root: './dist/reved',
+				styles: './dist/reved/**/*.css'
+			},
 			root: './dist',
 			styles: {
+				all: './dist/**/*.css',
 				folder: './dist/styles',
 				fileName: 'main.css'
 			}
