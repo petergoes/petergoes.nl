@@ -8,7 +8,7 @@ gulp.task('serve', ['connect', 'watch']);
 gulp.task('serve:watch', serveWatch);
 
 function connect() {
-	gulpConnect.server({
+	return gulpConnect.server({
 		root: paths.dist.root,
 		livereload: true,
 		port: 3000
@@ -16,7 +16,7 @@ function connect() {
 }
 
 function serveWatch() {
-	gulp.src(paths.dist.all)
+	return gulp.src(paths.dist.all)
 		.pipe(gulpWatch(paths.dist.all))
 		.pipe(gulpConnect.reload());
 }
