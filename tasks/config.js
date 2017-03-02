@@ -1,5 +1,6 @@
 module.exports = {
 	paths: {
+		node_modules: './node_modules/**/*',
 		content: {
 			all: './content/**/*.md'
 		},
@@ -12,7 +13,8 @@ module.exports = {
 				all: './dist/**/*.html'
 			},
 			js: {
-				all: './dist/**/*.js'
+				all: './dist/**/*.js',
+				bundle: './dist/js/bundle.js'
 			},
 			reved: {
 				fonts: './dist/reved/fonts/**/*',
@@ -42,7 +44,11 @@ module.exports = {
 				all: './src/**/*.less',
 				main: './src/styles/_main.less'
 			},
-			views: './src/views'
+			views: './src/views',
+			js: {
+				all: './src/**/*.js',
+				entry: './src/views/_base.js'
+			}
 		}
 	}
 }
