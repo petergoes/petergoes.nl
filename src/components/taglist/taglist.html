@@ -1,7 +1,0 @@
-<small><strong>Tags:</strong></small>
-<ul class="tag-list">
-	{# Strange indentation is to prevent some magical space between the tags #}
-	{%- for tag in post.tags %}<li class="tag-list__item">
-		<small>{% if not loop.first %},&nbsp;{% endif %}<span class="tag-list__tag-name"><a href="/{{ tag.slug }}" target="_self">{{ tag.name }}</a></span></small>
-	</li>{% endfor -%}
-</ul>
