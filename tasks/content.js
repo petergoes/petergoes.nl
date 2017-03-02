@@ -26,6 +26,9 @@ function content({ onlyChanged = true } = {}) {
 		.pipe(gulpIf(onlyChanged, changed('dist', { transformPath: transformPath })))
 		.pipe(transform(markdownToHtml))
 		.pipe(rename(nameToFolderWithIndex))
+		.pipe(gulp.dest(paths.dist.root))
+		.pipe(transform(extractMainContent))
+		.pipe(rename(indexToPartial))
 		.pipe(gulp.dest(paths.dist.root));
 }
 
@@ -84,4 +87,21 @@ function addHighlightJsClassToHtml(html) {
 	$('pre:has(code)').addClass('hljs-wrapper');
 
 	return $.html();
+}
+
+function extractMainContent(contents) {
+	const $ = cheerio.load(contents.toString());
+	const title = $('html title').text();
+	const data = {
+		title
+	}
+	
+	$('main').append(`<script type="application/json">${JSON.stringify(data)}</script>`);
+
+	return $('main').html();
+}
+
+function indexToPartial(path) {
+	path.basename = 'partial';
+	return path;
 }
