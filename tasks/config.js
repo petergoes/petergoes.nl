@@ -29,6 +29,9 @@ module.exports = {
 				all: './dist/**/*.css',
 				folder: './dist/styles',
 				fileName: 'main.css'
+			},
+			vendor: {
+				all: './dist/vendor'
 			}
 		},
 		source: {

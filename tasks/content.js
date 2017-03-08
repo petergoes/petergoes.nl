@@ -92,8 +92,10 @@ function addHighlightJsClassToHtml(html) {
 function extractMainContent(contents) {
 	const $ = cheerio.load(contents.toString());
 	const title = $('html title').text();
+	const bodyClass = $('body').attr('class');
 	const data = {
-		title
+		title,
+		bodyClass
 	}
 	
 	$('main').append(`<script type="application/json">${JSON.stringify(data)}</script>`);
