@@ -17,7 +17,7 @@ const asyncContentLoader = () => {
 	 * @param  {ClickEvent} event The click event
 	 */
 	function clickHandler(event) {
-		if (!window.fetch) { return; }
+		if (!window.fetch || !dom.closest(event.target, 'a')) { return; }
 		event.preventDefault();
 		const link = dom.closest(event.target, 'a');
 		const href = link.href;

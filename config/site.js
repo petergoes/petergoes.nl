@@ -5,7 +5,8 @@ module.exports = {
 		"data": {
 			"mainmenu": [
 				{ label: "Home",     uri: '/' },
-				{ label: "About Me", uri: '/about-me' }
+				{ label: "About Me", uri: '/about-me' },
+				{ label: "Contact", uri: '/contact' }
 			]
 		},
 		"email": "petergoes@gmail.com",
