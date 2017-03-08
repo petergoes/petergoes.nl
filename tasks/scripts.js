@@ -1,6 +1,8 @@
-const gulp = require('gulp');
-const rollup = require('rollup');
 const babel = require('rollup-plugin-babel');
+const commonjs = require('rollup-plugin-commonjs');
+const gulp = require('gulp');
+const resolve = require('rollup-plugin-node-resolve');
+const rollup = require('rollup');
 const { paths } = require('./config');
 
 gulp.task('scripts:build', scripts);
@@ -10,6 +12,12 @@ function scripts() {
 	const config = {
 		entry: paths.source.js.entry,
 		plugins: [
+			resolve({
+				jsnext: true,
+				main: true,
+				browser: true,
+			}),
+			commonjs(),
 			babel({
 				exclude: paths.node_modules
 			})
