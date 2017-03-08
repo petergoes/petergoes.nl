@@ -11,7 +11,6 @@ require('./tasks/rev');
 require('./tasks/scripts');
 require('./tasks/serve');
 require('./tasks/styles');
-require('./tasks/vendor');
 require('./tasks/watch');
 
 gulp.task('default', taskListing.withFilters(null, 'default'));
