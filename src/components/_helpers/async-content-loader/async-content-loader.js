@@ -33,10 +33,13 @@ const asyncContentLoader = () => {
 			return;
 		}
 
+		document.body.classList.add('async-content-loading');
+
 		fetch(`${href}/partial.html`)
 			.then(checkStatus)
 			.then(parseResponseBody)
 			.then(response => replaceMainWithResponse(response, href))
+			.then(() => document.body.classList.remove('async-content-loading'))
 			.catch(() => {
 				window.location = href;
 			});

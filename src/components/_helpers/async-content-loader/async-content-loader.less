@@ -1,0 +1,12 @@
+.async-content-loading main {
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: fade(@background-color, 75%);
+	}
+}
