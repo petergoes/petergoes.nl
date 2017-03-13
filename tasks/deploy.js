@@ -7,7 +7,7 @@ const fs = require('fs');
 const mime = require('mime');
 const { paths } = require('./config');
 const s3 = new AWS.S3();
-const s3Params = { Bucket: 'petergoes.nl' };
+const s3Params = { Bucket: 'www.petergoes.nl' };
 
 gulp.task('deploy', deploy);
 
@@ -82,9 +82,11 @@ function pushNewFiles(localFiles) {
 function getExpiresValue(file) {
 	const revManifest = require(`../${paths.dist.reved.manifest}`);
 	const revedFiles = Object.values(revManifest);
+	const expireNow = 0;
+	const expireYearFromNow = new Date(new Date().setFullYear(new Date().getFullYear() + 1)).getTime() / 1000;
 	const expires = { 
-		Expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).getTime() / 1000
+		Expires: (revedFiles.includes(file)) ? expireYearFromNow : expireNow
 	};
 
-	return (revedFiles.includes(file)) ? expires : {} ;
+	return expires;
 }
