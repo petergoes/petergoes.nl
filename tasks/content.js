@@ -4,6 +4,7 @@ const configSite = require('../config/site');
 const frontMatter = require('front-matter');
 const gulp = require('gulp');
 const gulpIf = require('gulp-if');
+const htmlmin = require('gulp-htmlmin');
 const marked = require('marked');
 const nunjucks = require('nunjucks');
 const path = require('path');
@@ -26,6 +27,7 @@ function content({ onlyChanged = true } = {}) {
 		.pipe(gulpIf(onlyChanged, changed('dist', { transformPath: transformPath })))
 		.pipe(transform(markdownToHtml))
 		.pipe(rename(nameToFolderWithIndex))
+		.pipe(htmlmin({collapseWhitespace: true, minifyJS: true}))
 		.pipe(gulp.dest(paths.dist.root))
 		.pipe(transform(extractMainContent))
 		.pipe(rename(indexToPartial))
