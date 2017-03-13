@@ -6,6 +6,7 @@ require('./tasks/build');
 require('./tasks/clean');
 require('./tasks/compress');
 require('./tasks/content');
+require('./tasks/critical');
 require('./tasks/deploy');
 require('./tasks/rev');
 require('./tasks/scripts');
