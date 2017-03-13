@@ -20,7 +20,7 @@ const asyncContentLoader = () => {
 		if (!window.fetch || !dom.closest(event.target, 'a')) { return; }
 		event.preventDefault();
 		const link = dom.closest(event.target, 'a');
-		const href = link.href;
+		const href = link.href.replace(/\/^/, '');
 		const origin = window.location.origin;
 		const isExternal = !(new RegExp(origin).test(href));
 
