@@ -10,7 +10,8 @@ module.exports = {
 				all: './dist/fonts/**/*'
 			},
 			html: {
-				all: './dist/**/*.html'
+				all: './dist/**/*.html',
+				indexes: './dist/**/index.html'
 			},
 			js: {
 				all: './dist/**/*.js',
