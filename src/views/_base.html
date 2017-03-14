@@ -3,6 +3,8 @@
 	<head>
 		<title>{% if page.path === 'index'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
 		
+		<link rel="manifest" href="/web-manifest.json">
+
 		<link rel="dns-prefetch" href="http://www.gravatar.com/">
 
 		<link rel="me" href="{{ site.social.googlePlus.url }}">

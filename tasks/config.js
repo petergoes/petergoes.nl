@@ -32,7 +32,8 @@ module.exports = {
 			},
 			vendor: {
 				all: './dist/vendor'
-			}
+			},
+			webManifest: './dist/web-manifest.json'
 		},
 		source: {
 			assets: [
@@ -51,7 +52,8 @@ module.exports = {
 			js: {
 				all: './src/**/*.js',
 				entry: './src/views/_base.js'
-			}
+			},
+			webManifest: './src/web-manifest.json'
 		}
 	}
 }

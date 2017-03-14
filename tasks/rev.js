@@ -15,7 +15,8 @@ function rev() {
 	return gulp.src([
 		paths.dist.fonts.all,
 		paths.dist.js.all,
-		paths.dist.styles.all
+		paths.dist.styles.all,
+		paths.dist.webManifest
 	], { base: paths.dist.root })
 		.pipe(gulpRev())
 		.pipe(gulp.dest(paths.dist.reved.root))  // write rev'd assets to build dir 

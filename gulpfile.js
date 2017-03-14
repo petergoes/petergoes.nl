@@ -8,6 +8,7 @@ require('./tasks/compress');
 require('./tasks/content');
 require('./tasks/critical');
 require('./tasks/deploy');
+require('./tasks/manifest');
 require('./tasks/rev');
 require('./tasks/scripts');
 require('./tasks/serve');
