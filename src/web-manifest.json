@@ -1,11 +1,12 @@
 {
-  "name": "PeterGoes.nl",
-  "short_name": "PeterGoes.nl",
+  "name": "",
+  "short_name": "",
   "start_url": "./?homescreen=true",
-  "display": "standalone",
-  "background_color": "#263238",
-  "theme_color": "#263238",
-  "description": "My home on the web",
+  "display": "browser",
+  "orientation": "any",
+  "background_color": "",
+  "theme_color": "",
+  "description": "",
   "icons": [
     {
       "src": "images/touch/homescreen48.png",
