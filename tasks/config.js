@@ -13,6 +13,9 @@ module.exports = {
 				all: './dist/**/*.html',
 				indexes: './dist/**/index.html'
 			},
+			images: {
+				all: './dist/**/*.{png,gif,svg,jpg,jpeg}'
+			},
 			js: {
 				all: './dist/**/*.js',
 				bundle: './dist/js/bundle.js'
@@ -37,13 +40,23 @@ module.exports = {
 			webManifest: './dist/web-manifest.json'
 		},
 		source: {
-			assets: [
-				'./src/assets/**/*',
-				'./node_modules/fontfaceobserver/fontfaceobserver.js'
-			],
+			assets: {
+				all: [
+					'./src/assets/**/*',
+					'./node_modules/fontfaceobserver/fontfaceobserver.js'
+				],
+				sourceFiles: [
+					'./src/assets/**/*.sketch'
+				],
+				root: './src/assets/'
+			},
 			folder: './src',
 			html: {
 				all: './src/**/*.html'
+			},
+			images: {
+				all: './src/assets/**/*.{png,gif,svg,jpg,jpeg}',
+				bitmap: './src/assets/**/*.{png,gif,jpg,jpeg}'
 			},
 			styles: {
 				all: './src/**/*.less',
