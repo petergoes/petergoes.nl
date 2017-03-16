@@ -6,6 +6,7 @@ module.exports = {
 		},
 		dist: {
 			all: './dist/**/*',
+			assets: './dist/assets',
 			fonts: {
 				all: './dist/fonts/**/*'
 			},

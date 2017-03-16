@@ -9,5 +9,5 @@ function assets() {
 		...paths.source.images.all
 	].map(line => `!${line}`);
 	return gulp.src([...paths.source.assets.all, ...excludes])
-		.pipe(gulp.dest(paths.dist.root));
+		.pipe(gulp.dest(paths.dist.assets));
 }

@@ -36,11 +36,11 @@ function responsive() {
 				errorOnEnlargement: false
 			}
 		))
-		.pipe(gulp.dest(paths.dist.root));
+		.pipe(gulp.dest(paths.dist.assets));
 }
 
 function optimize() {
-	return gulp.src(paths.source.images.all, {base: paths.dist.root})
+	return gulp.src(paths.source.images.all, {base: paths.dist.assets})
 		.pipe(imagemin([
                 jpeg(),
                 optipng({ optimizationLevel: 3 })
@@ -49,5 +49,5 @@ function optimize() {
 			console.error(error);
 			this.emit('end');
 		})
-		.pipe(gulp.dest(paths.dist.root));
+		.pipe(gulp.dest(paths.dist.assets));
 }
