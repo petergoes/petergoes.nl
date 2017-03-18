@@ -1,7 +1,7 @@
 const gulp = require('gulp');
+const promisify = require('bluebird').promisify;
 const AWS = require('aws-sdk');
-const recursiveReadDir = require('recursive-readdir');
-const defer = require('promise-defer');
+const recursiveReadDir = promisify(require('recursive-readdir'));
 const path = require('path');
 const fs = require('fs');
 const mime = require('mime');
@@ -11,32 +11,28 @@ const s3Params = { Bucket: 'www.petergoes.nl' };
 
 gulp.task('deploy', deploy);
 
-function deploy(cb) {
-	const localFileListDefer = defer();
-	const remoteFileListDefer = defer();
-	
-	recursiveReadDir(paths.dist.root, function (err, files) {
-		if (err) { localFileListDefer.reject(err); return; }
-		const relativeFiles = files.map(file => path.relative('./dist', file))
-		localFileListDefer.resolve(relativeFiles)
-	});
+async function deploy() {
+	const localFilesPromise = getLocalFiles();
+	const remoteFilesPromise = getRemoteFiles();
 
-	s3.listObjects(s3Params, function(err, data) {
-		if (err) { remoteFileListDefer.reject(err); return; }
-		const files = data.Contents.map(fileObj => fileObj.Key);
-		remoteFileListDefer.resolve(files);
-	});
+	const localFiles = await localFilesPromise;
+	const remoteFiles = await remoteFilesPromise;
 
-	Promise.all([localFileListDefer.promise, remoteFileListDefer.promise])
-		.then(([localFiles, remoteFiles]) => {
-			return deleteRemoteFiles(remoteFiles)
-				.then(() => pushNewFiles(localFiles));
-		})
-		.then(() => cb());
+	await deleteRemoteFiles(remoteFiles);
+	await pushNewFiles(localFiles);
 }
 
-function deleteRemoteFiles(remoteFiles) {
-	const deleteDefer = defer();
+async function getLocalFiles() {
+	const files = await recursiveReadDir(paths.dist.root);
+	return files.map(file => path.relative('./dist', file))
+}
+
+async function getRemoteFiles() {
+	const data = await s3.listObjects(s3Params).promise();
+	return data.Contents.map(fileObj => fileObj.Key);
+}
+
+async function deleteRemoteFiles(remoteFiles) {
 	const objects = remoteFiles.map(file => ({ Key: file }));
 	const s3DeleteParams = {
 		Delete: {
@@ -45,38 +41,28 @@ function deleteRemoteFiles(remoteFiles) {
 		}
 	};
 
-	if (objects.length === 0) {
-		deleteDefer.resolve();
-	} else {
-		s3.deleteObjects(Object.assign({}, s3DeleteParams, s3Params), function(err, data) {
-			err ? deleteDefer.reject(err) : deleteDefer.resolve(data);
-		})
+	if (objects.length) {
+		return s3.deleteObjects(Object.assign({}, s3DeleteParams, s3Params)).promise();
 	}
-
-	return deleteDefer.promise;
 }
 
-function pushNewFiles(localFiles) {
-	const putPromises = localFiles.map(file => {
-		const putDefer = defer();
-		const fileBuffer = fs.readFileSync(path.resolve(paths.dist.root, file));
-		const expiresParam = getExpiresValue(file);
-		const s3PutParams = {
-			ACL: 'public-read',
-			Key: file,
-			Body: fileBuffer,
-			ContentType: mime.lookup(file),
-			ContentEncoding: 'gzip'
-		};
-
-		s3.putObject(Object.assign({}, s3PutParams, s3Params, expiresParam), (err, data) => {
-			err ? putDefer.reject(err) : putDefer.resolve(data);
-		});
-
-		return putDefer.promise;
-	})
-
+async function pushNewFiles(localFiles) {
+	const putPromises = localFiles.map(async file => pushNewFile(file));
 	return Promise.all(putPromises);
+}
+
+async function pushNewFile(file) {
+	const fileBuffer = fs.readFileSync(path.resolve(paths.dist.root, file));
+	const expiresParam = getExpiresValue(file);
+	const s3PutParams = {
+		ACL: 'public-read',
+		Key: file,
+		Body: fileBuffer,
+		ContentType: mime.lookup(file),
+		ContentEncoding: 'gzip'
+	};
+
+	return s3.putObject(Object.assign({}, s3PutParams, s3Params, expiresParam)).promise();
 }
 
 function getExpiresValue(file) {

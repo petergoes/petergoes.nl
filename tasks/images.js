@@ -41,13 +41,13 @@ function responsive() {
 
 function optimize() {
 	return gulp.src(paths.source.images.all, {base: paths.dist.assets})
-		.pipe(imagemin([
-                jpeg(),
-                optipng({ optimizationLevel: 3 })
-            ]))
-		.on('error', function(error) {
-			console.error(error);
-			this.emit('end');
-		})
+		.pipe(imagemin(getImageMinParsers()))
 		.pipe(gulp.dest(paths.dist.assets));
+}
+
+function getImageMinParsers() {
+	return [
+		jpeg(),
+		optipng({ optimizationLevel: 3 })
+	];
 }
