@@ -5,6 +5,7 @@ const recursiveReadDir = promisify(require('recursive-readdir'));
 const path = require('path');
 const fs = require('fs');
 const mime = require('mime');
+const isGzip = require('is-gzip');
 const { paths } = require('./config');
 const s3 = new AWS.S3();
 const s3Params = { Bucket: 'www.petergoes.nl' };
@@ -54,15 +55,21 @@ async function pushNewFiles(localFiles) {
 async function pushNewFile(file) {
 	const fileBuffer = fs.readFileSync(path.resolve(paths.dist.root, file));
 	const expiresParam = getExpiresValue(file);
+	const encodingParam = (isGzip(fileBuffer)) ? { ContentEncoding: 'gzip' } : {};
 	const s3PutParams = {
 		ACL: 'public-read',
 		Key: file,
 		Body: fileBuffer,
-		ContentType: mime.lookup(file),
-		ContentEncoding: 'gzip'
+		ContentType: mime.lookup(file)
 	};
 
-	return s3.putObject(Object.assign({}, s3PutParams, s3Params, expiresParam)).promise();
+	return s3.putObject(Object.assign(
+		{},
+		s3PutParams,
+		s3Params,
+		expiresParam,
+		encodingParam
+	)).promise();
 }
 
 function getExpiresValue(file) {

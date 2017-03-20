@@ -53,6 +53,7 @@
     "highlight.js": "9.9.0",
     "imagemin-jpeg-recompress": "5.1.0",
     "imagemin-optipng": "5.2.1",
+    "is-gzip": "1.0.0",
     "marked": "0.3.6",
     "mime": "1.3.4",
     "mz": "2.6.0",
