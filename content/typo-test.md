@@ -45,14 +45,29 @@ culpa qui officia deserunt mollit anim id est laborum.
 
 ## Code
 
-``` js
+```js
 const text = `Some code`;
+const number = 3.141592;
+const regex = /hello|world/g;
+const obj = {foo: 'bar'};
 
 function log(msg) {
 	console.log(msg);
 }
 
 log(text);
+```
+
+```css
+.my-component {
+	width: 20em;
+}
+```
+
+```html
+<article data-property="value">
+	Hello world
+</article>
 ```
 
 
