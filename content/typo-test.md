@@ -46,6 +46,7 @@ culpa qui officia deserunt mollit anim id est laborum.
 ## Code
 
 ```js
+// JavaScript code
 const text = `Some code`;
 const number = 3.141592;
 const regex = /hello|world/g;
@@ -59,12 +60,14 @@ log(text);
 ```
 
 ```css
+/* CSS code */
 .my-component {
 	width: 20em;
 }
 ```
 
 ```html
+<!-- HTML markup -->
 <article data-property="value">
 	Hello world
 </article>

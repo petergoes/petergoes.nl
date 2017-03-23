@@ -5,7 +5,7 @@
   "main": "build/index.html",
   "scripts": {
     "start": "gulp clean && gulp images:build && npm run nodemon",
-    "nodemon": "nodemon --ignore content --ignore dist --ignore src --exec npm run develop",
+    "nodemon": "nodemon --exec npm run develop --ignore content --ignore dist --ignore src --ignore node_modules --ignore bower_components",
     "develop": "NODE_ENV=development npm run build && gulp serve",
     "build": "gulp build",
     "build:production": "gulp clean && gulp build && gulp critical && gulp rev",
@@ -69,8 +69,5 @@
     "rollup-plugin-node-resolve": "2.0.0",
     "rollup-plugin-uglify": "1.0.1",
     "run-sequence": "1.2.2"
-  },
-  "dependencies": {
-    "whatwg-fetch": "2.0.3"
   }
 }

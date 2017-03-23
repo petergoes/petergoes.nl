@@ -1,5 +1,6 @@
+@homepage-link-background: #2B3B40;
 body > header {
-	background-color: @background-color-header;
+	background-color: @code-background;
 }
 
 .page-header {
@@ -30,11 +31,11 @@ body > header {
 
 .page-header__title {
 	padding-top: @default-margin / 2;
-	color: #DEE3E9;
+	color: @code-text;
 }
 
 .page-header__name {
-	color: #FFD47E;
+	color: @code-selector;
 }
 
 .page-header__occupation {
@@ -43,15 +44,19 @@ body > header {
 }
 
 .page-header__property {
-	color: #8FD2CE;
+	color: @code-property;
 }
 
 .page-header__property--value {
-	color: #BED5DD;
+	color: @code-value;
 }
 
 .page-header__nav {
 	margin-bottom: @default-margin;
+
+	& ul {
+		margin-bottom: 0;
+	}
 }
 
 .home .page-header__nav {
@@ -65,7 +70,7 @@ body > header {
 
 .page-header__link {
 	text-decoration: none;
-	color: #98E3FF;
+	color: @code-attribute;
 
 	&:hover,
 	&:focus,
@@ -79,7 +84,7 @@ body > header {
 }
 
 .page-header__element {
-	color: #FA516D;
+	color: @code-element;
 }
 
 .page-header__element--nav {
@@ -87,7 +92,7 @@ body > header {
 }
 
 .page-header__string {
-	color: #CAE69C;
+	color: @code-string;
 
 	&:hover {
 		text-decoration: underline;
@@ -124,8 +129,8 @@ body > header {
 	}
 
 	.page-header__title .page-header__link {
-		background-color: #2B3B40;
-		border: 1px solid fade(#fafafa, 25%);
+		background-color: @homepage-link-background;
+		border: 1px solid fade(@code-text, 25%);
 		padding: 0.3rem;
 		border-radius: 0.3rem;
 	}
