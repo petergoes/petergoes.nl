@@ -32,6 +32,7 @@ body > header {
 .page-header__title {
 	padding-top: @default-margin / 2;
 	color: @code-text;
+	padding-bottom: @line-height + 0.4;
 }
 
 .page-header__name {
@@ -114,13 +115,13 @@ body > header {
 }
 
 @media screen and (min-width: @screen-small) {
-	.page-header__title,
 	.page-header__nav {
 		padding-bottom: @default-margin;
 	}
 
 	.page-header__title {
 		padding-top: @default-margin;
+		padding-bottom: @line-height + 0.4;
 	}
 
 	.page-header__occupation {
@@ -145,6 +146,9 @@ body > header {
 }
 
 @media screen and (min-width: @screen-medium) {
+	.page-header__title {
+		padding-bottom: @line-height;
+	}
 	.page-header__link-container {
 		padding-top: 0;
 		padding-bottom: 0;
