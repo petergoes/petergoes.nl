@@ -38,3 +38,17 @@ svg:not(:root) { overflow: hidden; }
 .alert--error {
 	background-color: fade(@error-color, @alert-fade);
 }
+
+.debug-vertial-rythm {
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#ff0000), color-stop(4%, rgba(0, 0, 0, 0))) 0 1px;
+	position: absolute;
+	top: -2px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1000%;
+	background-size: 100% 1.75rem;
+	pointer-events: none;
+	display: none;
+}
