@@ -23,6 +23,18 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
 culpa qui officia deserunt mollit anim id est laborum.
 
+## Bold text
+
+Text in **bold** looks like **this**.
+
+## Italic text
+
+Text in _italic_ looks like _this_.
+
+## Strikethrough text
+
+Text wich is ~~strikethrough~~.
+
 ## Unordered list
 
 * List item
