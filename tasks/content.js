@@ -25,11 +25,11 @@ marked.setOptions({
 function content({ onlyChanged = true } = {}) {
 	return gulp.src(paths.content.all)
 		.pipe(gulpIf(onlyChanged, changed('dist', { transformPath: transformPath })))
-		.pipe(transform(markdownToHtml))
+		.pipe(transform('utf8', markdownToHtml))
 		.pipe(rename(nameToFolderWithIndex))
 		.pipe(htmlmin({collapseWhitespace: true, minifyJS: true}))
 		.pipe(gulp.dest(paths.dist.root))
-		.pipe(transform(extractMainContent))
+		.pipe(transform('utf8', extractMainContent))
 		.pipe(rename(indexToPartial))
 		.pipe(gulp.dest(paths.dist.root));
 }

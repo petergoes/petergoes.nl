@@ -11,7 +11,7 @@ gulp.task('scripts:watch', watch);
 
 function scripts() {
 	const config = {
-		entry: paths.source.js.entry,
+		input: paths.source.js.entry,
 		plugins: [
 			resolve({
 				jsnext: true,
@@ -30,8 +30,8 @@ function scripts() {
 		.then(function (bundle) {
 			bundle.write({
 				format: "iife",
-				dest: paths.dist.js.bundle,
-				sourceMap: true
+				file: paths.dist.js.bundle,
+				sourcemap: true
 			});
 		});
 }
