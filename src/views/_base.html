@@ -41,13 +41,14 @@
 	</head>
 
 	<body class="{{ page.title.toLowerCase() }}">
-		{% include 'components/header/header.html' %}
+		{% block header %}{% endblock %}
 
 		<main>
 			{% block content %}{% endblock %}
 		</main>
 
-		{% include 'components/footer/footer.html' %}
+		{% block footer %}{% endblock%}
+		
 		{% include 'components/font-face-observer/footer.html' %}
 
 		<div class="debug-vertial-rythm"></div>

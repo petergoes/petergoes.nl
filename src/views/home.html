@@ -1,5 +1,9 @@
 {% extends 'views/page.html' %}
 
+{% block header%}
+	{% include 'components/header/header.html' %}
+{% endblock %}
+
 {% block content %}
 	<article>
 		<h1 class="{% if page.showPageTitle === false %}visuallyhidden{% endif %}">{{ page.title }}</h1>
@@ -17,3 +21,7 @@
 		</div>
 	</article>
 {% endblock %}
+
+{% block footer %}
+	{% include 'components/footer/footer.html' %}
+{% endblock%}

@@ -1,5 +1,9 @@
 {% extends 'views/_base.html' %}
 
+{% block header%}
+	{% include 'components/header/header.html' %}
+{% endblock %}
+
 {% block content %}
 	<article>
 		<div class="content-section">
@@ -8,3 +12,7 @@
 		</div>
 	</article>
 {% endblock %}
+
+{% block footer %}
+	{% include 'components/footer/footer.html' %}
+{% endblock%}
