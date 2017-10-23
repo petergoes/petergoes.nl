@@ -1,0 +1,1 @@
+{"type":"PR","pr":{"number":1,"head":"24777c0f61428a86e881b5db438b8943901666c5"},"user":"Peter Goes","status":"draft","branch":"cms/typo-test","collection":"page","title":"My test title","description":"My test description","objects":{"entry":{"path":"content/typo-test.md","sha":"bbf2eb9c5ee832c82f7fd7954b04a7cec2387e40"},"files":[]},"timeStamp":"2017-10-23T19:37:07.093Z"}
