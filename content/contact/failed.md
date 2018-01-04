@@ -2,6 +2,7 @@
 	title: Contact
 	description: Your message has not been send
 	view: page
+	published: true
 ---
 
 ## failed

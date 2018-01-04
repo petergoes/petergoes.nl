@@ -4,6 +4,9 @@ const configSite = require('../config/site');
 const frontMatter = require('front-matter');
 const gulp = require('gulp');
 const gulpIf = require('gulp-if');
+const log = require('fancy-log');
+const chalk = require('chalk');
+const gulpIgnore = require('gulp-ignore');
 const htmlmin = require('gulp-htmlmin');
 const marked = require('marked');
 const nunjucks = require('nunjucks');
@@ -22,8 +25,9 @@ marked.setOptions({
   }
 });
 
-function content({ onlyChanged = true } = {}) {
+function content({ onlyChanged = true } = {}) {	
 	return gulp.src(paths.content.all)
+		.pipe(gulpIgnore.include(publishedInProduction))
 		.pipe(gulpIf(onlyChanged, changed('dist', { transformPath: transformPath })))
 		.pipe(transform('utf8', markdownToHtml))
 		.pipe(rename(nameToFolderWithIndex))
@@ -37,6 +41,30 @@ function content({ onlyChanged = true } = {}) {
 function watch() {
 	gulp.watch([paths.content.all], ['content:buildNew']);
 	gulp.watch([paths.source.html.all], ['content:build']);
+}
+
+function publishedInProduction({ contents, path:filePath }) {
+	let isReady = true;
+	const isProduction = process.env.NODE_ENV === 'production';
+	const { attributes } = frontMatter(contents.toString());
+
+	if (!attributes.hasOwnProperty('published')) {
+		isReady = false;
+	}
+
+	if (isProduction) {
+		isReady = attributes.published === true
+	}
+
+	if (isReady === false) {
+		{
+			let pathColored = chalk.yellow(path.relative('.', filePath));
+			let notHighlight = isProduction ? chalk.red('not') : chalk.yellow('not');
+			log(`Content: ${pathColored} is ${notHighlight} rendered!`)
+		}
+	}
+
+	return isReady;
 }
 
 function transformPath(newPath) {

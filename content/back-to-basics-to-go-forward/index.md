@@ -2,6 +2,7 @@
 	title: Back to basics to go forward
 	description: The start of my journey to become a better front-end developer
 	view: back-to-basics
+	published: true
 ---
 
 ## My journey to become a better front-end developer

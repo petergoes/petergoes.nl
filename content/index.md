@@ -3,6 +3,7 @@
 	description: Every product we interact with, should be a valuable addition to our lives.
 	showPageTitle: false
 	view: home
+	published: true
 ---
 
 ## About me

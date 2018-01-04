@@ -2,6 +2,7 @@
 	title: Typo Test
 	description: This page is a demo of all typographic styles
 	view: page
+	published: true
 ---
 
 This page is a demo of all typographic styles

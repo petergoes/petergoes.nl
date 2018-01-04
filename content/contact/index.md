@@ -2,6 +2,7 @@
 	title: Contact
 	description: Get in touch! I like to hear from you
 	view: page
+	published: true
 ---
 ## Send me a message:
 

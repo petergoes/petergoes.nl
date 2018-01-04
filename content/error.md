@@ -2,6 +2,7 @@
 	title: Error
 	description: Something went wrong
 	view: page
+	published: true
 ---
 
 ## Something went wrong

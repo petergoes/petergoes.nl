@@ -2,6 +2,7 @@
 	title: Contact
 	description: Your message has been send
 	view: page
+	published: true
 ---
 ## success 
 
