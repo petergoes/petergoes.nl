@@ -1,18 +1,22 @@
 const gulp = require('gulp');
 const fs = require('mz/fs');
+const path = require('path')
 const { site } = require('../config/site.js');
 const { paths } = require('./config');
 
 gulp.task('manifest:build', manifest);
 gulp.task('manifest:watch', watch);
 
+const manifestSource = path.join(__dirname, '..', paths.source.webManifest)
+const manifestDest = path.join(__dirname, '..', paths.source.webManifest)
+
 function manifest() {
-	const manifestData = JSON.parse(fs.readFileSync(paths.source.webManifest, 'utf8'));
+	const manifestData = JSON.parse(fs.readFileSync(manifestSource, 'utf8'));
 	return writeManifestFile(manifestData);
 }
 
 function watch() {
-	return gulp.watch([paths.source.webManifest], ['manifest:build']);
+	return gulp.watch([manifestSource], ['manifest:build']);
 }
 
 function writeManifestFile(manifestData) {
@@ -26,5 +30,5 @@ function writeManifestFile(manifestData) {
 	const mergedData = Object.assign({}, manifestData, siteData);
 	const mergedJson = JSON.stringify(mergedData);
 
-	return fs.writeFile(paths.dist.webManifest, mergedJson);
+	return fs.writeFile(manifestDest, mergedJson);
 }
