@@ -1,6 +1,6 @@
 const header = (element) => {
 	function init() {
-		console.log('header:', element);
+		console.log('netlify');
 	}
 	init();
 }
