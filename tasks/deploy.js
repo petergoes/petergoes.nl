@@ -60,7 +60,7 @@ async function pushNewFile(file) {
 		ACL: 'public-read',
 		Key: file,
 		Body: fileBuffer,
-		ContentType: mime.lookup(file)
+		ContentType: mime.getType(file)
 	};
 
 	return s3.putObject(Object.assign(

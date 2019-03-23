@@ -6,6 +6,7 @@ module.exports = {
 			"mainmenu": [
 				{ label: "Home",     uri: '/' },
 				{ label: "About Me", uri: '/about-me' },
+				{ label: "Blog", uri: '/blog' },
 				{ label: "Contact", uri: '/contact' }
 			]
 		},

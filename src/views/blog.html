@@ -1,0 +1,24 @@
+{% extends 'views/_base.html' %}
+
+{% block header%}
+	{% include 'components/header/header.html' %}
+{% endblock %}
+
+{% block content %}
+	<article>
+        <header class="content-section">
+                <h1 class="{% if page.showPageTitle === false %}visuallyhidden{% endif %}">{{ page.title }}</h1>
+                <aside>
+                    {% if page.created_at %}<small>Created at: {{ page.created_at }}</small>{% endif %}
+                    {% if page.updated_at %}<small>Updated at: {{ page.updated_at }}</small>{% endif %}
+                </aside>
+        </header>
+		<section class="content-section">	
+			{{ content }}
+		</section>
+	</article>
+{% endblock %}
+
+{% block footer %}
+	{% include 'components/footer/footer.html' %}
+{% endblock%}

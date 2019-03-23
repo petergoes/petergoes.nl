@@ -1,8 +1,9 @@
 ---
 	title: Back to basics to go forward
 	description: The start of my journey to become a better front-end developer
-	view: back-to-basics
+	view: blog
 	published: true
+	created_at: 15-02-2018
 ---
 
 ## My journey to become a better front-end developer
@@ -25,9 +26,9 @@ before I learn something that is build on top of that foundation.
 I am going to approach this project like so:
 
 **Phase 1: Lay the foundation**
-* A deeper understanding of _JavaScript_
-* Get intimate with _CSS_
-* Become close friends with _HTML_
+* A deeper foundational understanding of _JavaScript_
+* Get pretty intimate with _CSS_
+* Become really close friends with _HTML_
 
 **Phase 2: Build the walls**
 * Brick by brick, _Progressive Enhancement_ as a second nature
