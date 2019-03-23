@@ -8,7 +8,7 @@
     "nodemon": "nodemon --exec npm run develop --ignore content --ignore dist --ignore src --ignore node_modules --ignore bower_components",
     "develop": "cross-env-shell NODE_ENV=development npm run build && gulp serve",
     "build": "gulp build",
-    "build:production": "cross-env-shell NODE_ENV=production \"gulp clean && gulp build && gulp critical && gulp rev\"",
+    "build:production": "cross-env-shell NODE_ENV=production \"gulp clean && gulp build && gulp critical && gulp rev && node ./tasks/sitemap.js\"",
     "deploy": "npm run build:production && gulp compress && gulp deploy",
     "gulp": "gulp"
   },
@@ -74,5 +74,8 @@
     "rollup-plugin-node-resolve": "3.0.0",
     "rollup-plugin-uglify": "2.0.1",
     "run-sequence": "2.2.1"
+  },
+  "dependencies": {
+    "glob": "7.1.3"
   }
 }

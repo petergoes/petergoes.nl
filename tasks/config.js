@@ -1,4 +1,11 @@
 module.exports = {
+	sitemap: {
+		excludes: [
+			'/contact/failed/',
+			'/contact/success/',
+			'/error/'
+		]
+	},
 	paths: {
 		node_modules: './node_modules/**/*',
 		content: {
@@ -21,6 +28,7 @@ module.exports = {
 				all: './dist/**/*.js',
 				bundle: './dist/js/bundle.js'
 			},
+			sitemap: './dist/sitemap.txt',
 			reved: {
 				fonts: './dist/reved/fonts/**/*',
 				js: './dist/reved/**/*.js',
