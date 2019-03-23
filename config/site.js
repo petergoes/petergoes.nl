@@ -41,6 +41,6 @@ module.exports = {
 		"subtitle": "Front-end Developer",
 		"themeColor": "#263238",
 		"title": "Peter Goes",
-		"url": "http://www.petergoes.nl"
+		"url": "https://www.petergoes.nl"
 	}
 }

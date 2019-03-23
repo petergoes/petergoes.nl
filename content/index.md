@@ -10,7 +10,7 @@
 
 Hi there, welcome. My name is Peter Goes, and I am an Amsterdam (The Netherlands) based web developer. I get exited about all things created with web technologies. Whether it is a clean user interface, a clever Node.JS back-end implementation or geeking out on JavaScipt on Raspberry Pi's, chances are that I want to wrap my head around it.
 
-At the moment I work as a Front-End Developer at <a href="http://www.voorhoede.nl" target="_blank">De Voorhoede</a> in Amsterdam. I get to play with the latest web technologies, which I think is super exiting!
+At the moment I work as a Front-End Developer at <a href="https://www.voorhoede.nl" target="_blank">De Voorhoede</a> in Amsterdam. I get to play with the latest web technologies, which I think is super exiting!
 	
 I use this place to experiment with (new) web technologies and like to see it as my personal home on the web. Take a look around, and tell me what you think about it!
 
