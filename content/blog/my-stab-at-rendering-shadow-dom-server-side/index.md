@@ -33,7 +33,7 @@ Let me explain my approach, which is quite similar, but I can afford to use [Pup
 Lets look at the Shadow Dom of an `<x-hello>` Web Component:
 
 ```html
-<x-html>
+<x-hello>
   World                  <!-- Light DOM -->
   #shadow-root(open)     <!-- Thing made up by DevTools -->
     <span>               <!-- Element in the Shadow DOM -->
@@ -45,7 +45,7 @@ Lets look at the Shadow Dom of an `<x-hello>` Web Component:
 		  </strong>
 		  !
     </span>
-</x-html>
+</x-hello>
 ```
 
 As you can see DevTools visualises the Shadow DOM, but that is just so you can inspect it. It does not actually exist.
