@@ -278,6 +278,10 @@ That is the script at once. I simplified it a bit by removing some is-this-value
 7. Loop over the data object to add all properties to the Web Components properties. This makes sure Array and Object properties are set via JavaScript
 8. Update the `data-ssr` attribute to `'hydrated'` to indicate that this Web Component has been hydrated
 
+### Things I did not cover
+
+As stated before, I only focused on serialising the HTML. CSS is something I did not cover at all. But even then, the HTML part is not fully complete yet. As you might know, Web Components can have multiple `<slot>` elements. The process thus far only covers a Web Component with a single `<slot>`!
+
 And that's all there is to it. I am sure I can improve this code quite a lot. But it gets me started.
 
 If you want to have a look at the full code, check out the repo [here](https://github.com/petergoes/ssr-web-components/tree/0d1b6d5121faf4009a70fed2e657b2c034307695).
