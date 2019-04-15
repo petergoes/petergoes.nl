@@ -5,6 +5,10 @@
 	published: true
 ---
 
+## [Differentiate SSR states in a Web Component](/blog/differentiate-ssr-states-in-a-web-component)
+<small>15-04-2019</small>  
+Can the `mounted()` function of a Vue component be mimicked in a Web Component?
+
 ## [My stab at rendering Shadow Dom server side](/blog/my-stab-at-rendering-shadow-dom-server-side)
 <small>24-03-2019</small>  
 The first step in server side rendering web components is getting the Shadow Dom
