@@ -30,7 +30,9 @@ In my attempt to server side render Web Components, the process is like this:
 
 If you compare this flow to the workflow of enhancing html client side, my process enhances the component too early. As long as the client does not have the JavaScript downloaded, **the components html is enhanced, but does not have JavaScript yet to back it up**. That is the "semi-enhanced experience" Harmen is talking about.
 
-How does a front-end framework like Vue handle this? Why did I not encounter this issue more often before?
+Another thing that is quite different compared to the enhancer pattern, is that by using Vue or React, JavaScript is your templating language. Where on a typical server rendered site, the html would be written in php, nunjucks or something else. In that case JavaScript is only run client side and is only used to add behaviour. In the way I try to render a Web Component server side, I also use it as the templating language to create the html.
+
+How does a front-end framework like Vue handle the issue of the "semi-enhanced experience"? Why did I not encounter this issue more often before?
 
 ## Life cycle methods in Vue
 
@@ -117,3 +119,5 @@ Is this an ideal solution? **No** far from it. The `data-ssr` attribute is somet
 But, it gets the job done. And as long as there is no standardised way of server side rendering a Web Component, we will be tied to custom implementations like this one.
 
 So, now that I got that out of my head, I am going to focus on serialising the css of the Web Component. That is something I am struggling with for quite some time now. 
+
+Do you have any comments? Please reach out at [@petergoes](https://twitter.com/petergoes)
