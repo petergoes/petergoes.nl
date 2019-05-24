@@ -35,7 +35,11 @@ module.exports = {
 			"googlePlus": {
 				"name": "Google+",
 				"url": "https://plus.google.com/108905978694295358060"
-			}
+      },
+      "tootCafe": {
+        "name": "Toot Café",
+        "url": "https://toot.cafe/@petergoes"
+      },
 		},
 		"gravatar": gravatar.url('petergoes@gmail.com'),
 		"subtitle": "Front-end Developer",
