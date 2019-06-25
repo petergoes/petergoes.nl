@@ -33,7 +33,7 @@ module.exports = {
 				"url": "https://linkedin.com/in/pgoes"
 			},
       "tootCafe": {
-        "name": "Toot Café",
+        "name": "Mastodon",
         "url": "https://toot.cafe/@petergoes"
       },
 		},
