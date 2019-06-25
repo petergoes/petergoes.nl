@@ -1,7 +1,7 @@
 <ul class="sociallinks--inline">
 	{% for name, link in site.social %}
 		<li class="sociallinks__item">
-			<a rel="me" href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+			<a rel="me nofollow noopener" href="{{ link.url }}" target="_blank">{{ link.name }}</a>
 		</li>	
 	{% endfor %}
 </ul>
