@@ -30,7 +30,7 @@ module.exports = {
 			},
 			"linkedIn": {
 				"name": "LinkedIn",
-				"url": "https://nl.linkedin.com/in/pgoes"
+				"url": "https://linkedin.com/in/pgoes"
 			},
 			"googlePlus": {
 				"name": "Google+",
