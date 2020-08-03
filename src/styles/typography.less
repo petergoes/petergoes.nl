@@ -208,14 +208,14 @@ code {
 	}
 
 	strong:before,
-	strong:after, {
+	strong:after {
 		content: '*';
 		opacity: @markdown-decoration-fade;
 		color: @default-text-color;
 	}
 
 	em:before, i:before,
-	em:after, i:after, {
+	em:after, i:after {
 		content: '_';
 		opacity: @markdown-decoration-fade;
 		color: @default-text-color;
@@ -252,7 +252,7 @@ code {
 	h3, .h3,
 	h4, .h4,
 	h5, .h5,
-	h6, .h6, {
+	h6, .h6 {
 		position: relative;
 	}
 
@@ -288,7 +288,7 @@ code {
 	strong:after, 
 	em:before, i:before,
 	em:after, i:after,
-	li:before,
+	li:before
 	{
 		content: initial;
 	}
