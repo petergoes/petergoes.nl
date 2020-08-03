@@ -29,6 +29,7 @@ function responsive() {
 				{height: '144', width: '144', rename: {suffix: '-144'}, crop: 'center'},
 				{height: '168', width: '168', rename: {suffix: '-168'}, crop: 'center'},
 				{height: '192', width: '192', rename: {suffix: '-192'}, crop: 'center'},
+				{height: '512', width: '512', rename: {suffix: '-512'}, crop: 'center'},
 			]},
 			{
 				withoutEnlargement: true,
