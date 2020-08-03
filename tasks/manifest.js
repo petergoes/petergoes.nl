@@ -8,7 +8,7 @@ gulp.task('manifest:build', manifest);
 gulp.task('manifest:watch', watch);
 
 const manifestSource = path.join(__dirname, '..', paths.source.webManifest)
-const manifestDest = path.join(__dirname, '..', paths.source.webManifest)
+const manifestDest = path.join(__dirname, '..', paths.dist.webManifest)
 
 function manifest() {
 	const manifestData = JSON.parse(fs.readFileSync(manifestSource, 'utf8'));
