@@ -52,7 +52,6 @@ module.exports = {
 			assets: {
 				all: [
 					'./src/assets/**/*',
-					'./node_modules/fontfaceobserver/fontfaceobserver.js'
 				],
 				sourceFiles: [
 					'./src/assets/**/*.sketch'
