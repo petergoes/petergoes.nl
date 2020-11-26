@@ -57,7 +57,7 @@
     "gulp-task-listing": "1.0.1",
     "gulp-transform": "3.0.5",
     "gulp-watch": "4.3.11",
-    "highlight.js": "9.12.0",
+    "highlight.js": "10.1.2",
     "imagemin-jpeg-recompress": "5.1.0",
     "imagemin-optipng": "5.2.1",
     "is-gzip": "2.0.0",
