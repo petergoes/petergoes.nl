@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://www.petergoes.nl/sitemap.txt

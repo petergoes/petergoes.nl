@@ -7,6 +7,7 @@
     "start": "gulp clean && gulp images:build && npm run nodemon",
     "nodemon": "nodemon --exec npm run develop --ignore content --ignore dist --ignore src --ignore node_modules --ignore bower_components",
     "develop": "cross-env-shell NODE_ENV=development npm run build && gulp serve",
+    "clean": "gulp clean",
     "build": "gulp build",
     "build:production": "cross-env-shell NODE_ENV=production \"gulp clean && gulp build && gulp critical && gulp rev && node ./tasks/sitemap.js\"",
     "deploy": "npm run build:production && gulp compress && gulp deploy",

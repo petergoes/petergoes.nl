@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const taskListing = require('gulp-task-listing');
 
 require('./tasks/assets');
+require('./tasks/public');
 require('./tasks/build');
 require('./tasks/clean');
 require('./tasks/compress');

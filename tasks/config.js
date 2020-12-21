@@ -13,7 +13,8 @@ module.exports = {
 		},
 		dist: {
 			all: './dist/**/*',
-			assets: './dist/assets',
+      assets: './dist/assets',
+      public: './dist/',
 			fonts: {
 				all: './dist/fonts/**/*'
 			},
@@ -49,6 +50,7 @@ module.exports = {
 			webManifest: './dist/web-manifest.json'
 		},
 		source: {
+      public: './public/**/*',
 			assets: {
 				all: [
 					'./src/assets/**/*',
