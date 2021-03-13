@@ -26,8 +26,8 @@ self.addEventListener('fetch', function(event) {
     event.respondWith(
       fetch(request).catch(function(error) {
         // eslint-disable-next-line no-console
-        console.error(
-          '[onfetch] Failed. Serving cached offline fallback ' +
+        console.log(
+          '⚠️ [onfetch] Failed. Serving cached offline fallback ' +
           error
         );
         return caches.open('offline').then(function(cache) {
