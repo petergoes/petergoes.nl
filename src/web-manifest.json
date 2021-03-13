@@ -2,7 +2,7 @@
   "name": "PeterGoes.nl",
   "short_name": "PeterGoes.nl",
   "start_url": "./?homescreen=true",
-  "display": "minimal-ui",
+  "display": "standalone",
   "orientation": "any",
   "background_color": "#263238",
   "theme_color": "#263238",
