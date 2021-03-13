@@ -24,7 +24,6 @@ body > header {
 }
 
 .page-header__code-decoration {
-	opacity: 0.5;
 	display: none;
 }
 
@@ -71,21 +70,23 @@ body > header {
 
 .page-header__link {
 	text-decoration: none;
-	color: @code-attribute;
+	color: @code-attribute-dim;
 
 	&:hover,
 	&:focus,
 	&:active {
 		border-bottom: none;
+    color: @code-attribute;
 
-		.page-header__code-decoration {
-			opacity: 1;
-		}
+    .page-header__element {
+      color: @code-element;
+    }
+
 	}
 }
 
 .page-header__element {
-	color: @code-element;
+	color: @code-element-dim;
 }
 
 .page-header__element--nav {
