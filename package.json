@@ -62,7 +62,7 @@
     "imagemin-jpeg-recompress": "5.1.0",
     "imagemin-optipng": "5.2.1",
     "is-gzip": "2.0.0",
-    "marked": "0.3.9",
+    "marked": "0.3.18",
     "mime": "2.1.0",
     "mz": "2.7.0",
     "nodemon": "1.14.7",
