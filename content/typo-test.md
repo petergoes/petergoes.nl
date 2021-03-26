@@ -7,6 +7,8 @@
 
 This page is a demo of all typographic styles
 
+<debug-vertical-rythm></debug-vertical-rythm>
+
 ## Headings
 # Heading 1
 ## Heading 2

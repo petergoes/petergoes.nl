@@ -39,7 +39,7 @@ svg:not(:root) { overflow: hidden; }
 	background-color: fade(@error-color, @alert-fade);
 }
 
-.debug-vertial-rythm {
+.debug-vertical-rythm {
 	background: -webkit-gradient(linear, 0 0, 0 100%, from(#ff0000), color-stop(4%, rgba(0, 0, 0, 0))) 0 1px;
 	position: absolute;
 	top: -2px;
@@ -51,4 +51,7 @@ svg:not(:root) { overflow: hidden; }
 	background-size: 100% 1.75rem;
 	pointer-events: none;
 	display: none;
+}
+.debug-vertical-rythm.display {
+  display: initial;
 }

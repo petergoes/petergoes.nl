@@ -51,7 +51,28 @@
 
 		{% block footer %}{% endblock%}
 		
-		<div class="debug-vertial-rythm"></div>
+		<div class="debug-vertical-rythm"></div>
+    <script>
+      class ToggleDebugVerticalRythm extends HTMLElement {
+        connectedCallback() {
+          this.innerHTML = "<button>Toggle Vertical Rythm Debugger</button>"
+          this.querySelector('button').addEventListener('click', this.handleClick)
+        }
+
+        disconnectedCallback() {
+          this.querySelector('button').removeEventListener('click', this.handleClick)
+        }
+
+        handleClick() {
+          console.log(window.debugVerticalRythm)
+        }
+      }
+
+      if (customElements) {
+        customElements.define('debug-vertical-rythm', ToggleDebugVerticalRythm)
+      }
+    </script>
+
 
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-45961555-1"></script>
 		<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-45961555-1');</script>
