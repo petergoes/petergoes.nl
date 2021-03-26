@@ -38,7 +38,8 @@ How does a front-end framework like Vue handle the issue of the "semi-enhanced e
 
 I take Vue as an example here since I have the most experience with it, but the concepts apply to React as well. 
 
-A Vue component has the concept of life cycle methods. During various stages of its life, various methods are run. Let's look at the `mounted()` method. The [documentation](https://vuejs.org/v2/api/#mounted) of the `mounted` method tells us: 
+A Vue component has the concept of life cycle methods. During various stages of its life, various methods are run. Let's look at the `mounted()` method.  
+The [documentation](https://vuejs.org/v2/api/#mounted) of the `mounted` method tells us: 
 
 > Called after the instance has been mounted
 
