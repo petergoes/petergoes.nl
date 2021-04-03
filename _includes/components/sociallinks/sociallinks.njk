@@ -1,0 +1,13 @@
+<ul class="sociallinks--inline">
+	{% for name, link in socialLinks %}
+		<li class="sociallinks__item">
+      <a
+        rel="me nofollow noopener"
+        href="{{ link.url }}"
+        target="_blank"
+      >
+        <span class="visuallyhidden">My&nbsp;</span>{{ link.name }}<span class="visuallyhidden">&nbsp;profile</span>
+      </a>
+		</li>	
+	{% endfor %}
+</ul>

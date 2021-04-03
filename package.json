@@ -1,0 +1,23 @@
+{
+  "name": "nl.petergoes",
+  "version": "2.0.0",
+  "description": "Personal website of Peter Goes",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petergoes/petergoes.nl.git"
+  },
+  "author": "Peter Goes <petergoes@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petergoes/petergoes.nl/issues"
+  },
+  "homepage": "https://github.com/petergoes/petergoes.nl#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "0.12.1"
+  }
+}

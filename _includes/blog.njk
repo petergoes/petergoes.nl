@@ -1,0 +1,16 @@
+{% extends './page.njk' %}
+
+{% block content %}
+	<article>
+        <header class="content-section">
+                <h1 class="{% if showPageTitle === false %}visuallyhidden{% endif %}">{{ title }}</h1>
+                <aside>
+                    {% if created_at %}<small>Created at: {{ created_at }}</small>{% endif %}
+                    {% if updated_at %}<small>Updated at: {{ updated_at }}</small>{% endif %}
+                </aside>
+        </header>
+		<section class="content-section">	
+			{{ content | safe }}
+		</section>
+	</article>
+{% endblock %}
