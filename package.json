@@ -19,6 +19,7 @@
   "homepage": "https://github.com/petergoes/petergoes.nl#readme",
   "devDependencies": {
     "@11ty/eleventy": "0.12.1",
+    "@11ty/eleventy-plugin-inclusive-language": "1.0.2",
     "gravatar": "1.8.1"
   }
 }

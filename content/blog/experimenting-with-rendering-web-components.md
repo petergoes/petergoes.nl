@@ -16,7 +16,7 @@ Then, Web Components caught my attention again. I did notice it when they were f
 
 ## The problem of server side rendering
 
-However, server side rendering is still an issue with Web Components. React, Vue and all those other frameworks have this covered. But for the `shadowDom`, there is not a standardised way of serialising that to send it over the wire. 
+Server side rendering is still an issue with Web Components. React, Vue and all those other frameworks have this covered. But for the `shadowDom`, there is not a standardised way of serialising that to send it over the wire. 
 
 There are some experiments / solutions going on. Especially the [@skatejs/ssr](https://github.com/skatejs/skatejs/tree/master/packages/ssr) package by [@treshugart](https://twitter.com/treshugart) is really close.
 

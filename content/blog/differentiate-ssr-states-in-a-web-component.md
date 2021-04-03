@@ -62,7 +62,7 @@ Looking at the enhancer pattern there are only two states:
 * non enhanced client side
 * enhanced client side
 
-As it turns out, I did encounter the issue before, but because Vue as a framework makes working with components both on server and client side so easy, I do not have to think about the differences between server and client environments. That is kind of the whole reason to go for a universal JavaScript approach in the first place.
+As it turns out, I did encounter the issue before, but because Vue as a framework makes working with components both on server and client side so straight forward, I do not have to think about the differences between server and client environments. That is kind of the whole reason to go for a universal JavaScript approach in the first place.
 
 In my attempt to render Web Components server side, I did not take the work Vue does here into account. Because I don't treat server and client environments as two separate environments, I actually spin up a client IN the server to render the output.
 

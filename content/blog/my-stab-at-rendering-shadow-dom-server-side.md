@@ -49,7 +49,7 @@ Lets look at the Shadow Dom of an `<x-hello>` Web Component:
 </x-hello>
 ```
 
-As you can see DevTools visualises the Shadow DOM, but that is just so you can inspect it. It does not actually exist.
+As you can see DevTools visualises the Shadow DOM, but that is there so you can inspect it. It does not actually exist.
 
 As a quick reference, as a user of the `<x-hello>` element this is how it looks in the source code:
 
@@ -232,7 +232,7 @@ page.on('load', async (...args) => {
 2. Yet another slight mutation to the HTML: include the `hydrate` script.
 3. When all is done, close the browser
 
-So! Thats that! We now have a server side rendered version of all Web Components in a Light DOM fashion. Note that I did not do anything with CSS yet. I just focused on serialising the HTML!! The CSS part is something I still have to figure out.
+So! Thats that! We now have a server side rendered version of all Web Components in a Light DOM fashion. Note that I did not do anything with CSS yet. I focused on serialising the HTML!! The CSS part is something I still have to figure out.
 
 But the browser has all these capabilities. It would be a shame to not use them. Lets have a look at the hydrate script to see how the process can be reverted client side
 
@@ -274,7 +274,7 @@ That is the script at once. I simplified it a bit by removing some is-this-value
 1. Get all elements on the page with a `[data-ssr="serialized"]` attribute.
 2. For each element do:
 3. Get a reference to the `<template>` and `<script>` elements and their contents, in the current Web Component element
-4. Remove all elements except the `<template>`. Basically remove all would-be-Shadow-DOM
+4. Remove all elements except the `<template>`. Removing all would-be-Shadow-DOM
 5. Move all elements in the `<template>` element (original Light DOM) back into their original place
 6. Remove the now empty `<template>` element and `<script>` element
 7. Loop over the data object to add all properties to the Web Components properties. This makes sure Array and Object properties are set via JavaScript

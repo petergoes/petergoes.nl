@@ -13,7 +13,7 @@ insight in the work I do. These are side projects. I build them mainly because
 I like to experiment with some technology / framework, or I feel the need to 
 automate something in my day to day work.
 
-This is not a full list, but just some i'd like to highlight.
+This is not a full list, but some i'd like to highlight.
 
 ### `json-mock-api`: Mock an api with plain json files.
 This simple CLI tool allows you to turn a folder of static json files into a
