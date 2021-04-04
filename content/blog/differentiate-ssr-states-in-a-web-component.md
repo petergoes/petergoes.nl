@@ -1,8 +1,9 @@
 ---
   title: Differentiate SSR states in a Web Component
   description: Can the mounted() function of a Vue component be mimicked in a Web Component?
+  tags: ["blog", "web-components"]
   layout: blog
-  created_at: 15-04-2019
+  date: 2019-04-15
 ---
 
 ## The problem

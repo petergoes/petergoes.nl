@@ -1,9 +1,10 @@
 ---
   title: Why I signed Overlay Factsheet
   description: .
+  tags: ["blog", "random-thoughts"]
   view: blog
   permalink: false
-  created_at: 13-03-2021
+  date: 2021-03-13
 ---
 
 Today I submitted the [PR](https://github.com/karlgroves/overlayfactsheet/pull/113)

@@ -1,8 +1,9 @@
 ---
   title: Back to basics to go forward
   description: The start of my journey to become a better front-end developer
+  tags: ["blog", "random-thoughts"]
   layout: blog
-  created_at: 15-02-2018
+  date: 2018-02-15
 ---
 
 ## My journey to become a better front-end developer
