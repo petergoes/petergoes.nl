@@ -1,8 +1,12 @@
+const fs = require('fs')
+const path = require('path')
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.setDataDeepMerge(true);
+
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(inclusiveLangPlugin);
@@ -20,6 +24,14 @@ module.exports = function(eleventyConfig) {
     const year = `${date.getFullYear()}`
     return `${day}-${month}-${year}`
   });
+
+
+  eleventyConfig.addFilter("postcss", function(files) {
+    const getFileContents = file => fs.readFileSync(path.join(__dirname, '_includes', file), {encoding: "utf-8"})
+    return files
+      .map(getFileContents)
+      .join('\n')
+  })
 
   // You can return your Config object (optional).
   return {

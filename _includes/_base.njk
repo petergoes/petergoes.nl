@@ -40,6 +40,7 @@
 		{% endblock %}
 
 		<script src="/js/bundle.js" async></script>
+    <style>{{ stylesheets | postcss }}</style>
 	</head>
 
 	<body class="{{ title | slug }}">

@@ -3,6 +3,10 @@
 {% block content %}
   <h1 class="{% if showPageTitle === false %}visuallyhidden{% endif %}">{{ title }}</h1>
   {{ content | safe }}
+
+  {% block filters %}
+  {% endblock %}
+
   {%- for post in collections[collection] | reverse -%}
     {% if post.url %}
     <article>
