@@ -9,18 +9,18 @@
 			<span class="page-header__code-decoration" aria-hidden="true" role="presentation">}</span>
 		</a>
 	</h1>
-	<nav class="page-header__nav">
-		<h2 class="visuallyhidden">Menu</h2>
+	<nav class="page-header__nav" aria-labelledby="main-menu-label">
+		<h2 id="main-menu-label" class="visuallyhidden">Main Menu</h2>
 		<span class="page-header__code-decoration page-header__link page-header__element--nav" aria-hidden="true" role="presentation">&lt;<span class="page-header__element">nav</span>&gt;</span>
-		<ul>
-			{% for link in mainMenu %}
-			<li class="page-header__link-container">
-				<a href="{{ link.uri }}" class="page-header__link">
-					<span class="page-header__code-decoration" aria-hidden="true" role="presentation">&lt;<span class="page-header__element">a</span> href&equals;</span><span class="page-header__string"><span aria-hidden="true" role="presentation">&quot;</span>{{ link.label }}<span aria-hidden="true" role="presentation">&quot;</span></span><span class="page-header__code-decoration" aria-hidden="true" role="presentation">&gt;&lt;&sol;<span class="page-header__element">a</span>&gt;</span>
-				</a>
-			</li>	
-			{% endfor %}
-		</ul>
+      <ul>
+        {% for link in mainMenu %}
+        <li class="page-header__link-container">
+          <a href="{{ link.uri }}" class="page-header__link">
+            <span class="page-header__code-decoration" aria-hidden="true" role="presentation">&lt;<span class="page-header__element">a</span> href&equals;</span><span class="page-header__string"><span aria-hidden="true" role="presentation">&quot;</span>{{ link.label }}<span aria-hidden="true" role="presentation">&quot;</span></span><span class="page-header__code-decoration" aria-hidden="true" role="presentation">&gt;&lt;&sol;<span class="page-header__element">a</span>&gt;</span>
+          </a>
+        </li>	
+        {% endfor %}
+      </ul>
 		<span class="page-header__code-decoration page-header__link page-header__element--nav" aria-hidden="true" role="presentation">&lt;&sol;<span class="page-header__element">nav</span>&gt;</span>
 	</nav>
 </div>

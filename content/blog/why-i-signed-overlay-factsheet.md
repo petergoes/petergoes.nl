@@ -1,7 +1,9 @@
 ---
   title: Why I signed Overlay Factsheet
   description: .
-  tags: ["blog", "random-thoughts"]
+  tags: 
+    - blog
+    - random-thoughts
   view: blog
   permalink: false
   date: 2021-03-13

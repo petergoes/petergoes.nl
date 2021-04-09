@@ -1,9 +1,12 @@
 ---
   title: Experimenting with rendering Web Components
   description: The start of my journey to render web components on the server
-  tags: ["blog", "web-components"]
+  tags: 
+    - blog
+    - web-components
   layout: blog
   date: 2019-03-23
+  excerpt: The start of my journey to render web components on the server
 ---
 
 ## About this serie of posts

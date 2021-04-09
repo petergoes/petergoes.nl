@@ -1,6 +1,12 @@
 <footer class="footer">
 	<div class="content-section">
-		<p>&copy; 2020 Peter Goes</p>
+    <nav aria-labelledby="footer-other-pages-nav">
+      <span id="footer-other-pages-nav" class="visuallyhidden">Other pages</span>
+      <ul>
+        <li><a href="/bookmarks">Bookmarks</a></li>
+      </ul>
+    </nav>
 		{% include '../sociallinks/sociallinks.njk' %}
+    <p>&copy; 2020 Peter Goes</p>
 	</div>
 </footer>

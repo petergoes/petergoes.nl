@@ -1,0 +1,9 @@
+{% extends './page.njk' %}
+
+{% block content %}
+		<div class="content-section">
+			<h1 class="{% if showPageTitle === false %}visuallyhidden{% endif %}">Bookmark: {{ title }}</h1>
+			{{ content | safe }}
+      <a href="{{ url }}">Link to {{ title }}</a>
+		</div>
+{% endblock %}

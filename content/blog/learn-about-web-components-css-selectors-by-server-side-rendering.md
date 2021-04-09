@@ -1,9 +1,12 @@
 ---
   title: Learn about Web Components CSS selectors by server side rendering
   description: Can the mounted() function of a Vue component be mimicked in a Web Component?
-  tags: ["blog", "web-components"]
+  tags: 
+    - blog
+    - web-components
   layout: blog
   date: 2019-04-27
+  permalink: false
 ---
 
 ## New CSS selectors in Web Components

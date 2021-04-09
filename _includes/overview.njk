@@ -1,0 +1,21 @@
+{% extends './page.njk' %}
+
+{% block content %}
+  <h1 class="{% if showPageTitle === false %}visuallyhidden{% endif %}">{{ title }}</h1>
+  {{ content | safe }}
+  {%- for post in collections[collection] | reverse -%}
+    {% if post.url %}
+    <article>
+      <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+      {% if showDate %}
+        <small>{{ post.date | formatDate }}</small>
+      {% endif %}
+      {% if post.data.excerpt %}
+        <p>{{ post.data.excerpt }}</p>
+      {% else %}
+        {{ post.data.content | safe }}
+      {% endif %}
+    </article>
+    {% endif %}
+  {%- endfor -%}
+{% endblock %}

@@ -1,9 +1,12 @@
 ---
   title: My stab at rendering Shadow Dom server side
   description: The first step in server side rendering web components is getting the Shadow Dom over the wire. This is my attempt.
-  tags: ["blog", "web-components"]
+  tags: 
+    - blog
+    - web-components
   layout: blog
   date: 2019-03-24
+  excerpt: The first step in server side rendering web components is getting the Shadow Dom over the wire. This is my attempt.
 ---
 
 ## What is the Shadow Dom and why is it important?
