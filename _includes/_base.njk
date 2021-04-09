@@ -36,11 +36,14 @@
 		{% endif %}
 
 		{% block head %}
-			<link rel="stylesheet" href="/styles/main.css">
 		{% endblock %}
 
 		<script src="/js/bundle.js" async></script>
-    <style>{{ stylesheets | postcss }}</style>
+    {% if process.env.DEVELOPMENT === 'true' %}
+      <link rel="stylesheet" href="{% postcss stylesheets, page.outputPath, true %}" />
+    {% else %}
+      <style>{% postcss stylesheets, page.outputPath, false %}</style>
+    {% endif %}
 	</head>
 
 	<body class="{{ title | slug }}">

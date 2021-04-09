@@ -17,7 +17,7 @@
       {% if post.data.excerpt %}
         <p>{{ post.data.excerpt }}</p>
       {% else %}
-        {{ post.data.content | safe }}
+        {# {{ post.data.content | safe }} #}
       {% endif %}
     </article>
     {% endif %}
