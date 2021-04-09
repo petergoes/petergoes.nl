@@ -2,6 +2,7 @@
   title: Error
   description: Something went wrong
   layout: page
+  eleventyExcludeFromCollections: true
 ---
 
 ## Something went wrong

@@ -2,6 +2,7 @@
   title: Contact
   description: Your message has not been send
   layout: page
+  eleventyExcludeFromCollections: true
 ---
 
 ## failed
