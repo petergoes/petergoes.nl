@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const mkdirp = require('mkdirp')
 const postcss = require('postcss')
+const htmlmin = require("html-minifier");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
@@ -21,8 +22,18 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "_public": "/" });
 
-  eleventyConfig.addFilter("json", function(value) {
-    JSON.stringify(value, null, 2)
+  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
+    if( outputPath && outputPath.endsWith(".html") ) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+      return minified;
+    }
+
+    return content;
   });
 
   eleventyConfig.addFilter("formatDate", function(value) {
