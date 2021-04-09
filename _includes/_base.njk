@@ -54,5 +54,20 @@
 		<div class="debug-vertical-rythm"></div>
 
     <link rel="stylesheet" href="/styles/markdown-decorations.css">
+
+    {% if not process.env.DEVELOPMENT %}
+    <script type="module">
+      window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent the mini-infobar from appearing on mobile
+        e.preventDefault();
+      });
+
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
+    {% endif %}
 	</body>
 </html>

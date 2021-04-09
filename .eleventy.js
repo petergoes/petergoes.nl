@@ -7,6 +7,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(inclusiveLangPlugin);
 
+  eleventyConfig.addPassthroughCopy({ "_public": "/" });
+
   eleventyConfig.addFilter("json", function(value) {
     JSON.stringify(value, null, 2)
   });
