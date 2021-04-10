@@ -1,1 +1,13 @@
-.sociallinks {}
+.sociallinks__item:before {
+	content: initial;
+}
+
+.sociallinks--inline .sociallinks__item {
+  display: inline-block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+  
+.sociallinks--inline  .sociallinks__item:not(:first-child) {
+  margin-left: 0.5rem;
+}

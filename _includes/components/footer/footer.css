@@ -1,1 +1,16 @@
-.footer { background-color: red; }
+.footer {
+	margin-top: var(--margin-m);
+	padding-top: var(--margin-s);
+	padding-bottom: var(--margin-s);
+
+	background-color: var(--code-background);
+	color: var(--dark-background-text);
+}
+
+.footer a {
+  color: #91c8ff;
+}
+
+.footer p {
+  margin-bottom: 0;
+}

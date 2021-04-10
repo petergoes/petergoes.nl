@@ -1,0 +1,48 @@
+:root {
+  --serif: Georgia, Times, 'Times New Roman', serif;
+  --sans-serif: 'Fira Code', 'Courier New', monospace;
+  --monospace-prefered: 'Fira Code', 'Courier New', monospace;
+  --monospace: 'Courier New', monospace;
+
+  --screen-xsmall: 18em; /* 288px */
+  --screen-small: 48em; /* 768px */
+  --screen-medium: 64em; /* 1024px */
+  --screen-large: 90em; /* 1440px */
+
+  --char-width: 0.625rem;
+  --line-height: 1.75rem;
+
+  --margin-s: var(--line-height);
+  --margin-m: calc(var(--line-height) * 2);
+  --margin-l: calc(var(--line-height) * 3);
+
+  --markdown-decoration-fade: 0.4;
+  --alert-fade: 50%;
+  --default-text-color: #444444;
+  --default-text-color-50: #444444FF;
+  --background-color: #FAFAFA;
+  --background-color-50: #FAFAFAB4;
+  --dark-background-text: #BED5DD;
+  --link-color: #014cbd;
+  --error-color-50: #F44336B4;
+  --success-color: #8BC34A;
+  --success-color-50: #8BC34AB4;
+  --inline-code-color: #c94158;
+
+  /* code highlight */
+  --code-background: #263238;
+  --code-comment: #61737e;
+  --code-selector: #FFD47E;
+  --code-property: #8FD2CE;
+  --code-value: #BED5DD;
+  --code-text: #DEE3E9;
+  --code-text-25: #DEE3E95A;
+  --code-attribute: #98E3FF;
+  --code-attribute-dim: #68a0b5;
+  --code-element: #FA516D;
+  --code-element-dim: #ff637d;
+  --code-string: #CAE69C;
+  --code-keyword: #c792ea;
+  --code-number: #f78556;
+  --code-regex: #69a5ff;
+}

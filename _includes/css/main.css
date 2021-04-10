@@ -1,3 +1,10 @@
+@import "./variables.css";
+@import "./hljs-theme.css";
+@import "./reset.css";
+@import "./typography.css";
+@import "./helpers.css";
+@import "./core.css";
+@import './pages/contact.css';
 @import '../components/footer/footer.css';
 @import '../components/header/header.css';
 @import '../components/sociallinks/sociallinks.css';

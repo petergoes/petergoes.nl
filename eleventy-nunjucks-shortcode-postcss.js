@@ -44,6 +44,6 @@ module.exports = async function(files, pageOutputFile, external) {
 
   return external
     ? cssOutputFile.replace('_site', '')
-    : `/* CSS_REPLACE_WITH ${fileName} */`
+    : `/*CSS_REPLACE_WITH_START${fileName}CSS_REPLACE_WITH_END*/`
 
 }

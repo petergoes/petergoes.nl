@@ -1,0 +1,37 @@
+.my-vision {
+	background-color: var(--code-background);
+}
+.my-vision__quote {
+	max-width: calc(var(--char-width) * 80);
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+  padding-bottom: var(--margin-m);
+	margin-bottom: var(--margin-m);
+
+	color: var(--code-keyword);
+}
+@media screen and (min-width: var(--screen-small)) and (max-width: var(--screen-medium)) {
+  .my-vision__quote {
+    max-width: var(--char-width) * 66.66666;
+  }
+}
+
+.my-vision__quote	blockquote {
+  border: none;
+}
+
+.my-vision__variable {
+	color: var(--code-text);
+}
+
+.my-vision__text {
+	color: var(--code-keyword);
+}
+
+@media screen and (min-width: var(--screen-xsmall)) {
+	.my-vision__text {
+		color: var(--code-string);
+	}
+}

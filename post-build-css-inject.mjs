@@ -11,19 +11,34 @@ const htmlFiles = await glob('_site/**/*.html')
 const promises = htmlFiles
   .map(file => path.join(__dirname, file))
   .map(async htmlFile => {
-    const findCssFile = /\/\*\sCSS_REPLACE_WITH\s(.+)\s\*\//
+    const findCssFile = /\/\*CSS_REPLACE_WITH_START(.+)CSS_REPLACE_WITH_END\*\//
     const htmlContents = await fs.readFile(htmlFile, { encoding: 'utf-8' })
-    const [fullMatch, cssFile] = findCssFile.exec(htmlContents)
+    const [fullMatch, cssFile, ...rest] = findCssFile.exec(htmlContents)
+
+    console.log({fullMatch, cssFile, rest})
 
     const purgeCSSResult = await new PurgeCSS().purge({
       content: [htmlFile],
       css: [cssFile]
     })
 
-    const cssContents = purgeCSSResult[0].css
+    const cssContents = purgeCSSResult && purgeCSSResult[0] && purgeCSSResult[0].css
     const updatedHtml = htmlContents.replace(fullMatch, cssContents)
-    const writePromise = fs.writeFile(htmlFile, updatedHtml, { encoding: 'utf-8' })
-    const deletePromise = fs.unlink(cssFile)
+    let writePromise
+    try {
+      writePromise = fs.writeFile(htmlFile, updatedHtml, { encoding: 'utf-8' })
+    } catch (error) {
+      console.log('could not write to ', htmlFile)
+      writePromise = Promise.resolve()
+    }
+
+    let deletePromise
+    try {
+      deletePromise = fs.unlink(cssFile)
+    } catch (error) {
+      console.log('could not delete ', cssFile)
+      deletePromise = Promise.resolve()
+    }
     await Promise.all([writePromise, deletePromise])
   })
 
