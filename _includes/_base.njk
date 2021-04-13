@@ -38,7 +38,7 @@
     {% block head %}
     {% endblock %}
 
-    <script src="/js/bundle.js" async></script>
+    <script type="module" src="/_includes/scripts.js" async></script>
     <style>{% postcss stylesheets, page.outputPath, process.env.DEVELOPMENT === 'true' %}</style>
   </head>
 

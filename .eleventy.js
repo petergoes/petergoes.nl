@@ -16,6 +16,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(inclusiveLangPlugin);
 
   eleventyConfig.addPassthroughCopy({ "_public": "/" });
+  eleventyConfig.addPassthroughCopy("_includes/**/*.js");
 
   eleventyConfig.addTransform("htmlmin", transfromHtmlmin);
 
