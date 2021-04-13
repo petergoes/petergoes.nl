@@ -1,3 +1,4 @@
+// Eleventy based
 // eslint-disable-next-line no-console
 console.log(
   `%c  .petergoes %c{ front-end: %c developer%c; }  `,
