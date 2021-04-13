@@ -14,3 +14,7 @@
 .footer p {
   margin-bottom: 0;
 }
+
+.footer__other-nav li::before {
+  content: none;
+}
