@@ -33,7 +33,10 @@ module.exports = async function(files, pageOutputFile, development) {
   let css = await postcss(pluginList)
     .process(mainContents, { from: path.join(__dirname, '_includes', baseCssFile) })
     .then(result => result.css)
-  css = `/*\n${mainContents}\n*/\n\n${css}`
+
+  if (development) {
+    css = `/*\n${mainContents}\n*/\n\n${css}`
+  }
 
   let fileName
   if (pageOutputFile) {
