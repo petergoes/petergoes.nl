@@ -22,6 +22,7 @@
     <meta name="twitter:title" content="{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{{ description }}">
     <meta name="twitter:image" content="{% if page.featuredimage %}{{ site.url }}{{ page.url }}{{ page.featuredimage}}{% else %}{{ site.gravatar }}{% endif %}">
+    <meta name="twitter:image:alt" content="{% if page.featuredimage %}{{ page.featuredimageAlt }}{% else %}Close up of my face{% endif %}">
     
     <meta property="og:site_name" content="{{ site.name }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
