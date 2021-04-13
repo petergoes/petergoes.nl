@@ -56,6 +56,8 @@
     <link rel="stylesheet" href="/styles/markdown-decorations.css">
 
     {% if not process.env.DEVELOPMENT %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45961555-1"></script>
+		<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-45961555-1');</script>
     <script type="module">
       window.addEventListener('beforeinstallprompt', (e) => {
         // Prevent the mini-infobar from appearing on mobile
