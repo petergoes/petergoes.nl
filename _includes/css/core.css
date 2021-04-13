@@ -1,5 +1,5 @@
 html {
-	background-color: var(--code-background);
+  background-color: var(--code-background);
 }
 
 body {
@@ -9,15 +9,15 @@ body {
 }
 
 img {
-	width: 100%;
+  width: 100%;
 }
 
 picture {
-	display: block;
+  display: block;
 }
 
 main {
-	position: relative;
+  position: relative;
   flex: 1;
   margin-top: 3.5rem;
 }
@@ -27,19 +27,19 @@ main {
 }
 
 pre.hljs-block {
-	position: relative;
-	margin-bottom: var(--line-height);
+  position: relative;
+  margin-bottom: var(--line-height);
 }
 
 pre.hljs-block:before {
-	content: '';
-	position: absolute;
-	background-color: var(--code-background);
-	width: 150%;
-	height: 100%;
-	left: 50%;
-	transform: translateX(-50%);
-	max-width: 100vw;
+  content: '';
+  position: absolute;
+  background-color: var(--code-background);
+  width: 150%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100vw;
 
 }
 @media screen and (min-width: var(--screen-small)) {
@@ -49,10 +49,10 @@ pre.hljs-block:before {
 }
 
 code.hljs-block {
-	position: relative;
-	background-color: var(--code-background);
-	padding-top: var(--line-height);
-	padding-bottom: var(--line-height);
-	padding-left: 0;
-	padding-right: 0;
+  position: relative;
+  background-color: var(--code-background);
+  padding-top: var(--line-height);
+  padding-bottom: var(--line-height);
+  padding-left: 0;
+  padding-right: 0;
 }

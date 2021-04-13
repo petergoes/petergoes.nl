@@ -1,37 +1,37 @@
 .contact__form {
-	margin-top: var(--margin-m);
-	margin-bottom: var(--margin-m);
+  margin-top: var(--margin-m);
+  margin-bottom: var(--margin-m);
 }
 
 .contact__form__element {
-	margin-bottom: var(--margin-s);
+  margin-bottom: var(--margin-s);
 }
 
 .contact__form__element:before{
-	content: initial;
+  content: initial;
 }
 
 .contact__form__label {
-	display: block;
+  display: block;
 }
 
 .contact__form__input {
-	display: block;
-	width: 100%;
-	padding: 0.25rem;
+  display: block;
+  width: 100%;
+  padding: 0.25rem;
 }
 
 
 @media screen and (min-width: var(--screen-medium)) {
-	.contact__form__element {
-		display: flex;
-	}
+  .contact__form__element {
+    display: flex;
+  }
 
-	.contact__form__label {
-		width: calc(var(--char-width) * 20);
-	}
+  .contact__form__label {
+    width: calc(var(--char-width) * 20);
+  }
 
-	.contact__form__submit {
-		margin-left: 9.85rem;
-	}
+  .contact__form__submit {
+    margin-left: 9.85rem;
+  }
 }

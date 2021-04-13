@@ -1,18 +1,18 @@
 {% extends './_base.njk' %}
 
 {% block header%}
-	{% include 'components/header/header.njk' %}
+  {% include 'components/header/header.njk' %}
 {% endblock %}
 
 {% block content %}
-	<article>
-		<div class="content-section">
-			<h1 class="{% if showPageTitle === false %}visuallyhidden{% endif %}">{{ title }}</h1>
-			{{ content | safe }}
-		</div>
-	</article>
+  <article>
+    <div class="content-section">
+      <h1 class="{% if showPageTitle === false %}visuallyhidden{% endif %}">{{ title }}</h1>
+      {{ content | safe }}
+    </div>
+  </article>
 {% endblock %}
 
 {% block footer %}
-	{% include 'components/footer/footer.njk' %}
+  {% include 'components/footer/footer.njk' %}
 {% endblock%}

@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-	<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-		<title>{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}</title>
-		
-		<link rel="manifest" href="/manifest.json">
+    <title>{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}</title>
+    
+    <link rel="manifest" href="/manifest.json">
 
-		<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <link rel="shortcut icon" href="{% imageUrl '_assets/logo.svg', 32, 'png' %}" />
     <link rel="apple-touch-icon" href="{% imageUrl '_assets/logo.svg', 192, 'png' %}">
-		
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		
-		<meta name="theme-color" content="{{ site.themeColor }}">
-		<meta name="description" content="{{ description }}">
-		
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:creator" content="{{ socialLinks.twitter.username }}">
-		<meta name="twitter:title" content="{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
-		<meta name="twitter:description" content="{{ description }}">
-		<meta name="twitter:image" content="{% if page.featuredimage %}{{ site.url }}{{ page.url }}{{ page.featuredimage}}{% else %}{{ site.gravatar }}{% endif %}">
-		
-		<meta property="og:site_name" content="{{ site.name }}">
-		<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-		<meta property="og:title" content="{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
-		<meta property="og:type" content="article">
-		<meta property="og:image" content="{% if page.featuredimage %}{{ site.url }}{{ page.url }}{{ page.featuredimage}}{% else %}{{ site.gravatar }}{% endif %}">
-		
-		<meta name="google-site-verification" content="nqrUK41xnH-Xy6jkKrFZaB7WepOc-53Nein0KOSwizo" />
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <meta name="theme-color" content="{{ site.themeColor }}">
+    <meta name="description" content="{{ description }}">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="{{ socialLinks.twitter.username }}">
+    <meta name="twitter:title" content="{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{% if page.featuredimage %}{{ site.url }}{{ page.url }}{{ page.featuredimage}}{% else %}{{ site.gravatar }}{% endif %}">
+    
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="{% if page.featuredimage %}{{ site.url }}{{ page.url }}{{ page.featuredimage}}{% else %}{{ site.gravatar }}{% endif %}">
+    
+    <meta name="google-site-verification" content="nqrUK41xnH-Xy6jkKrFZaB7WepOc-53Nein0KOSwizo" />
 
-		{% if page.tags.length > 0 %}
-			<meta name="keywords" content="{% for tag in page.tags %}{{ tag.name }}{% if not loop.last %}, {% endif %}{% endfor %}">
-		{% endif %}
+    {% if page.tags.length > 0 %}
+      <meta name="keywords" content="{% for tag in page.tags %}{{ tag.name }}{% if not loop.last %}, {% endif %}{% endfor %}">
+    {% endif %}
 
-		{% block head %}
-		{% endblock %}
+    {% block head %}
+    {% endblock %}
 
-		<script src="/js/bundle.js" async></script>
+    <script src="/js/bundle.js" async></script>
     <style>{% postcss stylesheets, page.outputPath, process.env.DEVELOPMENT === 'true' %}</style>
-	</head>
+  </head>
 
-	<body class="{{ title | slug }}">
-		{% block header %}{% endblock %}
+  <body class="{{ title | slug }}">
+    {% block header %}{% endblock %}
 
-		<main>
-			{% block content %}{% endblock %}
-		</main>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
 
-		{% block footer %}{% endblock%}
-		
-		<div class="debug-vertical-rythm"></div>
+    {% block footer %}{% endblock%}
+    
+    <div class="debug-vertical-rythm"></div>
 
     <link rel="stylesheet" href="/styles/markdown-decorations.css">
 
@@ -69,5 +69,5 @@
       }
     </script>
     {% endif %}
-	</body>
+  </body>
 </html>

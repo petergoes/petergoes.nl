@@ -1,10 +1,10 @@
 .footer {
-	margin-top: var(--margin-m);
-	padding-top: var(--margin-s);
-	padding-bottom: var(--margin-s);
+  margin-top: var(--margin-m);
+  padding-top: var(--margin-s);
+  padding-bottom: var(--margin-s);
 
-	background-color: var(--code-background);
-	color: var(--dark-background-text);
+  background-color: var(--code-background);
+  color: var(--dark-background-text);
 }
 
 .footer a {
