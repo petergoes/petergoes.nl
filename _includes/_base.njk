@@ -39,11 +39,7 @@
 		{% endblock %}
 
 		<script src="/js/bundle.js" async></script>
-    {% if process.env.DEVELOPMENT === 'true' %}
-      <link rel="stylesheet" href="{% postcss stylesheets, page.outputPath, true %}" />
-    {% else %}
-      <style>{% postcss stylesheets, page.outputPath, false %}</style>
-    {% endif %}
+    <style>{% postcss stylesheets, page.outputPath, process.env.DEVELOPMENT === 'true' %}</style>
 	</head>
 
 	<body class="{{ title | slug }}">

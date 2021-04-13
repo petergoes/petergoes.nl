@@ -1,6 +1,12 @@
+---
+  stylesheets:
+   - overview.css
+---
+
 {% extends './page.njk' %}
 
 {% block content %}
+<section class="content-section">
   <h1 class="{% if showPageTitle === false %}visuallyhidden{% endif %}">{{ title }}</h1>
   {{ content | safe }}
 
@@ -23,7 +29,10 @@
     {% endif %}
   {%- endfor -%}
 
+  <hr class="overview-hr" />
+
   <aside>
     <a href="/{{page.fileSlug}}/feed.xml">{{title}} RSS feed</a>
   </aside>
+</section>
 {% endblock %}

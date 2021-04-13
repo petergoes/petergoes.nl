@@ -8,12 +8,12 @@ const postcssImport = require('postcss-import')
 const postcssMediaVariables = require('postcss-media-variables')
 const postcssCustomProperties = require('postcss-custom-properties')
 
-module.exports = async function(files, pageOutputFile, external) {
+module.exports = async function(files, pageOutputFile, development) {
   const baseCssFile = 'css/main.css'
   const cssOutputFile = (pageOutputFile || '').replace('.html', '.css')
   const getFileContents = file => fs.readFileSync(path.join(__dirname, '_includes', file), {encoding: "utf-8"})
 
-  const mainContents = `${getFileContents(baseCssFile)}\n${files.map(file => `@import '../${file}';\n`)}`
+  const mainContents = `${getFileContents(baseCssFile)}\n${files.map(file => `@import "../${file}";`).join('\n')}`
 
   const plugins = [
     postcssImport,
@@ -30,9 +30,10 @@ module.exports = async function(files, pageOutputFile, external) {
     ? plugins
     : [...plugins, ...productionPlugins]
 
-  const css = await postcss(pluginList)
+  let css = await postcss(pluginList)
     .process(mainContents, { from: path.join(__dirname, '_includes', baseCssFile) })
     .then(result => result.css)
+  css = `/*\n${mainContents}\n*/\n\n${css}`
 
   let fileName
   if (pageOutputFile) {
@@ -42,8 +43,7 @@ module.exports = async function(files, pageOutputFile, external) {
     fs.writeFileSync(fileName, css, { encoding: 'utf-8' })
   }
 
-  return external
-    ? cssOutputFile.replace('_site', '')
+  return development
+    ? `/*\n  ${fileName}\n*/\n${css}`
     : `/*CSS_REPLACE_WITH_START${fileName}CSS_REPLACE_WITH_END*/`
-
 }
