@@ -21,17 +21,15 @@
   "homepage": "https://github.com/petergoes/petergoes.nl#readme",
   "devDependencies": {
     "@11ty/eleventy": "0.12.1",
+    "@11ty/eleventy-img": "0.8.3",
     "@11ty/eleventy-plugin-inclusive-language": "1.0.2",
     "@11ty/eleventy-plugin-rss": "1.1.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "3.1.0",
-    "dotenv-save": "1.2.0",
-    "glob-promise": "4.1.0",
-    "gravatar": "1.8.1"
-  },
-  "dependencies": {
-    "@11ty/eleventy-img": "0.8.3",
     "autoprefixer": "10.2.5",
     "cssnano": "4.1.11",
+    "dotenv-save": "1.2.0",
+    "eleventy-plugin-highlightjs": "0.2.2",
+    "glob-promise": "4.1.0",
+    "gravatar": "1.8.1",
     "html-minifier": "4.0.0",
     "mkdirp": "1.0.4",
     "postcss": "8.2.9",

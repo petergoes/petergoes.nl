@@ -15,6 +15,10 @@
   margin-bottom: 0;
 }
 
+.footer ul {
+  margin-bottom: 0;
+}
+
 .footer__other-nav li::before {
   content: none;
 }

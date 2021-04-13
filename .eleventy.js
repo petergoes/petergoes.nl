@@ -1,5 +1,6 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+// const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const syntaxHighlight = require("eleventy-plugin-highlightjs");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const filterFormatDate = require('./eleventy-filter-format-date')
 const transfromHtmlmin = require('./eleventy-transform-htmlmin')
@@ -11,7 +12,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(syntaxHighlight, { className: "hljs-block" });
   eleventyConfig.addPlugin(inclusiveLangPlugin);
 
   eleventyConfig.addPassthroughCopy({ "_public": "/" });

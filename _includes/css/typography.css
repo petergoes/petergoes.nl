@@ -125,8 +125,8 @@ code {
   position: relative;
 }
 
-code :before,
-code :after {
+code:not([class*="hljs"])::before,
+code:not([class*="hljs"])::after {
   content: '';
   display: inline-block;
   color: var(--default-text-color);

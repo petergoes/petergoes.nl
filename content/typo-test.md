@@ -76,7 +76,7 @@ const regex = /hello|world/g;
 const obj = {foo: 'bar'};
 
 function log(msg) {
-	console.log(msg);
+  console.log(msg);
 }
 
 log(text);
@@ -85,14 +85,14 @@ log(text);
 ```css
 /* CSS code */
 .my-component {
-	width: 20em;
+  width: 20em;
 }
 ```
 
 ```html
 <!-- HTML markup -->
 <article data-property="value">
-	Hello world
+  Hello world
 </article>
 ```
 
