@@ -9,5 +9,6 @@ module.exports = {
   "subtitle": "Front-end Developer",
   "themeColor": "#263238",
   "title": "Peter Goes",
+  "author": "Peter Goes",
   "url": "https://www.petergoes.nl"
 }
