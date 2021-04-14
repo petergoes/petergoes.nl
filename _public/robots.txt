@@ -1,4 +1,4 @@
-Sitemap: https://www.petergoes.bl/sitemap.xml
+Sitemap: https://www.petergoes.nl/sitemap.xml
 
 User-agent: *
 Disallow:
