@@ -2,6 +2,8 @@
   title: About Me
   description: I am a passionate front-end developer, who loves to push boundaries on order to get the best user experience possible
   layout: page
+  og:
+    type: article
 ---
 ## Vision
 Every product we use or interact with, should be a valuable addition to our lives. Only when a product or service is designed in a way that the end user is put in an environment where he can move freely, without constraints, he can truly express himself. The ability to express creativity is probably one the most important needs one has.

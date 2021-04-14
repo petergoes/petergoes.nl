@@ -30,8 +30,12 @@
     <meta property="og:site_name" content="{{ site.name }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:title" content="{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
-    <meta property="og:type" content="article">
     <meta property="og:image" content="{% if page.featuredimage %}{{ site.url }}{{ page.url }}{{ page.featuredimage}}{% else %}{{ site.gravatar }}{% endif %}">
+    <meta property="og:type" content="{{ og.type }}">
+    {% if og.type === "article" %}
+      <meta property="article:published_time" content="{{ page.date }}">
+      <meta property="article:author" content="{{ author }}">
+    {% endif %}
 
     <meta name="google-site-verification" content="nqrUK41xnH-Xy6jkKrFZaB7WepOc-53Nein0KOSwizo" />
 
