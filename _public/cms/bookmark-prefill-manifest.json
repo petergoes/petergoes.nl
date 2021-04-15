@@ -1,0 +1,28 @@
+{
+  "short_name": "Bookmark Prefill",
+  "name": "PeterGoes.nl | CMS | Bookmark Prefill",
+  "icons": [
+    {
+      "src": "/assets/img/logo-192-74f35151.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/img/logo-512-74f35151.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/cms/bookmark-prefill.html",
+  "background_color": "#263238",
+  "display": "standalone",
+  "share_target": {
+    "action": "/cms/bookmark-prefill.html",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}

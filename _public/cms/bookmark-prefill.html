@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Bookmark Prefill</title>
+<link rel="manifest" href="/cms/bookmark-prefill-manifest.json">
+
+<h1>Bookmark Prefill</h1>
+
+<script type="module">
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js');
+    });
+  }
+</script>
