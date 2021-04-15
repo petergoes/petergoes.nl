@@ -1,5 +1,9 @@
+const fs = require('fs')
 const path = require('path')
 const Image = require("@11ty/eleventy-img");
+
+const featuredImageFallback = fs.readFileSync(path.join(__dirname, '_assets/featured-image-fallback.svg'), {encoding: 'utf-8'})
+const featuredImageSvg = fs.readFileSync(path.join(__dirname, '_assets/featured-image-mockup.svg'), {encoding: 'utf-8'})
 
 function getImage(src, widths, formats) {
   return Image(src, {
@@ -33,7 +37,31 @@ async function shortcodeSingleImageUrl(src, size, format) {
   return metadata[format][0].url
 }
 
+async function shortcodeFeaturedImage(page, title, fallback) {
+  if (page.outputPath) {
+    const outputFileName = 'featured-image.png'
+    const outputDir = fallback
+      ? './_site/assets/img/'
+      : `./_site/${page.filePathStem.replace('/index', '')}`
+    const buffer = fallback
+      ? Buffer.from(featuredImageFallback)
+      : Buffer.from(featuredImageSvg.replace('PAGE_TITLE', title))
+    const outputUrl = `${outputDir}/${outputFileName}`
+    const urlPath = outputDir.replace('./_site', '')
+    const image = await new Image(buffer, {
+      formats: ['png'],
+      widths: [1000],
+      outputDir,
+      urlPath,
+      filenameFormat: () => outputFileName
+    })
+    return `http://localhost:8080${image.png[0].url}`
+  }
+  return 'other'
+}
+
 module.exports = {
   shortcodeImageManifest,
-  shortcodeSingleImageUrl
+  shortcodeSingleImageUrl,
+  shortcodeFeaturedImage,
 }

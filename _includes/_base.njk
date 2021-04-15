@@ -22,15 +22,16 @@
     <meta name="twitter:creator" content="{{ socialLinks.twitter.username }}">
     <meta name="twitter:title" content="{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{{ description }}">
-    <meta name="twitter:image" content="{% if page.featuredimage %}{{ site.url }}{{ page.url }}{{ page.featuredimage}}{% else %}{{ site.gravatar }}{% endif %}">
-    <meta name="twitter:image:alt" content="{% if page.featuredimage %}{{ page.featuredimageAlt }}{% else %}My avatar on the web whicht is a close up of my face{% endif %}">
+    <meta name="twitter:image" content="{% featuredImage page, title, true %}">
+    <meta name="twitter:image:alt" content="Dark image with the text: {{ title }}" >
     <meta name="twitter:creator" content="@petergoes">
     <meta name="twitter:site" content="@petergoes">
 
     <meta property="og:site_name" content="{{ site.name }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:title" content="{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
-    <meta property="og:image" content="{% if page.featuredimage %}{{ site.url }}{{ page.url }}{{ page.featuredimage}}{% else %}{{ site.gravatar }}{% endif %}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{% featuredImage page, title, true %}">
     <meta property="og:type" content="{{ og.type }}">
     <meta property="og:publish_date" content="{{ page.date | dateToRfc3339 }}">
 

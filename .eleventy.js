@@ -5,7 +5,7 @@ const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const filterFormatDate = require('./eleventy-filter-format-date')
 const transfromHtmlmin = require('./eleventy-transform-htmlmin')
 const shortcodePostcss = require('./eleventy-nunjucks-shortcode-postcss')
-const { shortcodeImageManifest, shortcodeSingleImageUrl } = require('./eleventy-shortcode-image')
+const { shortcodeImageManifest, shortcodeSingleImageUrl, shortcodeFeaturedImage } = require('./eleventy-shortcode-image')
 require('dotenv-save').config()
 
 module.exports = function(eleventyConfig) {
@@ -25,6 +25,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("postcss", shortcodePostcss);
   eleventyConfig.addNunjucksAsyncShortcode("imageManifest", shortcodeImageManifest);
   eleventyConfig.addNunjucksAsyncShortcode("imageUrl", shortcodeSingleImageUrl);
+  eleventyConfig.addNunjucksAsyncShortcode("featuredImage", shortcodeFeaturedImage);
 
   // You can return your Config object (optional).
   return {
