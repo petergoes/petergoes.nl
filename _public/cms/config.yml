@@ -16,6 +16,6 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "bookmark" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "URL", name: 'url', widget: "url" }
-      - { label: "Body", name: "body", widget: "text", default: " " }
       - { label: "Tags", name: "tags", widget: "list", allow_add: true, default: ["bookmark"] }
+      - { label: "Body", name: "body", widget: "text", default: " " }
       - { label: "Publish Date", name: "date", widget: "datetime" }
