@@ -5,39 +5,57 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Bookmark Prefill</title>
 <link rel="manifest" href="/cms/bookmark-prefill-manifest.json">
+<style>
+  label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    padding: 0.5rem;
+  }
+
+  a {
+    display: block;
+    margin-top: 1rem;
+  }
+</style>
 
 <h1>Bookmark Prefill</h1>
 
-<label>
-  Title:
-  <input type="text" />
-</label>
-
-<label>
-  Url:
-  <input type="url" />
-</label>
-
-<button>Submit</button>
+<div>
+  <label>
+    <div>Title:</div>
+    <input type="text" />
+  </label>
+</div>
+<br />
+<div>
+  <label>
+    <div>Url:</div>
+    <input type="url" />
+  </label>
+</div>
 
 <script>
   const titleInput = document.querySelector('input[type="text"]')
   const urlInput = document.querySelector('input[type="url"]')
-  const submitButton = document.querySelector('button')
   const queryString = location.search.replace('?', '')
   const pairs = queryString
     .split('&')
       .map(part => part
         .split('=')
-        .map(([key, value]) => ([key, decodeURIComponent(value)]))
       )
   const titlePair = pairs.find(([key]) => key === 'title')
   const urlPair = pairs.find(([key]) => key === 'text')
 
-  titlePair && titlePair[1] && (titleInput.value = titlePair[1])
-  urlPair && urlPair[1] && (urlInput.value = urlPair[1])
+  titlePair && titlePair[1] && (titleInput.value = decodeURIComponent(titlePair[1]))
+  urlPair && urlPair[1] && (urlInput.value = decodeURIComponent(urlPair[1]))
 
-  submitButton.addEventListener('click', () => alert(`Title: ${titleInput.value}, url: ${urlInput.value}`))
+  const aElement = document.createElement('a')
+  aElement.href = `/cms/#/collections/bookmarks/new?title=${titlePair[1]}&url=${urlPair[1]}`
+  aElement.innerText = 'Save as bookmark'
+  document.body.appendChild(aElement)
 </script>
 
 <script type="module">
