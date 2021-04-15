@@ -25,7 +25,12 @@
   const urlInput = document.querySelector('input[type="url"]')
   const submitButton = document.querySelector('button')
   const queryString = location.search.replace('?', '')
-  const pairs = queryString.split('&').map(part => part.split('='))
+  const pairs = queryString
+    .split('&')
+      .map(part => part
+        .split('=')
+        .map(([key, value]) => ([key, decodeURIComponent(value)]))
+      )
   const titlePair = pairs.find(([key]) => key === 'title')
   const urlPair = pairs.find(([key]) => key === 'text')
 
