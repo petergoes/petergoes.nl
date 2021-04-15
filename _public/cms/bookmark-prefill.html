@@ -8,6 +8,33 @@
 
 <h1>Bookmark Prefill</h1>
 
+<label>
+  Title:
+  <input type="text" />
+</label>
+
+<label>
+  Url:
+  <input type="url" />
+</label>
+
+<button>Submit</button>
+
+<script>
+  const titleInput = document.querySelector('input[type="text"]')
+  const urlInput = document.querySelector('input[type="url"]')
+  const submitButton = document.querySelector('button')
+  const queryString = location.search.replace('?', '')
+  const pairs = queryString.split('&').map(part => part.split('='))
+  const titlePair = pairs.find(([key]) => key === 'title')
+  const urlPair = pairs.find(([key]) => key === 'url')
+
+  titlePair && titlePair[1] && (titleInput.value = titlePair[1])
+  urlPair && urlPair[1] && (urlInput.value = urlPair[1])
+
+  submitButton.addEventListener('click', () => alert(`Title: ${titleInput.value}, url: ${urlInput.value}`))
+</script>
+
 <script type="module">
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
