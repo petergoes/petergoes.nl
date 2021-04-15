@@ -6,6 +6,11 @@
 <title>Bookmark Prefill</title>
 <link rel="manifest" href="/cms/bookmark-prefill-manifest.json">
 <style>
+  html {
+    font-family: sans-serif;
+    padding: 1rem;
+  }
+
   label {
     display: flex;
     flex-direction: column;
@@ -16,8 +21,12 @@
   }
 
   a {
-    display: block;
+    display: inline-block;
     margin-top: 1rem;
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 0.5rem;
+    text-decoration: none;
   }
 </style>
 
@@ -27,6 +36,7 @@
   <label>
     <div>Title:</div>
     <input type="text" />
+    <p data-title></p>
   </label>
 </div>
 <br />
@@ -34,12 +44,15 @@
   <label>
     <div>Url:</div>
     <input type="url" />
+    <p data-url></p>
   </label>
 </div>
 
 <script>
   const titleInput = document.querySelector('input[type="text"]')
+  const titleOutput = document.querySelector('[data-title]')
   const urlInput = document.querySelector('input[type="url"]')
+  const urlOutput = document.querySelector('[data-url]')
   const queryString = location.search.replace('?', '')
   const pairs = queryString
     .split('&')
@@ -49,8 +62,14 @@
   const titlePair = pairs.find(([key]) => key === 'title')
   const urlPair = pairs.find(([key]) => key === 'text')
 
-  titlePair && titlePair[1] && (titleInput.value = decodeURIComponent(titlePair[1]))
+  titleInput.addEventListener('input', event => titleOutput.innerText = event.target.value)
+  urlInput.addEventListener('input', event => urlOutput.innerText = event.target.value)
+
+  titlePair && titlePair[1] && (titleInput.value = decodeURIComponent(titlePair[1]).replace(/\+/g, ' '))
   urlPair && urlPair[1] && (urlInput.value = decodeURIComponent(urlPair[1]))
+
+  titleOutput.innerHTML = titleInput.value
+  urlOutput.innerHTML = urlInput.value
 
   const aElement = document.createElement('a')
   aElement.href = `/cms/#/collections/bookmarks/new?title=${titlePair[1]}&url=${urlPair[1]}`
