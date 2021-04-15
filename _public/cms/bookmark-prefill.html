@@ -27,7 +27,7 @@
   const queryString = location.search.replace('?', '')
   const pairs = queryString.split('&').map(part => part.split('='))
   const titlePair = pairs.find(([key]) => key === 'title')
-  const urlPair = pairs.find(([key]) => key === 'url')
+  const urlPair = pairs.find(([key]) => key === 'text')
 
   titlePair && titlePair[1] && (titleInput.value = titlePair[1])
   urlPair && urlPair[1] && (urlInput.value = urlPair[1])

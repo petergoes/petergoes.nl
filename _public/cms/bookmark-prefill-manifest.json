@@ -21,6 +21,7 @@
     "method": "GET",
     "params": {
       "title": "title",
+      "text": "text",
       "url": "url"
     }
   }
