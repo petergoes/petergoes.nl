@@ -26,5 +26,7 @@ module.exports = function splitStringInTspans(string, category, maxChars = 38, x
   }
 
   lines = [...lines, ...splitInLines(string, maxChars)]
-  return lines.map((line, index) => `<tspan x="${x}" y="${y + (index * lineHeight)}">${line}</tspan>`).join('\n')
+  return lines
+    .map((line, index) => `<tspan x="${category && index === 0 ? x - 40 : x}" y="${y + (index * lineHeight)}">${line}</tspan>`)
+    .join('\n')
 }
