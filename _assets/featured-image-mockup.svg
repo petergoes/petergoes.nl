@@ -5,7 +5,7 @@
     <desc>Created with Sketch.</desc>
     <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <rect id="Rectangle" fill="#263238" x="0" y="0" width="1000" height="500"></rect>
-        <text id="logo" font-family="FiraCode-Regular, Fira Code" font-size="32" font-weight="normal">
+        <text id="logo" font-family="FiraCode-Regular, Fira Code, monospace" font-size="32" font-weight="normal">
             <tspan x="100" y="86" fill="#FFD47E">.peter-goes</tspan>
             <tspan x="316.615385" y="86" fill="#8FD2CE"> </tspan>
             <tspan x="336.307692" y="86" fill="#68A0B5">{</tspan>
@@ -17,7 +17,7 @@
             <tspan x="513.538462" y="150" fill="#68A0B5">;</tspan>
             <tspan x="100" y="214" fill="#68A0B5">}</tspan>
         </text>
-        <text font-family="FiraCode-Regular, Fira Code" font-size="32" font-weight="normal" fill="#FFD47E">
+        <text font-family="FiraCode-Regular, Fira Code, monospace" font-size="32" font-weight="normal" fill="#FFD47E">
             PAGE_TITLE
         </text>
     </g>
