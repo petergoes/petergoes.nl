@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const Image = require("@11ty/eleventy-img");
 const splitStringInTspans = require('./_utils/split-string-in-tspans')
+require('dotenv-save').config()
 
 const featuredImageFallback = fs.readFileSync(path.join(__dirname, '_assets/featured-image-fallback.svg'), {encoding: 'utf-8'})
 const featuredImageSvg = fs.readFileSync(path.join(__dirname, '_assets/featured-image-mockup.svg'), {encoding: 'utf-8'})
@@ -39,6 +40,8 @@ async function shortcodeSingleImageUrl(src, size, format) {
 }
 
 async function shortcodeFeaturedImage(page, title, fallback, category) {
+  if (process.env.DEVELOPMENT === 'true') return 'ignored-in-development'
+
   if (page.outputPath) {
     const outputFileName = 'featured-image.png'
     const outputDir = fallback
