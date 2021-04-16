@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const Image = require("@11ty/eleventy-img");
+const splitStringInTspans = require('./_utils/split-string-in-tspans')
 
 const featuredImageFallback = fs.readFileSync(path.join(__dirname, '_assets/featured-image-fallback.svg'), {encoding: 'utf-8'})
 const featuredImageSvg = fs.readFileSync(path.join(__dirname, '_assets/featured-image-mockup.svg'), {encoding: 'utf-8'})
@@ -37,7 +38,7 @@ async function shortcodeSingleImageUrl(src, size, format) {
   return metadata[format][0].url
 }
 
-async function shortcodeFeaturedImage(page, title, fallback) {
+async function shortcodeFeaturedImage(page, title, fallback, category) {
   if (page.outputPath) {
     const outputFileName = 'featured-image.png'
     const outputDir = fallback
@@ -45,7 +46,7 @@ async function shortcodeFeaturedImage(page, title, fallback) {
       : `./_site/${page.filePathStem.replace('/index', '')}`
     const buffer = fallback
       ? Buffer.from(featuredImageFallback)
-      : Buffer.from(featuredImageSvg.replace('PAGE_TITLE', title))
+      : Buffer.from(featuredImageSvg.replace('PAGE_TITLE', splitStringInTspans(title, category)))
     const outputUrl = `${outputDir}/${outputFileName}`
     const urlPath = outputDir.replace('./_site', '')
     const image = await new Image(buffer, {
@@ -53,9 +54,9 @@ async function shortcodeFeaturedImage(page, title, fallback) {
       widths: [1000],
       outputDir,
       urlPath,
-      filenameFormat: () => outputFileName
+      filenameFormat: id => `${id}-${outputFileName}`
     })
-    return `http://localhost:8080${image.png[0].url}`
+    return `${image.png[0].url}`
   }
   return 'other'
 }

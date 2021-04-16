@@ -1,22 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000px" height="500px" viewBox="0 0 1000 500" version="1.1">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000px" height="500px" viewBox="0 0 1000 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
     <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="Rectangle" fill="#263238" x="0" y="0" width="1000" height="500"/>
+        <rect id="Rectangle" fill="#263238" x="0" y="0" width="1000" height="500"></rect>
         <text id="logo" font-family="FiraCode-Regular, Fira Code" font-size="32" font-weight="normal">
-            <tspan x="100" y="90" fill="#FFD47E">.peter-goes</tspan>
-            <tspan x="316.615385" y="90" fill="#8FD2CE"> </tspan>
-            <tspan x="336.307692" y="90" fill="#68A0B5">{</tspan>
-            <tspan x="356" y="90" fill="#8FD2CE"/>
-            <tspan x="140" y="139" fill="#8FD2CE">frontEnd</tspan>
-            <tspan x="296.923077" y="139" fill="#68A0B5">:</tspan>
-            <tspan x="316.615385" y="139" fill="#8FD2CE"> </tspan>
-            <tspan x="336.307692" y="139" fill="#BED5DD">developer</tspan>
-            <tspan x="513.538462" y="139" fill="#68A0B5">;</tspan>
-            <tspan x="100" y="188" fill="#68A0B5">}</tspan>
+            <tspan x="100" y="86" fill="#FFD47E">.peter-goes</tspan>
+            <tspan x="316.615385" y="86" fill="#8FD2CE"> </tspan>
+            <tspan x="336.307692" y="86" fill="#68A0B5">{</tspan>
+            <tspan x="356" y="86" fill="#8FD2CE"></tspan>
+            <tspan x="140" y="150" fill="#8FD2CE">frontEnd</tspan>
+            <tspan x="296.923077" y="150" fill="#68A0B5">:</tspan>
+            <tspan x="316.615385" y="150" fill="#8FD2CE"> </tspan>
+            <tspan x="336.307692" y="150" fill="#BED5DD">developer</tspan>
+            <tspan x="513.538462" y="150" fill="#68A0B5">;</tspan>
+            <tspan x="100" y="214" fill="#68A0B5">}</tspan>
         </text>
-        <foreignObject x="100" y="225" width="800" height="250">
-          <p xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Fira Code'; font-size: 2.5rem; color: #FFD47E;">
+        <text font-family="FiraCode-Regular, Fira Code" font-size="32" font-weight="normal" fill="#FFD47E">
             PAGE_TITLE
-          </p>
-        </foreignObject>
+        </text>
     </g>
 </svg>
