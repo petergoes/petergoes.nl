@@ -40,7 +40,7 @@ async function shortcodeSingleImageUrl(src, size, format) {
 }
 
 async function shortcodeFeaturedImage(page, title, fallback, category) {
-  // if (process.env.DEVELOPMENT === 'true') return 'ignored-in-development'
+  if (process.env.DEVELOPMENT === 'true') return 'ignored-in-development'
 
   if (page.outputPath) {
     const outputFileName = 'featured-image.png'
@@ -59,7 +59,7 @@ async function shortcodeFeaturedImage(page, title, fallback, category) {
       urlPath,
       filenameFormat: id => `${id}-${outputFileName}`
     })
-    return `${image.png[0].url}`
+    return `https://www.petergoes.nl/${image.png[0].url}`
   }
   return 'other'
 }
