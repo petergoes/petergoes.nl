@@ -1,3 +1,8 @@
 .blog header {
   margin-bottom: var(--line-height);
 }
+
+.blog footer {
+  margin-top: calc(var(--line-height) * 2);
+  border-top: 1px solid var(--default-text-color-50);
+}
