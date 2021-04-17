@@ -7,4 +7,5 @@ tags:
   - css
 date: 2021-04-15T19:43:11.452Z
 ---
- 
+ Sara Soueidan writes about a typography bug in Safari and how she manages to
+ work around it

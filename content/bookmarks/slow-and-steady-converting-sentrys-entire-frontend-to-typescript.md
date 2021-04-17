@@ -8,4 +8,4 @@ tags:
   - refactoring
 date: 2021-04-14T10:05:11.669Z
 ---
- 
+ Team at Sentry writes about their process of migrating to TypeScript

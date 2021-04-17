@@ -7,4 +7,4 @@ tags:
   - still-to-read
 date: 2021-04-09T06:08:50.727Z
 ---
- 
+ Some arguments against using analytics on a website

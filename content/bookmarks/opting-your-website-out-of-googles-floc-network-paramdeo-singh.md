@@ -8,4 +8,5 @@ tags:
   - FLoC
 date: 2021-04-16T08:24:40.682Z
 ---
- 
+ Features examples of how to opt out on various hosting providers including
+ Netlify
