@@ -1,6 +1,6 @@
 ---
 layout: blog
-permalink: '"{{ page.filePathStem }}/index.html"'
+permalink: "{{ page.filePathStem }}/index.html"
 title: Why I signed the Overlay Factsheet
 description: My thoughts on the Overlay Factsheet and why I signed it
 tags:
