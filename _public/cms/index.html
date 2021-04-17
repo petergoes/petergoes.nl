@@ -22,7 +22,23 @@
       },
     });
 
+    var PublishControl = createClass({
+      render: function() {
+        return h('label', {
+          className: this.props.classNameWrapper,
+          children: ['Publish', h('input', {
+          id: this.props.forID,
+          type: 'checkbox',
+          checked: Boolean(this.props.value),
+          onChange: (event) => {
+            this.props.onChange(event.target.checked ? '"{{ page.filePathStem }}/index.html"' : false)
+          },
+        })]});
+      },
+    });
+
     CMS.registerWidget('url', UrlControl);
+    CMS.registerWidget('publish', PublishControl);
   </script>
   <style>
     @media (max-width: 799px) {
