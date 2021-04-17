@@ -25,7 +25,7 @@ collections:
     create: true
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
-      - { label: "Publish", name: "permalink", widget: "publish", default: '"{{ page.filePathStem }}/index.html"' }
+      - { label: "Publish", name: "permalink", widget: "publish", default: false }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list", allow_add: true, default: ["blog"] }
