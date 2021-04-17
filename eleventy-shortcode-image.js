@@ -40,7 +40,7 @@ async function shortcodeSingleImageUrl(src, size, format) {
 }
 
 async function shortcodeFeaturedImage(page, title, fallback, category) {
-  if (process.env.DEVELOPMENT === 'true') return 'ignored-in-development'
+  // if (process.env.DEVELOPMENT === 'true') return 'ignored-in-development'
 
   if (page.outputPath) {
     const outputFileName = 'featured-image.png'
