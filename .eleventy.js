@@ -1,5 +1,4 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-// const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const syntaxHighlight = require("eleventy-plugin-highlightjs");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const filterFormatDate = require('./eleventy-filter-format-date')

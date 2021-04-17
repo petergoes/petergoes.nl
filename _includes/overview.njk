@@ -1,4 +1,5 @@
 ---
+  timeSeperatorFormat: MM-YYYY
   stylesheets:
    - overview.css
 ---
@@ -13,10 +14,18 @@
   {% block filters %}
   {% endblock %}
 
+  {% set month = undefined %}
+
   {%- for post in collections[collection] | reverse -%}
     {% if post.url %}
+
+    {% if month !== post.date | formatDate(timeSeperatorFormat) %}
+      <h2><span class="visuallyhidden">Items posted on</span>{{ post.date | formatDate(timeSeperatorFormat) }}</h2>
+      {% set month = post.date | formatDate(timeSeperatorFormat) %}
+    {% endif %}
+
     <article>
-      <h2><a href="{% if post.data.url %}{{ post.data.url }}{% else %}{{ post.url }}{% endif %}">{{ post.data.title }}</a></h2>
+      <h3><a href="{% if post.data.url %}{{ post.data.url }}{% else %}{{ post.url }}{% endif %}">{{ post.data.title }}</a></h3>
       {% if showDate %}
         <small>{{ post.date | formatDate }}</small>
       {% endif %}

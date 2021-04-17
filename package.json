@@ -37,5 +37,8 @@
     "postcss-import": "14.0.1",
     "postcss-media-variables": "2.0.1",
     "purgecss": "4.0.3"
+  },
+  "dependencies": {
+    "dayjs": "1.10.4"
   }
 }
