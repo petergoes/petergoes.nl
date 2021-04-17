@@ -59,7 +59,7 @@ async function shortcodeFeaturedImage(page, title, fallback, category) {
       urlPath,
       filenameFormat: id => `${id}-${outputFileName}`
     })
-    return `https://www.petergoes.nl/${image.png[0].url}`
+    return `https://www.petergoes.nl${image.png[0].url}`
   }
   return 'other'
 }
