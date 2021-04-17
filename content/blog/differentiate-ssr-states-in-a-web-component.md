@@ -6,7 +6,7 @@
     - web-components
   layout: blog
   date: 2019-04-15
-  excerpt: Can the `mounted()` function of a Vue component be mimicked in a Web Component?
+  permalink: "{{ page.filePathStem }}"
 ---
 
 ## The problem

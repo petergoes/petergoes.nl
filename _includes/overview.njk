@@ -29,8 +29,8 @@
       {% if showDate %}
         <small>{{ post.date | formatDate }}</small>
       {% endif %}
-      {% if post.data.excerpt %}
-        <p>{{ post.data.excerpt }}</p>
+      {% if post.data.description %}
+        <p>{{ post.data.description }}</p>
       {% else %}
         {{ post.templateContent | safe }}
       {% endif %}

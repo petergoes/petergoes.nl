@@ -6,7 +6,7 @@
     - random-thoughts
   layout: blog
   date: 2018-02-15
-  excerpt: The start of my journey to become a better front-end developer
+  permalink: "{{ page.filePathStem }}"
 ---
 
 ## My journey to become a better front-end developer

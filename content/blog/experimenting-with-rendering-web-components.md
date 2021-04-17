@@ -6,7 +6,7 @@
     - web-components
   layout: blog
   date: 2019-03-23
-  excerpt: The start of my journey to render web components on the server
+  permalink: "{{ page.filePathStem }}"
 ---
 
 ## About this serie of posts

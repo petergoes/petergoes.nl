@@ -4,7 +4,7 @@
   tags: 
     - blog
     - random-thoughts
-  view: blog
+  layout: blog
   permalink: false
   date: 2021-03-13
 ---
