@@ -30,4 +30,4 @@ collections:
       - { label: "Tags", name: "tags", widget: "list", allow_add: true, default: ["blog"] }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown", default: " " }
-      - { label: "Permalink", name: "permalink", widget: "string", default: '"{{ page.filePathStem }}"' }
+      - { label: "Permalink", name: "permalink", widget: "string", default: '"{{ page.filePathStem }}/index.html"' }

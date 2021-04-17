@@ -6,7 +6,7 @@
     - web-components
   layout: blog
   date: 2019-03-23
-  permalink: "{{ page.filePathStem }}"
+  permalink: "{{ page.filePathStem }}/index.html"
 ---
 
 ## About this serie of posts

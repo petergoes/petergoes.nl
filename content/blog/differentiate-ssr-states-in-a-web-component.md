@@ -6,7 +6,7 @@
     - web-components
   layout: blog
   date: 2019-04-15
-  permalink: "{{ page.filePathStem }}"
+  permalink: "{{ page.filePathStem }}/index.html"
 ---
 
 ## The problem

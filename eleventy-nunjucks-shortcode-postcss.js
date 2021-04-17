@@ -42,8 +42,16 @@ module.exports = async function(files, pageOutputFile, development) {
   if (pageOutputFile) {
     fileName = path.join(__dirname, cssOutputFile)
     const dir = fileName.replace(/\/(.[^\/]+)$/, '').replace(/\.$/, '')
-    await mkdirp(dir)
-    fs.writeFileSync(fileName, css, { encoding: 'utf-8' })
+    try {
+      await mkdirp(dir)
+    } catch (error) {
+      console.log(`Could not create ${dir}`)
+    }
+    try {
+      fs.writeFileSync(fileName, css, { encoding: 'utf-8' })
+    } catch (error) {
+      console.log(`Could not write ${fileName}`)
+    }
   }
 
   return development

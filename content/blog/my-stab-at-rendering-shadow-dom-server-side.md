@@ -6,7 +6,7 @@
     - web-components
   layout: blog
   date: 2019-03-24
-  permalink: "{{ page.filePathStem }}"
+  permalink: "{{ page.filePathStem }}/index.html"
 ---
 
 ## What is the Shadow Dom and why is it important?
