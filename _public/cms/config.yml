@@ -19,3 +19,14 @@ collections:
       - { label: "Tags", name: "tags", widget: "list", allow_add: true, default: ["bookmark"] }
       - { label: "Body", name: "body", widget: "text", default: " " }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+  - name: "blogposts"
+    label: "Blog posts"
+    folder: "content/blog"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", allow_add: true, default: ["blog"] }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown", default: " " }
