@@ -5,7 +5,7 @@
 ---
 ## Send me a message:
 
-<form class="contact__form" action="https://petergoes-backend-app.herokuapp.com/contactform" method="POST">
+<form data-netlify="true" class="contact__form" name="contact-page" action="/contact/success" method="POST">
 	<ol>
 		<li class="contact__form__element">
 			<label class="contact__form__label" for="input-name">Your name:</label>
