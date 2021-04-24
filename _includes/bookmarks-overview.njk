@@ -3,8 +3,21 @@
   timeSeperatorFormat: DD-MM-YYYY
   stylesheets:
     - components/bookmark-filter/bookmark-filter.css
+    - components/tag/tag.css
+    - components/tag-list/tag-list.css
 ---
+
+{% from "./components/tag/tag.njk" import tag %}
+{% from "./components/tag-list/tag-list.njk" import tagList %}
 
 {% block filters %}
   {% include 'components/bookmark-filter/bookmark-filter.njk' %}
+
+  {{
+    tagList(
+      collections.bookmark | tagsInCollection('bookmark'),
+      tag
+    )
+  }}
+
 {% endblock %}

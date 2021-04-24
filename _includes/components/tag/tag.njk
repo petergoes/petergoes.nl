@@ -1,0 +1,8 @@
+{% macro tag(tagName, tagSlug) %}
+  <a
+    class="tag"
+    href="?tag={{ tagSlug }}"
+  >
+    {{ tagName }}
+  </a>
+{% endmacro %}
