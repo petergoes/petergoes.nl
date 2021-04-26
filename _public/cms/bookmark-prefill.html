@@ -66,13 +66,23 @@
   document.body.appendChild(aElement)
   aElement.innerText = 'Save as bookmark'
 
-  titleInput.addEventListener('input', event => titleOutput.innerText = event.target.value)
-  urlInput.addEventListener('input', event => urlOutput.innerText = event.target.value)
+  function updateLink(element) {
+    return function (event) {
+      element.innerText = event.target.value
+      aElement.href = `/cms/#/collections/bookmarks/new?url=${encodeURIComponent(urlOutput.innerText)}&title=${encodeURIComponent(titleOutput.innerText)}`
+    }
+  }
+
+  titleInput.addEventListener('input', updateLink(titleOutput))
+  urlInput.addEventListener('input', updateLink(urlOutput))
 
   urlPair && urlPair[1] && (urlInput.value = decodeURIComponent(urlPair[1]))
   aElement.href = `/cms/#/collections/bookmarks/new?url=${urlPair[1]}`
   titlePair && titlePair[1] && (titleInput.value = decodeURIComponent(titlePair[1]).replace(/\+/g, ' '))
-  aElement.href = `${aElement.href}&url=${urlPair[1]}`
+
+  if (titlePair && titlePair[1]) {
+    aElement.href = `${aElement.href}&title=${titlePair[1]}`
+  }
 
   titleOutput.innerHTML = titleInput.value
   urlOutput.innerHTML = urlInput.value
