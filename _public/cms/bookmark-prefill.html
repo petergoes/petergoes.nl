@@ -49,6 +49,7 @@
 </div>
 
 <script>
+  const aElement = document.createElement('a')
   const titleInput = document.querySelector('input[type="text"]')
   const titleOutput = document.querySelector('[data-title]')
   const urlInput = document.querySelector('input[type="url"]')
@@ -62,19 +63,20 @@
   const titlePair = pairs.find(([key]) => key === 'title')
   const urlPair = pairs.find(([key]) => key === 'text')
 
+  document.body.appendChild(aElement)
+  aElement.innerText = 'Save as bookmark'
+
   titleInput.addEventListener('input', event => titleOutput.innerText = event.target.value)
   urlInput.addEventListener('input', event => urlOutput.innerText = event.target.value)
 
-  titlePair && titlePair[1] && (titleInput.value = decodeURIComponent(titlePair[1]).replace(/\+/g, ' '))
   urlPair && urlPair[1] && (urlInput.value = decodeURIComponent(urlPair[1]))
+  aElement.href = `/cms/#/collections/bookmarks/new?url=${urlPair[1]}`
+  titlePair && titlePair[1] && (titleInput.value = decodeURIComponent(titlePair[1]).replace(/\+/g, ' '))
+  aElement.href = `${aElement.href}&url=${urlPair[1]}`
 
   titleOutput.innerHTML = titleInput.value
   urlOutput.innerHTML = urlInput.value
 
-  const aElement = document.createElement('a')
-  aElement.href = `/cms/#/collections/bookmarks/new?title=${titlePair[1]}&url=${urlPair[1]}`
-  aElement.innerText = 'Save as bookmark'
-  document.body.appendChild(aElement)
 </script>
 
 <script type="module">
