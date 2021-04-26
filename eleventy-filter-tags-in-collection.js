@@ -20,11 +20,10 @@ module.exports = function filterTagsInCollection(collection, collectionName) {
       list[slug].push(item)
       return list
     }, {})
+
   return Object
     .values(result)
     .map(getHead)
-    .map(replace('-', ' '))
-    .map(toTitle)
     .filter(not(collectionName))
-    .sort()
+    .map(item => ({ slug: replace('-', ' ')(item),  label: toTitle(item) }))
 }

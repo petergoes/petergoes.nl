@@ -1,8 +1,8 @@
-{% macro tag(tagName, tagSlug) %}
+{% macro tag(item) %}
   <a
     class="tag"
-    href="?tag={{ tagSlug }}"
+    href="?tag={{ item.slug }}"
   >
-    {{ tagName }}
+    {{ item.label }}
   </a>
 {% endmacro %}
