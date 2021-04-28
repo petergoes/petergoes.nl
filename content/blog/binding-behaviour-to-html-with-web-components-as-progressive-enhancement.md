@@ -1,14 +1,13 @@
 ---
-layout: blog
-permalink: false
-title: Binding behaviour to HTML with Web Components as Progressive Enhancement
-description: An enhancement on the enhancer / handler pattern for JavaScript
-tags:
-  - blog
-  - webcomponents
-  - ""
-date: 2021-04-28T17:48:36.052Z
-tweet-url: " "
+  layout: blog
+  permalink: false
+  title: Binding behaviour to HTML with Web Components as Progressive Enhancement
+  description: An enhancement on the enhancer / handler pattern for JavaScript
+  tags:
+    - blog
+    - webcomponents
+  date: 2021-04-28T17:48:36.052Z
+  tweet-url: ""
 ---
 For a couple of years now, I have been working with front-end frameworks almost exclusively. At [De Voorhoede](https://www.voorhoede.nl), we adopted the componentised way of working early on. We moved from binding JavaScript to the DOM via `data-*` attributes on to using Angular.JS and from there to React and Vue. 
 
@@ -28,6 +27,7 @@ Besides the big list of all bookmarks, I wanted a way to filter them by tag. Ele
 
 First, lets look at the template side:
 
+{% raw %}
 ```twig
 <my-tag-list>
   <details>
@@ -47,6 +47,7 @@ First, lets look at the template side:
   </details>
 </my-tag-list>
 ```
+{% endraw %}
 
 A `details`/`summary` combination is used to show / hide the tags. Nunjucks templating is used to render the tags. For each tag, a link to an overview page of that tag is rendered.
 
