@@ -49,44 +49,53 @@
 </div>
 
 <script>
-  const aElement = document.createElement('a')
-  const titleInput = document.querySelector('input[type="text"]')
-  const titleOutput = document.querySelector('[data-title]')
-  const urlInput = document.querySelector('input[type="url"]')
-  const urlOutput = document.querySelector('[data-url]')
-  const queryString = location.search.replace('?', '')
-  const pairs = queryString
-    .split('&')
-      .map(part => part
-        .split('=')
-      )
-  const titlePair = pairs.find(([key]) => key === 'title')
-  const urlPair = pairs.find(([key]) => key === 'text')
+  (async function() {
+    const aElement = document.createElement('a')
+    const titleInput = document.querySelector('input[type="text"]')
+    const titleOutput = document.querySelector('[data-title]')
+    const urlInput = document.querySelector('input[type="url"]')
+    const urlOutput = document.querySelector('[data-url]')
+    const queryString = location.search.replace('?', '')
+    const pairs = queryString
+      .split('&')
+        .map(part => part
+          .split('=')
+        )
+    const titlePair = pairs.find(([key]) => key === 'title')
+    const urlPair = pairs.find(([key]) => key === 'text')
 
-  document.body.appendChild(aElement)
-  aElement.innerText = 'Save as bookmark'
+    document.body.appendChild(aElement)
+    aElement.innerText = 'Save as bookmark'
 
-  function updateLink(element) {
-    return function (event) {
-      element.innerText = event.target.value
-      aElement.href = `/cms/#/collections/bookmarks/new?url=${encodeURIComponent(urlOutput.innerText)}&title=${encodeURIComponent(titleOutput.innerText)}`
+    function updateLink(element) {
+      return function (event) {
+        element.innerText = event.target.value
+        aElement.href = `/cms/#/collections/bookmarks/new?url=${encodeURIComponent(urlOutput.innerText)}&title=${encodeURIComponent(titleOutput.innerText)}`
+      }
     }
-  }
 
-  titleInput.addEventListener('input', updateLink(titleOutput))
-  urlInput.addEventListener('input', updateLink(urlOutput))
+    titleInput.addEventListener('input', updateLink(titleOutput))
+    urlInput.addEventListener('input', updateLink(urlOutput))
 
-  urlPair && urlPair[1] && (urlInput.value = decodeURIComponent(urlPair[1]))
-  aElement.href = `/cms/#/collections/bookmarks/new?url=${urlPair[1]}`
-  titlePair && titlePair[1] && (titleInput.value = decodeURIComponent(titlePair[1]).replace(/\+/g, ' '))
+    urlPair && urlPair[1] && (urlInput.value = decodeURIComponent(urlPair[1]))
+    aElement.href = `/cms/#/collections/bookmarks/new?url=${urlPair[1]}`
+    titlePair && titlePair[1] && (titleInput.value = decodeURIComponent(titlePair[1]).replace(/\+/g, ' '))
 
-  if (titlePair && titlePair[1]) {
-    aElement.href = `${aElement.href}&title=${titlePair[1]}`
-  }
+    if (titlePair && titlePair[1]) {
+      aElement.href = `${aElement.href}&title=${titlePair[1]}`
+    } else if (urlPair && urlPair[1]) {
+      const { title } = await fetch(`/.netlify/functions/get-title-from-url?url=${urlPair[1]}`)
+        .then(res => res.json())
+        .catch(console.error)
+      if (title) {
+        titleInput.value = title
+        aElement.href = `${aElement.href}&title=${title}`
+      }
+    }
 
-  titleOutput.innerHTML = titleInput.value
-  urlOutput.innerHTML = urlInput.value
-
+    titleOutput.innerHTML = titleInput.value
+    urlOutput.innerHTML = urlInput.value
+  })()
 </script>
 
 <script type="module">
