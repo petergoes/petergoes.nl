@@ -1,6 +1,6 @@
 ---
 layout: blog
-permalink: '"{{ page.filePathStem }}/index.html"'
+permalink: "{{ page.filePathStem }}/index.html"
 title: Binding behaviour to HTML with Web Components as Progressive Enhancement
 description: An enhancement on the enhancer / handler pattern for JavaScript
 tags:
