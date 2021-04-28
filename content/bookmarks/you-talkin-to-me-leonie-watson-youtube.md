@@ -1,6 +1,6 @@
 ---
 layout: bookmark
-title: You talkin&#039; to me? - Leonie Watson - YouTube
+title: You talkin' to me? - Leonie Watson - YouTube
 url: https://youtube.com/watch?v=kBTcZPEfsRc
 tags:
   - bookmark

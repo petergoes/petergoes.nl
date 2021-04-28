@@ -1,0 +1,31 @@
+---
+  title: Filtered Tags
+  layout: page
+  permalink: /bookmarks/tags/index.html
+  eleventyExcludeFromCollections: true
+  stylesheets:
+    - components/bookmark-filtered-list/bookmark-filtered-list.css
+---
+
+<my-bookmark-filtered-list root="bookmarks"></my-bookmark-filtered-list>
+
+<script id="bookmarks-tags--json-content" type="module">
+  window.bookmarks = [{% for post in collections.bookmark -%}
+      {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+      {% raw %}{{% endraw %}
+        "title": {{ post.data.title | dump | safe }},
+        "url": {{ post.data.url | dump | safe }},
+        "tags": 
+          [{%- for tag in post.data.tags %}
+            "{{ tag | slug | safe }}"
+            {% if not loop.last%},{% endif %}
+          {% endfor -%}]
+      {% raw %}}{% endraw %}{% if not loop.last%},{% endif %}
+    {%- endfor %}]
+
+  const h1 = document.querySelector('main h1')
+  const currentTag = location.pathname
+    .replace(`/bookmarks/tags/`, '')
+    .replace('/', '');
+  h1.innerText = `${h1.innerText} (${currentTag})`
+</script>

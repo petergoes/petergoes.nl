@@ -1,0 +1,14 @@
+{% macro tagList(tags, renderer, root) %}
+<my-tag-list class="tag-list">
+  <details>
+    <summary>All tags ({{ tags.length }})</summary>
+    <ul class="tag-list__list">
+      {% for tag in tags %}
+        <li class="tag-list__item">
+          {{ renderer(tag, root) }}
+        </li>
+      {% endfor %}
+    </ul>
+  </details>
+</my-tag-list>
+{% endmacro %}

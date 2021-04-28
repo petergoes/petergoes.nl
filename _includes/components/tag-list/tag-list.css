@@ -1,0 +1,26 @@
+.tag-list {
+  min-height: var(--line-height);
+  display: block;
+}
+
+.tag-list details {
+  display: none;
+}
+
+.tag-list--show details {
+  display: initial;
+}
+
+.tag-list__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag-list__item {
+  max-height: var(--line-height);
+  margin-right: 0.5rem;
+}
+
+.tag-list__item::before {
+  content: initial;
+}

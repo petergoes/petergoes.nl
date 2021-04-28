@@ -1,0 +1,11 @@
+.tag {
+  border: 1px solid var(--code-text);
+  padding: 0.25em;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.tag::before,
+.tag::after {
+  content: initial;
+}
