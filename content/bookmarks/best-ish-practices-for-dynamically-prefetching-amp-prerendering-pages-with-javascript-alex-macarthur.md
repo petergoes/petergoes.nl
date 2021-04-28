@@ -1,7 +1,7 @@
 ---
 layout: bookmark
-title: Best-ish Practices for Dynamically Prefetching &amp; Prerendering Pages
-  with JavaScript // Alex MacArthur
+title: Best-ish Practices for Dynamically Prefetching & Prerendering Pages with
+  JavaScript // Alex MacArthur
 url: https://macarthur.me/posts/best-ish-practices-for-dynamically-prefetching-and-prerendering-with-javascript
 tags:
   - bookmark
