@@ -18,7 +18,7 @@ const promises = htmlFiles
 
     const purgeCSSResult = await new PurgeCSS().purge({
       content: [htmlFile],
-      css: [cssFile]
+      css: [cssFile],
     })
 
     const cssContents = purgeCSSResult && purgeCSSResult[0] && purgeCSSResult[0].css
