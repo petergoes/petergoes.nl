@@ -3,6 +3,7 @@ my-bookmark-filtered-list {
   margin-top: var(--line-height);
 }
 
+/*! purgecss ignore */
 .bookmark-filtered-list__item {
   display: flex;
   flex-direction: column;
