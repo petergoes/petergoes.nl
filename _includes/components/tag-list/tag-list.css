@@ -7,7 +7,7 @@
   display: none;
 }
 
-/* purgecss ignore */
+/*! purgecss ignore */
 .tag-list--show details {
   display: initial;
 }
