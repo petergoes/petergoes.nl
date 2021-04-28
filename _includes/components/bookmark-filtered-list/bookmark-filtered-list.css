@@ -1,0 +1,10 @@
+my-bookmark-filtered-list {
+  display: block;
+  margin-top: var(--line-height);
+}
+
+.bookmark-filtered-list__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--line-height);
+}

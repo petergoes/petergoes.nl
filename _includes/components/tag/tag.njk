@@ -1,7 +1,7 @@
-{% macro tag(item) %}
+{% macro tag(item, root) %}
   <a
     class="tag"
-    href="?tag={{ item.slug }}"
+    href="/{{root}}/tags/{{ item.slug | slug }}/"
   >
     {{ item.label }}
   </a>
