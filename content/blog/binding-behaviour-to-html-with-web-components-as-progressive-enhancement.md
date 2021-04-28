@@ -17,11 +17,12 @@ But the downside is that it requires a lot of build steps, and results in pretty
 
 For smaller (or simpeler) sites, that do not require a lot of JavaScript (like this website), a large Front-end framework is overkill. The question becomes again: "How do you manage JavaScript when you use a HTML templating language?"
 
-The folks over at [GRRR](https://grrr.nl) (checkout [Grrr's tech blog](https://grrr.tech)!), have released [Hansel](https://github.com/grrr-amsterdam/hansel) to deal with this. I have used that for a couple of projects, and I like the philosophy behind it. But for this website, I wanted a build step free developer experience. By using a small set of features of the Custom Elements spec, I think I hit the sweet spot.
+The folks over at [Grrr](https://grrr.nl) (checkout [Grrr's tech blog](https://grrr.tech)!), have released  
+[Hansel](https://github.com/grrr-amsterdam/hansel) to deal with this. I have used that for a couple of projects, and I like the philosophy behind it. But for this website, I wanted a build step free developer experience. By using a small set of features of the Custom Elements spec, I think I hit the sweet spot.
 
 ## Componentised UI with a HTML templating engine
 
-To explain the concept, I'll use the [`tag-list`](https://github.com/petergoes/petergoes.nl/tree/main/_includes/components/tag-list) component from the [bookmarks](/bookmarks) page. On this page, I'll store bookmarks, which have _tags_ on them. The tags are not yet displayed when I write this though. 
+To explain the concept, I'll use the [`tag-list` component](https://github.com/petergoes/petergoes.nl/tree/main/_includes/components/tag-list) from the [/bookmarks](/bookmarks) page. On this page, I'll store bookmarks, which have _tags_ on them. The tags are not yet displayed when I write this though. 
 
 Besides the big list of all bookmarks, I wanted a way to filter them by tag. Eleventy gave me a hard time in doing this during build time. Because of that, I wanted to do it with JavaScript.
 
@@ -29,7 +30,7 @@ First, lets look at the template side:
 
 {% raw %}
 ```twig
-<my-tag-list>
+<my-tag-list class="tag-list">
   <details>
     <summary>All tags ({{ tags.length }})</summary>
     <ul class="tag-list__list">
@@ -82,7 +83,7 @@ This is how I do that with JavaScript:
 ```js
 class MyTagList extends HTMLElement {
   connectedCallback() {
-    this.classList.toggle('tag-list--show', true)
+    this.classList.add('tag-list--show')
   }
 }
 
