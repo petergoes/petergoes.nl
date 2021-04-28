@@ -86,7 +86,12 @@
     } else if (urlPair && urlPair[1]) {
       const { title } = await fetch(`/.netlify/functions/get-title-from-url?url=${urlPair[1]}`)
         .then(res => res.json())
-        .catch(console.error)
+        .catch(error => {
+          if (error.message === 'Title was not found') {
+            titleOutput.value = error.message
+          }
+          console.error(error.message)
+        })
       if (title) {
         titleInput.value = title
         aElement.href = `${aElement.href}&title=${title}`
