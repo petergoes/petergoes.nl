@@ -1,13 +1,13 @@
 ---
-  layout: blog
-  permalink: false
-  title: Binding behaviour to HTML with Web Components as Progressive Enhancement
-  description: An enhancement on the enhancer / handler pattern for JavaScript
-  tags:
-    - blog
-    - webcomponents
-  date: 2021-04-28T17:48:36.052Z
-  tweet-url: ""
+layout: blog
+permalink: '"{{ page.filePathStem }}/index.html"'
+title: Binding behaviour to HTML with Web Components as Progressive Enhancement
+description: An enhancement on the enhancer / handler pattern for JavaScript
+tags:
+  - blog
+  - webcomponents
+date: 2021-04-28T17:48:36.052Z
+tweet-url: " "
 ---
 For a couple of years now, I have been working with front-end frameworks almost exclusively. At [De Voorhoede](https://www.voorhoede.nl), we adopted the componentised way of working early on. We moved from binding JavaScript to the DOM via `data-*` attributes on to using Angular.JS and from there to React and Vue. 
 
