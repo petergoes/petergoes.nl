@@ -7,7 +7,7 @@ tags:
   - blog
   - webcomponents
 date: 2021-04-28T17:48:36.052Z
-tweet-url: https://twitter.com/petergoes/status/1387491272869523456
+tweetUrl: https://twitter.com/petergoes/status/1387491272869523456
 ---
 For a couple of years now, I have been working with front-end frameworks almost exclusively. At [De Voorhoede](https://www.voorhoede.nl), we adopted the componentised way of working early on. We moved from binding JavaScript to the DOM via `data-*` attributes on to using Angular.JS and from there to React and Vue. 
 
