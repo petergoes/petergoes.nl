@@ -1,21 +1,25 @@
 function splitInLines(string, maxChars) {
-  if (string.length <= 29) return [string]
+  if (string.length <= maxChars) return [string]
 
   const spacesWithinFirstLine = string
     .trim()
     .split('')
     .reduce((indexList, char, index) => char === ' ' ? [...indexList, index] : indexList, [])
-    .filter(index => index < 29)
+    .filter(index => index < maxChars)
 
   const splitIndex = spacesWithinFirstLine[spacesWithinFirstLine.length - 1]
   const lineOne = string.substring(0, splitIndex)
   let lineTwo = string.substring(splitIndex + 1)
 
+  if (lineTwo.length < maxChars) {
+    return [lineOne, lineTwo]
+  }
+
   const spacesWithinSecondLine = lineTwo
     .trim()
     .split('')
     .reduce((indexList, char, index) => char === ' ' ? [...indexList, index] : indexList, [])
-    .filter(index => index < 29)
+    .filter(index => index < maxChars)
 
   const splitIndex2 = spacesWithinSecondLine[spacesWithinSecondLine.length - 1]
   let lineThree = lineTwo.substring(splitIndex2 + 1)
