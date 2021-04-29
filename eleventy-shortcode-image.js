@@ -49,7 +49,10 @@ async function shortcodeFeaturedImage(page, title, fallback, category) {
       : `./_site/${page.filePathStem.replace('/index', '')}`
     const buffer = fallback
       ? Buffer.from(featuredImageFallback)
-      : Buffer.from(featuredImageSvg.replace('PAGE_TITLE', splitStringInTspans(title, category)))
+      : Buffer.from(featuredImageSvg
+          .replace('PAGE_TITLE', splitStringInTspans(title))
+          .replace('PAGE_CATEGORY', category)
+        )
     const outputUrl = `${outputDir}/${outputFileName}`
     const urlPath = outputDir.replace('./_site', '')
     const image = await new Image(buffer, {
