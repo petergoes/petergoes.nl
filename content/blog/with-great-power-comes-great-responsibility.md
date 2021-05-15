@@ -1,6 +1,6 @@
 ---
 layout: blog
-permalink: false
+permalink: "{{ page.filePathStem }}/index.html"
 title: With great power comes great responsibility
 description: By not taking care of accessibility, a team takes away the
   self-sustainability of real people. Thats a lot of power, and an equal amount
@@ -9,7 +9,6 @@ tags:
   - blog
   - a11y
 date: 2021-05-15T10:00:39.864Z
-tweetUrl: " "
 ---
 When you build a UI for a product (app, website, anything else), it is intended be used by people. People come in all shapes, sizes and abilities. I used to think that making an UI accessible is something you should aim for. It was morally the right thing to do.
 
