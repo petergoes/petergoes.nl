@@ -10,32 +10,32 @@
         <g id="featured-image-mockup">
             <rect id="Rectangle" fill="#263238" fill-rule="nonzero" x="0" y="0" width="1000" height="500"></rect>
             <g id="text-logo">
-              <text id=".peter-goes" fill="#FFD47E" font-family="FiraCode-Regular, Fira Code" font-size="32" font-weight="normal">
+              <text id=".peter-goes" fill="#FFD47E" font-family="FiraCode-Regular, Fira Code, monospace" font-size="32" font-weight="normal">
                   <tspan x="158" y="415">.peter-goes</tspan>
               </text>
-              <text id="{" fill="#68A0B5" font-family="FiraCode-Regular, Fira Code" font-size="32" font-weight="normal">
+              <text id="{" fill="#68A0B5" font-family="FiraCode-Regular, Fira Code, monospace" font-size="32" font-weight="normal">
                   <tspan x="384.307692" y="415">{</tspan>
               </text>
-              <text id="frontEnd" fill="#8FD2CE" font-family="FiraCode-Regular, Fira Code" font-size="32" font-weight="normal">
+              <text id="frontEnd" fill="#8FD2CE" font-family="FiraCode-Regular, Fira Code, monospace" font-size="32" font-weight="normal">
                   <tspan x="418" y="415">frontEnd</tspan>
               </text>
-              <text id=":" fill="#68A0B5" font-family="FiraCode-Regular, Fira Code" font-size="32" font-weight="normal">
+              <text id=":" fill="#68A0B5" font-family="FiraCode-Regular, Fira Code, monospace" font-size="32" font-weight="normal">
                   <tspan x="574.923077" y="415">:</tspan>
               </text>
-              <text id="developer" fill="#BED5DD" font-family="FiraCode-Regular, Fira Code" font-size="32" font-weight="normal">
+              <text id="developer" fill="#BED5DD" font-family="FiraCode-Regular, Fira Code, monospace" font-size="32" font-weight="normal">
                   <tspan x="614.307692" y="415">developer</tspan>
               </text>
-              <text id=";" fill="#68A0B5" font-family="FiraCode-Regular, Fira Code" font-size="32" font-weight="normal">
+              <text id=";" fill="#68A0B5" font-family="FiraCode-Regular, Fira Code, monospace" font-size="32" font-weight="normal">
                   <tspan x="791.538462" y="415">;</tspan>
               </text>
-              <text id="}" fill="#68A0B5" font-family="FiraCode-Regular, Fira Code" font-size="32" font-weight="normal">
+              <text id="}" fill="#68A0B5" font-family="FiraCode-Regular, Fira Code, monospace" font-size="32" font-weight="normal">
                   <tspan x="822" y="415">}</tspan>
               </text>
             </g>
-            <text id="12345678901234567890" font-family="FiraCode-Regular, Fira Code" font-size="32" font-weight="normal" fill="#DEE3E9">
+            <text id="12345678901234567890" font-family="FiraCode-Regular, Fira Code, monospace" font-size="32" font-weight="normal" fill="#DEE3E9">
               PAGE_TITLE
             </text>
-            <text id="Blog:" font-family="FiraCode-Regular, Fira Code" font-size="32" font-weight="normal" fill="#C792EA">
+            <text id="Blog:" font-family="FiraCode-Regular, Fira Code, monospace" font-size="32" font-weight="normal" fill="#C792EA">
                 <tspan x="100" y="115">PAGE_CATEGORY:</tspan>
             </text>
             <g id="_me-2-0" transform="translate(697.000000, 77.000000)">
