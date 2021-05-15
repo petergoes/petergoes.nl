@@ -9,6 +9,7 @@ tags:
   - blog
   - a11y
 date: 2021-05-15T10:00:39.864Z
+tweetUrl: https://twitter.com/petergoes/status/1393508418216935426
 ---
 When you build a UI for a product (app, website, anything else), it is intended be used by people. People come in all shapes, sizes and abilities. I used to think that making an UI accessible is something you should aim for. It was morally the right thing to do.
 
