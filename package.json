@@ -33,7 +33,7 @@
     "html-minifier": "4.0.0",
     "mkdirp": "1.0.4",
     "netlify-cli": "3.22.0",
-    "postcss": "8.2.9",
+    "postcss": "8.2.15",
     "postcss-custom-properties": "11.0.0",
     "postcss-import": "14.0.1",
     "postcss-media-variables": "2.0.1",
