@@ -27,6 +27,7 @@
   <hr class="content-section"/>
   <aside class="content-section">
     <h2>This is me</h2>
-    {% include './components/h-card/h-card.njk' %}
+    {% from './components/h-card/h-card.njk' import hCard %}
+      {{ hCard(site.gravatar) }}
   </aside>
 {% endblock %}
