@@ -1,5 +1,5 @@
 {% macro hCard(img, _rel) %}
-{% set rel = me %}
+{% set rel = 'me' %}
 {% if _rel %}
 {% set rel = _rel %}
 {% endif %}
@@ -15,7 +15,7 @@
   />
   <div>
     <p>
-      <a rel="{{ rel }}" class="{% if _rel === 'author' %}p-author {% endif %}u-url u-uid" href="https://www.petergoes.nl"><span class="p-name"><span class="p-given-name">Peter</span> <span class="p-family-name">Goes</span></span></a>
+      <a rel="{{ rel }}" class="u-url u-uid" href="https://www.petergoes.nl"><span class="p-name"><span class="p-given-name">Peter</span> <span class="p-family-name">Goes</span></span></a>
       &nbsp;
       <span class="p-locality">Amsterdam</span>, <span class="p-country-name">The Netherlands</span>
     </p>
