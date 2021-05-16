@@ -80,7 +80,7 @@ body > header {
   color: var(--code-attribute-dim);
 }
 
-.page-header__link:hover,
+a.page-header__link:hover,
 .page-header__link:focus,
 .page-header__link:active {
     border-bottom: none;

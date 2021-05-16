@@ -1,13 +1,21 @@
 <header data-header>
 <div class="page-header">
   <h1 class="page-header__title">
-    <a href="/" class="page-header__link" aria-label="Peter Goes, Front-end Developer home page">
+  {% if page.url !== '/' %}
+    <a href="/" rel="author" class="page-header__link p-author h-card" aria-label="Peter Goes, Front-end Developer home page">
+  {% else %}
+    <span class="page-header__link" aria-label="Peter Goes, Front-end Developer home page">
+  {% endif %}
       <span class="page-header__name"><span class="page-header__code-decoration" aria-hidden="true" role="presentation" tabindex="-1">.</span>peter-goes</span> <span class="page-header__code-decoration" aria-hidden="true" role="presentation">{</span> 
         <span class="page-header__occupation">
-          <span class="page-header__property">frontEnd</span><span class="page-header__code-decoration" aria-hidden="true" role="presentation">:</span> <span class="page-header__property--value">developer</span><span class="page-header__code-decoration" aria-hidden="true" role="presentation">;</span></span>
+          <span class="page-header__property">frontEnd</span><span class="page-header__code-decoration" aria-hidden="true" role="presentation">:</span> <span class="page-header__property--value">developer</span><span class="page-header__code-decoration" aria-hidden="true" role="presentation">;&nbsp;</span>
         </span>
       <span class="page-header__code-decoration" aria-hidden="true" role="presentation">}</span>
+    {% if page.url !== '/' %}
     </a>
+    {% else %}
+    </span>
+    {% endif %}
   </h1>
   <nav class="page-header__nav" aria-labelledby="main-menu-label">
     <h2 id="main-menu-label" class="visuallyhidden">Main Menu</h2>

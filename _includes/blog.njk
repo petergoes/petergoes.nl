@@ -45,11 +45,6 @@
     </footer>
     {% endif %}
 
-    <aside>
-      <h2>About me</h2>
-      {% from './components/h-card/h-card.njk' import hCard %}
-      {{ hCard(site.gravatar, 'author') }}
-    </aside>
   </article>
 
 {% endblock %}
