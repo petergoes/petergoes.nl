@@ -9,3 +9,7 @@
   width: initial;
   border-radius: 100%;
 }
+
+.h-card p:not(:nth-child(2)) {
+  margin-bottom: 0;
+}
