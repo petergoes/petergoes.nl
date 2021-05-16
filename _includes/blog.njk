@@ -31,7 +31,6 @@
           <small>
             <a class="u-url"  href="{{ page.url }}">permalink<span class="visuallyhidden"> to this post</span></a>
           </small>
-          <span class="visuallyhidden">published by <a class="p-author h-card" href="https://www.petergoes.nl">me</a></span>
       </aside>
     </header>
     <section class="e-content">
@@ -45,6 +44,12 @@
       can let me know what you think about it on Twitter under <a rel="syndication" class="u-syndication" href="{{ tweetUrl }}">this tweet</a>!
     </footer>
     {% endif %}
+
+    <div>
+      <h2>This is me</h2>
+      {% from './components/h-card/h-card.njk' import hCard %}
+      {{ hCard(site.gravatar, 'author') }}
+    </div>
 
   </article>
 
