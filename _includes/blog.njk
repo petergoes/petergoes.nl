@@ -12,15 +12,26 @@
 {% block content %}
   <article class="blog content-section h-entry">
     <header>
-            <h1 class="{% if showPageTitle === false %}visuallyhidden{% endif %} p-name">{{ title }}</h1>
-            <aside>
-                <small>
-                  Created at:
-                  <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD HH:MM:SS') }}">
-                    {{ date | formatDate('Do of MMMM, YYYY') }}
-                  </time>
-                </small>
-            </aside>
+      <h1 class="{% if showPageTitle === false %}visuallyhidden{% endif %} p-name">{{ title }}</h1>
+      <aside>
+          <small>
+            Created at:
+            <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD HH:MM') }}">
+              {{ date | formatDate('Do of MMMM, YYYY') }}
+            </time>
+          </small>
+          <small class="blog__tags">
+            Filled under:
+            <ul class="blog__tags-list">
+              {% for tag in tags | remove('blog') %}
+                <li class="blog__tags-list-item p-category">{{ tag }}</li>
+              {% endfor %}
+            </ul>
+          </small>
+          <small>
+            <a class="u-url"  href="{{ page.url }}">permalink<span class="visuallyhidden"> to this post</span></a>
+          </small>
+      </aside>
     </header>
     <section class="e-content">
       {{ content | safe }}

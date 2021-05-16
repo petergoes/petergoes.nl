@@ -10,3 +10,23 @@
   margin-top: calc(var(--line-height) * 2);
   border-top: 1px solid var(--default-text-color-50);
 }
+
+.blog > header aside small {
+  display: block;
+}
+
+.blog .blog__tags {
+  display: flex;
+}
+
+.blog__tags-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  margin-left: 1em;
+  padding: 0;
+}
+
+.blog__tags-list-item::before {
+  content: initial;
+}
