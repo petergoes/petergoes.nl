@@ -1,15 +1,27 @@
 .h-card-full {
   width: 100%;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 1rem;
 }
 
 .h-card-full img{
   width: initial;
   border-radius: 100%;
+  float: left;
+  margin-right: var(--line-height);
+  margin-bottom: var(--line-height);
+  width: calc(var(--line-height) * 4);
+  height: calc(var(--line-height) * 4);
 }
 
-.h-card-full p:not(:nth-child(2)) {
+.h-card-full p:nth-child(2) {
   margin-bottom: 0;
+}
+
+.h-card-full a {
+  white-space: nowrap;
+}
+
+@media (min-width: 529px) {
+  .h-card-full p:nth-child(4) {
+    margin-bottom: 0;
+  }
 }
