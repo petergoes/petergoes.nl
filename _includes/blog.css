@@ -2,6 +2,10 @@
   margin-bottom: var(--line-height);
 }
 
+.blog .h-card {
+  margin: calc(var(--line-height) * 0.5) 0;
+}
+
 .blog footer {
   margin-top: calc(var(--line-height) * 2);
   border-top: 1px solid var(--default-text-color-50);

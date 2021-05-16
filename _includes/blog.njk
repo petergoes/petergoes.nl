@@ -10,14 +10,19 @@
 {% extends './page.njk' %}
 
 {% block content %}
-  <article class="blog content-section">
+  <article class="blog content-section h-entry">
     <header>
-            <h1 class="{% if showPageTitle === false %}visuallyhidden{% endif %}">{{ title }}</h1>
+            <h1 class="{% if showPageTitle === false %}visuallyhidden{% endif %} p-name">{{ title }}</h1>
             <aside>
-                <small>Created at: {{ date | formatDate('Do of MMMM, YYYY') }}</small>
+                <small>
+                  Created at:
+                  <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD HH:MM:SS') }}">
+                    {{ date | formatDate('Do of MMMM, YYYY') }}
+                  </time>
+                </small>
             </aside>
     </header>
-    <section>
+    <section class="e-content">
       {{ content | safe }}
     </section>
 
@@ -28,5 +33,11 @@
       can let me know what you think about it on Twitter under <a href="{{ tweetUrl }}">this tweet</a>!
     </footer>
     {% endif %}
+
+    <aside>
+      <h2>About me</h2>
+      {% include './components/h-card/h-card.njk' %}
+    </aside>
   </article>
+
 {% endblock %}
