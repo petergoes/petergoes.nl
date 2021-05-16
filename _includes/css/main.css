@@ -5,6 +5,8 @@
 @import "./helpers.css";
 @import "./core.css";
 @import "./pages/contact.css";
+@import "./pages/home.css";
 @import "../components/footer/footer.css";
+@import "../components/h-card/h-card.css";
 @import "../components/header/header.css";
 @import "../components/sociallinks/sociallinks.css";

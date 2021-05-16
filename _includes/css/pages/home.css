@@ -1,0 +1,11 @@
+.home > aside {
+  width: 100vw;
+}
+
+.home > hr {
+  width: 100vw;
+}
+
+.home .h-card {
+  margin: calc(var(--line-height) * 0.5) 0;
+}
