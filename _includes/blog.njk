@@ -13,7 +13,7 @@
   <article class="blog content-section h-entry">
     <header>
       <h1 class="{% if showPageTitle === false %}visuallyhidden{% endif %} p-name">{{ title }}</h1>
-      <aside>
+      <aside aria-label="post meta data">
           <small>
             Created at:
             <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD hh:mm:ss') }}">
@@ -45,11 +45,11 @@
     </footer>
     {% endif %}
 
-    <div>
-      <h2>This is me</h2>
+    <aside aria-labelledby="this-is-me">
+      <h2 id="this-is-me">This is me</h2>
       {% from './components/h-card/h-card.njk' import hCard %}
       {{ hCard(site.gravatar, 'author') }}
-    </div>
+    </aside>
 
   </article>
 

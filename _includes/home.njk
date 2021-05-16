@@ -25,9 +25,9 @@
 
 {% block aside %}
   <hr class="content-section"/>
-  <aside class="content-section">
-    <h2>This is me</h2>
+  <aside class="content-section" aria-labelledby="this-is-me">
+    <h2 id="this-is-me">This is me</h2>
     {% from './components/h-card/h-card.njk' import hCard %}
-      {{ hCard(site.gravatar) }}
+    {{ hCard(site.gravatar) }}
   </aside>
 {% endblock %}

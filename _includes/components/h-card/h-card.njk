@@ -4,7 +4,7 @@
 {% set rel = _rel %}
 {% endif %}
 
-<div class="h-card h-card-full">
+<div class="h-card h-card-full{% if rel === 'author'%} p-author{% endif %}">
   <img
     rel="me"
     class="u-photo"
