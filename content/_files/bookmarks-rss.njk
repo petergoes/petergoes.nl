@@ -24,6 +24,7 @@
   <author>
     <name>{{ metadata.author.name }}</name>
   </author>
+  <icon>{{ site.gravatar }}</icon>
   {%- for post in collections.bookmark %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <entry>
