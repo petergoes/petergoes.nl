@@ -4,6 +4,7 @@ const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const filterFormatDate = require('./eleventy-filter-format-date')
 const filterRemove = require('./eleventy-filter-remove')
 const filterTagsInCollection = require('./eleventy-filter-tags-in-collection')
+const filterWebMentions = require('./eleventy-filter-webmentions')
 const transfromHtmlmin = require('./eleventy-transform-htmlmin')
 const shortcodePostcss = require('./eleventy-nunjucks-shortcode-postcss')
 const { shortcodeImageManifest, shortcodeSingleImageUrl, shortcodeFeaturedImage } = require('./eleventy-shortcode-image')
@@ -24,6 +25,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("formatDate", filterFormatDate);
   eleventyConfig.addFilter("remove", filterRemove);
   eleventyConfig.addFilter("tagsInCollection", filterTagsInCollection);
+  Object.keys(filterWebMentions).forEach(filterName => {
+    eleventyConfig.addFilter(filterName, filterWebMentions[filterName])
+  })
 
   eleventyConfig.addNunjucksAsyncShortcode("postcss", shortcodePostcss);
   eleventyConfig.addNunjucksAsyncShortcode("imageManifest", shortcodeImageManifest);

@@ -1,0 +1,19 @@
+{% macro interaction(type, singular, plural, webmentions) %}
+{% set items = webmentions | webmentionsByType(type) %}
+
+{% if items | length > 0 %}
+<section>
+  <h3>{{ plural }}</h3>
+  <ul class="webmention__items-list">
+    {% for item in items %}
+      <li class="webmention__item">
+        <a href="{{ item.url }}">
+          <img src="{{ item.author.photo }}" alt=""/>
+          <span class="visuallyhidden">{{ singular }} from: {{ item.author.name }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% endmacro %}
