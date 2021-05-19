@@ -7,7 +7,7 @@
 {% extends './page.njk' %}
 
 {% block content %}
-<section class="content-section">
+<section class="content-section h-feed">
   <h1 class="{% if showPageTitle === false %}visuallyhidden{% endif %}">{{ title }}</h1>
   {{ content | safe }}
 
@@ -24,10 +24,16 @@
       {% set month = post.date | formatDate(timeSeperatorFormat) %}
     {% endif %}
 
-    <article>
-      <h3><a href="{% if post.data.url %}{{ post.data.url }}{% else %}{{ post.url }}{% endif %}">{{ post.data.title }}</a></h3>
+    <article class="h-entry">
+      <h3 class="p-name">
+        <a class="u-url" href="{% if post.data.url %}{{ post.data.url }}{% else %}{{ post.url }}{% endif %}">{{ post.data.title }}</a>
+      </h3>
       {% if showDate %}
-        <small>{{ post.date | formatDate }}</small>
+        <small>
+          <time class="dt-published" datetime="{{ post.date | formatDate('YYYY-MM-DD hh:mm:ss') }}">
+            {{ post.date | formatDate('Do of MMMM, YYYY') }}
+          </time>
+        </small>
       {% endif %}
       {% if post.data.description %}
         <p>{{ post.data.description }}</p>
