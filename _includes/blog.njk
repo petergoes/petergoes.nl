@@ -43,10 +43,11 @@
       Do you have any comments? A proper comment secion is still being constructed, but you
       can let me know what you think about it on Twitter under <a rel="syndication" class="u-syndication" href="{{ tweetUrl }}">this tweet</a>!
       {% from './components/webmentions/interaction.njk' import interaction %}
-      {% from './components/webmentions/replies.njk' import replies %}
+      {% from './components/webmentions/text-responses.njk' import textResponses %}
       {% set webmentionsForUrl = webmentions | getWebmentionsForUrl(site.url + page.url) %}
       {{ interaction(['like-of', 'repost-of'], 'Like', 'Likes and reposts', webmentionsForUrl) }}
-      {{ replies(webmentionsForUrl) }}
+      {{ textResponses('in-reply-to', 'Reply', 'Replies', webmentionsForUrl) }}
+      {{ textResponses('mention-of', 'Mention', 'Mentions', webmentionsForUrl) }}
     </footer>
     {% endif %}
 

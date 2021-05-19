@@ -1,0 +1,43 @@
+{% macro textResponses(type, singular, plural, webmentions) %}
+{% set textResponses = webmentions | webmentionsByType(type) %}
+
+{% if textResponses | length > 0 %}
+<section aria-labelledby="webmention-text-responses">
+  <h3 id="webmention-text-responses">{{ textResponses | length }} {% if textResponses | length === 1 %}{{ singular }}{% else %}{{ plural }}{% endif %}</h3>
+  <ul class="webmention__text-response-list">
+    {% for textResponse in textResponses %}
+      <li class="webmention__text-response-item">
+        <article>
+          <header class="webmention__text-response-header">
+            <img src="{{ textResponse.author.photo }}" width="50" height="50" alt="{{ textResponse.author.name }}" loading="lazy"/>
+            {% if textResponse.author.url !== '' %}
+              <a href="{{ textResponse.author.url }}">
+            {% else %}
+              <span>
+            {% endif %}
+              {{ textResponse.author.name }}
+            {% if textResponse.author.url !== '' %}
+              </a>
+            {% else %}
+              </span>
+            {% endif %}
+            <small>
+              <small class="visuallyhidden">Posted on</small>
+              <time datetime="{{ textResponse.published | formatDate('YYYY-MM-DD hh:mm:ss') }}">
+                {{ textResponse.published | formatDate('Do of MMMM, YYYY @ hh:mm') }}
+              </time>
+            </small>
+          </header>
+
+          {{ textResponse.content.text }}
+
+          <footer class="webmention__text-response-footer">
+            <a href="{{ textResponse['wm-source'] }}">Source<span class="visuallyhidden"> of the {{ singular }}</span></a>
+          </footer>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% endmacro %}

@@ -1,27 +1,27 @@
-.webmention__reply-item {
+.webmention__text-response-item {
   padding: calc(calc(var(--line-height) * 0.5) - 2px);
   border: 1px solid black;
   margin-top: var(--line-height);
 }
 
-.webmention__reply-item::before {
+.webmention__text-response-item::before {
   content: initial;
 }
 
-.webmention__reply-header {
+.webmention__text-response-header {
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 1rem;
   align-items: center;
 }
 
-.webmention__reply-header img {
+.webmention__text-response-header img {
   border-radius: 100%;
   width: calc(var(--line-height) * 2);
   height: calc(var(--line-height) * 2);
 }
 
-.webmention__reply-list .webmention__reply-footer {
+.webmention__text-response-list .webmention__text-response-footer {
   margin-top: 0;
   border: none;
   text-align: right;
