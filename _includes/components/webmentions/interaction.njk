@@ -2,8 +2,8 @@
 {% set items = webmentions | webmentionsByType(type) %}
 
 {% if items | length > 0 %}
-<section>
-  <h3>{{ plural }}</h3>
+<section aria-labelledby="webmention-{{ plural | slug }}">
+  <h3 id="webmention-{{ plural | slug }}">{{ plural }}</h3>
   <ul class="webmention__items-list">
     {% for item in items %}
       <li class="webmention__item">

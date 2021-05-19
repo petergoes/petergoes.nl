@@ -1,0 +1,43 @@
+{% macro replies(webmentions) %}
+{% set replies = webmentions | webmentionsByType('in-reply-to') %}
+
+{% if replies | length > 0 %}
+<section aria-labelledby="webmention-replies">
+  <h3 id="webmention-replies">{{ replies | length }} Repl{% if replies | length === 1%}y{% else %}ies{% endif %}</h3>
+  <ul class="webmention__reply-list">
+    {% for reply in replies %}
+      <li class="webmention__reply-item">
+        <article>
+          <header class="webmention__reply-header">
+            <img src="{{ reply.author.photo }}" width="50" height="50" alt="{{ reply.author.name }}" loading="lazy"/>
+            {% if reply.author.url !== '' %}
+              <a href="{{ reply.author.url }}">
+            {% else %}
+              <span>
+            {% endif %}
+              {{ reply.author.name }}
+            {% if reply.author.url !== '' %}
+              </a>
+            {% else %}
+              </span>
+            {% endif %}
+            <small>
+              <small class="visuallyhidden">Posted on</small>
+              <time datetime="{{ reply.published | formatDate('YYYY-MM-DD hh:mm:ss') }}">
+                {{ reply.published | formatDate('Do of MMMM, YYYY @ hh:mm') }}
+              </time>
+            </small>
+          </header>
+
+          {{ reply.content.text }}
+
+          <footer class="webmention__reply-footer">
+            <a href="{{ reply['wm-source'] }}">Source<span class="visuallyhidden"> of the reply</source></a>
+          </footer>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% endmacro %}
