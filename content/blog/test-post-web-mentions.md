@@ -1,6 +1,6 @@
 ---
 layout: blog
-permalink: false
+permalink: "{{ page.filePathStem }}/index.html"
 title: "Test post: Web Mentions"
 description: This is a test post in which I test the Web Mentions implementation
 tags:
