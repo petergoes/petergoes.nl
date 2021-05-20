@@ -11,7 +11,7 @@
 {% block content %}
   <article class="reply content-section h-entry">
     <header>
-      <h1 class="p-name"><a href="{{ url }}" class="u-in-reply-to">{{ title }}: {{ url }}</a></h1>
+      <h1><a href="{{ url }}" class="u-in-reply-to">{{ title }}: {{ url }}</a></h1>
       <aside aria-label="post meta data">
           <small>
             Published at:
@@ -30,10 +30,10 @@
       {{ content | safe }}
     </section>
 
-    <footer>
-      <a href="{{ site.url }}" class="p-author h-card">
-        <span class="p-given-name">Peter</span> <span class="p-family-name">Goes</span>
-      </a>
+    <footer aria-labelledby="this-is-me">
+      <h2 id="this-is-me">This is me</h2>
+      {% from './components/h-card/h-card.njk' import hCard %}
+      {{ hCard(site.gravatar, 'author') }}
     </footer>
   </article>
 
