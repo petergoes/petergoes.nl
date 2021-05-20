@@ -38,7 +38,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}"
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "bookmark" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "reply" }
       - { label: "Tags", name: "tags", widget: "hidden", default: ["reply"] }
       - { label: "Title", name: "title", widget: "string", default: "Reply to" }
       - { label: "Target URL", name: 'url', widget: "url" }
