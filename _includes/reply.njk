@@ -15,9 +15,11 @@
       <aside aria-label="post meta data">
           <small>
             Published at:
+            <a href="{{ site.url + page.url }}" class="u-url">
             <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD hh:mm:ss') }}">
               {{ date | formatDate('Do of MMMM, YYYY') }}
             </time>
+            </a>
           </small>
           <small>
             <a class="u-url"  href="{{ page.url }}">permalink<span class="visuallyhidden"> to this reply</span></a>
@@ -29,7 +31,7 @@
     </section>
 
     <footer>
-      <a href="{{ site.url + page.url }}" class="p-author h-card">
+      <a href="{{ site.url }}" class="p-author h-card">
         <span class="p-given-name">Peter</span> <span class="p-family-name">Goes</span>
       </a>
     </footer>
