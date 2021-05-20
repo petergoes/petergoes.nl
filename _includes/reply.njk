@@ -1,0 +1,33 @@
+---
+  stylesheets:
+    - reply.css
+  category: Reply
+  og: 
+    type: artice
+---
+
+{% extends './page.njk' %}
+
+{% block content %}
+  <article class="reply content-section h-entry">
+    <header>
+      <h1 class="p-name"><a href="{{ url }}">{{ title }}: {{ url }}</a></h1>
+      <aside aria-label="post meta data">
+          <small>
+            Published at:
+            <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD hh:mm:ss') }}">
+              {{ date | formatDate('Do of MMMM, YYYY') }}
+            </time>
+          </small>
+          <small>
+            <a class="u-url"  href="{{ page.url }}">permalink<span class="visuallyhidden"> to this reply</span></a>
+          </small>
+      </aside>
+    </header>
+    <section class="e-content">
+      {{ content | safe }}
+    </section>
+
+  </article>
+
+{% endblock %}
