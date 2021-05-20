@@ -1,3 +1,7 @@
+.webmention__interaction {
+  margin-top: var(--line-height);
+}
+
 .webmention__items-list {
   position: relative;
   list-style: none;

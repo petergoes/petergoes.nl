@@ -3,7 +3,8 @@
 
 {% if items | length > 0 %}
 <section aria-labelledby="webmention-{{ plural | slug }}">
-  <h3 id="webmention-{{ plural | slug }}">{{ plural }}</h3>
+<details class="webmention__interaction">
+  <summary id="webmention-{{ plural | slug }}">{{ plural }}</summary>
   <ul class="webmention__items-list">
     {% for item in items %}
       <li class="webmention__item">
@@ -14,6 +15,7 @@
       </li>
     {% endfor %}
   </ul>
+  </details>
 </section>
 {% endif %}
 {% endmacro %}
