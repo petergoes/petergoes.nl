@@ -7,9 +7,31 @@
 {% extends './page.njk' %}
 
 {% block content %}
-  <div class="content-section">
-    <h1 class="{% if showPageTitle === false %}visuallyhidden{% endif %}">Bookmark: {{ title }}</h1>
-    {{ content | safe }}
-    <a href="{{ url }}">Link to {{ title }}</a>
-  </div>
+  <article class="bookmark content-section h-entry">
+    <header>
+      <h1><a href="{{ url }}" class="u-in-reply-to">Bookmark: {{ title }}</a></h1>
+      <aside aria-label="post meta data">
+          <small>
+            Bookmarked at:
+            <a href="{{ site.url + page.url }}" class="u-url">
+            <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD hh:mm:ss') }}">
+              {{ date | formatDate('Do of MMMM, YYYY') }}
+            </time>
+            </a>
+          </small>
+          <small>
+            <a class="u-url"  href="{{ page.url }}">permalink<span class="visuallyhidden"> to this bookmark</span></a>
+          </small>
+      </aside>
+    </header>
+    <section class="e-content">
+      {{ content | safe }}
+    </section>
+
+    <footer aria-labelledby="this-is-me">
+      <h2 id="this-is-me">This is me</h2>
+      {% from './components/h-card/h-card.njk' import hCard %}
+      {{ hCard(site.gravatar, 'author') }}
+    </footer>
+  </article>
 {% endblock %}
