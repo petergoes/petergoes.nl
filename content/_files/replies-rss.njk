@@ -31,7 +31,7 @@
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content type="html">
-      <a href="{{ post.data.url }}">Target</a>
+      {{ '<a href="' }}{{ post.data.url }}{{' ">Target</a>'}}
       {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
     </content>
   </entry>
