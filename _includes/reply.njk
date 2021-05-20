@@ -11,7 +11,7 @@
 {% block content %}
   <article class="reply content-section h-entry">
     <header>
-      <h1 class="p-name"><a href="{{ url }}">{{ title }}: {{ url }}</a></h1>
+      <h1 class="p-name"><a href="{{ url }}" class="u-in-reply-to">{{ title }}: {{ url }}</a></h1>
       <aside aria-label="post meta data">
           <small>
             Published at:
@@ -28,6 +28,9 @@
       {{ content | safe }}
     </section>
 
+    <footer>
+      <a href="{{ site.url | page.url }}" class="p-author h-card">Peter Goes</a>
+    </footer>
   </article>
 
 {% endblock %}
