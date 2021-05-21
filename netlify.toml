@@ -1,11 +1,11 @@
+[dev]
+  command = "npx eleventy --serve"
+
 [functions]
-  directory = "netlify-functions"
+  directory = ".netlify/functions"
 
 [[redirects]]
   from = "/bookmarks/tags/*"
   to = "/bookmarks/tags/index.html"
   status = 200
   force = true
-
-[dev]
-  command = "npx eleventy --serve"
