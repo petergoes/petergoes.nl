@@ -8,14 +8,14 @@ const { domain } = require('./site.js')
 require('dotenv').config()
 // Define Cache Location and API Endpoint
 
-const CACHE_FILE_PATH = '_cache/received-webmentions.json'
+const CACHE_FILE_PATH = '_cache/webmentions.json'
 const API = 'https://webmention.io/api'
 const TOKEN = process.env.WEBMENTION_IO_TOKEN
 
 async function fetchWebmentions(since, perPage = 10000) {
   // If we dont have a domain name or token, abort
   if (!domain || !TOKEN) {
-    console.warn('>>> unable to fetch webmentions: missing domain or token')
+    console.warn('    unable to fetch webmentions: missing domain or token')
     return false
   }
   let url = `${API}/mentions.jf2?token=${TOKEN}&per-page=${perPage}`
@@ -23,7 +23,7 @@ async function fetchWebmentions(since, perPage = 10000) {
   const response = await fetch(url)
   if (response.ok) {
     const feed = await response.json()
-    console.log(`>>> ${feed.children.length} new webmentions fetched from ${API}`)
+    console.log(`    ${feed.children.length} new webmentions fetched from ${API}`)
     return feed
   }
   return null
@@ -43,7 +43,7 @@ function writeToCache(data) {
   // write data to cache json file
   fs.writeFile(CACHE_FILE_PATH, fileContent, err => {
     if (err) throw err
-    console.log(`>>> webmentions cached to ${CACHE_FILE_PATH}`)
+    console.log(`    webmentions cached to ${CACHE_FILE_PATH}`)
   })
 }
 // get cache contents from json file
@@ -62,7 +62,7 @@ module.exports = async function () {
   console.log('>>> Reading webmentions from cache...');
   const cache = readFromCache()
   if (cache.children.length) {
-    console.log(`>>> ${cache.children.length} webmentions loaded from cache`)
+    console.log(`    ${cache.children.length} webmentions loaded from cache`)
   }
   // Only fetch new mentions in production
   if (process.env.DEVELOPMENT === 'false') {
