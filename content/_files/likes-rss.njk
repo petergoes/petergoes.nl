@@ -1,0 +1,35 @@
+---json
+{
+  "permalink": "likes/feed.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "PeterGoes.nl Web Mention likes",
+    "subtitle": "List of my web mention likes.",
+    "feedUrl": "https://www.petergoes.nl/likes/feed.xml",
+    "author": {
+      "name": "Peter Goes"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.subtitle }}</subtitle>
+  <link href="{{ metadata.feedUrl }}" rel="self"/>
+  <updated>{{ collections.like | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ metadata.url }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+  </author>
+  <icon>{{ site.gravatar }}</icon>
+  {%- for post in collections.like | reverse %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="https://www.petergoes.nl{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>https://www.petergoes.nl{{ absolutePostUrl }}</id>
+  </entry>
+  {%- endfor %}
+</feed>

@@ -8,19 +8,9 @@ local_backend: true
 media_folder: "_public/images"
 
 collections:
-  - name: "bookmarks"
-    label: "Bookmarks"
-    folder: "content/bookmarks"
-    create: true
-    fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "bookmark" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "URL", name: 'url', widget: "url" }
-      - { label: "Tags", name: "tags", widget: "list", allow_add: true, default: ["bookmark"] }
-      - { label: "Body", name: "body", widget: "text", default: " " }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
   - name: "blogposts"
     label: "Blog posts"
+    label_singular: "Blog post"
     folder: "content/blog"
     create: true
     fields:
@@ -32,11 +22,41 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Tweet URL", name: "tweetUrl", widget: 'url', default: "", required: false  }
       - { label: "Body", name: "body", widget: "markdown", default: " " }
+
+  - name: "bookmarks"
+    label: "Bookmarks"
+    label_singular: "Bookmark"
+    folder: "content/bookmarks"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "bookmark" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "URL", name: 'url', widget: "url" }
+      - { label: "Tags", name: "tags", widget: "list", allow_add: true, default: ["bookmark"] }
+      - { label: "Body", name: "body", widget: "text", default: " " }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+
+  - name: "likes"
+    label: "Likes"
+    label_singular: "Like"
+    folder: "content/likes"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}"
+    summary: "{{url}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "like" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: ["like"] }
+      - { label: "Title", name: "title", widget: "string", default: "Like of" }
+      - { label: "Target URL", name: 'url', widget: "url" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+
   - name: "replies"
     label: "Replies"
+    label_singular: "Reply"
     folder: "content/replies"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}"
+    summary: "{{url}}"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "reply" }
       - { label: "Tags", name: "tags", widget: "hidden", default: ["reply"] }

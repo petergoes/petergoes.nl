@@ -1,0 +1,35 @@
+---
+  category: Like
+  og: 
+    type: artice
+---
+
+{% extends './page.njk' %}
+
+{% block content %}
+  <article class="like content-section h-entry">
+    <header>
+      <h1><a href="{{ url }}" class="u-like-of">{{ title }}: {{ url }}</a></h1>
+      <aside aria-label="post meta data">
+          <small>
+            Liked at:
+            <a href="{{ site.url + page.url }}" class="u-url">
+            <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD hh:mm:ss') }}">
+              {{ date | formatDate('Do of MMMM, YYYY') }}
+            </time>
+            </a>
+          </small>
+          <small>
+            <a class="u-url"  href="{{ page.url }}">permalink<span class="visuallyhidden"> to this like</span></a>
+          </small>
+      </aside>
+    </header>
+
+    <footer aria-labelledby="this-is-me">
+      <h2 id="this-is-me">This is me</h2>
+      {% from './components/h-card/h-card.njk' import hCard %}
+      {{ hCard(site.gravatar, 'author') }}
+    </footer>
+  </article>
+
+{% endblock %}
