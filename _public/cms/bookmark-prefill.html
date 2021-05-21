@@ -11,6 +11,18 @@
     padding: 1rem;
   }
 
+  fieldset {
+    display: flex;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: 1px solid black;
+  }
+
+  fieldset label {
+    flex-direction: row;
+    margin-right: 1rem;
+  }
+
   label {
     display: flex;
     flex-direction: column;
@@ -30,8 +42,15 @@
   }
 </style>
 
-<h1>Bookmark Prefill</h1>
+<h1>Prefill</h1>
 
+<fieldset>
+  <legend>Post type</legend>
+  <label><input type="radio" name="post-type" value="bookmarks" checked/> Bookmark</label>
+  <label><input type="radio" name="post-type" value="likes" /> Like</label>
+  <label><input type="radio" name="post-type" value="replies" /> Reply</label>
+</fieldset>
+<br />
 <div>
   <label>
     <div>Title:</div>
@@ -63,22 +82,51 @@
         )
     const titlePair = pairs.find(([key]) => key === 'title')
     const urlPair = pairs.find(([key]) => key === 'text')
+    let postType = 'bookmarks'
 
     document.body.appendChild(aElement)
-    aElement.innerText = 'Save as bookmark'
+    aElement.innerText = 'Save as Bookmark'
 
     function updateLink(element) {
       return function (event) {
-        element.innerText = event.target.value
-        aElement.href = `/cms/#/collections/bookmarks/new?url=${encodeURIComponent(urlOutput.innerText)}&title=${encodeURIComponent(titleOutput.innerText)}`
+        if (element && event) {
+          element.innerText = event.target.value
+        }
+
+        if (postType === 'bookmarks') {
+          aElement.href = `/cms/#/collections/${postType}/new?url=${encodeURIComponent(urlOutput.innerText)}&title=${encodeURIComponent(titleOutput.innerText)}`
+        } else {
+          aElement.href = `/cms/#/collections/${postType}/new?url=${encodeURIComponent(urlOutput.innerText)}` 
+        }
+
+        switch (postType) {
+          case 'bookmarks':
+            return aElement.innerText = "Save as Bookmark"
+          case 'likes':
+            return aElement.innerText = "Save as Like"
+          case 'replies':
+            return aElement.innerText = "Save as Reply"
+          default:
+              return
+        }
+
       }
     }
+
+    document.querySelector('fieldset').addEventListener('change', () => {
+      document.querySelectorAll('fieldset input').forEach(input => {
+        if (input.checked) {
+          postType = input.value
+        }
+      })
+      updateLink()()
+    })
 
     titleInput.addEventListener('input', updateLink(titleOutput))
     urlInput.addEventListener('input', updateLink(urlOutput))
 
     urlPair && urlPair[1] && (urlInput.value = decodeURIComponent(urlPair[1]))
-    aElement.href = `/cms/#/collections/bookmarks/new?url=${urlPair[1]}`
+    aElement.href = `/cms/#/${postType}/bookmarks/new?url=${urlPair[1]}`
     titlePair && titlePair[1] && (titleInput.value = decodeURIComponent(titlePair[1]).replace(/\+/g, ' '))
 
     if (titlePair && titlePair[1]) {
