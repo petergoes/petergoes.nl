@@ -35,6 +35,11 @@
           </time>
         </small>
       {% endif %}
+      {% if showPermalink %}
+        <small>
+          <a href="{{ post.url }}">permalink<span class="visuallyhidden"> to {{ post.data.title }}</a>
+        </small>
+      {% endif %}
       {% if post.data.description %}
         <p>{{ post.data.description }}</p>
       {% else %}
