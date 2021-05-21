@@ -30,6 +30,10 @@
     <link href="https://www.petergoes.nl{{ absolutePostUrl }}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>https://www.petergoes.nl{{ absolutePostUrl }}</id>
+    <content type="html">
+      {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+      <a href="{{ post.data.url }}">Link of {{ post.data.title }}</a>
+    </content>
   </entry>
   {%- endfor %}
 </feed>
