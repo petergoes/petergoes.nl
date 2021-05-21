@@ -126,7 +126,7 @@
     urlInput.addEventListener('input', updateLink(urlOutput))
 
     urlPair && urlPair[1] && (urlInput.value = decodeURIComponent(urlPair[1]))
-    aElement.href = `/cms/#/${postType}/bookmarks/new?url=${urlPair[1]}`
+    aElement.href = `/cms/#/collections/${postType}/new?url=${urlPair[1]}`
     titlePair && titlePair[1] && (titleInput.value = decodeURIComponent(titlePair[1]).replace(/\+/g, ' '))
 
     if (titlePair && titlePair[1]) {
