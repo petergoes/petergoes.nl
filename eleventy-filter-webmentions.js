@@ -26,5 +26,9 @@ module.exports = {
   },
   readableDateFromISO: (dateStr, formatStr = "dd LLL yyyy 'at' hh:mma") => {
     return dayjs.format(formatStr);
+  },
+
+  removeSyndication: (mentions, syndicationLink) => {
+    return mentions.filter(mention => mention.url !== syndicationLink)
   }
 }
