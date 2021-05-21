@@ -1,0 +1,12 @@
+diff --git a/node_modules/emitter-mixin/package.json b/node_modules/emitter-mixin/package.json
+index 4d37556..c78087c 100644
+--- a/node_modules/emitter-mixin/package.json
++++ b/node_modules/emitter-mixin/package.json
+@@ -2,7 +2,6 @@
+   "name": "emitter-mixin",
+   "version": "0.0.3",
+   "description": "Node's EventEmitter mixin",
+-  "main": "y",
+   "scripts": {
+     "test": "make test"
+   },

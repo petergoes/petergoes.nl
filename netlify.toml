@@ -1,5 +1,5 @@
 [dev]
-  command = "npx eleventy --config=.eleventy/.eleventy.js --serve"
+  command = "npx eleventy --config=.eleventy/.eleventy.js --serve --quiet"
 
 [functions]
   directory = ".netlify/functions"
