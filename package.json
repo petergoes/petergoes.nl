@@ -4,7 +4,7 @@
   "description": "Personal website of Peter Goes",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve",
+    "start": "netlify dev",
     "build": "DEVELOPMENT=false eleventy",
     "postbuild": "node post-build-css-inject.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"

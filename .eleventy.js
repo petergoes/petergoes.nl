@@ -17,8 +17,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight, { className: "hljs-block" });
   eleventyConfig.addPlugin(inclusiveLangPlugin);
 
-  eleventyConfig.addPassthroughCopy({ "_public": "/" });
-  eleventyConfig.addPassthroughCopy("_includes/**/*.js");
+  eleventyConfig.addPassthroughCopy({ "src/_public": "/" });
+  eleventyConfig.addPassthroughCopy("src/_includes/**/*.js");
 
   eleventyConfig.addTransform("htmlmin", transfromHtmlmin);
 
@@ -38,8 +38,8 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: "content",
-      includes: "../_includes",
-      data: "../_data"
+      includes: "../src/_includes",
+      data: "../src/_data"
     }
   };
 };

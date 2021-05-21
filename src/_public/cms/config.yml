@@ -5,7 +5,7 @@ backend:
 
 local_backend: true
 
-media_folder: "_public/images"
+media_folder: "src/_public/images"
 
 collections:
   - name: "blogposts"
