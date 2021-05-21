@@ -11,7 +11,7 @@ const postcssCustomProperties = require('postcss-custom-properties')
 module.exports = async function(files, pageOutputFile, development) {
   const baseCssFile = 'css/main.css'
   const cssOutputFile = (pageOutputFile || '').replace('.html', '.css')
-  const getFileContents = file => fs.readFileSync(path.join(__dirname, 'src/_includes', file), {encoding: "utf-8"})
+  const getFileContents = file => fs.readFileSync(path.join(__dirname, '../src/_includes', file), {encoding: "utf-8"})
 
   const mainContents = `${getFileContents(baseCssFile)}\n${files.map(file => `@import "../${file}";`).join('\n')}`
 
@@ -31,7 +31,7 @@ module.exports = async function(files, pageOutputFile, development) {
     : [...plugins, ...productionPlugins]
 
   let css = await postcss(pluginList)
-    .process(mainContents, { from: path.join(__dirname, 'src/_includes', baseCssFile) })
+    .process(mainContents, { from: path.join(__dirname, '../src/_includes', baseCssFile) })
     .then(result => result.css)
 
   if (development) {
@@ -40,7 +40,7 @@ module.exports = async function(files, pageOutputFile, development) {
 
   let fileName
   if (pageOutputFile) {
-    fileName = path.join(__dirname, cssOutputFile)
+    fileName = path.join(__dirname, '..', cssOutputFile)
     const dir = fileName.replace(/\/(.[^\/]+)$/, '').replace(/\.$/, '')
     try {
       await mkdirp(dir)

@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 const htmlFiles = await glob('_site/**/*.html')
 const promises = htmlFiles
   .filter(file => /\/cms/.test(file) === false)
-  .map(file => path.join(__dirname, file))
+  .map(file => path.join(__dirname, '..', file))
   .map(async htmlFile => {
     const findCssFile = /\/\*CSS_REPLACE_WITH_START(.+)CSS_REPLACE_WITH_END\*\//
     const htmlContents = await fs.readFile(htmlFile, { encoding: 'utf-8' })
