@@ -19,6 +19,14 @@
   margin-bottom: 0;
 }
 
+.footer__other-nav ul {
+  display: flex;
+}
+
+.footer__other-nav li {
+  margin-right: 0.5rem;
+}
+
 .footer__other-nav li::before {
   content: none;
 }
