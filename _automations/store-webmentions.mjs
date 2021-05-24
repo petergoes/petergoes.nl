@@ -31,7 +31,7 @@ function convertResponseToJson(response) {
 
 function checkDataValidity(data) {
   if ("children" in data) return data
-  console.log(data)
+  console.log(data, apiOptions)
   throw new Error("Invalid webmention.io response.")
 }
 
