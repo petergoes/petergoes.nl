@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "david metcalf",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/e201425d48cc8cacdb5208bb04e6451ea82104c3c707718e9eaa3bdbe75ce1b2.jpg",
+    "url": "https://twitter.com/davidmcodes"
+  },
+  "url": "https://twitter.com/petergoes/status/1387491272869523456#favorited-by-1286447888822702080",
+  "published": null,
+  "wm-received": "2021-05-17T18:40:08Z",
+  "wm-id": 1161195,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1387491272869523456/1286447888822702080",
+  "wm-target": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "like-of": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "wm-property": "like-of",
+  "wm-private": false
+}

@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Christian Kozalla",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/521b39f19677046afb9ee2d28096aabf00add152ce8a6428609e606210ea5b27.jpg",
+    "url": "https://twitter.com/CKozalla"
+  },
+  "url": "https://twitter.com/petergoes/status/1387491272869523456#favorited-by-1315961855148523521",
+  "published": null,
+  "wm-received": "2021-05-17T18:39:21Z",
+  "wm-id": 1161181,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1387491272869523456/1315961855148523521",
+  "wm-target": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "like-of": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "wm-property": "like-of",
+  "wm-private": false
+}

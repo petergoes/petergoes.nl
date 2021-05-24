@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Sarah Jarque-Deakin",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/8a07e1121166b094a66702af618068fb9fd19f879c9eee886c4ee4c874fbbd58.jpg",
+    "url": "https://twitter.com/sjarquedeakin"
+  },
+  "url": "https://twitter.com/petergoes/status/1387491272869523456#favorited-by-957618337",
+  "published": null,
+  "wm-received": "2021-05-17T18:40:05Z",
+  "wm-id": 1161193,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1387491272869523456/957618337",
+  "wm-target": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "like-of": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "wm-property": "like-of",
+  "wm-private": false
+}

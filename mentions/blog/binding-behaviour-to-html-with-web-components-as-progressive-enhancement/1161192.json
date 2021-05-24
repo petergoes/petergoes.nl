@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Marc Stalfoort",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/90c871acd6bb1fd019a9d86dbe70cc2027ecfee7a086a990b888d4a4da7ba461.jpg",
+    "url": "https://twitter.com/mstalfoort"
+  },
+  "url": "https://twitter.com/petergoes/status/1387491272869523456#favorited-by-75093697",
+  "published": null,
+  "wm-received": "2021-05-17T18:40:05Z",
+  "wm-id": 1161192,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1387491272869523456/75093697",
+  "wm-target": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "like-of": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "wm-property": "like-of",
+  "wm-private": false
+}

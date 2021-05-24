@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Tanner Dolby",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/0b9b6080c2486ab209b39facadec189a081288baa997cdb77bda07ddd9dafa21.jpg",
+    "url": "https://twitter.com/tannerdolby"
+  },
+  "url": "https://twitter.com/petergoes/status/1387491272869523456#favorited-by-1259622945955016705",
+  "published": null,
+  "wm-received": "2021-05-17T18:40:07Z",
+  "wm-id": 1161194,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1387491272869523456/1259622945955016705",
+  "wm-target": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "like-of": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "wm-property": "like-of",
+  "wm-private": false
+}

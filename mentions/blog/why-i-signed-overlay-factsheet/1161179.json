@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Sarah Märdian",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/046538815410524d6d6e019a75b0883a63c220e3010ad208445c7d9cfd4c009c.png",
+    "url": "https://twitter.com/smaerdian"
+  },
+  "url": "https://twitter.com/petergoes/status/1383512710608945155#favorited-by-61603282",
+  "published": null,
+  "wm-received": "2021-05-17T18:39:20Z",
+  "wm-id": 1161179,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1383512710608945155/61603282",
+  "wm-target": "https://www.petergoes.nl/blog/why-i-signed-overlay-factsheet/",
+  "like-of": "https://www.petergoes.nl/blog/why-i-signed-overlay-factsheet/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
