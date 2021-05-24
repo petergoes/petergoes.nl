@@ -5,6 +5,10 @@ import filter from 'lodash/fp/filter.js'
 import get from 'lodash/fp/get.js'
 import forEach from 'lodash/fp/forEach.js'
 import mkdirp from 'mkdirp'
+import dotenv from 'dotenv'
+
+dotenv.config()
+
 
 const domain = 'https://www.petergoes.nl'
 const targetFolder = path.join(process.cwd(), 'mentions')
