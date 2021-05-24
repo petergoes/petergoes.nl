@@ -20,7 +20,7 @@ jobs:
       - name: Fetch webmentions
         env:
           WEBMENTIONS_IO_TOKEN: ${{ secrets.WEBMENTION_IO_TOKEN }}
-        run: node ./_automations/store-webmentions.js
+        run: node ./_automations/store-webmentions.mjs
 
       - name: Create Pull Request
         id: cpr
