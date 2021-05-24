@@ -1,13 +1,10 @@
 import fs from 'fs'
 import path from 'path'
 import fetch from 'node-fetch'
-import dotenv from 'dotenv-save'
 import filter from 'lodash/fp/filter.js'
 import get from 'lodash/fp/get.js'
 import forEach from 'lodash/fp/forEach.js'
 import mkdirp from 'mkdirp'
-
-dotenv.config()
 
 const domain = 'https://www.petergoes.nl'
 const targetFolder = path.join(process.cwd(), 'mentions')
