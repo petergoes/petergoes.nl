@@ -3,8 +3,8 @@ name: Webmentions
 on:
   schedule:
     - cron: "0 */6 * * *"
-
-webmentions:
+jobs:
+  webmentions:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
