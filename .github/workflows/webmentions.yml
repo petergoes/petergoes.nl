@@ -1,8 +1,10 @@
 name: Webmentions
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 */6 * * *"
+
 jobs:
   webmentions:
     runs-on: ubuntu-latest
