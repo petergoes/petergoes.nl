@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Peter Goes",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/69a046822458a17a3daa22e5989322c2fc50f21526b761b111f804cf58d44d89.jpg",
+    "url": "https://twitter.com/petergoes"
+  },
+  "url": "https://twitter.com/petergoes/status/1394916439979614208#favorited-by-41120808",
+  "published": null,
+  "wm-received": "2021-05-20T03:17:21Z",
+  "wm-id": 1164234,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1394916439979614208/41120808",
+  "wm-target": "https://www.petergoes.nl/blog/test-post-web-mentions/",
+  "like-of": "https://www.petergoes.nl/blog/test-post-web-mentions/",
+  "wm-property": "like-of",
+  "wm-private": false
+}

@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Eleventy",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/64ed7c5b6f8f7dc61e11ff6a926eeb6a94e686473efdb5a7c697a4a87f4e411a.jpg",
+    "url": "https://twitter.com/eleven_ty"
+  },
+  "url": "https://twitter.com/petergoes/status/1387491272869523456#favorited-by-949639269433380864",
+  "published": null,
+  "wm-received": "2021-05-17T18:39:30Z",
+  "wm-id": 1161188,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1387491272869523456/949639269433380864",
+  "wm-target": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "like-of": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
