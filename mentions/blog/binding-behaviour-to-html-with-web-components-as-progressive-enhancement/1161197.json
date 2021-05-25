@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Jim Nielsen",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/44728920f07defc757fb7b8277972def0e464c56e1a2434bac650dc2e92334e7.jpg",
+    "url": "https://twitter.com/jimniels"
+  },
+  "url": "https://twitter.com/petergoes/status/1389264496603111425#favorited-by-141811791",
+  "published": null,
+  "wm-received": "2021-05-17T18:40:09Z",
+  "wm-id": 1161197,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1389264496603111425/141811791",
+  "wm-target": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "like-of": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "wm-property": "like-of",
+  "wm-private": false
+}

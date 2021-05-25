@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Tom Doe",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/4658f04a7eebc446d9b3b11711b0e442e586934e585c8f8b48a668af4bb6973c.jpg",
+    "url": "https://twitter.com/thet0m"
+  },
+  "url": "https://twitter.com/petergoes/status/1387491272869523456#favorited-by-944302690519191554",
+  "published": null,
+  "wm-received": "2021-05-17T18:39:24Z",
+  "wm-id": 1161185,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1387491272869523456/944302690519191554",
+  "wm-target": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "like-of": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
