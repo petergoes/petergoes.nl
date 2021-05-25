@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Carles Muiños",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/c2eaf8cc4be9e3ccd1b887e86329af39b2ec759f1af380a5ad07d8d9e9c2d833.jpg",
+    "url": "https://twitter.com/zuzudev"
+  },
+  "url": "https://twitter.com/petergoes/status/1387491272869523456#favorited-by-487592858",
+  "published": null,
+  "wm-received": "2021-05-17T18:40:08Z",
+  "wm-id": 1161196,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1387491272869523456/487592858",
+  "wm-target": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "like-of": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "wm-property": "like-of",
+  "wm-private": false
+}

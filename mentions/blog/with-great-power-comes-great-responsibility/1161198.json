@@ -1,0 +1,21 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Alexander Lehner",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/e9ab3bf6a3d9cd17edfe8c65f80f198f021d875df768218e575d1654759e8009.jpg",
+    "url": "https://twitter.com/alexlehner42"
+  },
+  "url": "https://twitter.com/alexlehner42/status/1393534240013361154",
+  "published": "2021-05-15T11:50:28+00:00",
+  "wm-received": "2021-05-17T18:40:14Z",
+  "wm-id": 1161198,
+  "wm-source": "https://brid.gy/repost/twitter/petergoes/1393508418216935426/1393534240013361154",
+  "wm-target": "https://www.petergoes.nl/blog/with-great-power-comes-great-responsibility/",
+  "content": {
+    "text": "By not taking care of accessibility, a team takes away the self-sustainability of real people. \n\nThats a lot of power, and an equal amount of responsibility.\n\n#a11y \n\npetergoes.nl/blog/with-grea…"
+  },
+  "repost-of": "https://www.petergoes.nl/blog/with-great-power-comes-great-responsibility/",
+  "wm-property": "repost-of",
+  "wm-private": false
+}

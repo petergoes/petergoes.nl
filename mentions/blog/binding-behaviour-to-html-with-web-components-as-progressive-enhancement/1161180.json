@@ -1,0 +1,21 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Eleventy",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/64ed7c5b6f8f7dc61e11ff6a926eeb6a94e686473efdb5a7c697a4a87f4e411a.jpg",
+    "url": "https://twitter.com/eleven_ty"
+  },
+  "url": "https://twitter.com/eleven_ty/status/1387497589419950083",
+  "published": "2021-04-28T20:02:58+00:00",
+  "wm-received": "2021-05-17T18:39:21Z",
+  "wm-id": 1161180,
+  "wm-source": "https://brid.gy/repost/twitter/petergoes/1387491272869523456/1387497589419950083",
+  "wm-target": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "content": {
+    "text": "Today I used a #customelement to bind JS logic to the DOM. I did not want to include a build process for JavaScript.\n\nI use @eleven_ty so the JS logic needed to enhance the existing DOM, no Shadow Dom.\n\nI wrote about the process: \npetergoes.nl/blog/binding-b…"
+  },
+  "repost-of": "https://www.petergoes.nl/blog/binding-behaviour-to-html-with-web-components-as-progressive-enhancement/",
+  "wm-property": "repost-of",
+  "wm-private": false
+}
