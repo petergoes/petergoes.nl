@@ -280,9 +280,12 @@ code:not([class*="hljs"])::after {
     counter-increment:li; /* Increment the counter by 1 */
   }
 
+  ul {
+    list-style: none;
+  }
+
   ul,
   ol {
-    list-style: none;
     margin-bottom: var(--line-height);
   }
 

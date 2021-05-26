@@ -24,7 +24,9 @@
             Filled under:
             <ul class="blog__tags-list">
               {% for tag in tags | remove('blog') %}
-                <li class="blog__tags-list-item p-category">{{ tag }}</li>
+                <li class="blog__tags-list-item p-category">
+                  {{ tag }}{% if not loop.last %},&nbsp;{% endif %}
+                </li>
               {% endfor %}
             </ul>
           </small>
