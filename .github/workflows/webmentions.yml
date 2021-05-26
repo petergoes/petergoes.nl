@@ -3,7 +3,7 @@ name: Webmentions
 on:
   workflow_dispatch:
   repository_dispatch:
-    types: [trigger_pr_workflow]
+    types: [Received Webmention]
   schedule:
     - cron: "0 */6 * * *"
 
