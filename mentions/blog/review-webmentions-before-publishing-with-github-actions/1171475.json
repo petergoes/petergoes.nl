@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Will Norris 💉💉⏳",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/29171fa7c49f7db74f593af046dd6c180beb931076a18803b1308994c6e9d84f.jpg",
+    "url": "https://twitter.com/willnorris"
+  },
+  "url": "https://twitter.com/petergoes/status/1397632362926772228#favorited-by-755070",
+  "published": null,
+  "wm-received": "2021-05-26T21:10:40Z",
+  "wm-id": 1171475,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1397632362926772228/755070",
+  "wm-target": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "like-of": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
