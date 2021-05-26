@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Will Norris 💉💉⏳",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/29171fa7c49f7db74f593af046dd6c180beb931076a18803b1308994c6e9d84f.jpg",
+    "url": "https://twitter.com/willnorris"
+  },
+  "url": "https://twitter.com/willnorris/status/1397649573074530304",
+  "published": "2021-05-26T20:23:19+00:00",
+  "wm-received": "2021-05-26T21:11:08Z",
+  "wm-id": 1171477,
+  "wm-source": "https://brid.gy/comment/twitter/petergoes/1397632362926772228/1397649573074530304",
+  "wm-target": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "content": {
+    "html": "This is awesome, and is pretty much exactly the flow I've long been slowly poking at building, right down to the repository_dispatch event!  I hadn't considered pulling from <a href=\"http://webmention.io\">webmention.io</a> though (was trying to receive mentions directly).  I'll definitely try this out.\n<a class=\"u-mention\" href=\"https://twitter.com/petergoes\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/webmentionrocks\"></a>\n<a class=\"u-mention\" href=\"https://www.petergoes.nl/\"></a>",
+    "text": "This is awesome, and is pretty much exactly the flow I've long been slowly poking at building, right down to the repository_dispatch event!  I hadn't considered pulling from webmention.io though (was trying to receive mentions directly).  I'll definitely try this out."
+  },
+  "in-reply-to": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}

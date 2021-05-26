@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Peter Goes",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/69a046822458a17a3daa22e5989322c2fc50f21526b761b111f804cf58d44d89.jpg",
+    "url": "https://twitter.com/petergoes"
+  },
+  "url": "https://twitter.com/petergoes/status/1397655867957329922",
+  "published": "2021-05-26T20:48:20+00:00",
+  "wm-received": "2021-05-26T21:10:41Z",
+  "wm-id": 1171476,
+  "wm-source": "https://brid.gy/comment/twitter/petergoes/1397632362926772228/1397655867957329922",
+  "wm-target": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "content": {
+    "html": "Thanks! Glad you like it! Let me know how it works out for you!\n\nI found doing the receiving part manually a bit intimidating. Using <a href=\"http://webmention.io\">webmention.io</a> handles quite a lot for you.\n<a class=\"u-mention\" href=\"https://twitter.com/webmentionrocks\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/willnorris\"></a>",
+    "text": "Thanks! Glad you like it! Let me know how it works out for you!\n\nI found doing the receiving part manually a bit intimidating. Using webmention.io handles quite a lot for you."
+  },
+  "in-reply-to": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}
