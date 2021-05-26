@@ -3,7 +3,8 @@ name: Bug report
 about: Create a report to help me improve my site
 title: "[BUG]"
 labels: bug
-projects: roadmap
+projects: 1
+project: 1
 
 ---
 
