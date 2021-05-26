@@ -1,13 +1,14 @@
 ---
 layout: blog
 permalink: "{{ page.filePathStem }}/index.html"
-title: Review incomming Webmentions before publishing with Github Actions
-description: A guide on how I generate PR's when webmentions are received
+title: Review incoming WebMentions before publishing with Github Actions
+description: How I automatically generate PR's when WebMentions are received
 tags:
   - blog
   - webmentions
   - github actions
-date: 2021-05-26T12:25:39.864Z
+date: 2021-05-26T19:10:17.049Z
+tweetUrl: https://twitter.com/petergoes/status/1397632362926772228
 ---
 
 Recently I added [webmentions](https://indieweb.org/webmention) to this blog. 
