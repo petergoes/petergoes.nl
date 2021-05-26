@@ -2,6 +2,8 @@ name: Webmentions
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [trigger_pr_workflow]
   schedule:
     - cron: "0 */6 * * *"
 
