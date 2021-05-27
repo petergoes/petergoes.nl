@@ -1,6 +1,6 @@
 ---
 layout: bookmark
-title: The A11Y Collective - Web Accessibility Courses and Training
+title: The A11Y Collective
 url: https://a11y-collective.com/
 tags:
   - bookmark
@@ -8,4 +8,4 @@ tags:
   - courses
 date: 2021-05-27T20:36:02.803Z
 ---
- 
+Web Accessibility Courses and Training
