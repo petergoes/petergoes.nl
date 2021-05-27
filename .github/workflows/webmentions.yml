@@ -44,9 +44,7 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.PAT }}
           commit-message: Update WebMentions
-          author: GitHub <noreply@github.com>
           branch: new-web-mentions
           delete-branch: true
           assignees: petergoes
