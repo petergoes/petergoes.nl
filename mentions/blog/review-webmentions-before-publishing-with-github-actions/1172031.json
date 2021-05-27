@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Peter Peerdeman",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/d2fa4f6e51d457f89736e2c164168e2720b9d30290c824ce905a8e092cbf1184.jpg",
+    "url": "https://twitter.com/peterpeerdeman"
+  },
+  "url": "https://twitter.com/petergoes/status/1397632362926772228#favorited-by-42890041",
+  "published": null,
+  "wm-received": "2021-05-27T05:31:39Z",
+  "wm-id": 1172031,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1397632362926772228/42890041",
+  "wm-target": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "like-of": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
