@@ -123,6 +123,7 @@ pre code:after {
 code {
   color: var(--inline-code-color);
   position: relative;
+  word-break: break-word;
 }
 
 code:not([class*="hljs"])::before,
@@ -278,8 +279,9 @@ code:not([class*="hljs"])::after {
   ol > li:before {
     content:counter(li) + '. '; /* Use the counter as content */
     counter-increment:li; /* Increment the counter by 1 */
+    opacity: var(--markdown-decoration-fade);
   }
-
+  
   ul {
     list-style: none;
   }
@@ -307,7 +309,7 @@ code:not([class*="hljs"])::after {
   }
 }
 
-@media screen and (min-width: var(--screen-small) ){
+@media screen and (min-width: var(--screen-medium) ){
   li,
   h1, .h1,
   h2, .h2,
@@ -328,6 +330,10 @@ code:not([class*="hljs"])::after {
     position: absolute;
     transform: translate(-100%);
     padding-right: var(--char-width);
+  }
+
+  ol {
+    padding: 0;
   }
 }
 

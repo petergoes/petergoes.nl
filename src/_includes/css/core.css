@@ -55,4 +55,5 @@ code.hljs-block {
   padding-bottom: var(--line-height);
   padding-left: 0;
   padding-right: 0;
+  overflow-x: scroll;
 }

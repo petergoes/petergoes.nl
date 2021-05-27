@@ -31,6 +31,10 @@ time, mark, audio, video {
     background:transparent;
 }
 
+ol {
+  padding-left: 3ch;
+}
+
 body {
     line-height:1;
 }
