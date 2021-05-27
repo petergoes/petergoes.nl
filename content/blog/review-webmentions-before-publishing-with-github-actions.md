@@ -9,6 +9,7 @@ tags:
   - github actions
 date: 2021-05-26T19:10:17.049Z
 tweetUrl: https://twitter.com/petergoes/status/1397632362926772228
+tootUrl: https://toot.cafe/@petergoes/106309292601460064
 ---
 
 Recently I added [webmentions](https://indieweb.org/webmention) to this blog. 
