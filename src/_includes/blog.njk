@@ -43,11 +43,19 @@
       <h2 id="comments">Comments</h2>
 
       <p>
-        I use <a href="https://indieweb.org/Webmention">WebMentions</a> via the <a href="https://indieweb.org">IndyWeb</a>. Do you have a comment?
+        I use <a href="https://indieweb.org/Webmention">WebMentions</a> via the <a href="https://indieweb.org">IndyWeb</a>. Do you have a comment?<br />
         {% if tweetUrl %}
-          <br />Reply on twitter under <a rel="syndication" class="u-syndication" href="{{ tweetUrl }}">this tweet</a>. Or
+          Reply on Twitter under <a rel="syndication" class="u-syndication" href="{{ tweetUrl }}">this tweet</a>.
+        {% endif %}
+        {% if tootUrl %}
+          Respond on Mastodon under <a rel="syndication" class="u-syndication" href="{{ tootUrl }}">this toot</a>.
+        {% endif %}
+
+        {% if tweetUrl or tootUrl %}
+          <br />
+          Or
         {% else %}
-          <br />Please
+          Please
         {% endif %}
         respond via a post from your site!
       </p>
