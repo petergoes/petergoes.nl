@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Siilwyn",
+    "photo": "https://webmention.io/avatar/assets.toot.cafe/8cc0bf77db356dccb34c6dfe5d1c45f3e223aa252fdd778f06a273a199478f1b.png",
+    "url": "https://mastodon.social/@Siilwyn"
+  },
+  "url": "https://toot.cafe/@petergoes/106241084856358088#reblogged-by-171302",
+  "published": null,
+  "wm-received": "2021-05-27T20:42:33Z",
+  "wm-id": 1172681,
+  "wm-source": "https://brid.gy/repost/mastodon/@petergoes@toot.cafe/106241084856358088/171302",
+  "wm-target": "https://www.petergoes.nl/blog/with-great-power-comes-great-responsibility/",
+  "repost-of": "https://www.petergoes.nl/blog/with-great-power-comes-great-responsibility/",
+  "wm-property": "repost-of",
+  "wm-private": false
+}
