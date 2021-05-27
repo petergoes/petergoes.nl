@@ -8,17 +8,15 @@
   content: initial;
 }
 
-.webmention__text-response-header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 1rem;
-  align-items: center;
-}
-
 .webmention__text-response-header img {
   border-radius: 100%;
   width: calc(var(--line-height) * 2);
   height: calc(var(--line-height) * 2);
+  float: left;
+  margin-right: 1rem;
+}
+.webmention__text-response-header a {
+  display: block;
 }
 
 .webmention__text-response-list .webmention__text-response-footer {
