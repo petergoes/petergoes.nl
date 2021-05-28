@@ -10,18 +10,24 @@
   <article class="like content-section h-entry">
     <header>
       <h1><a href="{{ url }}" class="u-like-of">{{ title }}: {{ url }}</a></h1>
-      <aside aria-label="post meta data">
-          <small>
-            Liked at:
-            <a href="{{ site.url + page.url }}" class="u-url">
-            <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD hh:mm:ss') }}">
-              {{ date | formatDate('Do of MMMM, YYYY') }}
-            </time>
-            </a>
-          </small>
-          <small>
-            <a class="u-url"  href="{{ page.url }}">permalink<span class="visuallyhidden"> to this like</span></a>
-          </small>
+      <aside aria-label="post meta-data">
+        {% if (silo === 'twitter') %}
+          <a href="https://brid.gy/publish/twitter" style="display: none;"></a>
+        {% endif %}
+        {% if (silo === 'mastodon') %}
+          <a href="https://brid.gy/publish/mastodon" style="display: none;"></a>
+        {% endif %}
+        <small>
+          Liked at:
+          <a href="{{ site.url + page.url }}" class="u-url">
+          <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD hh:mm:ss') }}">
+            {{ date | formatDate('Do of MMMM, YYYY') }}
+          </time>
+          </a>
+        </small>
+        <small>
+          <a class="u-url"  href="{{ page.url }}">permalink<span class="visuallyhidden"> to this like</span></a>
+        </small>
       </aside>
     </header>
 
