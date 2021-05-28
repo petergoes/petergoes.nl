@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "georg fischer",
+    "photo": "https://webmention.io/avatar/assets.toot.cafe/655344dae474635a8f0d127f2e61ded71401267dc776dbd701dedc298168a46e.png",
+    "url": "https://mastodon.social/@snorpey"
+  },
+  "url": "https://toot.cafe/@petergoes/106309292601460064#favorited-by-2327",
+  "published": null,
+  "wm-received": "2021-05-28T00:05:16Z",
+  "wm-id": 1172789,
+  "wm-source": "https://brid.gy/like/mastodon/@petergoes@toot.cafe/106309292601460064/2327",
+  "wm-target": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "like-of": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
