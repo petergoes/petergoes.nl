@@ -2,7 +2,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("eleventy-plugin-highlightjs");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const filterFormatDate = require('./filter-format-date')
-const filterRemove = require('./filter-remove')
+const { remove, removePostsInCollection } = require('./filter-remove')
 const filterTagsInCollection = require('./filter-tags-in-collection')
 const filterWebMentions = require('./filter-webmentions')
 const transfromHtmlmin = require('./transform-htmlmin')
@@ -23,7 +23,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addTransform("htmlmin", transfromHtmlmin);
 
   eleventyConfig.addFilter("formatDate", filterFormatDate);
-  eleventyConfig.addFilter("remove", filterRemove);
+  eleventyConfig.addFilter("remove", remove);
+  eleventyConfig.addFilter("removePostsInCollection", removePostsInCollection);
   eleventyConfig.addFilter("tagsInCollection", filterTagsInCollection);
   Object.keys(filterWebMentions).forEach(filterName => {
     eleventyConfig.addFilter(filterName, filterWebMentions[filterName])
