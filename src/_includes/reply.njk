@@ -28,6 +28,13 @@
     </header>
     <section class="e-content">
       {{ content | safe }}
+      {% if silo === 'mastodon' %}
+        <a href="https://brid.gy/publish/mastodon"></a>
+      {% endif %}
+
+      {% if silo === 'twitter' %}
+        <a href="https://brid.gy/publish/twitter"></a>
+      {% endif %}
     </section>
 
     <footer aria-labelledby="this-is-me">
