@@ -11,13 +11,6 @@
     <header>
       <h1><a href="{{ url }}" class="u-like-of">{{ title }}: {{ url }}</a></h1>
       <aside aria-label="post meta-data">
-        {% if (silo === 'twitter') %}
-          <a href="https://brid.gy/publish/twitter" style="display: none;"></a>
-        {% endif %}
-        {% if (silo === 'mastodon') %}
-          <a href="https://brid.gy/publish/mastodon" style="display: none;"></a>
-          <a href="https://brid.gy/publish/webmention" class="u-url" style="display: none;"></a>
-        {% endif %}
         <small>
           Liked at:
           <a href="{{ site.url + page.url }}" class="u-url">
@@ -31,6 +24,18 @@
         </small>
       </aside>
     </header>
+
+    {% if silo === 'mastodon' or silo === 'twitter' %}
+      <div class="e-content">
+        {% if silo === 'mastodon' %}
+          <a href="https://brid.gy/publish/mastodon"></a>
+        {% endif %}
+
+        {% if silo === 'twitter' %}
+          <a href="https://brid.gy/publish/twitter"></a>
+        {% endif %}
+      </div>
+    {% endif %}
 
     <footer aria-labelledby="this-is-me">
       <h2 id="this-is-me">This is me</h2>
