@@ -1,13 +1,13 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("eleventy-plugin-highlightjs");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
-const filterFormatDate = require('./eleventy-filter-format-date')
-const filterRemove = require('./eleventy-filter-remove')
-const filterTagsInCollection = require('./eleventy-filter-tags-in-collection')
-const filterWebMentions = require('./eleventy-filter-webmentions')
-const transfromHtmlmin = require('./eleventy-transform-htmlmin')
-const shortcodePostcss = require('./eleventy-nunjucks-shortcode-postcss')
-const { shortcodeImageManifest, shortcodeSingleImageUrl, shortcodeFeaturedImage } = require('./eleventy-shortcode-image')
+const filterFormatDate = require('./filter-format-date')
+const filterRemove = require('./filter-remove')
+const filterTagsInCollection = require('./filter-tags-in-collection')
+const filterWebMentions = require('./filter-webmentions')
+const transfromHtmlmin = require('./transform-htmlmin')
+const shortcodePostcss = require('./nunjucks-shortcode-postcss')
+const { shortcodeImageManifest, shortcodeSingleImageUrl, shortcodeFeaturedImage } = require('./shortcode-image')
 require('dotenv-save').config()
 
 module.exports = function(eleventyConfig) {
