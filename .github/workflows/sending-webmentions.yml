@@ -24,4 +24,5 @@ jobs:
           >> new-endpoints.txt
           echo "New endpoints"
           cat new-endpoints.txt
-          cat new-endpoints.txt | xargs -I _ sh -c 'npx webmention _ --debug'
+          cat new-endpoints.txt | xargs -I _ sh -c 'npx webmention _ --debug >> mentions.log'
+          cat mentions.log
