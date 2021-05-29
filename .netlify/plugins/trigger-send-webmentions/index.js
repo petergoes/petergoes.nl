@@ -1,5 +1,5 @@
 module.exports = {
-  onSuccess: ({ constants }) => {
+  onSuccess: async ({ constants }) => {
     await fetch(
       'https://api.github.com/repos/petergoes/petergoes.nl/dispatches',
       {
