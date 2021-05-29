@@ -13,7 +13,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Find changed files
+      - name: Find changed posts
         env:
           AFTER: ${{ github.event.after }}
           BEFORE: ${{ github.event.before }}

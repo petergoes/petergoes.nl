@@ -4,4 +4,4 @@ _cache
 .env
 
 # Local Netlify folder
-.netlify/state.json
+.netlify
