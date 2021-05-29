@@ -15,4 +15,9 @@ jobs:
         env:
           AFTER: ${{ github.event.after }}
           BEFORE: ${{ github.event.before }}
-        run: git diff --name-only $BEFORE $AFTER >> changed-files.txt
+        run: |
+          git diff --name-only bd96407 HEAD | \
+          grep "content/[bookmarks|likes|replies]" | \
+          grep -v "index.md" | \
+          awk 'BEGIN { FS="/"; } { print "https://www.petergoes.nl/"$2"/"$3;}' | \
+          awk 'BEGIN { FS=".md" } { print $1 }' | xargs -I _ npx webmention _ --debug
