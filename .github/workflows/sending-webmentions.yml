@@ -1,0 +1,18 @@
+name: Send Webmentions
+
+on: [push]
+
+jobs:
+  send-webmentions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@master
+
+      - name: Find last sha
+        env:
+          BASE_REF: ${{ github.event.base_ref }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          echo "base ref: $BASE_REF"
+          echo "before: $BEFORE"
