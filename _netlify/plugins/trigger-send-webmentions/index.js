@@ -1,13 +1,10 @@
 const fs = require('fs')
 const { spawn } = require('child_process');
 const fetch = require('node-fetch')
-require('dotenv-save').config()
 
 module.exports = {
-  onPreBuild: () => {
-    fs.writeFileSync('.env', '', { encoding: 'utf-8' })
-  },
   onSuccess: ({ utils }) => {
+    require('dotenv-save').config()
     const { git } = utils
 
     const changedPosts = [...git.modifiedFiles, ...git.createdFiles]
