@@ -15,5 +15,4 @@ jobs:
         env:
           AFTER: ${{ github.event.after }}
           BEFORE: ${{ github.event.before }}
-        # run: git diff --name-only $BEFORE $AFTER >> changed-files.txt
-        run: git log
+        run: git diff --name-only $BEFORE $AFTER >> changed-files.txt
