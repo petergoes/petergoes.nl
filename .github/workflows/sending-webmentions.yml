@@ -20,5 +20,5 @@ jobs:
           grep "content/[bookmarks|likes|replies]" | \
           grep -v "index.md" | \
           awk 'BEGIN { FS="/"; } { print "https://www.petergoes.nl/"$2"/"$3;}' | \
-          awk 'BEGIN { FS=".md" } { print $1 }' | xargs -I _ npx webmention _ --debug | \
-          cat
+          awk 'BEGIN { FS=".md" } { print $1 }' | \
+          xargs -I _ sh -c 'npx webmention _ --debug'
