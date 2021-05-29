@@ -10,5 +10,5 @@
   status = 200
   force = true
 
-[[plugins]]
+[[context.production.plugins]]
   package = "/_netlify/plugins/trigger-send-webmentions"

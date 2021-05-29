@@ -1,6 +1,8 @@
+const fetch = require('node-fetch')
+
 module.exports = {
-  onSuccess: async ({ constants }) => {
-    await fetch(
+  onSuccess: ({ constants }) =>     
+    fetch(
       'https://api.github.com/repos/petergoes/petergoes.nl/dispatches',
       {
         method: 'POST',
@@ -10,5 +12,4 @@ module.exports = {
         body: '{ "event_type": "Build success" }'
       }
     )
-  },
 }
