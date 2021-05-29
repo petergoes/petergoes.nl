@@ -1,0 +1,30 @@
+name: Send Webmentions
+
+on:
+  repository_dispatch:
+    types: [Build success]
+
+jobs:
+  send-webmentions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+
+      - name: Find changed files
+        env:
+          AFTER: ${{ github.event.after }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          git diff --name-only $BEFORE $AFTER | \
+          grep "content/[bookmarks|likes|replies]" | \
+          grep -v "index.md" | \
+          awk 'BEGIN { FS="/"; } { print "https://www.petergoes.nl/"$2"/"$3"/";}' | \
+          awk 'BEGIN { FS=".md" } { print $1 }' \
+          >> new-endpoints.txt
+          echo "New endpoints"
+          cat new-endpoints.txt
+          cat new-endpoints.txt | xargs -I _ sh -c 'npx webmention _ --debug >> mentions.log'
+          cat mentions.log
