@@ -21,6 +21,6 @@ module.exports = {
       )
 
       return Promise.all(changedPosts)
-          .then(responses => responses.forEach(console.log)))
+          .then(responses => responses.forEach(console.log))
   }
 }
