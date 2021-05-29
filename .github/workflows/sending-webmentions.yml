@@ -1,6 +1,10 @@
 name: Send Webmentions
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   send-webmentions:
@@ -16,7 +20,7 @@ jobs:
           AFTER: ${{ github.event.after }}
           BEFORE: ${{ github.event.before }}
         run: |
-          git diff --name-only bd96407 $AFTER | \
+          git diff --name-only $BEFORE $AFTER | \
           grep "content/[bookmarks|likes|replies]" | \
           grep -v "index.md" | \
           awk 'BEGIN { FS="/"; } { print "https://www.petergoes.nl/"$2"/"$3"/";}' | \
