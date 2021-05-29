@@ -7,7 +7,7 @@ import { PurgeCSS } from 'purgecss'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const htmlFiles = await glob('../_site/**/*.html')
+const htmlFiles = await glob('_site/**/*.html')
 const promises = htmlFiles
   .filter(file => /\/cms/.test(file) === false)
   .map(file => path.join(__dirname, '..', file))
