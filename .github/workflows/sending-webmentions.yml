@@ -19,7 +19,7 @@ jobs:
           git diff --name-only bd96407 $AFTER | \
           grep "content/[bookmarks|likes|replies]" | \
           grep -v "index.md" | \
-          awk 'BEGIN { FS="/"; } { print "https://www.petergoes.nl/"$2"/"$3"/"";}' | \
+          awk 'BEGIN { FS="/"; } { print "https://www.petergoes.nl/"$2"/"$3"/";}' | \
           awk 'BEGIN { FS=".md" } { print $1 }' \
           >> new-endpoints.txt
           echo "New endpoints"
