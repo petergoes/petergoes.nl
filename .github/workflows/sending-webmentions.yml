@@ -11,8 +11,8 @@ jobs:
 
       - name: Find last sha
         env:
-          BASE_REF: ${{ github.event.base_ref }}
+          AFTER: ${{ github.event.after }}
           BEFORE: ${{ github.event.before }}
         run: |
-          echo "$BASE_REF"
           echo "$BEFORE"
+          echo "$AFTER"
