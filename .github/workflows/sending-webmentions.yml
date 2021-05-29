@@ -16,8 +16,9 @@ jobs:
           AFTER: ${{ github.event.after }}
           BEFORE: ${{ github.event.before }}
         run: |
-          git diff --name-only bd96407 HEAD | \
+          git diff --name-only bd96407 $AFTER | \
           grep "content/[bookmarks|likes|replies]" | \
           grep -v "index.md" | \
           awk 'BEGIN { FS="/"; } { print "https://www.petergoes.nl/"$2"/"$3;}' | \
-          awk 'BEGIN { FS=".md" } { print $1 }' | xargs -I _ npx webmention _ --debug
+          awk 'BEGIN { FS=".md" } { print $1 }' | xargs -I _ npx webmention _ --debug | \
+          cat
