@@ -1,8 +1,6 @@
 const { spawn } = require('child_process');
 const fetch = require('node-fetch')
-
-
-
+require('dotenv-save').config()
 
 module.exports = {
   onSuccess: ({ utils }) => {
@@ -13,31 +11,16 @@ module.exports = {
       .map(post => post.replace('content/', ''))
       .map(post => post.replace('.md', ''))
       .map(post => `http://petergoes.nl/${post}/`)
-      .map(postUrl => {
-        return new Promise((resolve, reject) => {
-          console.log('Post url:', postUrl)
-          const webmention = spawn('npx', ['webmention', postUrl, '--send']);
-          let stdout = ''
-          let stderr = ''
-          webmention.stdout.on('data', (data) => {
-            stdout += data
-          });
-
-          webmention.stderr.on('data', (data) => {
-            stderr += data
-          });
-
-          webmention.on('close', (code) => {
-            if (code !== 0) {
-              console.log(stderr)
-              return reject()
-            }
-            console.log(stdout)
-            resolve()
-          });
-        })
-      })
+      .map(postUrl => 
+        fetch(
+          `https://webmention.app/check?token=${process.env.WEBMENTION_APP_TOKEN}&url=${postUrl}`,
+          {
+            method: 'POST'
+          })
+          .then(response => response.text())
+      )
 
       return Promise.all(changedPosts)
+          .then(responses => responses.forEach(console.log)))
   }
 }
