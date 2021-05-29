@@ -1,8 +1,12 @@
+const fs = require('fs')
 const { spawn } = require('child_process');
 const fetch = require('node-fetch')
 require('dotenv-save').config()
 
 module.exports = {
+  onPreBuild: () => {
+    fs.writeFileSync('.env', '', { encoding: 'utf-8' })
+  },
   onSuccess: ({ utils }) => {
     const { git } = utils
 
