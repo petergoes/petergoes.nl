@@ -2,7 +2,7 @@
   command = "npx eleventy --config=.eleventy/.eleventy.js --serve --quiet"
 
 [functions]
-  directory = ".netlify/functions"
+  directory = "_netlify/functions"
 
 [[redirects]]
   from = "/bookmarks/tags/*"
@@ -11,4 +11,4 @@
   force = true
 
 [[plugins]]
-  package = "/.netlify/plugins/trigger-send-webmentions"
+  package = "/_netlify/plugins/trigger-send-webmentions"
