@@ -14,5 +14,5 @@ jobs:
           BASE_REF: ${{ github.event.base_ref }}
           BEFORE: ${{ github.event.before }}
         run: |
-          echo "base ref: $BASE_REF"
-          echo "before: $BEFORE"
+          echo "$BASE_REF"
+          echo "$BEFORE"
