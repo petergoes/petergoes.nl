@@ -9,8 +9,8 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@master
 
-      - name: Find last sha
+      - name: Find changed files
         env:
           AFTER: ${{ github.event.after }}
           BEFORE: ${{ github.event.before }}
-        run: git diff --name-only $BEFORE $AFTER | cat
+        run: git diff --name-only $BEFORE $AFTER >> changed-files.txt
