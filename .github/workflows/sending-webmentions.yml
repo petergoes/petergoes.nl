@@ -13,6 +13,4 @@ jobs:
         env:
           AFTER: ${{ github.event.after }}
           BEFORE: ${{ github.event.before }}
-        run: |
-          echo "$BEFORE"
-          echo "$AFTER"
+        run: git diff --name-only $BEFORE $AFTER | cat
