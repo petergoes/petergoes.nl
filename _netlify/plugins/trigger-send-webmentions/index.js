@@ -30,8 +30,10 @@ module.exports = {
             console.log(`Target: ${item.target}`)
             if (item.endpoint && item.endpoint.url) {
               console.log(`Endpoint: ${item.endpoint.url} (${item.endpoint.type})`)
-            } else {
-              console.log(JSON.stringify(item, null, 2))
+            }
+            if (item.error) {
+              const errObj = JSON.parse(item.error)
+              console.error(errorObj.error)
             }
           } catch (error) {
             console.error(error)
