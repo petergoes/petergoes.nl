@@ -30,26 +30,3 @@
 .blog__tags-list-item::before {
   content: initial;
 }
-
-.webmentions-response-form input[type="url"] {
-  padding: 0.5rem;
-  font-family: inherit;
-  font-size: inherit;
-  border-color: black;
-  border-width: 1px;
-  border-radius: 2px;
-  flex: 1;
-  margin-bottom: 0.55rem;
-  margin-top: 0.55rem;
-  margin-right: 0.55rem;
-}
-
-.webmentions-response-form label {
-  flex-basis: 100%;
-}
-
-.webmentions-response-form {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: top;
-}

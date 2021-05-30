@@ -1,4 +1,6 @@
 ---
+  stylesheets:
+    - components/webmentions/response-form.css
   category: Note
   og: 
     type: article
@@ -7,10 +9,10 @@
 {% extends './page.njk' %}
 
 {% block content %}
-  <article class="bookmark content-section h-entry">
+  <article class="note content-section h-entry">
     <header>
       <h1>
-        <span class="visuallyhidden">Note written at </span>
+        Note written at
         <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD hh:mm:ss') }}">
           {{ date | formatDate('Do of MMMM, YYYY @ HH:mm') }}
         </time>
@@ -26,10 +28,32 @@
       {{ content | safe }}
     </section>
 
-    <footer aria-labelledby="this-is-me">
+    <footer aria-labelledby="comments">
+      <h2 id="comments">Comments</h2>
+
+      <p>
+        I use <a href="https://indieweb.org/Webmention">WebMentions</a> via the <a href="https://indieweb.org">IndieWeb</a>. Do you have a comment? <br />
+        Please respond via a post from your site!
+      </p>
+      <form class="webmentions-response-form" action="https://webmention.io/petergoes.nl/webmention" method="POST">
+        <label for="webmentions-response-form-input">Url of your response</label>
+        <input id="webmentions-response-form-input" type="url" name="source" placeholder="https://example.com/" required />
+        <input type="hidden" name="target" value="{{ site.url + page.url }}" />
+        <button type="submit">Send response</button> 
+      </form>
+
+      {% from './components/webmentions/interaction.njk' import interaction %}
+      {% from './components/webmentions/text-responses.njk' import textResponses %}
+      {% set webmentionsForUrl = webmentions | getWebmentionsForUrl(site.url + page.url) | removeSyndication(tweetUrl) %}
+      {{ interaction(['like-of', 'repost-of'], 'Like', 'Likes and Reposts', webmentionsForUrl) }}
+      {{ textResponses('in-reply-to', 'Reply', 'Replies', webmentionsForUrl | reverse) }}
+      {{ textResponses('mention-of', 'Mention', 'Mentions', webmentionsForUrl | reverse) }}
+    </footer>
+
+    <aside aria-labelledby="this-is-me">
       <h2 id="this-is-me">This is me</h2>
       {% from './components/h-card/h-card.njk' import hCard %}
       {{ hCard(site.gravatar, 'author') }}
-    </footer>
+    </aside>
   </article>
 {% endblock %}
