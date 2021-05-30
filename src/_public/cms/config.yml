@@ -52,6 +52,20 @@ collections:
       - { label: "Silo", name: 'silo', widget: 'select', options: ['twitter', 'mastodon', 'indieweb'], default: ['indieweb'] }
       - { label: "Publish Date", name: "date", widget: "datetime" }
 
+  - name: "notes"
+    label: "Notes"
+    label_singular: "Note"
+    folder: "content/notes"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}"
+    summary: "{{body}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "note" }
+      - { label: "Tags", name: "tags", widget: "hidden", default: ["note"] }
+      - { label: "Title", name: "title", widget: "string", default: "Note" }
+      - { label: "Body", name: "body", widget: "text", default: " " }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+
   - name: "replies"
     label: "Replies"
     label_singular: "Reply"
