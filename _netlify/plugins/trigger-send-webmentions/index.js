@@ -28,7 +28,11 @@ module.exports = {
           try {
             console.log(`Source: ${item.source}`)
             console.log(`Target: ${item.target}`)
-            console.log(`Endpoint: ${item.endpoint.url} (${item.endpoint.type})`)
+            if (item.endpoint && item.endpoint.url) {
+              console.log(`Endpoint: ${item.endpoint.url} (${item.endpoint.type})`)
+            } else {
+              console.log(`Endpoint: ${item.endpoint}`)
+            }
           } catch (error) {
             console.error(error)
           }
