@@ -30,6 +30,7 @@ module.exports = {
           console.log(`Endpoint: ${item.endpoint.url} (${item.endpoint.type})`)
         }))
     } else {
+      console.log('')
       console.log('No posts changed')
     }
   }
