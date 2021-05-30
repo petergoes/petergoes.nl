@@ -42,7 +42,8 @@ module.exports = function(eleventyConfig) {
       .filter(item => {
         return (item.data.tags || []).includes('like') ||
         (item.data.tags || []).includes('bookmark') ||
-        (item.data.tags || []).includes('reply')  
+        (item.data.tags || []).includes('reply') ||
+        (item.data.tags || []).includes('note')
       })
       .filter((item, index) => index <= 50)
   });
