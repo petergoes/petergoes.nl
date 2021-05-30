@@ -35,6 +35,17 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("imageUrl", shortcodeSingleImageUrl);
   eleventyConfig.addNunjucksAsyncShortcode("featuredImage", shortcodeFeaturedImage);
 
+  eleventyConfig.addCollection("webmentionsToSend", function(collectionApi) {
+    return collectionApi
+      .getAllSorted()
+      .filter(item => {
+        return (item.data.tags || []).includes('like') ||
+        (item.data.tags || []).includes('bookmark') ||
+        (item.data.tags || []).includes('reply')  
+      })
+      .filter((item, index) => index <= 50)
+  });
+
   // You can return your Config object (optional).
   return {
     dir: {

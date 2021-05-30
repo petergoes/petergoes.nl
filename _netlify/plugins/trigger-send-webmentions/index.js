@@ -2,7 +2,7 @@ const fs = require('fs')
 const { spawn } = require('child_process');
 const fetch = require('node-fetch')
 
-const feedurl = 'https://www.petergoes.nl/likes/feed.xml'
+const feedurl = 'https://www.petergoes.nl/webmentions-to-send-feed.xml'
 
 module.exports = {
   onSuccess: ({ utils }) => {
@@ -14,10 +14,10 @@ module.exports = {
     const changedPosts = changedFiles
       .filter(file => /content\/[bookmarks|likes|replies|notes]/.test(file))
       
-    console.log({ changedFiles })
+    console.log('Changed files:', changedFiles)
       
     if (changedPosts.length > 0) {
-      console.log({ changedPosts })
+      console.log('Changed posts:', changedPosts)
       return fetch(
         `https://webmention.app/check?token=${process.env.WEBMENTION_APP_TOKEN}&url=${feedurl}&limit=1`,
         {
@@ -29,6 +29,8 @@ module.exports = {
           console.log(`Target: ${item.target}`)
           console.log(`Endpoint: ${item.endpoint.url} (${item.endpoint.type})`)
         }))
+    } else {
+      console.log('No posts changed')
     }
   }
 }
