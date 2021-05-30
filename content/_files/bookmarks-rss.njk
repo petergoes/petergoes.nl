@@ -1,6 +1,6 @@
 ---json
 {
-  "permalink": "bookmarks/feed.xml",
+  "permalink": "bookmarks/feed{% if pagination.pageNumber > 0 %}-page-{{ pagination.pageNumber + 1 }}{% endif %}.xml",
   "eleventyExcludeFromCollections": true,
   "metadata": {
     "title": "PeterGoes.nl Bookmarks",
@@ -10,6 +10,12 @@
     "author": {
       "name": "Peter Goes"
     }
+  },
+  "pagination": {
+    "data": "collections.bookmark",
+    "size": 20,
+    "alias": "bookmarks",
+    "reverse": true
   }
 }
 ---
@@ -17,15 +23,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.subtitle }}</subtitle>
-  <link href="{{ metadata.feedUrl }}" rel="self"/>
+  <link  rel="self"/>
   <link href="{{ metadata.url }}"/>
+  <link rel="self" href="https://www.petergoes.nl/bookmarks/feed{% if pagination.pageNumber > 0 %}-page-{{ pagination.pageNumber + 1 }}{% endif %}.xml"/>
+  <link rel="first" href="https://www.petergoes.nl{{ pagination.firstPageHref }}"/>
+  {% if pagination.next -%}
+    <link rel="next" href="https://www.petergoes.nl{{ pagination.next }}"/>
+  {%- endif %}
+  {% if pagination.previous -%}
+    <link rel="previous" href="https://www.petergoes.nl{{ pagination.previous }}"/>
+  {%- endif %}
+  <link rel="last" href="https://www.petergoes.nl{{ pagination.lastPageHref }}"/>
   <updated>{{ collections.bookmark | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ metadata.url }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
   </author>
   <icon>{{ site.gravatar }}</icon>
-  {%- for post in collections.bookmark | reverse %}
+  {%- for post in bookmarks %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
