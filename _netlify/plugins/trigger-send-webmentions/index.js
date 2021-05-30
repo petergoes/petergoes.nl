@@ -21,7 +21,7 @@ module.exports = {
       return fetch(
         `https://webmention.app/check?token=${process.env.WEBMENTION_APP_TOKEN}&url=${feedurl}&limit=1`,
         {
-          method: 'GET'
+          method: 'POST'
         })
         .then(response => response.json())
         .then(data => data.urls.forEach(item => {
