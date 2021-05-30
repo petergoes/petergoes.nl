@@ -25,9 +25,13 @@ module.exports = {
         })
         .then(response => response.json())
         .then(data => data.urls.forEach(item => {
-          console.log(`Source: ${item.source}`)
-          console.log(`Target: ${item.target}`)
-          console.log(`Endpoint: ${item.endpoint.url} (${item.endpoint.type})`)
+          try {
+            console.log(`Source: ${item.source}`)
+            console.log(`Target: ${item.target}`)
+            console.log(`Endpoint: ${item.endpoint.url} (${item.endpoint.type})`)
+          } catch (error) {
+            console.error(error)
+          }
         }))
     } else {
       console.log('')
