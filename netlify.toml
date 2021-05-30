@@ -10,3 +10,8 @@
   status = 200
   force = true
 
+[[context.production.plugins]]
+  package = '/_netlify/plugins/add-dot-env'
+
+[[context.production.plugins]]
+  package = '/_netlify/plugins/trigger-send-webmentions'
