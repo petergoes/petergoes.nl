@@ -42,6 +42,11 @@
       {% if post.data.tags.includes('reply') %}
         {{ '<a class="u-in-reply-to" href="' }}{{ post.data.url }}{{ '">Reply to '}}{{ post.data.url }}{{ '</a>' }}
       {% endif %}
+      {% if post.data.tags.includes('note') %}
+        {{ '<a href="https://brid.gy/publish/mastodon"></a>' }}
+        {{ '<a href="https://brid.gy/publish/twitter"></a>' }}
+        {{ '<a rel="webmention" href="https://www.brid.gy/publish/webmention"></a>' }}
+      {% endif %}
 
       {% if post.data.silo === 'mastodon' or post.data.silo === 'twitter' %}
         {% if post.data.silo === 'mastodon' %}
