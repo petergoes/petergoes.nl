@@ -23,7 +23,7 @@
     <name>{{ metadata.author.name }}</name>
   </author>
   <icon>{{ site.gravatar }}</icon>
-  {%- for post in collections.webmentionsToSend | reverse %}
+  {%- for post in collections.webmentionsToSend %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>

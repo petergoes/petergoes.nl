@@ -38,6 +38,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection("webmentionsToSend", function(collectionApi) {
     return collectionApi
       .getAllSorted()
+      .reverse()
       .filter(item => {
         return (item.data.tags || []).includes('like') ||
         (item.data.tags || []).includes('bookmark') ||
