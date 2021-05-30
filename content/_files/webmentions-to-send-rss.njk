@@ -43,6 +43,7 @@
         {{ '<a class="u-in-reply-to" href="' }}{{ post.data.url }}{{ '">Reply to '}}{{ post.data.url }}{{ '</a>' }}
       {% endif %}
       {% if post.data.tags.includes('note') %}
+        {{ '<a href="' }}{{ post.data.url }}{{ '">Note</a>' }}
         {{ '<a href="https://brid.gy/publish/mastodon"></a>' }}
         {{ '<a href="https://brid.gy/publish/twitter"></a>' }}
         {{ '<a rel="webmention" href="https://www.brid.gy/publish/webmention"></a>' }}
