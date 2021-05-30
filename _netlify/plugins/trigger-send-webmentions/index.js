@@ -12,7 +12,7 @@ module.exports = {
 
     const changedFiles = [...git.modifiedFiles, ...git.createdFiles]
     const changedPosts = changedFiles
-      .filter(file => /webmention-to-send/.test(file))
+      .filter(file => /webmentions-to-send/.test(file))
       
     console.log('Changed files:', changedFiles)
       
