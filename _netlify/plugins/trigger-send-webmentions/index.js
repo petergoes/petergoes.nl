@@ -12,7 +12,7 @@ module.exports = {
 
     const changedFiles = [...git.modifiedFiles, ...git.createdFiles]
     const changedPosts = changedFiles
-      .filter(file => /content\/[bookmarks|likes|replies|notes]/.test(file))
+      .filter(file => /content\/[bookmarks|likes|replies]/.test(file))
       
     console.log('Changed files:', changedFiles)
       
