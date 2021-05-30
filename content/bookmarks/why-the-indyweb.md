@@ -1,10 +1,10 @@
 ---
 layout: bookmark
-title: Why the IndyWeb
+title: Why the IndieWeb
 url: https://briefs.video/videos/why-the-indieweb/
 tags:
   - bookmark
-  - IndyWeb
+  - IndieWeb
 date: 2021-04-08T18:16:05.929Z
 ---
- Video about the IndyWeb by Haydon Pickering.
+ Video about the IndieWeb by Haydon Pickering.

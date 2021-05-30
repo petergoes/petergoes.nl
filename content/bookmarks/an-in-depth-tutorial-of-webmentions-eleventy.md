@@ -5,7 +5,7 @@ url: https://sia.codes/posts/webmentions-eleventy-in-depth/
 tags:
   - bookmark
   - webmentions
-  - indyweb
+  - indieweb
   - eleventy
 date: 2021-05-19T06:59:25.213Z
 ---

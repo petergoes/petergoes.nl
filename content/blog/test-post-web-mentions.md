@@ -6,7 +6,7 @@ title: "Test post: Web Mentions"
 description: This is a test post in which I test the Web Mentions implementation
 tags:
   - blog
-  - indyweb
+  - indieweb
 date: 2021-05-19T07:16:29.850Z
 tweetUrl: https://twitter.com/petergoes/status/1394916439979614208
 ---
