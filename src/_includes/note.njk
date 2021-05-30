@@ -9,19 +9,17 @@
 {% block content %}
   <article class="bookmark content-section h-entry">
     <header>
-      <h1>Note title</h1>
+      <h1>
+        <span class="visuallyhidden">Note written at </span>
+        <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD hh:mm:ss') }}">
+          {{ date | formatDate('Do of MMMM, YYYY @ HH:mm') }}
+        </time>
+      </h1>
       <aside aria-label="post meta-data">
-          <small>
-            Written at:
-            <a href="{{ site.url + page.url }}" class="u-url">
-            <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD hh:mm:ss') }}">
-              {{ date | formatDate('Do of MMMM, YYYY') }}
-            </time>
-            </a>
-          </small>
-          <small>
-            <a class="u-url"  href="{{ page.url }}">permalink<span class="visuallyhidden"> to this note</span></a>
-          </small>
+        <data class="p-bridgy-omit-link" value="maybe" />
+        <small>
+          <a class="u-url"  href="{{ site.url + page.url }}">permalink<span class="visuallyhidden"> to this note</span></a>
+        </small>
       </aside>
     </header>
     <section class="e-content">
