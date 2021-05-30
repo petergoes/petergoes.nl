@@ -11,12 +11,14 @@ module.exports = {
     const { git } = utils
 
     const changedFiles = [...git.modifiedFiles, ...git.createdFiles]
+    const rssChanged = changedFiles.find(file => /webmentions-to-send/.test(file))
     const changedPosts = changedFiles
-      .filter(file => /webmentions-to-send/.test(file))
+      .filter(file => /content/.test(file))
+      
       
     console.log('Changed files:', changedFiles)
       
-    if (changedPosts.length > 0) {
+    if (rssChanged) {
       console.log('Changed posts:', changedPosts)
       return fetch(
         `https://webmention.app/check?token=${process.env.WEBMENTION_APP_TOKEN}&url=${feedurl}&limit=1`,

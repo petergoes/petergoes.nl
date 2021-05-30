@@ -19,7 +19,9 @@
     <meta name="description" content="{{ description }}">
     <meta name="author" content="{{ author }}">
 
+    {% if (tags or []).includes('note') === false %}
     <meta name="twitter:card" content="summary_large_image">
+    {% endif %}
     <meta name="twitter:creator" content="{{ socialLinks.twitter.username }}">
     <meta name="twitter:title" content="{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{{ description }}">
