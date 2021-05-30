@@ -16,15 +16,19 @@ module.exports = {
       
     console.log({ changedFiles })
       
-    if (changedFiles.length > 0) {
+    if (changedPosts.length > 0) {
       console.log({ changedPosts })
       return fetch(
-        `https://webmention.app/check?token=${process.env.WEBMENTION_APP_TOKEN}&url=${feedurl}`,
+        `https://webmention.app/check?token=${process.env.WEBMENTION_APP_TOKEN}&url=${feedurl}&limit=1`,
         {
           method: 'GET'
         })
-        .then(response => response.text())
-        .then(data => console.log(data))
+        .then(response => response.json())
+        .then(data => data.urls.forEach(item => {
+          console.log(`Source: ${item.source}`)
+          console.log(`Target: ${item.target}`)
+          console.log(`Endpoint: ${item.endpoint.url} (${item.endpoint.type})`)
+        }))
     }
   }
 }
