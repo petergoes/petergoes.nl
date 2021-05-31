@@ -10,7 +10,10 @@ module.exports = {
     require('dotenv-save').config()
     const { git } = utils
 
-    const changedFiles = [...git.modifiedFiles, ...git.createdFiles]
+    const changedFiles = [
+      ...git.modifiedFiles.filter(file => !/content\/notes/.test(file)),
+      ...git.createdFiles
+    ]
     const changedPosts = changedFiles
       .filter(file => /content\/[bookmarks|likes|replies|notes]/.test(file))
       
@@ -28,13 +31,11 @@ module.exports = {
           try {
             console.log(`Source: ${item.source}`)
             console.log(`Target: ${item.target}`)
-            if (item.endpoint && item.endpoint.url) {
-              console.log(`Endpoint: ${item.endpoint.url} (${item.endpoint.type})`)
-            }
             if (item.error) {
               const errObj = JSON.parse(item.error)
               console.error(errorObj.error)
             }
+            console.log(JSON.stringify(item, null, 2))
           } catch (error) {
             console.error(error)
           }

@@ -22,6 +22,12 @@
         <small>
           <a class="u-url"  href="{{ site.url + page.url }}">permalink<span class="visuallyhidden"> to this note</span></a>
         </small>
+        {% if tweetUrl %}
+          <a href="{{ tweetUrl }}" style="display: none;"></a>
+        {% endif %}
+        {% if mastodonUrl %}
+          <a href="{{ mastodonUrl }}" style="display: none;"></a>
+        {% endif %}
       </aside>
     </header>
     <section class="e-content">
