@@ -102,6 +102,7 @@ button {
   margin-top: 0.55rem;
   margin-bottom: 0.55rem;
   cursor: pointer;
+  color: inherit;
 }
 button:active {
   font-weight: bold;
@@ -109,7 +110,7 @@ button:active {
 
 pre code {
   width: 100%;
-  color: var(--background-color);
+  color: var(--code-text);
   background-color: var(--code-background);
   font-family: var(--monospace);
   display: block;
@@ -124,6 +125,7 @@ code {
   color: var(--inline-code-color);
   position: relative;
   word-break: break-word;
+  font-size: 1rem;
 }
 
 code:not([class*="hljs"])::before,

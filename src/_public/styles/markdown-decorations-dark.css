@@ -1,6 +1,6 @@
 code::before,
 code::after {
-  background-image: url('data:image/svg+xml;utf8,<svg width="20px" height="48px" viewBox="0 0 20 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="back-tick-regular" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon fill="crimson" fill-rule="nonzero" points="13.5876923 16.0594872 12.6851282 17.585641 6.05538462 14.5333333 7.53230769 12.1866667"></polygon></g></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg width="20px" height="48px" viewBox="0 0 20 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="back-tick-regular" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon fill="%23FA516D" fill-rule="nonzero" points="13.5876923 16.0594872 12.6851282 17.585641 6.05538462 14.5333333 7.53230769 12.1866667"></polygon></g></svg>');
 }
 
 h1::before, .h1::before {

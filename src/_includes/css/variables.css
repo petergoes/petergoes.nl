@@ -55,7 +55,9 @@
     --background-color: #263238;
     --background-color-50: #263238;
     --link-color: #7fa7ff;
-    
+    --input-background: #BED5DD7e;
+
     --code-background: #1e272c;
+    --inline-code-color: #FA516D; 
   }
 }
