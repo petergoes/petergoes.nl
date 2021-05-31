@@ -21,7 +21,11 @@
     <meta name="author" content="{{ author }}">
 
     {% if (tags or []).includes('note') === false %}
-    <meta name="twitter:card" content="summary_large_image">
+      {% if (tags or []).includes('blog') %}
+        <meta name="twitter:card" content="summary_large_image">
+      {% else %}
+        <meta name="twitter:card" content="summary">
+      {% endif %}
     {% endif %}
     <meta name="twitter:creator" content="{{ socialLinks.twitter.username }}">
     <meta name="twitter:title" content="{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
