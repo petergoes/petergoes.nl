@@ -13,7 +13,7 @@ module.exports = {
     const { git } = utils
 
     const changedFiles = [
-      ...git.modifiedFiles.filter(file => !/content\/notes|replies/.test(file)),
+      ...git.modifiedFiles.filter(file => !/content\/replies/.test(file)),
       ...git.createdFiles
     ]
     const changedPosts = changedFiles
@@ -27,7 +27,7 @@ module.exports = {
       const promises = changedPosts
         .map(path => path.replace('content', 'https://petergoes.nl').replace('.md', '/'))
         .map(url => 
-          fetch(`${webmentionAppEndpoint}&url=${url}`, { method: 'GET' })
+          fetch(`${webmentionAppEndpoint}&url=${url}`, { method: 'POST' })
             .then(response => response.json())
         )
 
