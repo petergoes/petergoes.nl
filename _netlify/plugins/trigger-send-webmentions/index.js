@@ -1,17 +1,19 @@
 const fs = require('fs')
 const { spawn } = require('child_process');
-const fetch = require('node-fetch')
+const fetch = require('node-fetch');
+const { map } = require('lodash');
 
 const feedurl = 'https://www.petergoes.nl/webmentions-to-send-feed.xml'
+const webmentionAppEndpoint = `https://webmention.app/check?token=${process.env.WEBMENTION_APP_TOKEN}`
 
 module.exports = {
-  onSuccess: ({ utils }) => {
+  onSuccess: async ({ utils }) => {
 
     require('dotenv-save').config()
     const { git } = utils
 
     const changedFiles = [
-      ...git.modifiedFiles.filter(file => !/content\/notes/.test(file)),
+      ...git.modifiedFiles.filter(file => !/content\/notes|replies/.test(file)),
       ...git.createdFiles
     ]
     const changedPosts = changedFiles
@@ -21,25 +23,31 @@ module.exports = {
       
     if (changedPosts.length > 0) {
       console.log('Changed posts:', changedPosts)
-      return fetch(
-        `https://webmention.app/check?token=${process.env.WEBMENTION_APP_TOKEN}&url=${feedurl}&limit=1`,
-        {
-          method: 'POST'
-        })
-        .then(response => response.json())
-        .then(data => data.urls.forEach(item => {
-          try {
-            console.log(`Source: ${item.source}`)
-            console.log(`Target: ${item.target}`)
-            if (item.error) {
-              const errObj = JSON.parse(item.error)
-              console.error(errorObj.error)
-            }
-            console.log(JSON.stringify(item, null, 2))
-          } catch (error) {
-            console.error(error)
-          }
-        }))
+
+      const promises = changedPosts
+        .map(path => path.replace('content', 'https://petergoes.nl').replace('.md', '/'))
+        .map(url => 
+          fetch(`${webmentionAppEndpoint}&url=${url}`, { method: 'GET' })
+            .then(response => response.json())
+        )
+
+      await Promise.all(promises)
+            .then((results) => {
+              results.forEach(item => console.log(JSON.stringify(item, null, 2)))
+            })
+      // return fetch(
+      //   `https://webmention.app/check?token=${process.env.WEBMENTION_APP_TOKEN}&url=${feedurl}&limit=1`,
+      //   {
+      //     method: 'POST'
+      //   })
+      //   .then(response => response.json())
+      //   .then(data => data.urls.forEach(item => {
+      //     try {
+      //       console.log(JSON.stringify(item, null, 2))
+      //     } catch (error) {
+      //       console.error(error)
+      //     }
+      //   }))
     } else {
       console.log('')
       console.log('No posts changed')
