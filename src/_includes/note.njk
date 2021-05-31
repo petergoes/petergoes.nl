@@ -18,15 +18,15 @@
         </time>
       </h1>
       <aside aria-label="post meta-data">
-        <data class="p-bridgy-omit-link" value="maybe" />
+        <data class="p-bridgy-omit-link" value="maybe"></data>
         <small>
           <a class="u-url"  href="{{ site.url + page.url }}">permalink<span class="visuallyhidden"> to this note</span></a>
         </small>
         {% if tweetUrl %}
-          <a href="{{ tweetUrl }}" style="display: none;"></a>
+          <a rel="syndication" href="{{ tweetUrl }}">This note on Twitter</a>
         {% endif %}
         {% if mastodonUrl %}
-          <a href="{{ mastodonUrl }}" style="display: none;"></a>
+          <a rel="syndication" href="{{ mastodonUrl }}">This note on toot.cafe</a>
         {% endif %}
       </aside>
     </header>
