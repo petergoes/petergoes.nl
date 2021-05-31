@@ -23,6 +23,7 @@
   --background-color: #FAFAFA;
   --background-color-50: #FAFAFAB4;
   --dark-background-text: #BED5DD;
+  --dark-background-text-50: #BED5DD7e;
   --link-color: #014cbd;
   --error-color-50: #F44336B4;
   --success-color: #8BC34A;
@@ -45,4 +46,18 @@
   --code-keyword: #c792ea;
   --code-number: #f78556;
   --code-regex: #69a5ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --default-text-color: var(--dark-background-text);
+    --default-text-color-50: var(--dark-background-text-50);
+    --background-color: #263238;
+    --background-color-50: #263238;
+    --link-color: #7fa7ff;
+    --input-background: #BED5DD7e;
+
+    --code-background: #1e272c;
+    --inline-code-color: #FA516D; 
+  }
 }
