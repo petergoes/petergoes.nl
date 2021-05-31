@@ -27,7 +27,7 @@ module.exports = {
       const promises = changedPosts
         .map(path => path.replace('content', 'https://petergoes.nl').replace('.md', '/'))
         .map(url => 
-          fetch(`${webmentionAppEndpoint}&url=${url}`, { method: 'POST' })
+          fetch(`${webmentionAppEndpoint}&url=${url}`, { method: 'GET' })
             .then(response => response.json())
         )
 
