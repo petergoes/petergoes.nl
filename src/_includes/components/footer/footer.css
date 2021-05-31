@@ -21,6 +21,7 @@
 
 .footer__other-nav ul {
   display: flex;
+  flex-direction: column;
 }
 
 .footer__other-nav li {
@@ -29,4 +30,10 @@
 
 .footer__other-nav li::before {
   content: none;
+}
+
+@media (min-width: var(--screen-small)) {
+  .footer__other-nav ul {
+    flex-direction: row;
+  }
 }

@@ -20,7 +20,7 @@
     {% if post.url %}
 
     {% if month !== post.date | formatDate(timeSeperatorFormat) %}
-      <h2><span class="visuallyhidden">Items posted on</span>{{ post.date | formatDate(timeSeperatorFormat) }}</h2>
+      <h2><span class="visuallyhidden">Items posted in</span>{{ post.date | formatDate('MMMM YYYY') }}</h2>
       {% set month = post.date | formatDate(timeSeperatorFormat) %}
     {% endif %}
 
@@ -41,11 +41,11 @@
         </small>
       {% endif %}
       {% if addSyndicationLinks %}
-        {% if tweetUrl %}
-          <small><a rel="syndication" href="{{ tweetUrl }}">This note on Twitter</a></small>
+        {% if post.data.tweetUrl %}
+          <small><a rel="syndication" href="{{ post.data.tweetUrl }}">This note on Twitter</a></small>
         {% endif %}
-        {% if mastodonUrl %}
-          <small><a rel="syndication" href="{{ mastodonUrl }}">This note on toot.cafe</a></small>
+        {% if post.data.mastodonUrl %}
+          <small><a rel="syndication" href="{{ post.data.mastodonUrl }}">This note on toot.cafe</a></small>
         {% endif %}
       {% endif %}
       {% if post.data.description %}
