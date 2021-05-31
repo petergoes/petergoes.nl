@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Ton Zijlstra",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/6dbb6f93e63e3555d44cb9d509f21c53d81f68390846e058306fba33a62aa5a6.jpg",
+    "url": "https://twitter.com/ton_zylstra"
+  },
+  "url": "https://twitter.com/petergoes/status/1399129637993824259#favorited-by-25049203",
+  "published": null,
+  "wm-received": "2021-05-31T12:39:30Z",
+  "wm-id": 1174863,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1399129637993824259/25049203",
+  "wm-target": "https://www.petergoes.nl/notes/2021-05-30-22-23/",
+  "like-of": "https://www.petergoes.nl/notes/2021-05-30-22-23/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
