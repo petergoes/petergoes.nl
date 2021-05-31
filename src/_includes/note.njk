@@ -21,13 +21,13 @@
         <data class="p-bridgy-omit-link" value="maybe"></data>
         <small>
           <a class="u-url"  href="{{ site.url + page.url }}">permalink<span class="visuallyhidden"> to this note</span></a>
+          {% if tweetUrl %}
+            <a rel="syndication" href="{{ tweetUrl }}">This note on Twitter</a>
+          {% endif %}
+          {% if mastodonUrl %}
+            <a rel="syndication" href="{{ mastodonUrl }}">This note on toot.cafe</a>
+          {% endif %}
         </small>
-        {% if tweetUrl %}
-          <a rel="syndication" href="{{ tweetUrl }}">This note on Twitter</a>
-        {% endif %}
-        {% if mastodonUrl %}
-          <a rel="syndication" href="{{ mastodonUrl }}">This note on toot.cafe</a>
-        {% endif %}
       </aside>
     </header>
     <section class="e-content">

@@ -5,5 +5,6 @@
   collection: note
   showPermalink: true
   showDate: true
+  addSyndicationLinks: true
 ---
 List of my notes. Stored here for personal reference.

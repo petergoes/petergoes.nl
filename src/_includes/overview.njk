@@ -40,6 +40,14 @@
           <a href="{{ post.url }}">permalink<span class="visuallyhidden"> to {{ post.data.title }}</a>
         </small>
       {% endif %}
+      {% if addSyndicationLinks %}
+        {% if tweetUrl %}
+          <small><a rel="syndication" href="{{ tweetUrl }}">This note on Twitter</a></small>
+        {% endif %}
+        {% if mastodonUrl %}
+          <small><a rel="syndication" href="{{ mastodonUrl }}">This note on toot.cafe</a></small>
+        {% endif %}
+      {% endif %}
       {% if post.data.description %}
         <p>{{ post.data.description }}</p>
       {% else %}
