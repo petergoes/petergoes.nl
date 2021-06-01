@@ -4,6 +4,7 @@
 
 .home > hr {
   width: 100vw;
+  margin-top: calc(var(--line-height) * 1.5);
 }
 
 .home .h-card {

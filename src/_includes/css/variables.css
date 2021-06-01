@@ -3,6 +3,9 @@
   --sans-serif: 'Fira Code', 'Courier New', monospace;
   --monospace-prefered: 'Fira Code', 'Courier New', monospace;
   --monospace: 'Courier New', monospace;
+  --font-code: 'Fira Code', 'Courier New', monospace;
+  --font-text: 'iA Writer Duo', 'Courier New', monospace;
+  --font-heading: 'iA Writer Mono', 'Courier New', monospace;
 
   --screen-xsmall: 18em; /* 288px */
   --screen-small: 48em; /* 768px */

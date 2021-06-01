@@ -2,7 +2,7 @@
     font-family: 'Fira Code';
     src: url('/assets/fonts/FiraCode-Light.woff2') format('woff2'),
      url('/assets/fonts/FiraCode-Light.woff') format('woff');
-    font-weight: 300;
+    font-weight: 100;
     font-style: normal;
     font-display: swap;
 }
@@ -17,35 +17,73 @@
 }
 
 @font-face{
-    font-family: 'Fira Code';
-    src: url('/assets/fonts/FiraCode-Medium.woff2') format('woff2'),
-     url('/assets/fonts/FiraCode-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'iA Writer Duo';
+  src: url('/assets/fonts/iAWriterDuoS-Regular.woff2') format('woff2'),
+   url('/assets/fonts/iAWriterDuoS-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face{
-    font-family: 'Fira Code';
-    src: url('/assets/fonts/FiraCode-Bold.woff2') format('woff2'),
-     url('/assets/fonts/FiraCode-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'iA Writer Duo';
+  src: url('/assets/fonts/iAWriterDuoS-Italic.woff2') format('woff2'),
+   url('/assets/fonts/iAWriterDuoS-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
 }
 
+@font-face{
+  font-family: 'iA Writer Mono';
+  src: url('/assets/fonts/iAWriterMonoS-Bold.woff2') format('woff2'),
+   url('/assets/fonts/iAWriterMonoS-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 body {
-  font-family: var(--monospace-prefered);
+  font-family: var(--font-text);
   color: var(--default-text-color);
   background-color: var(--background-color);
   line-height: var(--line-height);
 }
 h2, .h2 {
+  margin-top: calc(var(--line-height) * 3);
+}
+
+h1 + h2,
+h1 + .h2,
+.h1 + h2,
+.h1 + .h2,
+h1 + * > h2:first-child,
+h1 + * > .h2:first-child,
+.h1 + * > h2:first-child,
+.h1 + * > .h2:first-child {
   margin-top: calc(var(--line-height) * 2);
 }
 
 h3, .h3 {
+  margin-top: calc(var(--line-height) * 2);
+}
+
+h2 + h3,
+h2 + .h3,
+.h2 + h3,
+.h2 + .h3,
+h2 + * > h3:first-child,
+h2 + * > .h3:first-child,
+.h2 + * > h3:first-child,
+.h2 + * > .h3:first-child {
   margin-top: var(--line-height);
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+  transform: translateY(calc(var(--line-height) * -0.25));
+  font-family: var(--font-heading);
+  letter-spacing: 0.7px;
 }
 
 p {
@@ -97,7 +135,7 @@ button {
   border: 1px solid var(--default-text-color-50);
   background-color: transparent;
   padding: 0.5rem;
-  font-family: var(--monospace-prefered);
+  font-family: inherit;
   font-size: 1rem;
   margin-top: 0.55rem;
   margin-bottom: 0.55rem;
@@ -112,7 +150,8 @@ pre code {
   width: 100%;
   color: var(--code-text);
   background-color: var(--code-background);
-  font-family: var(--monospace);
+  font-family: var(--font-code);
+  font-weight: 400;
   display: block;
   border-radius: initial;
 }
@@ -126,6 +165,8 @@ code {
   position: relative;
   word-break: break-word;
   font-size: 1rem;
+  font-family: var(--font-code);
+  font-weight: 400;
 }
 
 code:not([class*="hljs"])::before,
@@ -139,10 +180,6 @@ code:not([class*="hljs"])::after {
   height: 1.188em;
   opacity: var(--markdown-decoration-fade);
   transform: translateY(15%);
-}
-
-.fonts-loaded code {
-  font-family: var(--monospace-prefered);
 }
 
 @media screen {
