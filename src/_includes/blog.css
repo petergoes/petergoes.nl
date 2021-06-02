@@ -19,6 +19,10 @@
   display: flex;
 }
 
+.blog__toc details {
+  margin-bottom: calc(var(--line-height) * 2);
+}
+
 .blog__tags-list {
   list-style: none;
   display: flex;

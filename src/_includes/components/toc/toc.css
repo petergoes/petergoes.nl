@@ -1,0 +1,21 @@
+.toc {
+  border: 1px solid var(--code-comment);
+  padding: calc(var(--line-height) - 1px);
+  margin-bottom: var(--line-height);
+}
+
+.toc ul {
+  margin: 0;
+}
+
+.toc ul ul {
+  padding-left: 2ch;
+}
+
+.toc > ul > li:not(:last-child) {
+  padding-bottom: var(--line-height);
+}
+
+.toc li::before {
+  content: initial;
+}

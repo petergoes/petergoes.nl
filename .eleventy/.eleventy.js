@@ -1,21 +1,26 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("eleventy-plugin-highlightjs");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
+const tocPlugin = require('eleventy-plugin-nesting-toc')
 const filterFormatDate = require('./filter-format-date')
 const { remove, removePostsInCollection } = require('./filter-remove')
 const filterTagsInCollection = require('./filter-tags-in-collection')
 const filterWebMentions = require('./filter-webmentions')
 const transfromHtmlmin = require('./transform-htmlmin')
 const shortcodePostcss = require('./nunjucks-shortcode-postcss')
+const markdownIt = require('./markdown-it')
 const { shortcodeImageManifest, shortcodeSingleImageUrl, shortcodeFeaturedImage } = require('./shortcode-image')
 require('dotenv-save').config()
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
+  eleventyConfig.setLibrary("md", markdownIt);
+
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight, { className: "hljs-block" });
   eleventyConfig.addPlugin(inclusiveLangPlugin);
+  eleventyConfig.addPlugin(tocPlugin, { ul: true, asDetailsSummary: true, summaryText: 'Table of contents' });
 
   eleventyConfig.addPassthroughCopy({ "src/_public": "/" });
   eleventyConfig.addPassthroughCopy("src/_includes/**/*.js");

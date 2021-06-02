@@ -2,6 +2,7 @@
   stylesheets:
     - blog.css
     - components/webmentions/response-form.css
+    - components/toc/toc.css
   featuredImageFallback: false
   category: Blog
   og: 
@@ -20,6 +21,8 @@
             <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD hh:mm:ss') }}">
               {{ date | formatDate('Do of MMMM, YYYY') }}
             </time>
+            |
+            <a class="u-url"  href="{{ page.url }}">permalink<span class="visuallyhidden"> to this post</span></a>
           </small>
           <small class="blog__tags">
             Filled under:
@@ -31,11 +34,13 @@
               {% endfor %}
             </ul>
           </small>
-          <small>
-            <a class="u-url"  href="{{ page.url }}">permalink<span class="visuallyhidden"> to this post</span></a>
-          </small>
       </aside>
     </header>
+
+    <aside class="blog__toc">
+      {{ content | toc | safe }}
+    </aside
+
     <section class="e-content">
       {{ content | safe }}
     </section>
