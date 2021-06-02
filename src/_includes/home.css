@@ -10,7 +10,7 @@
   padding-bottom: var(--margin-m);
   margin-bottom: var(--margin-m);
   font-family: var(--font-code);
-  font-weight: 100;
+  font-variation-settings: "wght" 300;
   color: var(--code-keyword);
 }
 @media screen and (min-width: var(--screen-small)) and (max-width: var(--screen-medium)) {

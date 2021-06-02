@@ -1,60 +1,31 @@
-@font-face{
-    font-family: 'Fira Code';
-    src: url('/assets/fonts/FiraCode-Light.woff2') format('woff2'),
-     url('/assets/fonts/FiraCode-Light.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face{
-    font-family: 'Fira Code';
-    src: url('/assets/fonts/FiraCode-Regular.woff2') format('woff2'),
-     url('/assets/fonts/FiraCode-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face{
-  font-family: 'iA Writer Duo';
-  src: url('/assets/fonts/iAWriterDuoS-Regular.woff2') format('woff2'),
-   url('/assets/fonts/iAWriterDuoS-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
+@font-face {
+  font-family: 'Fira Code';
+  src: url('/assets/fonts/FiraCode-VariableFont_wght.woff2') format("woff2-variations");
+  font-weight: 300 700;
   font-display: swap;
 }
-
-@font-face{
-  font-family: 'iA Writer Duo';
-  src: url('/assets/fonts/iAWriterDuoS-Italic.woff2') format('woff2'),
-   url('/assets/fonts/iAWriterDuoS-Italic.woff') format('woff');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* @font-face{
-  font-family: 'iA Writer Mono';
-  src: url('/assets/fonts/iAWriterMonoS-Bold.woff2') format('woff2'),
-   url('/assets/fonts/iAWriterMonoS-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-} */
 
 @font-face {
   font-family: 'iA Writer Mono';
-  src: url('/assets/fonts/iAWriterDuoV.ttf') format("truetype-variations");
+  src: url('/assets/fonts/iAWriterDuoV.woff2') format("woff2-variations");
   font-weight: 400 1000;
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'iA Writer Mono';
+  src: url('/assets/fonts/iAWriterDuoV-Italic.woff2') format("woff2-variations");
+  font-weight: 400 1000;
+  font-style: italic;
+  font-display: swap;
+}
+
 body {
-  font-family: var(--font-text);
+  font-family: var(--font-heading);
   color: var(--default-text-color);
   background-color: var(--background-color);
   line-height: var(--line-height);
+  font-variation-settings: "wght" 400, "SPCG" 0;
 }
 h2, .h2 {
   margin-top: calc(var(--line-height) * 3);
@@ -89,6 +60,8 @@ h2 + * > .h3:first-child,
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
   transform: translateY(calc(var(--line-height) * -0.25));
   font-family: var(--font-heading);
+  font-variation-settings: "wght" 555, "SPCG" 33;
+  color: var(--heading-color);
 }
 
 p {

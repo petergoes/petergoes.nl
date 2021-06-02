@@ -5,7 +5,7 @@
 body > header {
   background-color: var(--code-background);
   font-family: var(--font-code);
-  font-weight: 100;
+  font-variation-settings: "wght" 200;
 }
 
 [data-header] > .page-header {
@@ -30,7 +30,7 @@ body > header {
 
 .page-header   h1 {
   font-family: var(--font-code);
-  font-weight: 100;
+  font-variation-settings: "wght" 300;
   letter-spacing: initial;
 }
 
