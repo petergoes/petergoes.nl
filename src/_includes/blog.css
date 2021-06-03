@@ -19,8 +19,12 @@
   display: flex;
 }
 
-.blog__toc details {
+.blog > header details {
   margin-bottom: calc(var(--line-height) * 2);
+}
+
+.blog > header summary {
+  font-size: 0.8rem;
 }
 
 .blog__tags-list {

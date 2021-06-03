@@ -22,6 +22,10 @@ main {
   margin-top: 3.5rem;
 }
 
+summary {
+  cursor: pointer;
+}
+
 .home main {
   margin-top: 0;
 }
