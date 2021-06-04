@@ -1,5 +1,5 @@
 ---
-  timeSeperatorFormat: MM-YYYY
+  timeSeperatorFormat: MMMM YYYY
   stylesheets:
    - overview.css
 ---
@@ -20,7 +20,7 @@
     {% if post.url %}
 
     {% if month !== post.date | formatDate(timeSeperatorFormat) %}
-      <h2><span class="visuallyhidden">Items posted in</span>{{ post.date | formatDate('MMMM YYYY') }}</h2>
+      <h2><span class="visuallyhidden">Items posted in</span>{{ post.date | formatDate(timeSeperatorFormat) }}</h2>
       {% set month = post.date | formatDate(timeSeperatorFormat) %}
     {% endif %}
 
