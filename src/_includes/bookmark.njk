@@ -9,18 +9,16 @@
 {% block content %}
   <article class="bookmark content-section h-entry">
     <header>
-      <h1><a href="{{ url }}" class="u-bookmark-of">Bookmark: {{ title }}</a></h1>
+      <h1><a href="{{ url }}" class="u-url u-bookmark-of">Bookmark: {{ title }}</a></h1>
       <aside aria-label="post meta data">
           <small>
             Bookmarked at:
-            <a href="{{ site.url + page.url }}" class="u-url">
             <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD hh:mm:ss') }}">
               {{ date | formatDate('Do of MMMM, YYYY') }}
             </time>
-            </a>
           </small>
           <small>
-            <a class="u-url"  href="{{ page.url }}">permalink<span class="visuallyhidden"> to this bookmark</span></a>
+            <a class="u-url"  href="{{ site.url + page.url }}">permalink<span class="visuallyhidden"> to this bookmark</span></a>
           </small>
       </aside>
     </header>
