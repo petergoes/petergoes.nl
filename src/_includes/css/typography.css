@@ -21,11 +21,11 @@
 }
 
 body {
-  font-family: var(--font-heading);
+  font-family: var(--font-text);
+  font-variation-settings: "wght" 400, "SPCG" 0;
   color: var(--default-text-color);
   background-color: var(--background-color);
   line-height: var(--line-height);
-  font-variation-settings: "wght" 400, "SPCG" 0;
 }
 h2, .h2 {
   margin-top: calc(var(--line-height) * 3);
