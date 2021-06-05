@@ -20,21 +20,21 @@
       <aside aria-label="post meta-data">
         <data class="p-bridgy-omit-link" value="maybe"></data>
         <small>
-          <a class="u-url"  href="{{ site.url + page.url }}">permalink<span class="visuallyhidden"> to this note</span></a>
+          <a class="u-url" href="{{ site.url + page.url }}">permalink<span class="visuallyhidden"> to this note</span></a>
+          <a class="u-url" href="https://brid.gy/publish/mastodon" hidden></a>
+          <a class="u-url" href="https://brid.gy/publish/twitter" hidden></a>
           {% if tweetUrl %}
             <a rel="syndication" href="{{ tweetUrl }}">This note on Twitter</a>
           {% endif %}
-          {% if mastodonUrl %}
-            <a rel="syndication" href="{{ mastodonUrl }}">This note on toot.cafe</a>
+          {% if tootUrl %}
+            <a rel="syndication" href="{{ tootUrl }}">This note on toot.cafe</a>
           {% endif %}
         </small>
       </aside>
     </header>
     <section class="e-content">
       {{ content | safe }}
-      <a href="https://brid.gy/publish/mastodon" style="display: none;"></a>
-      <a href="https://brid.gy/publish/twitter" style="display: none;"></a>
-    </section>
+    </section>    
 
     <footer aria-labelledby="comments">
       <h2 id="comments">Comments</h2>

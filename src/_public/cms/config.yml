@@ -63,6 +63,8 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "note" }
       - { label: "Tags", name: "tags", widget: "hidden", default: ["note"] }
       - { label: "Title", name: "title", widget: "string", default: "Note" }
+      - { label: "Tweet URL", name: "tweetUrl", widget: 'url', default: "", required: false  }
+      - { label: "Toot URL", name: "tootUrl", widget: 'url', default: "", required: false  }
       - { label: "Body", name: "body", widget: "text", default: " " }
       - { label: "Publish Date", name: "date", widget: "datetime" }
 

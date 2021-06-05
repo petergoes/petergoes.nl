@@ -3,6 +3,9 @@
   --sans-serif: 'Fira Code', 'Courier New', monospace;
   --monospace-prefered: 'Fira Code', 'Courier New', monospace;
   --monospace: 'Courier New', monospace;
+  --font-code: 'Fira Code', 'Courier New', monospace;
+  --font-text: 'iA Writer Mono', 'Courier New', monospace;
+  --font-heading: 'Fira Code', 'Courier New', monospace;
 
   --screen-xsmall: 18em; /* 288px */
   --screen-small: 48em; /* 768px */
@@ -20,6 +23,7 @@
   --alert-fade: 50%;
   --default-text-color: #444444;
   --default-text-color-50: #444444FF;
+  --heading-color: #222222;
   --background-color: #FAFAFA;
   --background-color-50: #FAFAFAB4;
   --dark-background-text: #BED5DD;
@@ -59,5 +63,6 @@
 
     --code-background: #1e272c;
     --inline-code-color: #FA516D; 
+    --heading-color: #DEE3E9;
   }
 }

@@ -100,7 +100,7 @@ hr {
     display:block;
     height:1px;
     border:0;   
-    border-top:1px solid #cccccc;
+    border-top:1px solid var(--code-comment);
     margin-top: 0.85rem;
     margin-bottom: 0.85rem;
     padding:0;

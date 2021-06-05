@@ -4,4 +4,5 @@
   layout: overview
   collection: blog
   showDate: true
+  addSyndicationLinks: true
 ---

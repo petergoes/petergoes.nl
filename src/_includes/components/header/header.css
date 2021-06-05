@@ -4,9 +4,11 @@
 
 body > header {
   background-color: var(--code-background);
+  font-family: var(--font-code);
+  font-variation-settings: "wght" 200;
 }
 
-.page-header {
+[data-header] > .page-header {
   max-width: calc(var(--char-width) * 80);
   margin-right: auto;
   margin-left: auto;
@@ -27,7 +29,9 @@ body > header {
 }
 
 .page-header   h1 {
-  font-weight: 400;
+  font-family: var(--font-code);
+  font-variation-settings: "wght" 300;
+  letter-spacing: initial;
 }
 
 .page-header__nav {

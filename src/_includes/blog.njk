@@ -2,6 +2,7 @@
   stylesheets:
     - blog.css
     - components/webmentions/response-form.css
+    - components/toc/toc.css
   featuredImageFallback: false
   category: Blog
   og: 
@@ -15,27 +16,29 @@
     <header>
       <h1 class="{% if showPageTitle === false %}visuallyhidden{% endif %} p-name">{{ title }}</h1>
       <aside aria-label="post meta data">
-          <small>
-            Published at:
-            <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD hh:mm:ss') }}">
-              {{ date | formatDate('Do of MMMM, YYYY') }}
-            </time>
-          </small>
-          <small class="blog__tags">
-            Filled under:
-            <ul class="blog__tags-list">
-              {% for tag in tags | remove('blog') %}
-                <li class="blog__tags-list-item p-category">
-                  {{ tag }}{% if not loop.last %},&nbsp;{% endif %}
-                </li>
-              {% endfor %}
-            </ul>
-          </small>
-          <small>
-            <a class="u-url"  href="{{ page.url }}">permalink<span class="visuallyhidden"> to this post</span></a>
-          </small>
+        <small>
+          Published at:
+          <time class="dt-published" datetime="{{ date | formatDate('YYYY-MM-DD hh:mm:ss') }}">
+            {{ date | formatDate('Do of MMMM, YYYY') }}
+          </time>
+          |
+          <a class="u-url"  href="{{ page.url }}">permalink<span class="visuallyhidden"> to this post</span></a>
+        </small>
+        <small class="blog__tags">
+          Filled under:
+          <ul class="blog__tags-list">
+            {% for tag in tags | remove('blog') %}
+              <li class="blog__tags-list-item p-category">
+                {{ tag }}{% if not loop.last %},&nbsp;{% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </small>
+        {{ content | toc | safe }}
       </aside>
     </header>
+
+
     <section class="e-content">
       {{ content | safe }}
     </section>
