@@ -23,23 +23,6 @@ module.exports = {
       console.log('Changed posts:', changedPosts)
       sendWebmentionForChangedPost(changedPosts)
 
-      // await Promise.all(promises)
-      //       .then((results) => {
-      //         results.forEach(item => console.log(JSON.stringify(item, null, 2)))
-      //       })
-      // return fetch(
-      //   `https://webmention.app/check?token=${process.env.WEBMENTION_APP_TOKEN}&url=${feedurl}&limit=1`,
-      //   {
-      //     method: 'POST'
-      //   })
-      //   .then(response => response.json())
-      //   .then(data => data.urls.forEach(item => {
-      //     try {
-      //       console.log(JSON.stringify(item, null, 2))
-      //     } catch (error) {
-      //       console.error(error)
-      //     }
-      //   }))
     } else {
       console.log('')
       console.log('No posts changed')

@@ -55,11 +55,20 @@ async function sendWebMention({ target, source, endpoint }) {
   console.log(`  Source: ${source}`)
   console.log(`  Endpoint: ${endpoint}`)
   console.log('')
-  return fetch(`http://localhost:3000/api?source=${source}&target=${target}`)
-    .then(async response => ({
-      source,
-      content: await response.text()
-    }))
+
+  const url = /\?/.test(target)
+    ? `${target}&source=${source}&target=${target}`
+    : `${target}?source=${source}&target=${target}`
+
+  console.log('Execute fetch on:')
+  console.log(`  ${url}`)
+  return { source }
+
+  // return fetch(url)
+  //   .then(async response => ({
+  //     source,
+  //     content: await response.text()
+  //   }))
 }
 
 async function handleWebmentionResponse({ source, content }) {
