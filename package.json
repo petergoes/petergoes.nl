@@ -43,11 +43,13 @@
     "purgecss": "4.0.3"
   },
   "dependencies": {
+    "cheerio": "*",
     "dayjs": "1.10.4",
     "eleventy-plugin-nesting-toc": "github:petergoes/eleventy-plugin-nesting-toc",
     "markdown-it-abbr": "1.0.4",
     "markdown-it-anchor": "7.1.0",
     "markdown-it-footnote": "3.0.3",
+    "microformat-node": "2.0.1",
     "node-fetch": "2.6.1"
   }
 }

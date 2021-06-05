@@ -1,7 +1,5 @@
-const fs = require('fs')
-const { spawn } = require('child_process');
-const fetch = require('node-fetch');
 const { map } = require('lodash');
+const sendWebmentionForChangedPost = require('./send-webmention-for-changed-posts')
 
 const feedurl = 'https://www.petergoes.nl/webmentions-to-send-feed.xml'
 const webmentionAppEndpoint = `https://webmention.app/check?token=${process.env.WEBMENTION_APP_TOKEN}`
@@ -23,18 +21,12 @@ module.exports = {
       
     if (changedPosts.length > 0) {
       console.log('Changed posts:', changedPosts)
+      sendWebmentionForChangedPost(changedPosts)
 
-      const promises = changedPosts
-        .map(path => path.replace('content', 'https://petergoes.nl').replace('.md', '/'))
-        .map(url => 
-          fetch(`${webmentionAppEndpoint}&url=${url}`, { method: 'POST' })
-            .then(response => response.json())
-        )
-
-      await Promise.all(promises)
-            .then((results) => {
-              results.forEach(item => console.log(JSON.stringify(item, null, 2)))
-            })
+      // await Promise.all(promises)
+      //       .then((results) => {
+      //         results.forEach(item => console.log(JSON.stringify(item, null, 2)))
+      //       })
       // return fetch(
       //   `https://webmention.app/check?token=${process.env.WEBMENTION_APP_TOKEN}&url=${feedurl}&limit=1`,
       //   {
