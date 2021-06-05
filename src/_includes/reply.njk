@@ -22,6 +22,12 @@
           </small>
           <small>
             <a class="u-url"  href="{{ site.url + page.url }}">permalink<span class="visuallyhidden"> to this reply</span></a>
+            {% if tweetUrl %}
+              <a rel="syndication" href="{{ tweetUrl }}">This reply on Twitter</a>
+            {% endif %}
+            {% if tootUrl %}
+              <a rel="syndication" href="{{ tootUrl }}">This reply on toot.cafe</a>
+            {% endif %}
           </small>
       </aside>
     </header>

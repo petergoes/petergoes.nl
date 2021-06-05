@@ -8,7 +8,12 @@ module.exports = {
       if (/index.md/.test(data.page.inputPath)) {
         return data.title
       }
-      return `Replied to ${data.url}`
+
+      const title = /https?:\/\/(www.)?twitter.com\//.test(data.url)
+        ? `@${data.url.replace(/^https?:\/\/(www.)?twitter.com\//, '').replace(/\/.+/, '')}`
+        : data.url
+
+      return `Reply to ${title}`
     }
   }
 }
