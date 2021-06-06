@@ -64,11 +64,17 @@ async function sendWebMention({ target, source, endpoint }) {
   // console.log(`  ${url}`)
   // return { source }
 
-  return fetch(url)
-    .then(async response => ({
-      source,
-      content: await response.text()
-    }))
+  return fetch(url, {
+    headers: { 'Accept': 'application/json' }
+  })
+    .then(async response => {
+      const content = await response.json()
+        .catch(error => {
+          console.log(error.message)
+        })
+
+      return { source, content }
+    })
 }
 
 async function handleWebmentionResponse({ source, content }) {
