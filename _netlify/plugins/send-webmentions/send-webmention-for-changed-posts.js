@@ -73,6 +73,7 @@ async function sendWebMention({ target, source, endpoint }) {
           if (!/^invalid\sjson\sresponse\sbody/.test(error.message)) {
             console.log(error.message)
           }
+          return {}
         })
 
       return { source, content, response }
@@ -88,7 +89,7 @@ async function handleWebmentionResponse({ source, content, response }) {
   console.log(`  Target: ${response.url}`)
 
   if (content) {
-    console.log(`  Response: ${content}`)
+    console.log(`  Response: ${JSON.stringify(content, null, 2)}`)
   }
 
   console.log('')
@@ -121,7 +122,7 @@ async function sendWebmentionForChangedPost(changedPosts) {
 // await sendWebmentionForChangedPost(['content/likes/2021-06-04-10-06.md']) // twitter post
 // await sendWebmentionForChangedPost(['content/replies/2021-05-20-06-21.md']) // sia.codes article
 // await sendWebmentionForChangedPost(['content/replies/2021-06-04-10-05.md']) // tweet
-await sendWebmentionForChangedPost(['content/replies/2021-06-06-20-11.md']) // bulk reply webmention.rocks
+// await sendWebmentionForChangedPost(['content/replies/2021-06-06-20-11.md']) // bulk reply webmention.rocks
 // await sendWebmentionForChangedPost(['content/bookmarks/an-in-depth-tutorial-of-webmentions-eleventy.md']) // sia.codes article
 // await sendWebmentionForChangedPost(['content/bookmarks/css-is-a-strongly-typed-language-css-tricks.md']) // css tricks article
 })()
