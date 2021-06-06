@@ -60,15 +60,15 @@ async function sendWebMention({ target, source, endpoint }) {
     ? `${target}&source=${source}&target=${target}`
     : `${target}?source=${source}&target=${target}`
 
-  console.log('Execute fetch on:')
-  console.log(`  ${url}`)
-  return { source }
+  // console.log('Execute fetch on:')
+  // console.log(`  ${url}`)
+  // return { source }
 
-  // return fetch(url)
-  //   .then(async response => ({
-  //     source,
-  //     content: await response.text()
-  //   }))
+  return fetch(url)
+    .then(async response => ({
+      source,
+      content: await response.text()
+    }))
 }
 
 async function handleWebmentionResponse({ source, content }) {
