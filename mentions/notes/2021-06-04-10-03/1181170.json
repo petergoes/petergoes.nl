@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Peter Goes",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/69a046822458a17a3daa22e5989322c2fc50f21526b761b111f804cf58d44d89.jpg",
+    "url": "https://twitter.com/petergoes"
+  },
+  "url": "https://twitter.com/petergoes/status/1400483680842362881",
+  "published": "2021-06-03T16:05:03+00:00",
+  "wm-received": "2021-06-05T21:34:46Z",
+  "wm-id": 1181170,
+  "wm-source": "https://brid.gy/comment/twitter/petergoes/1400481867112009728/1400483680842362881",
+  "wm-target": "https://www.petergoes.nl/notes/2021-06-04-10-03/",
+  "content": {
+    "html": "I really like them ☺️ Nice colour, pretty vocal.\n<a class=\"u-mention\" href=\"https://twitter.com/SaraSoueidan\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/petervangrieken\"></a>",
+    "text": "I really like them ☺️ Nice colour, pretty vocal."
+  },
+  "in-reply-to": "https://www.petergoes.nl/notes/2021-06-04-10-03/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}

@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Stéphane Deschamps",
+    "photo": "https://webmention.io/avatar/assets.toot.cafe/1704534abd7671430ca8c5ee3cb2edac0fdf38e9bf9c47e9d03c2453a1541171.png",
+    "url": "https://toot.cafe/@accessiblestef"
+  },
+  "url": "https://toot.cafe/@petergoes/106339969845559453#reblogged-by-177687",
+  "published": null,
+  "wm-received": "2021-06-06T06:19:28Z",
+  "wm-id": 1181369,
+  "wm-source": "https://brid.gy/repost/mastodon/@petergoes@toot.cafe/106339969845559453/177687",
+  "wm-target": "https://www.petergoes.nl/notes/2021-06-02-07-32/",
+  "repost-of": "https://www.petergoes.nl/notes/2021-06-02-07-32/",
+  "wm-property": "repost-of",
+  "wm-private": false
+}
