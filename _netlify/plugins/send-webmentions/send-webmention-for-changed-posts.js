@@ -56,35 +56,42 @@ async function sendWebMention({ target, source, endpoint }) {
   console.log(`  Endpoint: ${endpoint}`)
   console.log('')
 
-  const url = /\?/.test(target)
-    ? `${target}&source=${encodeURI(source)}&target=${encodeURI(target)}`
-    : `${target}?source=${encodeURI(source)}&target=${encodeURI(target)}`
-
   // console.log('Execute fetch on:')
-  // console.log(`  ${url}`)
+  // console.log(`  ${endpoint}`)
   // return { source }
 
-  return fetch(url, {
-    headers: { 'Accept': 'application/json' }
+  return fetch(endpoint, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: `source=${encodeURIComponent(source)}&target=${encodeURIComponent(target)}`
   })
     .then(async response => {
       const content = await response.json()
         .catch(error => {
-          console.log(error.message)
+          if (!/^invalid\sjson\sresponse\sbody/.test(error.message)) {
+            console.log(error.message)
+          }
         })
 
-      return { source, content }
+      return { source, content, response }
     })
 }
 
-async function handleWebmentionResponse({ source, content }) {
+async function handleWebmentionResponse({ source, content, response }) {
+  console.log('')
+  console.log('Endpoint response:')
+  console.log(`  Status: ${response.status}`)
+  console.log(`  Status text: ${response.statusText}`)
+  console.log(`  Source: ${source}`)
+  console.log(`  Target: ${response.url}`)
+
   if (content) {
-    console.log('')
-    console.log('Endpoint response:')
-    console.log(`  Source: ${source}`)
     console.log(`  Response: ${content}`)
-    console.log('')
   }
+
+  console.log('')
 
   return { source, content }
 }
@@ -109,14 +116,14 @@ async function sendWebmentionForChangedPost(changedPosts) {
   )
 }
 
-// (async () => {
+(async () => {
 // await sendWebmentionForChangedPost(['content/notes/2021-06-04-10-03.md']) // note, should be posted to twitter and mastodon
 // await sendWebmentionForChangedPost(['content/likes/2021-06-04-10-06.md']) // twitter post
 // await sendWebmentionForChangedPost(['content/replies/2021-05-20-06-21.md']) // sia.codes article
 // await sendWebmentionForChangedPost(['content/replies/2021-06-04-10-05.md']) // tweet
-// await sendWebmentionForChangedPost(['content/replies/2021-06-05-18-56.md']) // bulk reply webmention.rocks
+await sendWebmentionForChangedPost(['content/replies/2021-06-06-20-11.md']) // bulk reply webmention.rocks
 // await sendWebmentionForChangedPost(['content/bookmarks/an-in-depth-tutorial-of-webmentions-eleventy.md']) // sia.codes article
 // await sendWebmentionForChangedPost(['content/bookmarks/css-is-a-strongly-typed-language-css-tricks.md']) // css tricks article
-// })()
+})()
 
 module.exports = sendWebmentionForChangedPost

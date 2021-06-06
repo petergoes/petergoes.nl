@@ -32,16 +32,30 @@ async function getTargetEndpoint(target) {
 
   return fetch(target)
     .then(async res => {
+      const url = new URL(res.url)
+      const origin = url.origin
+      const pathname = url.pathname
       const endpoint = getFromHeaders(res.headers) ||
                        getFromHtml(await res.text())
 
       if (!endpoint) return
 
-      if (!/http/.test(endpoint)) {
-        const url = new URL(res.url)
-        const origin = url.origin
+      if (
+        !/http/.test(endpoint) && // is not an absolute url
+        /^\//.test(endpoint)       // But starts with /
+      ) {
         const _endpoint = /^\//.test(endpoint) ? endpoint : `/${endpoint}`
         return `${origin}${_endpoint}`
+      }
+
+      if (
+        !/http/.test(endpoint) && // is not an absolute url
+        !/^\//.test(endpoint)      // But is relative to the target
+      ) {
+        const pathnameSplit = pathname.split('/')
+        pathnameSplit.pop()
+        return `${origin}${pathnameSplit.join('/')}/${endpoint}`
+
       }
 
       return endpoint.trim()
