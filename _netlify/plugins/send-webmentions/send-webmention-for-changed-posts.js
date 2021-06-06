@@ -8,7 +8,7 @@ const getTargetEndpoint = require('./get-webmention-target')
 async function getMentionBundle(postLocation) {
   const resource = postLocation.replace('content', '_site').replace('.md', '/index.html')
   const localFilePath = path.join(__dirname, '../../../', resource)
-  const postHtml = fs.readFileSync(localFilePath, {encoding: 'utf-8'})
+  const postHtml = fs.readFileSync(localFilePath, { encoding: 'utf-8' })
   const postMainHtml = cheerio.load(postHtml)('main').html()
   const microformats = microformat.get({ html: postMainHtml })
   const entry = microformats.items.find(({ type }) => type.includes('h-entry'))
@@ -26,8 +26,8 @@ async function getMentionBundle(postLocation) {
         source,
         endpoint,
       }))
-    }
-  ))
+  }
+  )).catch(error => console.log(error))
 
   return webmentionBundles.flat(Infinity)
 }
@@ -48,7 +48,7 @@ async function sendWebMention({ target, source, endpoint }) {
     console.log('')
     throw new Error('target or source not found')
   }
-  
+
   console.log('')
   console.log(`Sending webmention:`)
   console.log(`  Target: ${target}`)
@@ -57,8 +57,8 @@ async function sendWebMention({ target, source, endpoint }) {
   console.log('')
 
   const url = /\?/.test(target)
-    ? `${target}&source=${source}&target=${target}`
-    : `${target}?source=${source}&target=${target}`
+    ? `${target}&source=${encodeURI(source)}&target=${encodeURI(target)}`
+    : `${target}?source=${encodeURI(source)}&target=${encodeURI(target)}`
 
   // console.log('Execute fetch on:')
   // console.log(`  ${url}`)
@@ -79,25 +79,31 @@ async function handleWebmentionResponse({ source, content }) {
     console.log(`  Response: ${content}`)
     console.log('')
   }
+
+  return { source, content }
 }
 
 async function sendWebmentionForChangedPost(changedPosts) {
-  const mentionBundlePromise = changedPosts
-    .forEach(async postLocation => {
-      const bentionBundle = await getMentionBundle(postLocation)
-      bentionBundle.forEach(bundle => 
-          sendWebMention(bundle)
-            .then(handleWebmentionResponse)
-            .catch(error => {
-              if (error.message === 'No webmention endpoint') {
-                // ignore, already logged
-              }
-            })
-      )
-    }) 
+  return Promise.all(
+    changedPosts.map(postLocation =>
+      getMentionBundle(postLocation)
+        .then(mentionBundle =>
+          Promise.all(
+            mentionBundle.map(bundle =>
+              sendWebMention(bundle)
+                .then(handleWebmentionResponse)
+                .catch(error => {
+                  if (error.message === 'No webmention endpoint') {
+                    // ignore, already logged
+                  }
+                })
+            )
+          )
+        ))
+  )
 }
 
-// (async =() => {
+// (async () => {
 // await sendWebmentionForChangedPost(['content/notes/2021-06-04-10-03.md']) // note, should be posted to twitter and mastodon
 // await sendWebmentionForChangedPost(['content/likes/2021-06-04-10-06.md']) // twitter post
 // await sendWebmentionForChangedPost(['content/replies/2021-05-20-06-21.md']) // sia.codes article
