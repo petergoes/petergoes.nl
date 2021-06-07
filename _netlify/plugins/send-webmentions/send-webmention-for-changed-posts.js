@@ -90,6 +90,35 @@ async function handleWebmentionResponse({ source, content, response }) {
 
   if (content) {
     console.log(`  Response: ${JSON.stringify(content, null, 2)}`)
+
+    const body = {
+      event_type: "Add syndication link",
+      client_payload: { source }
+    }
+
+    if (response.url === 'https://brid.gy/publish/twitter') {
+      body.client_payload.tweetUrl = source
+    }
+
+    if (response.url === 'https://brid.gy/publish/mastodon') {
+      body.client_payload.tootUrl = source
+    }
+
+    if (body.client_payload.tweetUrl || body.client_payload.tootUrl) {
+      console.log('  Syndication action triggered')
+
+      await fetch(
+        'https://api.github.com/repos/petergoes/petergoes.nl/dispatches',
+        {
+          method: 'POST',
+          headers: {
+            Authorization: `token ${process.env.GITHUB_PAT}`
+          },
+          body: JSON.stringify(body)
+        }
+      )
+    }
+
   }
 
   console.log('')
