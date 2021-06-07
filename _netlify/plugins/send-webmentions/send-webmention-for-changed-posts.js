@@ -89,7 +89,7 @@ async function handleWebmentionResponse({ source, content, response }) {
   console.log(`  Target: ${response.url}`)
 
   if (content) {
-    console.log(`  Response: ${JSON.stringify(content, null, 2)}`)
+    console.log(`  Response: ${JSON.stringify(content.url, null, 2)}`)
 
     const body = {
       event_type: "Add syndication link",
@@ -97,11 +97,11 @@ async function handleWebmentionResponse({ source, content, response }) {
     }
 
     if (response.url === 'https://brid.gy/publish/twitter') {
-      body.client_payload.tweetUrl = source
+      body.client_payload.tweetUrl = content.url
     }
 
     if (response.url === 'https://brid.gy/publish/mastodon') {
-      body.client_payload.tootUrl = source
+      body.client_payload.tootUrl = content.url
     }
 
     if (body.client_payload.tweetUrl || body.client_payload.tootUrl) {
