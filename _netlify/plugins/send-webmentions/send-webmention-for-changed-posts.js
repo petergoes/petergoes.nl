@@ -97,15 +97,13 @@ async function handleWebmentionResponse({ source, target, content, response }) {
     }
 
     if (target === 'https://brid.gy/publish/twitter') {
-      console.log('  Response url is tweet publish')
       body.client_payload.tweetUrl = content.url
     }
 
     if (target === 'https://brid.gy/publish/mastodon') {
-      console.log('  Response url is toot publish')
       body.client_payload.tootUrl = content.url
     }
-    console.log(`  Response url is: ${target}`)
+
     if (body.client_payload.tweetUrl || body.client_payload.tootUrl) {
       console.log('  Syndication action triggered')
 
