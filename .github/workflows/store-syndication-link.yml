@@ -17,8 +17,8 @@ jobs:
 
       - name: Add Syndication urls
         run: |
-          sed --in-place='' 's@tweetUrl:.*$@tweetUrl: "${{ github.event.client_payload.tweetUrl }}"@' $POST_SOURCE
-          sed --in-place='' 's@tootUrl:.*$@tootUrl: "${{ github.event.client_payload.tootUrl }}"@' $POST_SOURCE
+          sed --in-place='' 's|tweetUrl:.*$|tweetUrl: "${{ github.event.client_payload.tweetUrl }}"|' $POST_SOURCE
+          sed --in-place='' 's|tootUrl:.*$|tootUrl: "${{ github.event.client_payload.tootUrl }}"|' $POST_SOURCE
 
       - name: Create Pull Request
         id: cpr
