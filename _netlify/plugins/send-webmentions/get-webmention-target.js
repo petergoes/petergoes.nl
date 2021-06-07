@@ -26,8 +26,6 @@ async function getTargetEndpoint(target) {
     if (linkHref === '') {
       return target
     }
-
-    console.log(html)
   }
 
   return fetch(target)
