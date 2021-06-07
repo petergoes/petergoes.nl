@@ -81,5 +81,7 @@ collections:
       - { label: "Title", name: "title", widget: "string", default: "Reply to" }
       - { label: "Target URL", name: 'url', widget: "url" }
       - { label: "Silo", name: 'silo', widget: 'select', options: ['twitter', 'mastodon', 'indieweb'], default: ['indieweb'] }
+      - { label: "Tweet URL", name: "tweetUrl", widget: 'url', default: "", required: false  }
+      - { label: "Toot URL", name: "tootUrl", widget: 'url', default: "", required: false  }
       - { label: "Body", name: "body", widget: "markdown", default: " " }
       - { label: "Publish Date", name: "date", widget: "datetime" }
