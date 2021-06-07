@@ -76,17 +76,17 @@ async function sendWebMention({ target, source, endpoint }) {
           return {}
         })
 
-      return { source, content, response }
+      return { source, target, content, response }
     })
 }
 
-async function handleWebmentionResponse({ source, content, response }) {
+async function handleWebmentionResponse({ source, target, content, response }) {
   console.log('')
   console.log('Endpoint response:')
   console.log(`  Status: ${response.status}`)
   console.log(`  Status text: ${response.statusText}`)
   console.log(`  Source: ${source}`)
-  console.log(`  Target: ${response.url}`)
+  console.log(`  Target: ${target}`)
 
   if (content) {
     console.log(`  Response: ${content.url}`)
@@ -96,16 +96,16 @@ async function handleWebmentionResponse({ source, content, response }) {
       client_payload: { source }
     }
 
-    if (response.url === 'https://brid.gy/publish/twitter') {
+    if (target === 'https://brid.gy/publish/twitter') {
       console.log('  Response url is tweet publish')
       body.client_payload.tweetUrl = content.url
     }
 
-    if (response.url === 'https://brid.gy/publish/mastodon') {
+    if (target === 'https://brid.gy/publish/mastodon') {
       console.log('  Response url is toot publish')
       body.client_payload.tootUrl = content.url
     }
-    console.log(`  Response url is: ${response.url}`)
+    console.log(`  Response url is: ${target}`)
     if (body.client_payload.tweetUrl || body.client_payload.tootUrl) {
       console.log('  Syndication action triggered')
 
