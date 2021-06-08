@@ -16,7 +16,7 @@
 
   {% set month = undefined %}
 
-  {%- for post in collections[collection] | reverse -%}
+  {%- for post in posts -%}
     {% if post.url %}
 
     {% if month !== post.date | formatDate(timeSeperatorFormat) %}
