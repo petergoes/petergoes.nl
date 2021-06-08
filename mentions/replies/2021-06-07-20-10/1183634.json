@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Mina Bui 💻",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/b8f5611eae81bc183800ce8cb392fa658cec12a7c46398152e61831bc752aa44.jpg",
+    "url": "https://twitter.com/webdevmina"
+  },
+  "url": "https://twitter.com/petergoes/status/1401995613684776963#favorited-by-1356362884217851904",
+  "published": null,
+  "wm-received": "2021-06-08T07:30:28Z",
+  "wm-id": 1183634,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1401995613684776963/1356362884217851904",
+  "wm-target": "https://www.petergoes.nl/replies/2021-06-07-20-10/",
+  "like-of": "https://www.petergoes.nl/replies/2021-06-07-20-10/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
