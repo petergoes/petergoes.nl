@@ -1,3 +1,33 @@
 .overview-hr {
   margin: 2rem 0;
 }
+
+.overview__pagination-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.overview__pagination-list li {
+  margin-right: 1rem;
+}
+
+.overview__pagination-list li::before {
+  content: initial;
+}
+
+.overview__pagination-list li a[aria-current="page"] {
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+.overview__pagination-list li a[aria-current="page"]::before,
+.overview__pagination-list li a[aria-current="page"]::after {
+  opacity: 0;
+}
+
+@media (min-width: var(--screen-small)) {
+  .overview__pagination-list {
+    flex-direction: row;
+  }
+}

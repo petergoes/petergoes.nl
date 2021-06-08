@@ -59,6 +59,17 @@
     {% endif %}
   {%- endfor -%}
 
+  {% if pagination.pages.length > 1 %}
+  <nav aria-labelledBy="pagination-title">
+    <h2 id="pagination-title">Pagination</h2>
+    <ol class="overview__pagination-list">
+  {%- for pageEntry in pagination.pages %}
+      <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
+  {%- endfor %}
+    </ol>
+  </nav>
+  {% endif %}
+
   {% if disableRssLink === false %}
   <hr class="overview-hr" />
 
