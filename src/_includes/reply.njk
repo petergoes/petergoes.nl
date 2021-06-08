@@ -32,7 +32,7 @@
         </small>
       </aside>
     </header>
-    <section class="e-content">
+    <section class="e-content" {% if language === 'nl' %}lang="nl"{% endif %}>
       {{ content | safe }}
       {% if silo === 'mastodon' %}
         <a class="u-url" href="https://brid.gy/publish/mastodon" hidden></a>

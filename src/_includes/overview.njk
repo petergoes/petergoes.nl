@@ -49,9 +49,11 @@
         {% endif %}
       {% endif %}
       {% if post.data.description %}
-        <p>{{ post.data.description }}</p>
+        <p  {% if post.data.language === 'nl' %}lang="nl"{% endif %}>{{ post.data.description }}</p>
       {% else %}
-        {{ post.templateContent | safe }}
+        <div {% if post.data.language === 'nl' %}lang="nl"{% endif %}>
+          {{ post.templateContent | safe }}
+        </div>
       {% endif %}
     </article>
     {% endif %}

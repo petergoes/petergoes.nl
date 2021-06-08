@@ -34,7 +34,10 @@
             {% endfor %}
           </ul>
         </small>
-        {{ content | toc | safe }}
+        
+        <div {% if language === 'nl' %}lang="nl"{% endif %}>
+          {{ content | toc | safe }}
+        </div>
       </aside>
     </header>
 
