@@ -11,7 +11,7 @@ module.exports = {
     const { git } = utils
 
     const changedFiles = [
-      ...git.modifiedFiles.filter(file => !/content\/replies|notes/.test(file)),
+      ...git.modifiedFiles.filter(file => !/content\/notes/.test(file)),
       ...git.createdFiles
     ]
     const changedPosts = changedFiles
