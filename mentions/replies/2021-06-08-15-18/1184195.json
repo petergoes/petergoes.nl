@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Tom",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/dc72226b8646f48b1d758743985e978763a6fed76e7ac42d5413e63424b28a36.jpg",
+    "url": "https://twitter.com/bestebreurtje"
+  },
+  "url": "https://twitter.com/petergoes/status/1402284346225135630#favorited-by-21097240",
+  "published": null,
+  "wm-received": "2021-06-08T17:12:03Z",
+  "wm-id": 1184195,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1402284346225135630/21097240",
+  "wm-target": "https://www.petergoes.nl/replies/2021-06-08-15-18/",
+  "like-of": "https://www.petergoes.nl/replies/2021-06-08-15-18/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
