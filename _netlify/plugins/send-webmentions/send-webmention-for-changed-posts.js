@@ -88,7 +88,11 @@ async function handleWebmentionResponse({ source, target, content, response }) {
   console.log(`  Source: ${source}`)
   console.log(`  Target: ${target}`)
 
-  if (content) {
+  if (response.status >= 400 && content) {
+    console.log(`  Error: ${JSON.stringify(content, null, 2)}`)
+  }
+
+  if (content.url) {
     console.log(`  Response: ${content.url}`)
 
     const body = {
