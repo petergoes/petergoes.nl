@@ -1,7 +1,3 @@
-const dayjs = require('dayjs')
-const advancedFormat = require('dayjs/plugin/advancedFormat')
-dayjs.extend(advancedFormat)
-
 module.exports = {
   eleventyComputed: {
     title: (data) => {
@@ -12,10 +8,8 @@ module.exports = {
   
           return `${data.title} (Page ${currentPageNumber + 1} of ${totalPages})`
         }
-
-        return data.title
       }
-      return `Note written on the ${dayjs(data.page.date).format('Do of MMMM, YYYY')}`
+      return data.title
     }
   }
 }
