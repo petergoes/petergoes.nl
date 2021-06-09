@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Peter Goes",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/69a046822458a17a3daa22e5989322c2fc50f21526b761b111f804cf58d44d89.jpg",
+    "url": "https://twitter.com/petergoes"
+  },
+  "url": "https://twitter.com/petergoes/status/1402331027314548736",
+  "published": "2021-06-08T18:25:45+00:00",
+  "wm-received": "2021-06-08T19:03:33Z",
+  "wm-id": 1184400,
+  "wm-source": "https://brid.gy/comment/twitter/petergoes/1402284346225135630/1402331027314548736",
+  "wm-target": "https://www.petergoes.nl/replies/2021-06-08-15-18/",
+  "content": {
+    "html": "Van het UWV schrik ik dan weer niet, dat er zo gereageerd wordt. Na die toeslagen affaire.\n\nWat een wereld waar we in leven…\n<a class=\"u-mention\" href=\"https://twitter.com/petervangrieken\"></a>",
+    "text": "Van het UWV schrik ik dan weer niet, dat er zo gereageerd wordt. Na die toeslagen affaire.\n\nWat een wereld waar we in leven…"
+  },
+  "in-reply-to": "https://www.petergoes.nl/replies/2021-06-08-15-18/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}
