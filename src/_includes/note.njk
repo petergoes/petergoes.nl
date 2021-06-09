@@ -52,7 +52,7 @@
 
       {% from './components/webmentions/interaction.njk' import interaction %}
       {% from './components/webmentions/text-responses.njk' import textResponses %}
-      {% set webmentionsForUrl = webmentions | getWebmentionsForUrl(site.url + page.url) | removeSyndication(tweetUrl) %}
+      {% set webmentionsForUrl = webmentions | getWebmentionsForUrl(site.url + page.url) | removeSyndication(tweetUrl) | reverse %}
       {{ interaction(['like-of', 'repost-of'], 'Like', 'Likes and Reposts', webmentionsForUrl) }}
       {{ textResponses('in-reply-to', 'Reply', 'Replies', webmentionsForUrl | reverse) }}
       {{ textResponses('mention-of', 'Mention', 'Mentions', webmentionsForUrl | reverse) }}
