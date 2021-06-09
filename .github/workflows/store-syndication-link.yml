@@ -26,7 +26,6 @@ jobs:
         with:
           commit-message: Update syndication urls
           branch: socials
-          delete-branch: false
           assignees: petergoes
           title: Automated update
           body: |
