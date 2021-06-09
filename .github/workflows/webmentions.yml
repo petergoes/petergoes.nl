@@ -46,7 +46,6 @@ jobs:
         with:
           commit-message: Update WebMentions
           branch: socials
-          delete-branch: false
           assignees: petergoes
           title: Automated update
           body: |
