@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Dan",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/c289bcee59f3d763973da8b24e929c57cf575c2513686004934c1d2e4840b46a.jpg",
+    "url": "https://twitter.com/dan_abramov"
+  },
+  "url": "https://twitter.com/petergoes/status/1403018668158636037#favorited-by-70345946",
+  "published": null,
+  "wm-received": "2021-06-10T16:00:52Z",
+  "wm-id": 1186330,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1403018668158636037/70345946",
+  "wm-target": "https://www.petergoes.nl/replies/2021-06-10-15-57/",
+  "like-of": "https://www.petergoes.nl/replies/2021-06-10-15-57/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
