@@ -24,10 +24,10 @@
           <a class="u-url" href="https://brid.gy/publish/mastodon" hidden></a>
           <a class="u-url" href="https://brid.gy/publish/twitter" hidden></a>
           {% if tweetUrl %}
-            <a rel="syndication" href="{{ tweetUrl }}">This note on Twitter</a>
+            <a rel="syndication" class="u_syndication" href="{{ tweetUrl }}">This note on Twitter</a>
           {% endif %}
           {% if tootUrl %}
-            <a rel="syndication" href="{{ tootUrl }}">This note on toot.cafe</a>
+            <a rel="syndication" class="u_syndication" href="{{ tootUrl }}">This note on toot.cafe</a>
           {% endif %}
         </small>
       </aside>
