@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Sara Soueidan",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/753b14faf68c1bbd5b56ce813d114fe63c41cf0d4ad9302ed0a72a2d469e592c.jpg",
+    "url": "https://twitter.com/SaraSoueidan"
+  },
+  "url": "https://twitter.com/petergoes/status/1403018668158636037#favorited-by-717654410",
+  "published": null,
+  "wm-received": "2021-06-10T17:01:53Z",
+  "wm-id": 1186403,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1403018668158636037/717654410",
+  "wm-target": "https://www.petergoes.nl/replies/2021-06-10-15-57/",
+  "like-of": "https://www.petergoes.nl/replies/2021-06-10-15-57/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
