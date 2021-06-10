@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Sara Soueidan",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/753b14faf68c1bbd5b56ce813d114fe63c41cf0d4ad9302ed0a72a2d469e592c.jpg",
+    "url": "https://twitter.com/SaraSoueidan"
+  },
+  "url": "https://twitter.com/SaraSoueidan/status/1403064422805950475",
+  "published": "2021-06-10T19:00:00+00:00",
+  "wm-received": "2021-06-10T19:28:10Z",
+  "wm-id": 1186476,
+  "wm-source": "https://brid.gy/comment/twitter/petergoes/1403059647511203847/1403064422805950475",
+  "wm-target": "https://www.petergoes.nl/replies/2021-06-10-18-39/",
+  "content": {
+    "html": "You know I thought about it but I don't want the course to get out of hand! 😅 i'm considering an article though\n<a class=\"u-mention\" href=\"https://twitter.com/hdv\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/petergoes\"></a>\n<a class=\"u-mention\" href=\"https://www.petergoes.nl/\"></a>",
+    "text": "You know I thought about it but I don't want the course to get out of hand! 😅 i'm considering an article though"
+  },
+  "in-reply-to": "https://www.petergoes.nl/replies/2021-06-10-18-39/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}
