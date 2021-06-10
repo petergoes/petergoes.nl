@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Peter",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/4137542733f2c80a42865215e25f9e5774fc5a9072903660647db88b13d81493.png",
+    "url": "https://twitter.com/Pieturp"
+  },
+  "url": "https://twitter.com/petergoes/status/1402912720228392968#favorited-by-34695631",
+  "published": null,
+  "wm-received": "2021-06-10T13:28:42Z",
+  "wm-id": 1186127,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1402912720228392968/34695631",
+  "wm-target": "https://www.petergoes.nl/notes/2021-06-10-08-55/",
+  "like-of": "https://www.petergoes.nl/notes/2021-06-10-08-55/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
