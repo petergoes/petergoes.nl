@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Harmen Janssen",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/6aac1ea6a98cf9597a3d2a5ad07c4756d15073e21dcd2e274a320ddacafca64b.jpg",
+    "url": "https://twitter.com/harmenjanssen"
+  },
+  "url": "https://twitter.com/petergoes/status/1402912720228392968#favorited-by-31101134",
+  "published": null,
+  "wm-received": "2021-06-10T15:38:39Z",
+  "wm-id": 1186314,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1402912720228392968/31101134",
+  "wm-target": "https://www.petergoes.nl/notes/2021-06-10-08-55/",
+  "like-of": "https://www.petergoes.nl/notes/2021-06-10-08-55/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
