@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Sara Soueidan",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/753b14faf68c1bbd5b56ce813d114fe63c41cf0d4ad9302ed0a72a2d469e592c.jpg",
+    "url": "https://twitter.com/SaraSoueidan"
+  },
+  "url": "https://twitter.com/SaraSoueidan/status/1403211064758747139",
+  "published": "2021-06-11T04:42:42+00:00",
+  "wm-received": "2021-06-11T06:36:46Z",
+  "wm-id": 1186948,
+  "wm-source": "https://brid.gy/comment/twitter/petergoes/1403114381014089731/1403211064758747139",
+  "wm-target": "https://www.petergoes.nl/notes/2021-06-10-22-17/",
+  "content": {
+    "html": "Ha! I'm on mobile so will check on my laptop later, but now I wonder how we'd make that work with touch dragging too 😄\n<a class=\"u-mention\" href=\"https://twitter.com/petergoes\"></a>\n<a class=\"u-mention\" href=\"https://www.petergoes.nl/\"></a>",
+    "text": "Ha! I'm on mobile so will check on my laptop later, but now I wonder how we'd make that work with touch dragging too 😄"
+  },
+  "in-reply-to": "https://www.petergoes.nl/notes/2021-06-10-22-17/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}

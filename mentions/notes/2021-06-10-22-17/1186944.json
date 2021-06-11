@@ -1,0 +1,21 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Cu & Código",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/a913fe9059e05187ecfb8a28dcd8be6dcb35ea10afd3761a792eb3abb59d8afc.jpg",
+    "url": "https://twitter.com/lixeletto"
+  },
+  "url": "https://twitter.com/lixeletto/status/1403212214316720132",
+  "published": "2021-06-11T04:47:16+00:00",
+  "wm-received": "2021-06-11T06:35:50Z",
+  "wm-id": 1186944,
+  "wm-source": "https://brid.gy/repost/twitter/petergoes/1403114381014089731/1403212214316720132",
+  "wm-target": "https://www.petergoes.nl/notes/2021-06-10-22-17/",
+  "content": {
+    "text": "Thanks @SaraSoueidan, now that whole table is stuck in my head… I cut a LOT of corners, but here is a proof of concept: codepen.io/petergoes/pen/…"
+  },
+  "repost-of": "https://www.petergoes.nl/notes/2021-06-10-22-17/",
+  "wm-property": "repost-of",
+  "wm-private": false
+}
