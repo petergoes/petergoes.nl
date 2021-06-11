@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Mads Stoumann",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/fc6c6352a34305c02c651840a68e5553d0244f689c58f7f695f1731218d386ff.jpg",
+    "url": "https://twitter.com/madsstoumann"
+  },
+  "url": "https://twitter.com/petergoes/status/1403218845222031360#favorited-by-122325178",
+  "published": null,
+  "wm-received": "2021-06-11T07:28:03Z",
+  "wm-id": 1186982,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1403218845222031360/122325178",
+  "wm-target": "https://www.petergoes.nl/replies/2021-06-11-05-11/",
+  "like-of": "https://www.petergoes.nl/replies/2021-06-11-05-11/",
+  "wm-property": "like-of",
+  "wm-private": false
+}

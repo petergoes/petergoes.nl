@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Mads Stoumann",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/fc6c6352a34305c02c651840a68e5553d0244f689c58f7f695f1731218d386ff.jpg",
+    "url": "https://twitter.com/madsstoumann"
+  },
+  "url": "https://twitter.com/madsstoumann/status/1403244453528322049",
+  "published": "2021-06-11T06:55:23+00:00",
+  "wm-received": "2021-06-11T07:28:03Z",
+  "wm-id": 1186981,
+  "wm-source": "https://brid.gy/comment/twitter/petergoes/1403114381014089731/1403244453528322049",
+  "wm-target": "https://www.petergoes.nl/notes/2021-06-10-22-17/",
+  "content": {
+    "html": "Thx! Since it’s range-sliders, it also works with arrow-keys, but I need to look into a11y, labels, roles etc.\n<a class=\"u-mention\" href=\"https://twitter.com/SaraSoueidan\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/petergoes\"></a>\n<a class=\"u-mention\" href=\"https://www.petergoes.nl/\"></a>",
+    "text": "Thx! Since it’s range-sliders, it also works with arrow-keys, but I need to look into a11y, labels, roles etc."
+  },
+  "in-reply-to": "https://www.petergoes.nl/notes/2021-06-10-22-17/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}
