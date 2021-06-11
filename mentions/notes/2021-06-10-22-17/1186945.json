@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Hidde",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/aec18d4e6514f5b156c5e7ef838f9bd1f81e3bfc4ac847a88be97a480eef77be.jpg",
+    "url": "https://twitter.com/hdv"
+  },
+  "url": "https://twitter.com/hdv/status/1403215700811038722",
+  "published": "2021-06-11T05:01:08+00:00",
+  "wm-received": "2021-06-11T06:36:26Z",
+  "wm-id": 1186945,
+  "wm-source": "https://brid.gy/comment/twitter/petergoes/1403114381014089731/1403215700811038722",
+  "wm-target": "https://www.petergoes.nl/notes/2021-06-10-22-17/",
+  "content": {
+    "html": "😍 so little JS! \n\nI wonder if display:flex on the tr's might remove table row semantics in some browsers, that could break the table in assistive tech\n<a class=\"u-mention\" href=\"https://twitter.com/SaraSoueidan\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/petergoes\"></a>\n<a class=\"u-mention\" href=\"https://www.petergoes.nl/\"></a>",
+    "text": "😍 so little JS! \n\nI wonder if display:flex on the tr's might remove table row semantics in some browsers, that could break the table in assistive tech"
+  },
+  "in-reply-to": "https://www.petergoes.nl/notes/2021-06-10-22-17/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}
