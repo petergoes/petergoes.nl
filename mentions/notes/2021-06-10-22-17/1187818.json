@@ -1,0 +1,21 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "maxzz",
+    "photo": "https://webmention.io/avatar/abs.twimg.com/0e6b2cd70aa5b35dec24ca4e1e63f8963f0118736d9ec3bba77e3a8c99a27bc2.png",
+    "url": "https://twitter.com/maxzz2000"
+  },
+  "url": "https://twitter.com/maxzz2000/status/1403526064282894339",
+  "published": "2021-06-12T01:34:24+00:00",
+  "wm-received": "2021-06-12T01:58:45Z",
+  "wm-id": 1187818,
+  "wm-source": "https://brid.gy/repost/twitter/petergoes/1403114381014089731/1403526064282894339",
+  "wm-target": "https://www.petergoes.nl/notes/2021-06-10-22-17/",
+  "content": {
+    "text": "Thanks @SaraSoueidan, now that whole table is stuck in my head… I cut a LOT of corners, but here is a proof of concept: codepen.io/petergoes/pen/…"
+  },
+  "repost-of": "https://www.petergoes.nl/notes/2021-06-10-22-17/",
+  "wm-property": "repost-of",
+  "wm-private": false
+}

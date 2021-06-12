@@ -1,0 +1,21 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Gautam Kumar",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/4679e141b4ff8ee144f97ec8b9b76032cf6ef69a1eb2bb6939dbc069ccba4802.jpg",
+    "url": "https://twitter.com/r8here"
+  },
+  "url": "https://twitter.com/r8here/status/1403301180705443848",
+  "published": "2021-06-11T10:40:48+00:00",
+  "wm-received": "2021-06-11T10:47:39Z",
+  "wm-id": 1187134,
+  "wm-source": "https://brid.gy/repost/twitter/petergoes/1403114381014089731/1403301180705443848",
+  "wm-target": "https://www.petergoes.nl/notes/2021-06-10-22-17/",
+  "content": {
+    "text": "Thanks @SaraSoueidan, now that whole table is stuck in my head… I cut a LOT of corners, but here is a proof of concept: codepen.io/petergoes/pen/…"
+  },
+  "repost-of": "https://www.petergoes.nl/notes/2021-06-10-22-17/",
+  "wm-property": "repost-of",
+  "wm-private": false
+}
