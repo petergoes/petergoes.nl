@@ -5,7 +5,11 @@ backend:
 
 local_backend: true
 
-media_folder: "src/_public/images"
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: https-www-petergoes-nl
+    api_key: 127997533857847
 
 collections:
   - name: "blogposts"
