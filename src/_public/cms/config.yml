@@ -10,6 +10,7 @@ media_library:
   config:
     cloud_name: https-www-petergoes-nl
     api_key: 127997533857847
+    output_filename_only: true
 
 collections:
   - name: "blogposts"
