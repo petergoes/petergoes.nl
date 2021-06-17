@@ -10,9 +10,15 @@ tags:
   - blog
   - a11y
 date: 2021-06-16T09:33:35.789Z
-tweetUrl: ""
+tweetUrl: https://twitter.com/petergoes/status/1405257561943818247
 tootUrl: ""
 ---
+## Update about the used example in this post
+
+Today (17th of June 2021) I stumbled upon a [CSS Tricks article](https://css-tricks.com/a-complete-guide-to-css-media-queries/#accessibility) which states that you CAN detect if a user has their colours inverted system wide. Kicking over the whole foundation of the examples I provide in this post. The original problem that I had is thus solved (use the `@media (inverted-colors)` media query). If you still want to read the original post, let's get going.
+
+---
+
 Today I did an interview for [my accessibility research (in Dutch, Chrome translates it well)](https://toegankelijkheidsonderzoek.petergoes.nl). The person I spoke with used the system setting to invert all colours, due to hyper sensitivity to light. The result was that images were also inverted and thus became negative:
 
 ![Screenshot of a Google Images search for cats. Split in half where the first half is normal. In the second half, the colours are inverted](https://res.cloudinary.com/https-www-petergoes-nl/image/upload/c_scale,q_auto:eco,w_1472/v1623837139/side-by-side_mkyyao.png)
