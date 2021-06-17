@@ -11,7 +11,7 @@ tags:
   - a11y
 date: 2021-06-16T09:33:35.789Z
 tweetUrl: https://twitter.com/petergoes/status/1405257561943818247
-tootUrl: ""
+tootUrl: https://toot.cafe/@petergoes/106422239744635921
 ---
 ## Update about the used example in this post
 
