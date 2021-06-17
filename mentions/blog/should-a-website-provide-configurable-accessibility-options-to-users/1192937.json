@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Stéphane Deschamps",
+    "photo": "https://webmention.io/avatar/assets.toot.cafe/ec69e246ad952436ac4235a12fcca395811d62d4ecc1a128819978c840051322.jpg",
+    "url": "https://toot.cafe/@accessiblestef"
+  },
+  "url": "https://toot.cafe/@petergoes/106422239744635921#reblogged-by-177687",
+  "published": null,
+  "wm-received": "2021-06-17T09:06:13Z",
+  "wm-id": 1192937,
+  "wm-source": "https://brid.gy/repost/mastodon/@petergoes@toot.cafe/106422239744635921/177687",
+  "wm-target": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "repost-of": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "wm-property": "repost-of",
+  "wm-private": false
+}

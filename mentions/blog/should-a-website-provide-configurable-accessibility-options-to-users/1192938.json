@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Stéphane Deschamps",
+    "photo": "https://webmention.io/avatar/assets.toot.cafe/ec69e246ad952436ac4235a12fcca395811d62d4ecc1a128819978c840051322.jpg",
+    "url": "https://toot.cafe/@accessiblestef"
+  },
+  "url": "https://toot.cafe/@accessiblestef/106425222716835793",
+  "published": "2021-06-17T08:53:44",
+  "wm-received": "2021-06-17T09:06:13Z",
+  "wm-id": 1192938,
+  "wm-source": "https://brid.gy/comment/mastodon/@petergoes@toot.cafe/106422239744635921/106425222716835793",
+  "wm-target": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "content": {
+    "html": "<p><span class=\"h-card\"><a href=\"https://toot.cafe/@petergoes\" class=\"u-url\">@<span>petergoes</span></a></span> <br />Q: Do users want this level of customisation?<br />A: From what I gather, having worked with disabled people for a long time, they're neither more expert than average users, nor more prone to all this cookie dance. So I'd wager not. Doing something for dark mode, thought, may be a good start as it is automatic. We can't provision for all system configurations, although the more we strive for accessibility and standards, the easier people can cope with our websites.</p>",
+    "text": "@petergoes \nQ: Do users want this level of customisation?\nA: From what I gather, having worked with disabled people for a long time, they're neither more expert than average users, nor more prone to all this cookie dance. So I'd wager not. Doing something for dark mode, thought, may be a good start as it is automatic. We can't provision for all system configurations, although the more we strive for accessibility and standards, the easier people can cope with our websites."
+  },
+  "in-reply-to": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}
