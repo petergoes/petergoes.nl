@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Bram Smulders",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/d211e63883f279d6920257bd8e424c7c4ed93ea879724de7d7152ec259776674.jpg",
+    "url": "https://twitter.com/bramsmulders"
+  },
+  "url": "https://twitter.com/petergoes/status/1405257561943818247#favorited-by-29981394",
+  "published": null,
+  "wm-received": "2021-06-17T05:51:37Z",
+  "wm-id": 1192845,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1405257561943818247/29981394",
+  "wm-target": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "like-of": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
