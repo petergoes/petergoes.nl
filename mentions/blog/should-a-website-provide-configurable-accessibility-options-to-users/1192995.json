@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Lien Rag",
+    "photo": "https://webmention.io/avatar/toot.cafe/a971b399b2b2c66daa292ea79888a77f2f15a8d33c7f9cf611428be3f8283405.png",
+    "url": "https://mastodon.tedomum.net/@lienrag"
+  },
+  "url": "https://mastodon.tedomum.net/@lienrag/106425927968606374",
+  "published": "2021-06-17T11:53:05",
+  "wm-received": "2021-06-17T12:01:21Z",
+  "wm-id": 1192995,
+  "wm-source": "https://brid.gy/comment/mastodon/@petergoes@toot.cafe/106422239744635921/106425928041932451",
+  "wm-target": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "content": {
+    "html": "<p><span class=\"h-card\"><a href=\"https://toot.cafe/@accessiblestef\" class=\"u-url\">@<span>accessiblestef</span></a></span></p><p>Why do you oppose a default for regular users and a customisation menu somewhere (maybe deep into the options if you believe not many users will want it) ?</p><p><span class=\"h-card\"><a href=\"https://toot.cafe/@petergoes\" class=\"u-url\">@<span>petergoes</span></a></span></p>",
+    "text": "@accessiblestefWhy do you oppose a default for regular users and a customisation menu somewhere (maybe deep into the options if you believe not many users will want it) ?@petergoes"
+  },
+  "in-reply-to": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}
