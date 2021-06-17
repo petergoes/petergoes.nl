@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Will Norris 💉💉🎉",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/29171fa7c49f7db74f593af046dd6c180beb931076a18803b1308994c6e9d84f.jpg",
+    "url": "https://twitter.com/willnorris"
+  },
+  "url": "https://twitter.com/willnorris/status/1405405458601414666",
+  "published": "2021-06-17T06:02:27+00:00",
+  "wm-received": "2021-06-17T06:51:01Z",
+  "wm-id": 1192871,
+  "wm-source": "https://brid.gy/comment/twitter/petergoes/1405384068137619459/1405405458601414666",
+  "wm-target": "https://www.petergoes.nl/replies/2021-06-17-04-36/",
+  "content": {
+    "html": "thanks!  \n\nAnd your process is working great.  Just merged my first set of webmentions (<a href=\"https://github.com/willnorris/willnorris.com/pull/22\">github.com/willnorris/wil…</a>).  Still need to improve rendering for replies and mentions, but working well: <a href=\"https://willnorris.com/2021/06/mac-and-cheese/#webmentions\">willnorris.com/2021/06/mac-an…</a>\n\n<a class=\"u-mention\" href=\"https://twitter.com/petergoes\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/webmentionrocks\"></a>\n<a class=\"u-mention\" href=\"https://www.petergoes.nl/\"></a>",
+    "text": "thanks!  \n\nAnd your process is working great.  Just merged my first set of webmentions (github.com/willnorris/wil…).  Still need to improve rendering for replies and mentions, but working well: willnorris.com/2021/06/mac-an…"
+  },
+  "in-reply-to": "https://www.petergoes.nl/replies/2021-06-17-04-36/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}
