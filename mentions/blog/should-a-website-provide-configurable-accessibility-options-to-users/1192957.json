@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Stéphane Deschamps",
+    "photo": "https://webmention.io/avatar/assets.toot.cafe/ec69e246ad952436ac4235a12fcca395811d62d4ecc1a128819978c840051322.jpg",
+    "url": "https://toot.cafe/@accessiblestef"
+  },
+  "url": "https://toot.cafe/@accessiblestef/106425445324569173",
+  "published": "2021-06-17T09:50:21",
+  "wm-received": "2021-06-17T10:07:43Z",
+  "wm-id": 1192957,
+  "wm-source": "https://brid.gy/comment/mastodon/@petergoes@toot.cafe/106422239744635921/106425445324569173",
+  "wm-target": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "content": {
+    "html": "<p><span class=\"h-card\"><a href=\"https://toot.cafe/@petergoes\" class=\"u-url\">@<span>petergoes</span></a></span> Q: How does a user distinguish between this menu and other bad actors?<br />A: It depends how it's presented. First and foremost, don't promise more than you want to achieve 😉 If you promise “more comfort” in this-or-that situation, it's up to the user to decide whether they want to engage with the menu options or not.<br />—Side note: I'm not sure users care about good/bad actors. When/if they see something, they either want to test it or not.</p>",
+    "text": "@petergoes Q: How does a user distinguish between this menu and other bad actors?\nA: It depends how it's presented. First and foremost, don't promise more than you want to achieve 😉 If you promise “more comfort” in this-or-that situation, it's up to the user to decide whether they want to engage with the menu options or not.\n—Side note: I'm not sure users care about good/bad actors. When/if they see something, they either want to test it or not."
+  },
+  "in-reply-to": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}

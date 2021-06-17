@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Peter Goes",
+    "photo": "https://webmention.io/avatar/assets.toot.cafe/f85170d8a136b85629cc04ced3616406973a10184766ee5ad38116b1952c96b1.jpg",
+    "url": "https://toot.cafe/@petergoes"
+  },
+  "url": "https://toot.cafe/@petergoes/106425332123892871",
+  "published": "2021-06-17T09:21:33",
+  "wm-received": "2021-06-17T10:07:41Z",
+  "wm-id": 1192956,
+  "wm-source": "https://brid.gy/comment/mastodon/@petergoes@toot.cafe/106422239744635921/106425332123892871",
+  "wm-target": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "content": {
+    "html": "<p><span class=\"h-card\"><a href=\"https://toot.cafe/@accessiblestef\" class=\"u-url\">@<span>accessiblestef</span></a></span> No, I think you are right. I have the same observations about digital literacy. </p><p>I updated the post just now. I stumbled upon a solution for the specific problem I faced. So there's that...</p>",
+    "text": "@accessiblestef No, I think you are right. I have the same observations about digital literacy. I updated the post just now. I stumbled upon a solution for the specific problem I faced. So there's that..."
+  },
+  "in-reply-to": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}
