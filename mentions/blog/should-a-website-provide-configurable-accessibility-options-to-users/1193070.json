@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Stéphane Deschamps",
+    "photo": "https://webmention.io/avatar/assets.toot.cafe/ec69e246ad952436ac4235a12fcca395811d62d4ecc1a128819978c840051322.jpg",
+    "url": "https://toot.cafe/@accessiblestef"
+  },
+  "url": "https://toot.cafe/@accessiblestef/106426227228105955",
+  "published": "2021-06-17T13:09:12",
+  "wm-received": "2021-06-17T14:13:18Z",
+  "wm-id": 1193070,
+  "wm-source": "https://brid.gy/comment/mastodon/@petergoes@toot.cafe/106422239744635921/106426227228105955",
+  "wm-target": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "content": {
+    "html": "<p><span class=\"h-card\"><a href=\"https://toot.cafe/@petergoes\" class=\"u-url\">@<span>petergoes</span></a></span> Ah but of course! Yay!</p>",
+    "text": "@petergoes Ah but of course! Yay!"
+  },
+  "in-reply-to": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}

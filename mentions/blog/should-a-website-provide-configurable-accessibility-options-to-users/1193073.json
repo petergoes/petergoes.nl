@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Stéphane Deschamps",
+    "photo": "https://webmention.io/avatar/assets.toot.cafe/ec69e246ad952436ac4235a12fcca395811d62d4ecc1a128819978c840051322.jpg",
+    "url": "https://toot.cafe/@accessiblestef"
+  },
+  "url": "https://toot.cafe/@accessiblestef/106426327591724140",
+  "published": "2021-06-17T13:34:43",
+  "wm-received": "2021-06-17T14:13:23Z",
+  "wm-id": 1193073,
+  "wm-source": "https://brid.gy/comment/mastodon/@petergoes@toot.cafe/106422239744635921/106426327591724140",
+  "wm-target": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "content": {
+    "html": "<p><span class=\"h-card\"><a href=\"https://mastodon.tedomum.net/@lienrag\" class=\"u-url\">@<span>lienrag</span></a></span> Did I say “screw them”? I was in the hypothesis of prioritization and was constrained by 500 characters.</p><p>So here goes:<br />s/I'd wager not/I'd wager most don't/</p><p>Happy, friend?</p><p> <span class=\"h-card\"><a href=\"https://toot.cafe/@petergoes\" class=\"u-url\">@<span>petergoes</span></a></span></p>",
+    "text": "@lienrag Did I say “screw them”? I was in the hypothesis of prioritization and was constrained by 500 characters.So here goes:\ns/I'd wager not/I'd wager most don't/Happy, friend? @petergoes"
+  },
+  "in-reply-to": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}
