@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Code 🐒 get up get ☕",
+    "photo": "https://webmention.io/avatar/assets.toot.cafe/04096158416df3ece510eb43e2fc2eaa075b5a88c60e134d0e01cbfe4de2573b.jpg",
+    "url": "https://toot.cafe/@thelonelyghost"
+  },
+  "url": "https://toot.cafe/@thelonelyghost/106426377783341111",
+  "published": "2021-06-17T13:47:29",
+  "wm-received": "2021-06-17T14:13:24Z",
+  "wm-id": 1193075,
+  "wm-source": "https://brid.gy/comment/mastodon/@petergoes@toot.cafe/106422239744635921/106426377783341111",
+  "wm-target": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "content": {
+    "html": "<p><span class=\"h-card\"><a href=\"https://toot.cafe/@petergoes\" class=\"u-url\">@<span>petergoes</span></a></span> only thing I can think of is colorblind and high contrast mode, which can be backend settings on a web app.</p><p>Only reason these would be settings is they can royally screw up the intended design whereas other <a href=\"https://toot.cafe/tags/a11y\">#<span>a11y</span></a> optimizations generally don't.</p>\n<a class=\"p-category\" href=\"https://toot.cafe/tags/a11y\">a11y</a>",
+    "text": "@petergoes only thing I can think of is colorblind and high contrast mode, which can be backend settings on a web app.Only reason these would be settings is they can royally screw up the intended design whereas other #a11y optimizations generally don't.\na11y"
+  },
+  "in-reply-to": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}

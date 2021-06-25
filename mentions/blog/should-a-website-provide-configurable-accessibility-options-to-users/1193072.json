@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Lien Rag",
+    "photo": "https://webmention.io/avatar/toot.cafe/a971b399b2b2c66daa292ea79888a77f2f15a8d33c7f9cf611428be3f8283405.png",
+    "url": "https://mastodon.tedomum.net/@lienrag"
+  },
+  "url": "https://mastodon.tedomum.net/@lienrag/106426319481844438",
+  "published": "2021-06-17T13:32:39",
+  "wm-received": "2021-06-17T14:13:22Z",
+  "wm-id": 1193072,
+  "wm-source": "https://brid.gy/comment/mastodon/@petergoes@toot.cafe/106422239744635921/106426319548645076",
+  "wm-target": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "content": {
+    "html": "<p><span class=\"h-card\"><a href=\"https://toot.cafe/@accessiblestef\" class=\"u-url\">@<span>accessiblestef</span></a></span> </p><p>Obviously, but there's a big difference between \"dont put it in the face of people that are not interested in it\" and \"screw the ones that would want it, they're a minority anyway\".<br />The question was \"should I provide configuration options to user\", not \"will everybody use it\".<br />So the answers are \"yes\" to the first and \"no\" to the second, that's not contradictory.</p><p><span class=\"h-card\"><a href=\"https://toot.cafe/@petergoes\" class=\"u-url\">@<span>petergoes</span></a></span></p>",
+    "text": "@accessiblestef Obviously, but there's a big difference between \"dont put it in the face of people that are not interested in it\" and \"screw the ones that would want it, they're a minority anyway\".\nThe question was \"should I provide configuration options to user\", not \"will everybody use it\".\nSo the answers are \"yes\" to the first and \"no\" to the second, that's not contradictory.@petergoes"
+  },
+  "in-reply-to": "https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}
