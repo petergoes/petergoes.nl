@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Rodney",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/42b3c9de979f7e48e7f6f4dd33926398bd5013d372c3bff6405710d7772f4e09.jpg",
+    "url": "https://twitter.com/askRodney"
+  },
+  "url": "https://twitter.com/petergoes/status/1397632362926772228#favorited-by-1323579817258831875",
+  "published": null,
+  "wm-received": "2021-07-26T17:27:33Z",
+  "wm-id": 1230433,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1397632362926772228/1323579817258831875",
+  "wm-target": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "like-of": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
