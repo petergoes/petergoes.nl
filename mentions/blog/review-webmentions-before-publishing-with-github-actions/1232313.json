@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Niki Tonsky",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/fb1a35e167659232c0e351e5c13ce9f5b5868193ba1c0ad13bb0955040f7b72f.jpg",
+    "url": "https://twitter.com/nikitonsky"
+  },
+  "url": "https://twitter.com/nikitonsky/status/1420396959681101825",
+  "published": "2021-07-28T14:53:19+00:00",
+  "wm-received": "2021-07-28T17:08:08Z",
+  "wm-id": 1232313,
+  "wm-source": "https://brid.gy/comment/twitter/petergoes/1420396597058449408/1420396959681101825",
+  "wm-target": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "content": {
+    "html": "Nice and clean! Thanks\n<a class=\"u-mention\" href=\"https://twitter.com/FiraCode\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/petergoes\"></a>\n<a class=\"u-mention\" href=\"https://www.petergoes.nl/\"></a>",
+    "text": "Nice and clean! Thanks"
+  },
+  "in-reply-to": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}
