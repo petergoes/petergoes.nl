@@ -1,0 +1,16 @@
+.curriculum-vitae .top {
+  display: flex;
+  gap: 5rem;
+}
+
+.curriculum-vitae .personal-information dd {
+  margin-left: var(--line-height);
+}
+
+.curriculum-vitae p + ul {
+  margin-top: calc(var(--line-height) * -1);
+}
+
+.curriculum-vitae li ul {
+  margin-left: var(--line-height);
+}
