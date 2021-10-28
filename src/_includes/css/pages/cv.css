@@ -1,6 +1,13 @@
 .curriculum-vitae .top {
   display: flex;
-  gap: 5rem;
+  flex-direction: column-reverse;
+}
+
+@media screen and (min-width: var(--screen-medium)) {
+  .curriculum-vitae .top {
+    flex-direction: row;
+    gap: 5rem;
+  }
 }
 
 .curriculum-vitae .personal-information dd {
