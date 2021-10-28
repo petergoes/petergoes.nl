@@ -59,6 +59,7 @@
 
 ### Senior Front-end Web Developer / Tech lead<br /><small>October 2014 - Present (7 years 1 month)</small>
 **De Voorhoede**, Amsterdam
+
 Leading dev teams of a project from start to finish and balance high quality, client satisfaction and the happiness of developers. Where possible, educate others.
 
 Responsibilities:
@@ -72,6 +73,7 @@ Responsibilities:
 
 ### Developer<br /><small>April 2014 - September 2014 (6 months)</small>
 **Sense Studios**, Amsterdam
+
 Building a game which teach children to handle money
 
 Responsibilities:
@@ -80,6 +82,7 @@ Responsibilities:
 
 ### Creative Developer<br /><small>December 2011 - March 2014 (2 years 4 months)</small>
 **Qlvr**, Utrecht
+
 Design and building mobile applications for the education and health care sector.
 
 Responsibilities:
@@ -90,12 +93,15 @@ Responsibilities:
 
 ### Master of Arts and Technologie, Digital Media Design<br /><small>2007 - 2011</small>
 **Hogeschool voor de Kunsten Utrecht**, Hilversum
+
 Design and build (physical) interactive installations
 
 ### VJ / Video Mixing<br /><small>2009 - 2010</small>
 **VJ Academy**, Amsterdam
+
 Translate the sound of a DJ and the response of the audience into visuals to enhance the experience of the audience
 
 ### MBO 4, Media Vormgeving<br ><small>2003 - 2007</small>
 **Media College Amsterdam**, Amsterdam
+
 Basics of digital media design and development
