@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "hexadev",
+    "photo": "https://webmention.io/avatar/pbs.twimg.com/d80941fbf9ff611f1f8170c135f1befcff64c661f37b5400035b6fbe80377bcf.jpg",
+    "url": "https://twitter.com/ashexadecimal"
+  },
+  "url": "https://twitter.com/petergoes/status/1420396597058449408#favorited-by-1330395149013291008",
+  "published": null,
+  "wm-received": "2021-12-08T04:22:44Z",
+  "wm-id": 1314052,
+  "wm-source": "https://brid.gy/like/twitter/petergoes/1420396597058449408/1330395149013291008",
+  "wm-target": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "like-of": "https://www.petergoes.nl/blog/review-webmentions-before-publishing-with-github-actions/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
