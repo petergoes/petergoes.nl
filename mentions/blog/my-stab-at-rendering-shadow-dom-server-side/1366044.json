@@ -1,0 +1,22 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Pranav Karawale",
+    "photo": "https://karawale.in/img/me96.webp",
+    "url": "https://karawale.in/"
+  },
+  "url": "https://karawale.in/likes/855415/",
+  "published": "2022-03-20T05:45:13",
+  "wm-received": "2022-03-20T06:33:02Z",
+  "wm-id": 1366044,
+  "wm-source": "https://karawale.in/likes/855415/",
+  "wm-target": "https://www.petergoes.nl/blog/my-stab-at-rendering-shadow-dom-server-side/",
+  "content": {
+    "html": "I liked <a class=\"u-like-of\" href=\"https://www.petergoes.nl/blog/my-stab-at-rendering-shadow-dom-server-side/\">https://www.petergoes.nl/blog/my-stab-at-rendering-shadow-dom-server-side/</a> \n        on <time class=\"dt-published\" datetime=\"2022-03-20T05:45:13Z\">\n            March 20, 2022</time>\n            <a class=\"u-url\" href=\"https://karawale.in/likes/855415/\">permalink</a>",
+    "text": "I liked https://www.petergoes.nl/blog/my-stab-at-rendering-shadow-dom-server-side/ \n        on \n            March 20, 2022permalink"
+  },
+  "like-of": "https://www.petergoes.nl/blog/my-stab-at-rendering-shadow-dom-server-side/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
