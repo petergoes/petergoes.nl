@@ -6,7 +6,7 @@ module.exports = {
   // },
   "tootCafe": {
     "name": "Mastodon",
-    "url": "https://toot.cafe/@petergoes"
+    "url": "https://social.petergoes.nl/@petergoes"
   },
   "github": {
     "name": "Github",
