@@ -1,6 +1,5 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("eleventy-plugin-highlightjs");
-const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const tocPlugin = require('eleventy-plugin-nesting-toc')
 const filterFormatDate = require('./filter-format-date')
 const { remove, removePostsInCollection } = require('./filter-remove')
@@ -19,7 +18,6 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight, { className: "hljs-block" });
-  eleventyConfig.addPlugin(inclusiveLangPlugin);
   eleventyConfig.addPlugin(tocPlugin, { ul: true, asDetailsSummary: true, summaryText: 'Table of contents' });
 
   eleventyConfig.addPassthroughCopy({ "src/_public": "/" });
