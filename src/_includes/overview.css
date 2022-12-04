@@ -26,7 +26,7 @@
   opacity: 0;
 }
 
-@media (min-width: var(--screen-small)) {
+@media (--screen-small) {
   .overview__pagination-list {
     flex-direction: row;
   }

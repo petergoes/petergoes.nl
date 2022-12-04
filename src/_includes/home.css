@@ -13,7 +13,7 @@
   font-variation-settings: "wght" 300;
   color: var(--code-keyword);
 }
-@media screen and (min-width: var(--screen-small)) and (max-width: var(--screen-medium)) {
+@media (--screen-small) and (--screen-medium-max) {
   .my-vision__quote {
     max-width: var(--char-width) * 66.66666;
   }
@@ -32,7 +32,7 @@
   color: var(--code-keyword);
 }
 
-@media screen and (min-width: var(--screen-xsmall)) {
+@media (--screen-xsmall) {
   .my-vision__text {
     color: var(--code-string);
   }

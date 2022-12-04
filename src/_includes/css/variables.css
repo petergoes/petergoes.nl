@@ -7,11 +7,6 @@
   --font-text: 'iA Writer Mono', 'Courier New', monospace;
   --font-heading: 'Fira Code', 'Courier New', monospace;
 
-  --screen-xsmall: 18em; /* 288px */
-  --screen-small: 48em; /* 768px */
-  --screen-medium: 64em; /* 1024px */
-  --screen-large: 90em; /* 1440px */
-
   --char-width: 0.625rem;
   --line-height: 1.75rem;
 
@@ -67,7 +62,7 @@
   }
 }
 
-@media (min-width: var(--screen-small)) {
+@media (--screen-small) {
   :root {
     --line-height: 1.8rem;
   }

@@ -326,7 +326,7 @@ code:not([class*="hljs"])::after {
   }
 }
 
-@media screen and (min-width: var(--screen-medium) ){
+@media (--screen-medium) {
   li,
   h1, .h1,
   h2, .h2,

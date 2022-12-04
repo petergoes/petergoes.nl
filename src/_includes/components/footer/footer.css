@@ -32,7 +32,7 @@
   content: none;
 }
 
-@media (min-width: var(--screen-small)) {
+@media (--screen-small) {
   .footer__other-nav ul {
     flex-direction: row;
   }

@@ -5,8 +5,8 @@ const postcss = require('postcss')
 const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
 const postcssImport = require('postcss-import')
-const postcssMediaVariables = require('postcss-media-variables')
 const postcssCustomProperties = require('postcss-custom-properties')
+const postcssCustomMedia = require('postcss-custom-media')
 
 module.exports = async function(files, pageOutputFile, development) {
   const baseCssFile = 'css/main.css'
@@ -17,9 +17,8 @@ module.exports = async function(files, pageOutputFile, development) {
 
   const plugins = [
     postcssImport,
-    postcssMediaVariables,
     postcssCustomProperties,
-    postcssMediaVariables,
+    postcssCustomMedia,
   ]
 
   const productionPlugins = [

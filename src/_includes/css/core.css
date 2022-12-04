@@ -46,7 +46,7 @@ pre.hljs-block:before {
   max-width: 100vw;
 
 }
-@media screen and (min-width: var(--screen-small)) {
+@media (--screen-small) {
   pre.hljs-block:before {
     max-width: 95vw;
   }

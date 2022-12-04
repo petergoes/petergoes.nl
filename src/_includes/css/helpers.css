@@ -10,7 +10,7 @@ svg:not(:root) { overflow: hidden; }
   padding-left: 1rem;
   padding-right: 1rem;
 }
-@media screen and (min-width: var(--screen-small)) and (max-width: var(--screen-medium)) {
+@media (--screen-small) and (--screen-medium-max) {
   .content-section {
     max-width: var(--char-width) * 66.66666;
   }

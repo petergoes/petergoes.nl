@@ -15,7 +15,7 @@ body > header {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-@media screen and (min-width: var(--screen-small)) and (max-width: var(--screen-medium)) {
+@media (--screen-small) and (--screen-medium-max) {
   .page-header {
     max-width: var(--char-width) * 66.66666;
   }
@@ -113,7 +113,7 @@ a.page-header__link:hover,
   text-decoration: underline;
 }
 
-@media screen and (min-width: var(--screen-xsmall)) {
+@media (--screen-xsmall) {
   .page-header__code-decoration {
     display: inline-block;
   }
@@ -126,7 +126,7 @@ a.page-header__link:hover,
   }
 }
 
-@media screen and (min-width: var(--screen-small)) {
+@media (--screen-small) {
   .page-header__nav {
     padding-bottom: calc(var(--margin-m) - 0.1em);
   }
@@ -157,7 +157,7 @@ a.page-header__link:hover,
   }
 }
 
-@media screen and (min-width: var(--screen-medium)) {
+@media (--screen-medium) {
   .page-header__nav {
     padding-bottom: var(--margin-m);
   }

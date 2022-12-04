@@ -24,7 +24,7 @@
 }
 
 
-@media screen and (min-width: var(--screen-medium)) {
+@media (--screen-medium) {
   .contact__form__element {
     display: flex;
   }

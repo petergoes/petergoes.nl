@@ -3,7 +3,7 @@
   flex-direction: column-reverse;
 }
 
-@media screen and (min-width: var(--screen-medium)) {
+@media (--screen-medium) {
   .curriculum-vitae .top {
     flex-direction: row;
     gap: 5rem;
