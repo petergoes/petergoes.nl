@@ -57,7 +57,10 @@
 
 ## Work Experience
 
-### Senior Front-end Web Developer / Tech lead<br /><small>October 2014 - Present (7 years 1 month)</small>
+### Senior Front-end Developer<br /><small>February 2022 - Present</small>
+**De Correspondent**, Amsterdam
+
+### Senior Front-end Web Developer / Tech lead<br /><small>October 2014 - January 2022 (7 years 2 month)</small>
 **De Voorhoede**, Amsterdam
 
 Leading dev teams of a project from start to finish and balance high quality, client satisfaction and the happiness of developers. Where possible, educate others.
