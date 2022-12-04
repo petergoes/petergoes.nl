@@ -66,3 +66,9 @@
     --heading-color: #DEE3E9;
   }
 }
+
+@media (min-width: var(--screen-small)) {
+  :root {
+    --line-height: 1.8rem;
+  }
+}
