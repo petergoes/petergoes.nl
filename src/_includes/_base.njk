@@ -1,111 +1,121 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="manifest" href="/manifest.json">
+  <title>{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif
+    %}</title>
 
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-    <link rel="shortcut icon" href="{% imageUrl 'src/_assets/logo.svg', 32, 'png' %}" />
-    <link rel="apple-touch-icon" href="{% imageUrl 'src/_assets/logo.svg', 192, 'png' %}">
-    <link rel="feed" href="/blog" />
-    <link rel="feed" href="/notes" />
-    <link rel="feed" href="/replies" />
+  <link rel="manifest" href="/manifest.json">
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="shortcut icon" href="{% imageUrl 'src/_assets/logo.svg', 32, 'png' %}" />
+  <link rel="apple-touch-icon" href="{% imageUrl 'src/_assets/logo.svg', 192, 'png' %}">
+  <link rel="feed" href="/blog" />
+  <link rel="feed" href="/notes" />
+  <link rel="feed" href="/replies" />
 
-    <meta name="theme-color" content="{{ site.themeColor }}">
-    <meta name="description" content="{{ description }}">
-    <meta name="author" content="{{ author }}">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    {% if (tags or []).includes('note') === false %}
-      {% if (tags or []).includes('blog') %}
-        <meta name="twitter:card" content="summary_large_image">
-      {% else %}
-        <meta name="twitter:card" content="summary">
-      {% endif %}
-    {% endif %}
-    <meta name="twitter:creator" content="{{ socialLinks.twitter.username }}">
-    <meta name="twitter:title" content="{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
-    <meta name="twitter:description" content="{{ description }}">
-    <meta name="twitter:image" content="{% featuredImage page, title, featuredImageFallback, category %}">
-    <meta name="twitter:image:alt" content="Dark image with the text: {{ title }}" >
-    <meta name="twitter:creator" content="@petergoes">
-    <meta name="twitter:site" content="@petergoes">
+  <meta name="theme-color" content="{{ site.themeColor }}">
+  <meta name="description" content="{{ description }}">
+  <meta name="author" content="{{ author }}">
 
-    <meta property="og:site_name" content="{{ site.name }}">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:title" content="{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
-    <meta property="og:description" content="{{ description }}">
-    <meta property="og:image" content="{% featuredImage page, title, featuredImageFallback, category %}">
-    <meta property="og:type" content="{{ og.type }}">
-    <meta property="og:publish_date" content="{{ page.date | dateToRfc3339 }}">
+  {% if (tags or []).includes('note') === false %}
+  {% if (tags or []).includes('blog') %}
+  <meta name="twitter:card" content="summary_large_image">
+  {% else %}
+  <meta name="twitter:card" content="summary">
+  {% endif %}
+  {% endif %}
+  <meta name="twitter:creator" content="{{ socialLinks.twitter.username }}">
+  <meta name="twitter:title"
+    content="{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{% featuredImage page, title, featuredImageFallback, category %}">
+  <meta name="twitter:image:alt" content="Dark image with the text: {{ title }}">
+  <meta name="twitter:creator" content="@petergoes">
+  <meta name="twitter:site" content="@petergoes">
 
-    <meta name="google-site-verification" content="nqrUK41xnH-Xy6jkKrFZaB7WepOc-53Nein0KOSwizo" />
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:title"
+    content="{% if page.url === '/'%}{{ site.title }} | {{ site.subtitle }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="{% featuredImage page, title, featuredImageFallback, category %}">
+  <meta property="og:type" content="{{ og.type }}">
+  <meta property="og:publish_date" content="{{ page.date | dateToRfc3339 }}">
 
-    {% if page.tags.length > 0 %}
-      <meta name="keywords" content="{% for tag in page.tags %}{{ tag.name }}{% if not loop.last %}, {% endif %}{% endfor %}">
-    {% endif %}
+  <meta name="google-site-verification" content="nqrUK41xnH-Xy6jkKrFZaB7WepOc-53Nein0KOSwizo" />
 
-    {% block head %}
-    {% endblock %}
+  {% if page.tags.length > 0 %}
+  <meta name="keywords"
+    content="{% for tag in page.tags %}{{ tag.name }}{% if not loop.last %}, {% endif %}{% endfor %}">
+  {% endif %}
 
-    {% if page.url !== '/' %}
-      <link rel="webmention" href="https://webmention.io/www.petergoes.nl/webmention" />
-      <link rel="pingback" href="https://webmention.io/www.petergoes.nl/xmlrpc" />
-    {% endif %}
+  {% block head %}
+  {% endblock %}
+
+  {% if page.url !== '/' %}
+  <link rel="webmention" href="https://webmention.io/www.petergoes.nl/webmention" />
+  <link rel="pingback" href="https://webmention.io/www.petergoes.nl/xmlrpc" />
+  {% endif %}
 
 
-    <script type="module" src="/src/_includes/scripts.js" async></script>
-    <style>{% postcss stylesheets, page.outputPath, process.env.DEVELOPMENT === 'true' %}</style>
-  </head>
+  <script type="module" src="/src/_includes/scripts.js" async></script>
+  <style>
+    {
+      % postcss stylesheets,
+      page.outputPath,
+      process.env.DEVELOPMENT==='true' %
+    }
+  </style>
+</head>
 
-  <body class="{{ title | slug }}">
-    {% block header %}{% endblock %}
+<body class="{{ title | slug }}">
+  {% block header %}{% endblock %}
 
-    <main>
-      {% block content %}{% endblock %}
-    </main>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
 
-    {% block aside %}{% endblock %}
+  {% block aside %}{% endblock %}
 
-    {% block footer %}{% endblock%}
+  {% block footer %}{% endblock%}
 
-    <div class="debug-vertical-rythm"></div>
+  <div class="debug-vertical-rythm"></div>
 
-    <link rel="stylesheet" href="/styles/markdown-decorations.css">
-    <link rel="stylesheet" href="/styles/markdown-decorations-dark.css" media="screen and (prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="/styles/markdown-decorations.css">
+  <link rel="stylesheet" href="/styles/markdown-decorations-dark.css" media="screen and (prefers-color-scheme: dark)">
 
-    {% if process.env.DEVELOPMENT !== "true" %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45961555-1"></script>
-		<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-45961555-1');</script>
-    <script type="module">
-      window.addEventListener('beforeinstallprompt', (e) => {
-        // Prevent the mini-infobar from appearing on mobile
-        e.preventDefault();
+  {% if process.env.DEVELOPMENT !== "true" %}
+  <script type="module">
+    window.addEventListener('beforeinstallprompt', (e) => {
+      // Prevent the mini-infobar from appearing on mobile
+      e.preventDefault();
+    });
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
       });
+    }
+  </script>
+  {% endif %}
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/cms/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
 
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js');
-        });
-      }
-    </script>
-    {% endif %}
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/cms/";
-            });
-          }
-        });
-      }
-    </script>
-  </body>
 </html>
