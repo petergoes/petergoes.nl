@@ -44,7 +44,7 @@ myHeaders.get('Accept-Encoding'); // Returns "deflate, gzip"
 myHeaders.get('Accept-Encoding').split(',').map((v) => v.trimStart()); // Returns [ "deflate", "gzip" ]
 ```
 
-That does not seem so hard... Let's have one more close look at the `Set-Cookie` value: `cookieName=cookieValue; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.some-site.com; secure; HttpOnly; SameSite=Lax`. Please notice the `expires` value: `Thu, 01-jan...`. That `,` right there is the sole reason a good amount of hours wasted.
+That does not seem so hard... Let's have one more close look at the `Set-Cookie` value: `cookieName=cookieValue; expires=Thu, 01-Jan-1970 00:00:01 GMT; Max-Age=0; path=/; domain=.some-site.com; secure; HttpOnly; SameSite=Lax`. Please notice the `expires` value: `Thu, 01-jan...`. That `,` right there is the sole reason a good amount of hours got wasted. There is no way to tell where to split the string without intimate knowledge of all possible attributes for the cookie...
 
 Parsing the `Set-Cookie` header with a library finally solved the problem I had.
 
