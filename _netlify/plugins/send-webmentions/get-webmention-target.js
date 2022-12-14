@@ -1,4 +1,4 @@
-const fetch = require('node-fetch')
+const fetch = require('node-fetch-commonjs')
 const microformat = require('microformat-node')
 const cheerio = require('cheerio')
 
