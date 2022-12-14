@@ -11,7 +11,7 @@ tags:
   - cookies
 date: 2022-12-14T19:56:05.743Z
 tweetUrl: ""
-tootUrl: ""
+tootUrl: https://social.petergoes.nl/@petergoes/109514210633832432
 ---
 I learned a thing or two about cookies today... It took me quite a while to figure it out, but I think I understand it now.
 
