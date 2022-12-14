@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const fetch = require('node-fetch');
+const fetch = require('node-fetch-commonjs');
 const cheerio = require('cheerio')
 const microformat = require('microformat-node')
 const getTargetEndpoint = require('./get-webmention-target')

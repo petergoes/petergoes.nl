@@ -50,6 +50,7 @@
     "markdown-it-footnote": "3.0.3",
     "microformat-node": "2.0.1",
     "node-fetch": "^3.3.0",
+    "node-fetch-commonjs": "^3.2.4",
     "postcss-custom-media": "^9.0.1"
   }
 }
