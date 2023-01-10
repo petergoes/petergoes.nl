@@ -27,7 +27,7 @@
         <small class="blog__tags">
           Filled under:
           <ul class="blog__tags-list">
-            {% for tag in tags | remove('blog') %}
+            {% for tag in tags | remove('blog') | remove('rss-club') %}
               <li class="blog__tags-list-item p-category">
                 {{ tag }}{% if not loop.last %},&nbsp;{% endif %}
               </li>
@@ -43,6 +43,13 @@
 
 
     <section class="e-content">
+      {% if tags.includes('rss-club') %}
+      <aside>
+        It is a secret to everyone!<br />
+        <a href="https://daverupert.com/rss-club/">Read more about RSS club!</a>
+      </aside>
+      {% endif %}
+
       {{ content | safe }}
     </section>
 
