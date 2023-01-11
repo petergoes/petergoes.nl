@@ -34,7 +34,7 @@
     <id>{{ absolutePostUrl }}</id>
     <content type="html">
       {% if post.data.tags.includes('rss-club') %}
-        {% set notice = '<aside><pre>It\'s a secret to everyone! This post is for RSS subscribers only.<a href="https://daverupert.com/rss-club/">Read more about RSS Club</a></pre></aside>' %}
+        {% set notice = '<p>It\'s a secret to everyone! This post is for RSS subscribers only.<a href="https://daverupert.com/rss-club/">Read more about RSS Club</a></p>' %}
         {{ notice }}
       {% endif %}
       {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
