@@ -32,7 +32,17 @@
     <link href="{{ absolutePostUrl }}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+    <content type="html">
+      {% if post.data.tags.includes('rss-club') %}
+        <aside>
+          <pre>
+            It's a secret to everyone! This post is for RSS subscribers only.
+            <a href="https://daverupert.com/rss-club/">Read more about RSS Club</a>
+          </pre>
+        </aside>
+      {% endif %}
+      {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+    </content>
   </entry>
   {%- endfor %}
 </feed>
