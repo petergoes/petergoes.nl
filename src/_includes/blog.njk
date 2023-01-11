@@ -45,9 +45,10 @@
     <section class="e-content">
       {% if tags.includes('rss-club') %}
       <aside>
-        It is a secret to everyone!<br />
+        It is a secret to everyone! This post is for RSS subscribers only.<br />
         <a href="https://daverupert.com/rss-club/">Read more about RSS club!</a>
       </aside>
+      <br />
       {% endif %}
 
       {{ content | safe }}
