@@ -76,9 +76,11 @@
       </p>
       <form class="webmentions-response-form" action="https://webmention.io/petergoes.nl/webmention" method="POST">
         <label for="webmentions-response-form-input">Url of your response</label>
-        <input id="webmentions-response-form-input" type="url" name="source" placeholder="https://example.com/" required />
+        <input disabled id="webmentions-response-form-input" type="url" name="source" placeholder="https://example.com/" required />
         <input type="hidden" name="target" value="{{ site.url + page.url }}" />
-        <button type="submit">Send response</button> 
+        <button disabled type="submit">Send response</button> 
+        <p>Turns out, my web mentions endpoint is broken. I am working on it,
+        but in the mean time, <a href="https://social.petergoes.nl/@petergoes">reach out to me on mastodon</a>
       </form>
 
       {% from './components/webmentions/interaction.njk' import interaction %}
