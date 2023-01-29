@@ -9,7 +9,9 @@
       <li class="webmention__text-response-item">
         <article>
           <header class="webmention__text-response-header">
-            <img src="{{ textResponse.author.photo }}" width="50" height="50" alt="{{ textResponse.author.name }}" loading="lazy"/>
+            {% if textResponse.author.photo %}
+              <img src="{{ textResponse.author.photo }}" width="50" height="50" alt="{{ textResponse.author.name }}" loading="lazy"/>
+            {% endif %}
             {% if textResponse.author.url !== '' %}
               <a href="{{ textResponse.author.url }}">
             {% else %}
@@ -23,8 +25,8 @@
             {% endif %}
             <small>
               <small class="visuallyhidden">Posted on</small>
-              <time datetime="{{ textResponse.published | formatDate('YYYY-MM-DD hh:mm:ss') }}">
-                {{ textResponse.published | formatDate('Do of MMMM, YYYY @ hh:mm') }}
+              <time datetime="{{ (textResponse.published or textResponse['wm-received']) | formatDate('YYYY-MM-DD hh:mm:ss') }}">
+                {{ (textResponse.published or textResponse['wm-received']) | formatDate('Do of MMMM, YYYY @ hh:mm') }}
               </time>
             </small>
           </header>
@@ -32,7 +34,9 @@
           {{ textResponse.content.text }}
 
           <footer class="webmention__text-response-footer">
-            <a href="{{ textResponse['wm-source'] }}">Source<span class="visuallyhidden"> of the {{ singular }}</span></a>
+            <small>
+              <a href="{{ textResponse['wm-source'] }}">Source<span class="visuallyhidden"> of the {{ singular }}</span></a>
+            </small>
           </footer>
         </article>
       </li>
