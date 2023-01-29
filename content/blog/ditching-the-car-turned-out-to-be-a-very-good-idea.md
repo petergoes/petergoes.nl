@@ -11,7 +11,7 @@ tags:
   - personal
 date: 2023-01-29T17:05:01.398Z
 tweetUrl: ""
-tootUrl: ""
+tootUrl: https://social.petergoes.nl/@petergoes/109774263434319840
 ---
 We just hit 1500km on our cargo bike. After our car broke down in the summer of 2022 we decided to not replace it. Instead we got an electric cargo bike and a subscription for a car share service. It still felt like a challenge with two kids (2 and 5 years old at the time).
 
