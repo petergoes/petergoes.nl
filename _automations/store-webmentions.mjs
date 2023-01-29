@@ -5,7 +5,7 @@ import filter from 'lodash/fp/filter.js'
 import get from 'lodash/fp/get.js'
 import forEach from 'lodash/fp/forEach.js'
 import mkdirp from 'mkdirp'
-import dotenv from 'dotenv'
+import dotenv from 'dotenv-safe'
 
 dotenv.config()
 
