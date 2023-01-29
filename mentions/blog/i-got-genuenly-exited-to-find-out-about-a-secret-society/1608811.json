@@ -1,0 +1,21 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Dan Q",
+    "photo": "https://webmention.io/avatar/danq.me/1e7c0d6f695ce9ab696ee7c7b938c0f55b79a999f7a1a1b9648ffe86402962fc.jpg",
+    "url": ""
+  },
+  "url": "https://commentpara.de/comment/1209.htm",
+  "published": null,
+  "wm-received": "2023-01-28T08:31:03Z",
+  "wm-id": 1608811,
+  "wm-source": "https://commentpara.de/comment/1209.htm",
+  "wm-target": "https://www.petergoes.nl/blog/i-got-genuenly-exited-to-find-out-about-a-secret-society/",
+  "content": {
+    "text": "Welcome to the club! And for helping me test my live-OPML subscription in my feed reader which aims to auto-subscribe me to any new members!"
+  },
+  "in-reply-to": "https://www.petergoes.nl/blog/i-got-genuenly-exited-to-find-out-about-a-secret-society/",
+  "wm-property": "in-reply-to",
+  "wm-private": false
+}
