@@ -1,6 +1,6 @@
 ---
 layout: blog
-permalink: false
+permalink: "{{ page.filePathStem }}/index.html"
 language: en
 title: A few updates for 01-2023
 description: Some thoughts about Arc Browser, blogging and bouldering
