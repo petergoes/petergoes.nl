@@ -1,0 +1,18 @@
+{
+  "type": "entry",
+  "author": {
+    "type": "card",
+    "name": "Dan Q",
+    "photo": "https://webmention.io/avatar/cdn.masto.host/de5168bf5e6f27e87d940879a90274ea87dda6dc3f1813bc987590f26b73d9a8.jpg",
+    "url": "https://m.danq.me/@dan"
+  },
+  "url": "https://social.petergoes.nl/@petergoes/109774263434319840#favorited-by-109461865298632620",
+  "published": null,
+  "wm-received": "2023-01-30T12:32:56Z",
+  "wm-id": 1610431,
+  "wm-source": "https://brid.gy/like/mastodon/@petergoes@social.petergoes.nl/109774263434319840/109461865298632620",
+  "wm-target": "https://www.petergoes.nl/blog/ditching-the-car-turned-out-to-be-a-very-good-idea/",
+  "like-of": "https://www.petergoes.nl/blog/ditching-the-car-turned-out-to-be-a-very-good-idea/",
+  "wm-property": "like-of",
+  "wm-private": false
+}
