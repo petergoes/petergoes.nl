@@ -9,7 +9,7 @@ tags:
   - blog
 date: 2023-03-04T14:06:42.491Z
 tweetUrl: ""
-tootUrl: ""
+tootUrl: https://social.petergoes.nl/@petergoes/109965586207512387
 ---
 It seems that the capabilities of CSS grow exponentially fast the last few years. With the [iterop](https://web.dev/interop-2022/) initiative making sure that features are consistent across browsers, life as a Front-end Dev is quite awesome.
 
